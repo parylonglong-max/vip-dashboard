@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#e8eef5">
+  <meta name="description" content="精品货价监控数据看板 — MTD/YTD 数据实时查看">
+  <title>精品货价监控数据看板</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ 登录页 ============ -->
+  <div id="loginPage" class="login-page">
+    <div class="login-card">
+      <h1 class="login-card__title">精品货价监控数据看板</h1>
+      <p class="login-card__subtitle">请输入统一密码以查看数据</p>
+      <div class="login-card__form">
+        <div class="login-card__input-wrap">
+          <input
+            onkeydown="if(event.key==='Enter'){window.dashboardLogin && window.dashboardLogin()}"
+            type="password"
+            id="passwordInput"
+            class="login-card__input"
+            placeholder="请输入密码"
+            autocomplete="off"
+          >
+        </div>
+        <p id="loginError" class="login-card__error"></p>
+        <button id="loginBtn" class="login-card__btn" type="button" onclick="window.dashboardLogin && window.dashboardLogin()">进 入 看 板</button>
+      </div>
+      <p class="login-card__hint">数据每周更新 · MTD / YTD 切换查看</p>
+    </div>
+  </div>
+
+  <!-- ============ 看板页 ============ -->
+  <div id="dashboard" class="dashboard">
+
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+      <div class="navbar__left">
+        <span class="navbar__title">精品货价监控</span>
+      </div>
+      <div class="navbar__right">
+        <a class="navbar__export" href="downloads/精品货价监控指标_Sheet1.xlsx" download="精品货价监控指标_Sheet1.xlsx" title="导出Excel">导出</a>
+        <span id="navbarDate" class="navbar__date">—</span>
+        <button id="logoutBtn" class="navbar__logout" title="退出">⏻</button>
+      </div>
+    </nav>
+
+    <!-- MTD / YTD 切换 -->
+    <div class="period-toggle">
+      <button class="period-toggle__btn active" data-period="mtd">MTD（月累计）</button>
+      <button class="period-toggle__btn" data-period="ytd">YTD（年累计）</button>
+    </div>
+
+    <!-- 顶部概览已按需求移除：销售进度统一放入自营销售卡片 -->
+
+    <!-- 模块容器 -->
+    <div id="modulesContainer">
+      <div class="loading">
+        <div class="loading__spinner"></div>
+        <div>正在加载数据…</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
