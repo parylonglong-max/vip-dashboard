@@ -1,0 +1,327 @@
+#!/usr/bin/env python3
+"""Excel-like mobile view builder for 精品货价监控数据看板.
+
+Goal: preserve Sheet1's business layout as much as possible for mobile viewing.
+Numbers are rendered in ten-thousand units (万) when values look like amounts/counts,
+while rates/scores/pp/index fields preserve their natural scale.
+"""
+from __future__ import annotations
+
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Any
+import ast
+import operator
+import re
+
+from openpyxl.utils.cell import column_index_from_string, range_boundaries
+
+from openpyxl import load_workbook
+from openpyxl.utils import get_column_letter
+
+SECTION_SPECS = [
+    {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
+    {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
+    {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 51, 2, 15), "stickyCols": 1},
+    {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
+    {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 26), "stickyCols": 1},
+    {"id": "six_high", "title": "六高 · MTD", "range": (77, 86, 2, 16), "stickyCols": 1},
+    {"id": "quality_product_mtd", "title": "优质款 · MTD", "range": (89, 98, 2, 7), "stickyCols": 1},
+    {"id": "quality_product_history", "title": "优质款 · YTD / 历史月份", "range": (100, 109, 2, 37), "stickyCols": 1},
+    {"id": "machine_purchase_mtd", "title": "机采 · MTD", "range": (112, 118, 2, 9), "stickyCols": 1},
+    {"id": "machine_purchase_history", "title": "机采 · YTD / 历史月份", "range": (121, 126, 2, 37), "stickyCols": 1},
+    {"id": "price_power_mtd", "title": "五星价格力 & 大爆款效率 · MTD", "range": (129, 134, 2, 10), "stickyCols": 1},
+    {"id": "price_power_history", "title": "五星价格力 & 大爆款效率 · YTD / 历史月份", "range": (137, 152, 2, 11), "stickyCols": 2},
+]
+
+RATE_KEYWORDS = ("率", "同比", "完成率", "权重", "占比", "折扣", "价指", "价格指数", "指数")
+SCORE_KEYWORDS = ("得分", "分")
+DIFF_KEYWORDS = ("差值", "差距", "pp", "PP", "降幅", "vs", "VS")
+AMOUNT_KEYWORDS = ("销售", "目标", "完成", "同期", "金额", "曝光", "商品数", "数量", "款数", "引进", "未引入", "总计", "APP销售", "外网加总")
+
+
+def excel_date_to_str(val: Any) -> str | None:
+    if val is None:
+        return None
+    if isinstance(val, datetime):
+        return val.strftime("%Y-%m-%d")
+    if isinstance(val, (int, float)):
+        try:
+            return (datetime(1899, 12, 30) + timedelta(days=int(val))).strftime("%Y-%m-%d")
+        except Exception:
+            return str(val)
+    return str(val)
+
+
+def normalize_text(value: Any) -> str:
+    if value is None:
+        return ""
+    text = str(value).strip()
+    if text in {"(NULL)", "NULL", "None", "nan"}:
+        return ""
+    return text.replace("\n", " ")
+
+
+def get_display_raw(value_ws, formula_ws, row: int, col: int):
+    """Return cached value first; fall back to formula/static workbook value."""
+    raw = value_ws.cell(row, col).value
+    if raw is not None and normalize_text(raw) != "":
+        return raw
+    fallback = formula_ws.cell(row, col).value
+    if isinstance(fallback, str) and fallback.startswith("="):
+        return None
+    return fallback
+
+
+def infer_col_context(value_ws, formula_ws, row: int, col: int, section_start_row: int) -> str:
+    parts = []
+    # Pick labels above/current column from the first 3 rows of the section.
+    for r in range(section_start_row, min(section_start_row + 3, row + 1)):
+        val = normalize_text(get_display_raw(value_ws, formula_ws, r, col))
+        if val and val not in parts:
+            parts.append(val)
+    # include nearest left row label for row-based metrics
+    row_label = normalize_text(get_display_raw(value_ws, formula_ws, row, 2))
+    if row_label and row_label not in parts:
+        parts.append(row_label)
+    return " ".join(parts)
+
+
+def should_show_as_percent(context: str, value: float) -> bool:
+    # Excel stores most ratios as 0.x. Keep them as percentages when context says ratio/rate/weight/share.
+    return any(k in context for k in ("率", "权重", "占比", "完成率", "同比")) and -5 <= value <= 5
+
+
+def should_show_as_wan(context: str, value: float) -> bool:
+    if any(k in context for k in RATE_KEYWORDS + SCORE_KEYWORDS + DIFF_KEYWORDS):
+        return False
+    if any(k in context for k in AMOUNT_KEYWORDS):
+        return abs(value) >= 10000
+    # Large raw values are likely amount/count columns; convert for mobile readability.
+    return abs(value) >= 100000
+
+
+def fmt_number(value: float, context: str, number_format: str = "") -> tuple[str, str]:
+    fmt = (number_format or "").lower()
+    if "%" in fmt:
+        decimals = 0
+        if "." in fmt:
+            decimals = len(fmt.split(".", 1)[1].split("%", 1)[0])
+        return f"{value * 100:.{decimals}f}%", "%"
+    if should_show_as_percent(context, value):
+        return f"{value * 100:.1f}%", "%"
+    if should_show_as_wan(context, value):
+        if abs(value) >= 100000000:
+            yi = value / 100000000
+            return f"{yi:,.2f}".rstrip("0").rstrip("."), "亿"
+        wan = value / 10000
+        if abs(wan) >= 100:
+            return f"{wan:,.0f}", "万"
+        return f"{wan:,.1f}", "万"
+    if abs(value) >= 1000 and float(value).is_integer():
+        return f"{value:,.0f}", ""
+    if abs(value) >= 100:
+        return f"{value:,.1f}".rstrip("0").rstrip("."), ""
+    return f"{value:.1f}".rstrip("0").rstrip("."), ""
+
+
+
+_BIN_OPS = {
+    ast.Add: operator.add,
+    ast.Sub: operator.sub,
+    ast.Mult: operator.mul,
+    ast.Div: operator.truediv,
+}
+_UNARY_OPS = {ast.UAdd: operator.pos, ast.USub: operator.neg}
+_CELL_REF_RE = re.compile(r"(?<![A-Za-z0-9_])\$?([A-Z]{1,3})\$?(\d+)(?![A-Za-z0-9_])")
+_RANGE_RE = re.compile(r"\$?[A-Z]{1,3}\$?\d+:\$?[A-Z]{1,3}\$?\d+")
+
+
+def _split_top_level_args(text: str) -> list[str]:
+    args, current, depth, in_quote = [], [], 0, False
+    quote_char = ""
+    for ch in text:
+        if ch in "'\"":
+            if not in_quote:
+                in_quote = True
+                quote_char = ch
+            elif quote_char == ch:
+                in_quote = False
+            current.append(ch)
+            continue
+        if not in_quote:
+            if ch == "(":
+                depth += 1
+            elif ch == ")":
+                depth -= 1
+            elif ch == "," and depth == 0:
+                args.append("".join(current).strip())
+                current = []
+                continue
+        current.append(ch)
+    args.append("".join(current).strip())
+    return args
+
+
+def _safe_eval_arithmetic(expr: str) -> float:
+    tree = ast.parse(expr, mode="eval")
+
+    def ev(node):
+        if isinstance(node, ast.Expression):
+            return ev(node.body)
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.BinOp) and type(node.op) in _BIN_OPS:
+            left = ev(node.left)
+            right = ev(node.right)
+            return _BIN_OPS[type(node.op)](left, right)
+        if isinstance(node, ast.UnaryOp) and type(node.op) in _UNARY_OPS:
+            return _UNARY_OPS[type(node.op)](ev(node.operand))
+        raise ValueError(f"unsupported formula expression: {ast.dump(node)}")
+
+    return float(ev(tree))
+
+
+def _range_sum(value_ws, formula_ws, range_text: str, visited: set[tuple[int, int]]) -> float:
+    min_col, min_row, max_col, max_row = range_boundaries(range_text.replace("$", ""))
+    total = 0.0
+    for rr in range(min_row, max_row + 1):
+        for cc in range(min_col, max_col + 1):
+            val = evaluate_cell_value(value_ws, formula_ws, rr, cc, visited)
+            if isinstance(val, (int, float)):
+                total += float(val)
+    return total
+
+
+def evaluate_formula(value_ws, formula_ws, formula: str, visited: set[tuple[int, int]]):
+    expr = formula.strip()
+    if expr.startswith("="):
+        expr = expr[1:].strip()
+    upper = expr.upper()
+
+    if upper.startswith("IFERROR(") and expr.endswith(")"):
+        inner = expr[8:-1]
+        args = _split_top_level_args(inner)
+        fallback = None
+        if len(args) > 1:
+            fallback = args[1].strip().strip('"').strip("'")
+        try:
+            return evaluate_formula(value_ws, formula_ws, "=" + args[0], visited)
+        except Exception:
+            return fallback if fallback is not None else ""
+
+    # Evaluate SUM ranges first.
+    def sum_repl(match):
+        inner = match.group(1).replace("$", "")
+        return str(_range_sum(value_ws, formula_ws, inner, visited))
+
+    expr = re.sub(r"SUM\(([^()]+)\)", sum_repl, expr, flags=re.IGNORECASE)
+
+    # Replace cell refs with numeric values.
+    def cell_repl(match):
+        col_letters, row_s = match.group(1), match.group(2)
+        rr = int(row_s)
+        cc = column_index_from_string(col_letters)
+        val = evaluate_cell_value(value_ws, formula_ws, rr, cc, visited)
+        if isinstance(val, (int, float)):
+            return str(float(val))
+        if normalize_text(val) in {"", "-"}:
+            return "0"
+        try:
+            return str(float(str(val).replace(",", "")))
+        except Exception:
+            return "0"
+
+    expr = _CELL_REF_RE.sub(cell_repl, expr)
+    # Remove simple Excel absolute markers and spaces.
+    expr = expr.replace("$", "").replace(" ", "")
+    return _safe_eval_arithmetic(expr)
+
+
+def evaluate_cell_value(value_ws, formula_ws, row: int, col: int, visited: set[tuple[int, int]] | None = None):
+    cached = value_ws.cell(row, col).value
+    if cached is not None and normalize_text(cached) != "":
+        return cached
+    formula_or_value = formula_ws.cell(row, col).value
+    if not (isinstance(formula_or_value, str) and formula_or_value.startswith("=")):
+        return formula_or_value
+    visited = visited or set()
+    key = (row, col)
+    if key in visited:
+        return None
+    visited.add(key)
+    try:
+        return evaluate_formula(value_ws, formula_ws, formula_or_value, visited)
+    except Exception:
+        return None
+    finally:
+        visited.discard(key)
+
+def cell_to_view(value_ws, formula_ws, row: int, col: int, section_start_row: int) -> dict[str, Any]:
+    raw = evaluate_cell_value(value_ws, formula_ws, row, col)
+    coord = f"{get_column_letter(col)}{row}"
+    formula = formula_ws.cell(row, col).value
+    formula_text = formula if isinstance(formula, str) and formula.startswith("=") else ""
+    if raw is None or normalize_text(raw) == "":
+        return {"coord": coord, "raw": None, "text": "", "unit": "", "type": "blank", "formula": formula_text}
+    if isinstance(raw, (int, float)):
+        cell = value_ws.cell(row, col)
+        context = infer_col_context(value_ws, formula_ws, row, col, section_start_row)
+        number_format = formula_ws.cell(row, col).number_format or cell.number_format or ""
+        text, unit = fmt_number(float(raw), context, number_format)
+        return {"coord": coord, "raw": raw, "text": text, "unit": unit, "type": "number", "context": context, "numberFormat": number_format, "formula": formula_text}
+    text = normalize_text(raw)
+    return {"coord": coord, "raw": text, "text": text, "unit": "", "type": "text", "formula": formula_text}
+
+
+def build_section(value_ws, formula_ws, spec: dict[str, Any]) -> dict[str, Any]:
+    r1, r2, c1, c2 = spec["range"]
+    rows = []
+    for r in range(r1, r2 + 1):
+        values = [cell_to_view(value_ws, formula_ws, r, c, r1) for c in range(c1, c2 + 1)]
+        # Keep rows that contain at least one visible value.
+        if any(cell["text"] for cell in values):
+            rows.append({"excelRow": r, "cells": values})
+    return {
+        "id": spec["id"],
+        "title": spec["title"],
+        "range": f"{get_column_letter(c1)}{r1}:{get_column_letter(c2)}{r2}",
+        "stickyCols": spec.get("stickyCols", 1),
+        "rows": rows,
+    }
+
+
+def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
+    excel_path = Path(excel_path)
+    value_wb = load_workbook(excel_path, data_only=True)
+    formula_wb = load_workbook(excel_path, data_only=False)
+    value_ws = value_wb["Sheet1"]
+    formula_ws = formula_wb["Sheet1"]
+    data_date = excel_date_to_str(evaluate_cell_value(value_ws, formula_ws, 1, 3))
+    sections = [build_section(value_ws, formula_ws, spec) for spec in SECTION_SPECS]
+    value_wb.close()
+    formula_wb.close()
+    return {
+        "meta": {
+            "title": "精品货价监控数据看板",
+            "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
+            "sourceFile": excel_path.name,
+            "sheet": "Sheet1",
+            "dataDate": data_date,
+            "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        },
+        "sections": sections,
+    }
+
+
+if __name__ == "__main__":
+    import argparse, json
+    parser = argparse.ArgumentParser()
+    parser.add_argument("excel_path")
+    parser.add_argument("--output", required=True)
+    args = parser.parse_args()
+    data = build_excel_view(args.excel_path)
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(out)
