@@ -62,12 +62,30 @@ def normalize_text(value: Any) -> str:
     return text.replace("\n", " ")
 
 
-def get_display_raw(value_ws, formula_ws, row: int, col: int):
-    """Return cached value first; fall back to formula/static workbook value."""
-    raw = value_ws.cell(row, col).value
+def merged_parent(ws, row: int, col: int) -> tuple[int, int] | None:
+    """Return the top-left coordinate of the merged range containing row/col."""
+    for merged in ws.merged_cells.ranges:
+        if merged.min_row <= row <= merged.max_row and merged.min_col <= col <= merged.max_col:
+            return merged.min_row, merged.min_col
+    return None
+
+
+def cell_or_merged_value(ws, row: int, col: int):
+    raw = ws.cell(row, col).value
     if raw is not None and normalize_text(raw) != "":
         return raw
-    fallback = formula_ws.cell(row, col).value
+    parent = merged_parent(ws, row, col)
+    if parent and parent != (row, col):
+        return ws.cell(parent[0], parent[1]).value
+    return raw
+
+
+def get_display_raw(value_ws, formula_ws, row: int, col: int):
+    """Return cached value first; fill merged cells; then fall back to formula/static workbook value."""
+    raw = cell_or_merged_value(value_ws, row, col)
+    if raw is not None and normalize_text(raw) != "":
+        return raw
+    fallback = cell_or_merged_value(formula_ws, row, col)
     if isinstance(fallback, str) and fallback.startswith("="):
         return None
     return fallback
@@ -297,6 +315,11 @@ def evaluate_formula(value_ws, formula_ws, formula: str, visited: set[tuple[int,
 
 
 def evaluate_cell_value(value_ws, formula_ws, row: int, col: int, visited: set[tuple[int, int]] | None = None):
+    # Fill merged cells from their top-left value. This is critical for mobile table views.
+    parent = merged_parent(formula_ws, row, col) or merged_parent(value_ws, row, col)
+    if parent and parent != (row, col):
+        row, col = parent
+
     cached = value_ws.cell(row, col).value
     if cached is not None and normalize_text(cached) != "":
         return cached
