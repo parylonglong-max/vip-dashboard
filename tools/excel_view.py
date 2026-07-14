@@ -210,12 +210,70 @@ def evaluate_formula(value_ws, formula_ws, formula: str, visited: set[tuple[int,
         except Exception:
             return fallback if fallback is not None else ""
 
-    # Evaluate SUM ranges first.
-    def sum_repl(match):
-        inner = match.group(1).replace("$", "")
-        return str(_range_sum(value_ws, formula_ws, inner, visited))
+    if upper.startswith("IF(") and expr.endswith(")"):
+        args = _split_top_level_args(expr[3:-1])
+        if len(args) >= 3:
+            cond = args[0]
+            # Convert Excel comparisons into a Python boolean expression after resolving refs.
+            def cond_ref(match):
+                col_letters, row_s = match.group(1), match.group(2)
+                rr = int(row_s)
+                cc = column_index_from_string(col_letters)
+                val = evaluate_cell_value(value_ws, formula_ws, rr, cc, visited)
+                if isinstance(val, (int, float)):
+                    return str(float(val))
+                try:
+                    return str(float(str(val).replace(",", "")))
+                except Exception:
+                    return "0"
+            cond_expr = _CELL_REF_RE.sub(cond_ref, cond).replace("%", "/100").replace("=", "==")
+            cond_expr = cond_expr.replace(">==", ">=").replace("<==", "<=").replace("!==", "!=")
+            try:
+                branch = args[1] if bool(_safe_eval_arithmetic(cond_expr)) else args[2]
+            except Exception:
+                branch = args[2]
+            return evaluate_formula(value_ws, formula_ws, "=" + branch, visited)
 
-    expr = re.sub(r"SUM\(([^()]+)\)", sum_repl, expr, flags=re.IGNORECASE)
+    # Evaluate aggregate functions. Supports SUM(A1:B2), SUM(A1,B1), AVERAGE(...)
+    def aggregate_repl(match):
+        func = match.group(1).upper()
+        inner = match.group(2)
+        values = []
+        for arg in _split_top_level_args(inner):
+            arg = arg.strip().replace("$", "")
+            if not arg:
+                continue
+            if ":" in arg and _RANGE_RE.fullmatch(arg):
+                min_col, min_row, max_col, max_row = range_boundaries(arg)
+                for rr in range(min_row, max_row + 1):
+                    for cc in range(min_col, max_col + 1):
+                        val = evaluate_cell_value(value_ws, formula_ws, rr, cc, visited)
+                        if isinstance(val, (int, float)):
+                            values.append(float(val))
+            else:
+                try:
+                    values.append(float(evaluate_formula(value_ws, formula_ws, "=" + arg, visited)))
+                except Exception:
+                    val = None
+                    m = _CELL_REF_RE.fullmatch(arg)
+                    if m:
+                        val = evaluate_cell_value(value_ws, formula_ws, int(m.group(2)), column_index_from_string(m.group(1)), visited)
+                    if isinstance(val, (int, float)):
+                        values.append(float(val))
+        if not values:
+            return "0"
+        if func == "SUM":
+            return str(sum(values))
+        if func == "AVERAGE":
+            return str(sum(values) / len(values))
+        return "0"
+
+    # Resolve innermost aggregate calls iteratively.
+    for _ in range(10):
+        new_expr = re.sub(r"(SUM|AVERAGE)\(([^()]+)\)", aggregate_repl, expr, flags=re.IGNORECASE)
+        if new_expr == expr:
+            break
+        expr = new_expr
 
     # Replace cell refs with numeric values.
     def cell_repl(match):
@@ -234,7 +292,7 @@ def evaluate_formula(value_ws, formula_ws, formula: str, visited: set[tuple[int,
 
     expr = _CELL_REF_RE.sub(cell_repl, expr)
     # Remove simple Excel absolute markers and spaces.
-    expr = expr.replace("$", "").replace(" ", "")
+    expr = expr.replace("$", "").replace(" ", "").replace("%", "/100")
     return _safe_eval_arithmetic(expr)
 
 
