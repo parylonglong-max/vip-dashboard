@@ -881,3 +881,6 @@ body {
 
 /* remove all chart icon placeholders */
 .login-card__icon,.navbar__logo{display:none!important;}
+
+.blank-placeholder{color:#94a3b8;font-weight:600;letter-spacing:.02em;}
+.excel-cell.is-blank{background:rgba(148,163,184,.08);}
