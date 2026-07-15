@@ -100,11 +100,14 @@
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 
   function renderGrossProfit(section){
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=27&&row.excelRow<=38;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    var keepRows={27:true,34:true,35:true,36:true,37:true,38:true};
+    var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
     rows=markHeaders(rows,1);
+    var version=(state.data&&state.data.meta&&state.data.meta.versionNote)?state.data.meta.versionNote:'';
     var noteCells=(section.rows||[]).filter(function(row){return row.excelRow===35||row.excelRow===36;}).map(function(row){return row.cells[9]&&row.cells[9].text?row.cells[0].text+'：'+row.cells[9].text:'';}).filter(Boolean);
-    var note='<div class="gross-note"><b>更新备注</b><span>毛利数据由用户单独提供时更新</span>'+(state.data&&state.data.meta&&state.data.meta.versionNote?'<span>'+escapeHtml(state.data.meta.versionNote)+'</span>':'')+noteCells.map(function(n){return '<span>'+escapeHtml(n)+'</span>';}).join('')+'</div>';
-    return '<div class="section-title"><span></span>毛利</div>'+note+renderRows(rows);
+    var title='<div class="section-title gross-title"><span></span><div><b>毛利</b>'+(version?'<em>'+escapeHtml(version)+'</em>':'')+'</div></div>';
+    var note='<div class="gross-note compact"><span>毛利数据由用户单独提供时更新</span>'+noteCells.map(function(n){return '<span>'+escapeHtml(n)+'</span>';}).join('')+'</div>';
+    return title+note+renderRows(rows);
   }
 
   function renderTableSection(section){
@@ -142,7 +145,7 @@
 
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.versionNote || (meta.dataDate?'截止 '+meta.dataDate:'—'); if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():renderGenericPanel(activeTab)))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():renderGenericPanel(activeTab)))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }

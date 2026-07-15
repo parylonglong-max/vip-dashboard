@@ -936,3 +936,11 @@ body {
 .excel-table tr[data-excel-row="36"] .excel-cell{background:#fff7cc!important;}
 .excel-table tr[data-excel-row="37"] .excel-cell,
 .excel-table tr[data-excel-row="38"] .excel-cell{background:#edf4ff!important;font-weight:900;}
+
+/* 2026-07-15 毛利展示收敛：日期只放标题处，表格只展示5-7月/YTD/全年目标 */
+.gross-title{align-items:flex-start!important;}
+.gross-title>div{display:flex;flex-direction:column;gap:2px;}
+.gross-title b{font-size:13px;color:var(--bi-text,#173a62);}
+.gross-title em{font-style:normal;font-size:10px;font-weight:700;color:#7b8fa6;}
+.gross-note.compact{gap:3px;margin-top:-2px;}
+.gross-note.compact span{display:block;}
