@@ -103,11 +103,9 @@
     var keepRows={27:true,34:true,35:true,36:true,37:true,38:true};
     var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
     rows=markHeaders(rows,1);
-    var version=(state.data&&state.data.meta&&state.data.meta.versionNote)?state.data.meta.versionNote:'';
-    var noteCells=(section.rows||[]).filter(function(row){return row.excelRow===35||row.excelRow===36;}).map(function(row){return row.cells[9]&&row.cells[9].text?row.cells[0].text+'：'+row.cells[9].text:'';}).filter(Boolean);
-    var title='<div class="section-title gross-title"><span></span><div><b>毛利</b>'+(version?'<em>'+escapeHtml(version)+'</em>':'')+'</div></div>';
-    var note='<div class="gross-note compact"><span>毛利数据由用户单独提供时更新</span>'+noteCells.map(function(n){return '<span>'+escapeHtml(n)+'</span>';}).join('')+'</div>';
-    return title+note+renderRows(rows);
+    var cutoff='毛利数据截止13号0点';
+    var title='<div class="section-title gross-title"><span></span><div><b>毛利</b><em>'+escapeHtml(cutoff)+'</em></div></div>';
+    return title+renderRows(rows);
   }
 
   function renderTableSection(section){
