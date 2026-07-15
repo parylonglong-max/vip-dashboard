@@ -100,9 +100,9 @@
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 
   function renderGrossProfit(section){
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=27&&row.excelRow<=38;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};});
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=27&&row.excelRow<=38;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
     rows=markHeaders(rows,1);
-    var noteCells=(section.rows||[]).filter(function(row){return row.excelRow===35||row.excelRow===36;}).map(function(row){return row.cells[9]&&row.cells[9].text?row.cells[1].text+'：'+row.cells[9].text:'';}).filter(Boolean);
+    var noteCells=(section.rows||[]).filter(function(row){return row.excelRow===35||row.excelRow===36;}).map(function(row){return row.cells[9]&&row.cells[9].text?row.cells[0].text+'：'+row.cells[9].text:'';}).filter(Boolean);
     var note='<div class="gross-note"><b>更新备注</b><span>毛利数据由用户单独提供时更新</span>'+(state.data&&state.data.meta&&state.data.meta.versionNote?'<span>'+escapeHtml(state.data.meta.versionNote)+'</span>':'')+noteCells.map(function(n){return '<span>'+escapeHtml(n)+'</span>';}).join('')+'</div>';
     return '<div class="section-title"><span></span>毛利</div>'+note+renderRows(rows);
   }
