@@ -99,6 +99,11 @@
   }
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 
+  function renderPricePowerMtd(section){
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=131&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    rows=markHeaders(rows,2);
+    return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows(rows);
+  }
   function renderGrossProfit(section){
     var keepRows={27:true,34:true,35:true,36:true,37:true,38:true};
     var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
@@ -115,7 +120,7 @@
     if(section.id==='six_high') return renderSixHighMtd(section);
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
     if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
-    if(section.id==='price_power_mtd') return renderMtdWithoutTitle(section,'五星价格力 & 大爆款效率 · MTD',131,136,9);
+    if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
     var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
 
   function renderSalesPanel(){ var mtd=getSection('self_sales_mtd'), hist=getSection('self_sales_history'); return salesMtdTableSection(mtd)+renderTableSection(hist); }
