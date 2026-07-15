@@ -21,6 +21,7 @@
 
   var TABS = [
     { id: "sales", label: "自营销售", sectionIds: ["self_sales_mtd", "self_sales_history"] },
+    { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
     { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
     { id: "liugao", label: "六高", sectionIds: ["six_high"] },
@@ -98,8 +99,17 @@
   }
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 
+  function renderGrossProfit(section){
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=27&&row.excelRow<=38;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};});
+    rows=markHeaders(rows,1);
+    var noteCells=(section.rows||[]).filter(function(row){return row.excelRow===35||row.excelRow===36;}).map(function(row){return row.cells[9]&&row.cells[9].text?row.cells[1].text+'：'+row.cells[9].text:'';}).filter(Boolean);
+    var note='<div class="gross-note"><b>更新备注</b><span>毛利数据由用户单独提供时更新</span>'+(state.data&&state.data.meta&&state.data.meta.versionNote?'<span>'+escapeHtml(state.data.meta.versionNote)+'</span>':'')+noteCells.map(function(n){return '<span>'+escapeHtml(n)+'</span>';}).join('')+'</div>';
+    return '<div class="section-title"><span></span>毛利</div>'+note+renderRows(rows);
+  }
+
   function renderTableSection(section){
     if(!section) return "";
+    if(section.id==='gross_profit') return renderGrossProfit(section);
     if(section.id==='price_index_mtd') return renderPriceIndexMtd(section);
     if(section.id==='six_high') return renderSixHighMtd(section);
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
@@ -132,7 +142,7 @@
 
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():renderGenericPanel(activeTab)))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.versionNote || (meta.dataDate?'截止 '+meta.dataDate:'—'); if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():renderGenericPanel(activeTab)))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }

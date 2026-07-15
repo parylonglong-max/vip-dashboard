@@ -917,3 +917,22 @@ body {
   .excel-cell.is-header.is-merged-head { min-width: 92px; }
   .excel-cell { vertical-align: middle; }
 }
+
+/* 2026-07-15 毛利看板 */
+.gross-note{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin:0 0 10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:linear-gradient(145deg,#fff7ed,#fff1f2);
+  border:1px solid rgba(251,146,60,.24);
+  color:#7c2d12;
+  font-size:11px;
+  line-height:1.35;
+}
+.gross-note b{font-size:12px;color:#9a3412;}
+.excel-table tr[data-excel-row="36"] .excel-cell{background:#fff7cc!important;}
+.excel-table tr[data-excel-row="37"] .excel-cell,
+.excel-table tr[data-excel-row="38"] .excel-cell{background:#edf4ff!important;font-weight:900;}

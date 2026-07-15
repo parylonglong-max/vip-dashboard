@@ -22,6 +22,7 @@ from openpyxl.utils import get_column_letter
 SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
     {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
+    {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 38, 2, 11), "stickyCols": 1},
     {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 51, 2, 15), "stickyCols": 1},
     {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
     {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 26), "stickyCols": 1},
@@ -412,6 +413,8 @@ def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
             "sheet": "Sheet1",
             "dataDate": data_date,
             "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "updatedAtHour": datetime.now().strftime("%Y-%m-%d %H点"),
+            "versionNote": f"更新于 {datetime.now().strftime('%Y-%m-%d %H点')}",
         },
         "sections": sections,
     }
