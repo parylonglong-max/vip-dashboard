@@ -80,6 +80,21 @@ def cell_or_merged_value(ws, row: int, col: int):
     return raw
 
 
+def merged_span(ws, row: int, col: int) -> dict[str, Any] | None:
+    """Return merge rendering metadata for frontend table rendering."""
+    for merged in ws.merged_cells.ranges:
+        if merged.min_row <= row <= merged.max_row and merged.min_col <= col <= merged.max_col:
+            if row == merged.min_row and col == merged.min_col:
+                return {
+                    "rowspan": merged.max_row - merged.min_row + 1,
+                    "colspan": merged.max_col - merged.min_col + 1,
+                    "covered": False,
+                    "range": str(merged),
+                }
+            return {"covered": True, "range": str(merged)}
+    return None
+
+
 def get_display_raw(value_ws, formula_ws, row: int, col: int):
     """Return cached value first; fill merged cells; then fall back to formula/static workbook value."""
     raw = cell_or_merged_value(value_ws, row, col)
@@ -343,16 +358,23 @@ def cell_to_view(value_ws, formula_ws, row: int, col: int, section_start_row: in
     coord = f"{get_column_letter(col)}{row}"
     formula = formula_ws.cell(row, col).value
     formula_text = formula if isinstance(formula, str) and formula.startswith("=") else ""
+    merge = merged_span(formula_ws, row, col) or merged_span(value_ws, row, col)
+    base: dict[str, Any] = {"coord": coord, "formula": formula_text}
+    if merge:
+        base["merge"] = merge
     if raw is None or normalize_text(raw) == "":
-        return {"coord": coord, "raw": None, "text": "", "unit": "", "type": "blank", "formula": formula_text}
+        base.update({"raw": None, "text": "", "unit": "", "type": "blank"})
+        return base
     if isinstance(raw, (int, float)):
         cell = value_ws.cell(row, col)
         context = infer_col_context(value_ws, formula_ws, row, col, section_start_row)
         number_format = formula_ws.cell(row, col).number_format or cell.number_format or ""
         text, unit = fmt_number(float(raw), context, number_format)
-        return {"coord": coord, "raw": raw, "text": text, "unit": unit, "type": "number", "context": context, "numberFormat": number_format, "formula": formula_text}
+        base.update({"raw": raw, "text": text, "unit": unit, "type": "number", "context": context, "numberFormat": number_format})
+        return base
     text = normalize_text(raw)
-    return {"coord": coord, "raw": text, "text": text, "unit": "", "type": "text", "formula": formula_text}
+    base.update({"raw": text, "text": text, "unit": "", "type": "text"})
+    return base
 
 
 def build_section(value_ws, formula_ws, spec: dict[str, Any]) -> dict[str, Any]:

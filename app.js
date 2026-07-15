@@ -70,27 +70,50 @@
   }
   function progressCard(label, rate, actual, target){ var pct=clamp((rate||0)*100,0,120); var cls=(rate>=1?'good':rate<0.8?'bad':'normal'); return '<div class="rate-card '+cls+'"><div class="rate-card__head"><b>'+escapeHtml(label)+'</b><span>'+((rate==null||isNaN(rate))?'—':(rate*100).toFixed(1)+'%')+'</span></div><div class="rate-card__bar"><i style="width:'+pct+'%"></i></div><div class="rate-card__money">'+escapeHtml(actual)+' / '+escapeHtml(target)+'</div></div>'; }
 
-  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
+  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
   function renderEnhancedContent(cell){ if(!cell||!cell.text) return '<span class="blank-placeholder">—</span>'; var ctx=cell.context||""; var raw=parseNum(cell); var text=escapeHtml(cell.text); var unit=cell.unit&&cell.unit!=="%"?'<small>'+escapeHtml(cell.unit)+'</small>':""; if(/同比/.test(ctx)&&raw!=null){ var status=raw>=0?"up":"down"; return '<span class="yoy-pill '+status+'">'+(raw>=0?'↑':'↓')+' '+text+'</span>'; } if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)&&raw!=null&&cell.unit==="%"){ var pct=raw>2?raw:raw*100; var cls=pct>=100?"good":pct<80?"bad":"normal"; return '<div class="progress-cell '+cls+'"><span>'+text+'</span><div class="mini-progress"><i style="width:'+clamp(pct,0,120)+'%"></i></div></div>'; } return text+unit; }
-  function renderCell(cell,rowIndex,colIndex){ var title=cell&&cell.coord&&cell.text?' title="'+escapeHtml(cell.coord+' '+(cell.raw==null?'':cell.raw))+'"':""; return '<td class="'+cellClass(cell,rowIndex,colIndex)+'"'+title+'>'+renderEnhancedContent(cell)+'</td>'; }
+  function renderCell(cell,rowIndex,colIndex){ if(cell&&cell.merge&&cell.merge.covered) return ''; var title=cell&&cell.coord&&cell.text?' title="'+escapeHtml(cell.coord+' '+(cell.raw==null?'':cell.raw))+'"':""; var span=''; if(cell&&cell.merge&&cell.merge.rowspan>1) span+=' rowspan="'+cell.merge.rowspan+'"'; if(cell&&cell.merge&&cell.merge.colspan>1) span+=' colspan="'+cell.merge.colspan+'"'; return '<td class="'+cellClass(cell,rowIndex,colIndex)+'"'+title+span+'>'+renderEnhancedContent(cell)+'</td>'; }
 
-  function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text"};})}; }
+  function markHeaders(rows, count){ return (rows||[]).map(function(row,idx){ if(idx<count){ row={excelRow:row.excelRow,cells:(row.cells||[]).map(function(cell){ var c=Object.assign({},cell); c.header=true; return c; })}; } return row; }); }
+  function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text",header:true};})}; }
   function renderRows(rows){ var html='<div class="excel-scroll"><table class="excel-table">'; rows.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
 
-  function salesMtdTableSection(section){ var headers=["小组","月度目标","月度完成","月完成率","同期","业绩同比","部门阶段目标","阶段完成率","小组阶段目标","阶段完成率"]; var rows=(section.rows||[]).filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows([headerRow(headers)].concat(rows)); }
+  function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
 
-  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var rows=(section.rows||[]).filter(function(row){return row.excelRow>=cfg.rowStart&&row.excelRow<=cfg.rowEnd;}).map(function(row){return {excelRow:row.excelRow,cells:idx.map(function(i){return row.cells[i]||{text:"",type:"blank"};})};}); return [headerRow(cfg.headers(period))].concat(rows); }
-  function pricePowerPeriodRows(section, period){ var rows=(section.rows||[]).filter(function(row){ if(period==='YTD') return row.excelRow>=139&&row.excelRow<=140; return row.excelRow>=141&&row.excelRow<=152; }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); return [headerRow(PERIOD_CONFIG.price_power_history.headers(period))].concat(rows); }
+  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){return {excelRow:row.excelRow,cells:idx.map(function(i){return row.cells[i]||{text:"",type:"blank"};})};}); return markHeaders(rows,2); }
+  function pricePowerPeriodRows(section, period){ var rows=(section.rows||[]).filter(function(row){ if(row.excelRow===137||row.excelRow===138) return true; if(period==='YTD') return row.excelRow>=139&&row.excelRow<=140; return row.excelRow>=141&&row.excelRow<=152; }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); return markHeaders(rows,2); }
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
-  function renderTableSection(section){ if(!section) return ""; var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
+  function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
+  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=51;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,14)};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows); }
+  function renderSixHighMtd(section){
+    var headers=["小组","款数目标","六高占比","天猫价指","天猫目标","vs天猫目标","抖音价指","抖音目标","vs抖音目标","折扣率","折扣目标","vs目标","动销率","动销目标","vs目标6.1%"];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=80&&row.excelRow<=86;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,15)};});
+    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+  }
+  function renderQualityMtd(section){
+    var headers=["小组","已引进","未引进","暂不引进","总计","引入率（目标50%）"];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=92&&row.excelRow<=98;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,6)};});
+    return '<div class="section-title"><span></span>优质款 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+  }
+  function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
+
+  function renderTableSection(section){
+    if(!section) return "";
+    if(section.id==='price_index_mtd') return renderPriceIndexMtd(section);
+    if(section.id==='six_high') return renderSixHighMtd(section);
+    if(section.id==='quality_product_mtd') return renderQualityMtd(section);
+    if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
+    if(section.id==='price_power_mtd') return renderMtdWithoutTitle(section,'五星价格力 & 大爆款效率 · MTD',131,136,9);
+    var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
 
   function renderSalesPanel(){ var mtd=getSection('self_sales_mtd'), hist=getSection('self_sales_history'); return salesMtdTableSection(mtd)+renderTableSection(hist); }
   function discountRows(section, period){
     var cfg=PERIOD_CONFIG.internal_discount;
     var idx=cfg.periods[period] || cfg.periods.MTD;
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=cfg.rowStart&&row.excelRow<=cfg.rowEnd;}).map(function(row){return {excelRow:row.excelRow,cells:idx.map(function(i){return row.cells[i]||{text:'',type:'blank'};})};});
-    return [headerRow(cfg.headers(period))].concat(rows);
+    var startHeader=Math.max(0,cfg.rowStart-2);
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){return {excelRow:row.excelRow,cells:idx.map(function(i){return row.cells[i]||{text:'',type:'blank'};})};});
+    return markHeaders(rows,2);
   }
 
   function renderDiscountPanel(){
