@@ -2,12 +2,12 @@
   "meta": {
     "title": "精品货价监控数据看板",
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
-    "sourceFile": "货价监控指标副本-26.07.16_机采MTD_修正v2.xlsx",
+    "sourceFile": "货价监控指标副本-26.07.16_五星价格力_修正.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-07-16",
-    "generatedAt": "2026-07-16 14:52:32",
-    "updatedAtHour": "2026-07-16 14点",
-    "versionNote": "更新于 2026-07-16 14点"
+    "generatedAt": "2026-07-16 15:20:19",
+    "updatedAtHour": "2026-07-16 15点",
+    "versionNote": "更新于 2026-07-16 15点"
   },
   "sections": [
     {
@@ -26032,8 +26032,8 @@
             {
               "coord": "C133",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.215072,
+              "text": "21.5%",
               "unit": "%",
               "type": "number",
               "context": "商品占比 四五星",
@@ -26042,8 +26042,8 @@
             {
               "coord": "D133",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.33801,
+              "text": "33.8%",
               "unit": "%",
               "type": "number",
               "context": "商品占比 四五星",
@@ -26051,17 +26051,19 @@
             },
             {
               "coord": "E133",
-              "formula": "=D133/C133",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 1.571614,
+              "text": "157.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "APP销售占比/ APP曝光占比 四五星",
+              "numberFormat": "0.00"
             },
             {
               "coord": "F133",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 2.037636278655495,
+              "text": "203.8%",
               "unit": "%",
               "type": "number",
               "context": "APP销售占比/ APP曝光占比 四五星",
@@ -26069,9 +26071,9 @@
             },
             {
               "coord": "G133",
-              "formula": "=E133-F133",
-              "raw": 0.0,
-              "text": "0.0%",
+              "formula": "",
+              "raw": -0.466022,
+              "text": "-46.6%",
               "unit": "%",
               "type": "number",
               "context": "APP销售占比/ APP曝光占比 四五星",
@@ -26079,11 +26081,13 @@
             },
             {
               "coord": "H133",
-              "formula": "=E133/F133",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.771293,
+              "text": "77.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "APP销售占比/ APP曝光占比 四五星",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "I133",
@@ -26140,8 +26144,8 @@
             },
             {
               "coord": "E134",
-              "formula": "=D134/C134",
-              "raw": 4.507462686567164,
+              "formula": "",
+              "raw": 4.507463,
               "text": "450.7%",
               "unit": "%",
               "type": "number",
@@ -26160,8 +26164,8 @@
             },
             {
               "coord": "G134",
-              "formula": "=E134-F134",
-              "raw": 1.6013626865671644,
+              "formula": "",
+              "raw": 1.601363,
               "text": "160.1%",
               "unit": "%",
               "type": "number",
@@ -26170,8 +26174,8 @@
             },
             {
               "coord": "H134",
-              "formula": "=E134/F134",
-              "raw": 1.5510349563219312,
+              "formula": "",
+              "raw": 1.551035,
               "text": "155.1%",
               "unit": "%",
               "type": "number",
