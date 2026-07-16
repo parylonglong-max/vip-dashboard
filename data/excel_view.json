@@ -2,12 +2,12 @@
   "meta": {
     "title": "精品货价监控数据看板",
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
-    "sourceFile": "货价监控指标副本-26.07.15_邮箱附件全流程更新_机采毛利更新.xlsx",
+    "sourceFile": "货价监控指标副本-26.07.16_毛利更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-07-15",
-    "generatedAt": "2026-07-15 11:11:17",
-    "updatedAtHour": "2026-07-15 11点",
-    "versionNote": "更新于 2026-07-15 11点"
+    "generatedAt": "2026-07-16 09:56:17",
+    "updatedAtHour": "2026-07-16 09点",
+    "versionNote": "更新于 2026-07-16 09点"
   },
   "sections": [
     {
@@ -5190,8 +5190,8 @@
             {
               "coord": "C35",
               "formula": "",
-              "raw": 401017967.9744362,
-              "text": "4.01",
+              "raw": 400099823.8179032,
+              "text": "4",
               "unit": "亿",
               "type": "number",
               "context": "实收 555622780.1328487 6月",
@@ -5200,8 +5200,8 @@
             {
               "coord": "D35",
               "formula": "",
-              "raw": 266882255.703103,
-              "text": "2.67",
+              "raw": 264735399.3403789,
+              "text": "2.65",
               "unit": "亿",
               "type": "number",
               "context": "净收入 (毛利口径) 396706641.059715 6月",
@@ -5210,8 +5210,8 @@
             {
               "coord": "E35",
               "formula": "=D35*F35",
-              "raw": 53963097.79121696,
-              "text": "5,396",
+              "raw": 54008495.15502305,
+              "text": "5,401",
               "unit": "万",
               "type": "number",
               "context": "毛利值 6月",
@@ -5220,8 +5220,8 @@
             {
               "coord": "F35",
               "formula": "",
-              "raw": 0.202198147827591,
-              "text": "20.22%",
+              "raw": 0.2040093440076088,
+              "text": "20.40%",
               "unit": "%",
               "type": "number",
               "context": "商务考核毛利率 0.182220718877206 6月",
@@ -5240,8 +5240,8 @@
             {
               "coord": "H35",
               "formula": "=F35-G35",
-              "raw": -0.006949442872409006,
-              "text": "-0.69%",
+              "raw": -0.005138246692391185,
+              "text": "-0.51%",
               "unit": "%",
               "type": "number",
               "context": "落差 6月",
@@ -5250,8 +5250,8 @@
             {
               "coord": "I35",
               "formula": "=F35/G35",
-              "raw": 0.9667725415858257,
-              "text": "96.7%",
+              "raw": 0.9754324366099849,
+              "text": "97.5%",
               "unit": "%",
               "type": "number",
               "context": "完成率 6月",
@@ -5260,8 +5260,8 @@
             {
               "coord": "J35",
               "formula": "=D35*H35",
-              "raw": -1854682.989668367,
-              "text": "-185",
+              "raw": -1360275.7900195615,
+              "text": "-136",
               "unit": "万",
               "type": "number",
               "context": "毛利盈余/缺口 6月",
@@ -5269,208 +5269,6 @@
             },
             {
               "coord": "K35",
-              "formula": "",
-              "raw": "待15号更新最终",
-              "text": "待15号更新最终",
-              "unit": "",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "excelRow": 36,
-          "cells": [
-            {
-              "coord": "B36",
-              "formula": "",
-              "raw": "7月MTD",
-              "text": "7月MTD",
-              "unit": "",
-              "type": "text"
-            },
-            {
-              "coord": "C36",
-              "formula": "",
-              "raw": 139555019.522971,
-              "text": "1.4",
-              "unit": "亿",
-              "type": "number",
-              "context": "实收 555622780.1328487 7月MTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "D36",
-              "formula": "",
-              "raw": 94626317.035368,
-              "text": "9,463",
-              "unit": "万",
-              "type": "number",
-              "context": "净收入 (毛利口径) 396706641.059715 7月MTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "E36",
-              "formula": "=D36*F36",
-              "raw": 18895322.040171374,
-              "text": "1,890",
-              "unit": "万",
-              "type": "number",
-              "context": "毛利值 7月MTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "F36",
-              "formula": "",
-              "raw": 0.1996835830893531,
-              "text": "19.97%",
-              "unit": "%",
-              "type": "number",
-              "context": "商务考核毛利率 0.182220718877206 7月MTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "G36",
-              "formula": "",
-              "raw": 0.208874994,
-              "text": "20.89%",
-              "unit": "%",
-              "type": "number",
-              "context": "毛利率目标 0.1909413295 7月MTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "H36",
-              "formula": "=F36-G36",
-              "raw": -0.009191410910646902,
-              "text": "-0.92%",
-              "unit": "%",
-              "type": "number",
-              "context": "落差 7月MTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "I36",
-              "formula": "=F36/G36",
-              "raw": 0.95599563770354,
-              "text": "95.6%",
-              "unit": "%",
-              "type": "number",
-              "context": "完成率 7月MTD",
-              "numberFormat": "0.0%"
-            },
-            {
-              "coord": "J36",
-              "formula": "=D36*H36",
-              "raw": -869749.3628332142,
-              "text": "-87.0",
-              "unit": "万",
-              "type": "number",
-              "context": "毛利盈余/缺口 7月MTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "K36",
-              "formula": "",
-              "raw": "截止13号0点",
-              "text": "截止13号0点",
-              "unit": "",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "excelRow": 37,
-          "cells": [
-            {
-              "coord": "B37",
-              "formula": "",
-              "raw": "YTD",
-              "text": "YTD",
-              "unit": "",
-              "type": "text"
-            },
-            {
-              "coord": "C37",
-              "formula": "=C34+C35+C36",
-              "raw": 2986246565.9387674,
-              "text": "29.86",
-              "unit": "亿",
-              "type": "number",
-              "context": "实收 555622780.1328487 YTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "D37",
-              "formula": "=D34+D35+D36",
-              "raw": 2083470133.439179,
-              "text": "20.83",
-              "unit": "亿",
-              "type": "number",
-              "context": "净收入 (毛利口径) 396706641.059715 YTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "E37",
-              "formula": "=E34+E35+E36",
-              "raw": 402292269.6029943,
-              "text": "4.02",
-              "unit": "亿",
-              "type": "number",
-              "context": "毛利值 YTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "F37",
-              "formula": "=E37/D37",
-              "raw": 0.19308761049477174,
-              "text": "19.31%",
-              "unit": "%",
-              "type": "number",
-              "context": "商务考核毛利率 0.182220718877206 YTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "G37",
-              "formula": "=F37-(J37/D37)",
-              "raw": 0.19426292324239197,
-              "text": "19.43%",
-              "unit": "%",
-              "type": "number",
-              "context": "毛利率目标 0.1909413295 YTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "H37",
-              "formula": "=F37-G37",
-              "raw": -0.0011753127476202274,
-              "text": "-0.12%",
-              "unit": "%",
-              "type": "number",
-              "context": "落差 YTD",
-              "numberFormat": "0.00%"
-            },
-            {
-              "coord": "I37",
-              "formula": "=F37/G37",
-              "raw": 0.9939498864322466,
-              "text": "99.4%",
-              "unit": "%",
-              "type": "number",
-              "context": "完成率 YTD",
-              "numberFormat": "0.0%"
-            },
-            {
-              "coord": "J37",
-              "formula": "=SUM(J34:J36)",
-              "raw": -2448729.0071170777,
-              "text": "-245",
-              "unit": "万",
-              "type": "number",
-              "context": "毛利盈余/缺口 YTD",
-              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
-            },
-            {
-              "coord": "K37",
               "formula": "",
               "raw": null,
               "text": "",
@@ -5480,94 +5278,296 @@
           ]
         },
         {
+          "excelRow": 36,
+          "cells": [
+            {
+              "coord": "B36",
+              "formula": "",
+              "raw": "6月YTD",
+              "text": "6月YTD",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "C36",
+              "formula": "=C34+C35",
+              "raw": 2845773402.259263,
+              "text": "28.46",
+              "unit": "亿",
+              "type": "number",
+              "context": "实收 555622780.1328487 6月YTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "D36",
+              "formula": "=D34+D35",
+              "raw": 1986696960.041087,
+              "text": "19.87",
+              "unit": "亿",
+              "type": "number",
+              "context": "净收入 (毛利口径) 396706641.059715 6月YTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "E36",
+              "formula": "=E34+E35",
+              "raw": 383442344.926629,
+              "text": "3.83",
+              "unit": "亿",
+              "type": "number",
+              "context": "毛利值 6月YTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "F36",
+              "formula": "=E36/D36",
+              "raw": 0.19300494873596577,
+              "text": "19.30%",
+              "unit": "%",
+              "type": "number",
+              "context": "商务考核毛利率 0.182220718877206 6月YTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "G36",
+              "formula": "",
+              "raw": 0.1935933117580375,
+              "text": "19.36%",
+              "unit": "%",
+              "type": "number",
+              "context": "毛利率目标 0.1909413295 6月YTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "H36",
+              "formula": "=F36-G36",
+              "raw": -0.0005883630220717417,
+              "text": "-0.06%",
+              "unit": "%",
+              "type": "number",
+              "context": "落差 6月YTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "I36",
+              "formula": "=F36/G36",
+              "raw": 0.9969608298100344,
+              "text": "99.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 6月YTD",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "J36",
+              "formula": "=D36*H36",
+              "raw": -1168899.0273505163,
+              "text": "-117",
+              "unit": "万",
+              "type": "number",
+              "context": "毛利盈余/缺口 6月YTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "K36",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            }
+          ]
+        },
+        {
+          "excelRow": 37,
+          "cells": [
+            {
+              "coord": "B37",
+              "formula": "",
+              "raw": "7月MTD",
+              "text": "7月MTD",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "C37",
+              "formula": "",
+              "raw": 139555019.522971,
+              "text": "1.4",
+              "unit": "亿",
+              "type": "number",
+              "context": "实收 555622780.1328487 7月MTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "D37",
+              "formula": "",
+              "raw": 94626317.035368,
+              "text": "9,463",
+              "unit": "万",
+              "type": "number",
+              "context": "净收入 (毛利口径) 396706641.059715 7月MTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "E37",
+              "formula": "=D37*F37",
+              "raw": 18895322.040171374,
+              "text": "1,890",
+              "unit": "万",
+              "type": "number",
+              "context": "毛利值 7月MTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "F37",
+              "formula": "",
+              "raw": 0.1996835830893531,
+              "text": "19.97%",
+              "unit": "%",
+              "type": "number",
+              "context": "商务考核毛利率 0.182220718877206 7月MTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "G37",
+              "formula": "",
+              "raw": 0.208874994,
+              "text": "20.89%",
+              "unit": "%",
+              "type": "number",
+              "context": "毛利率目标 0.1909413295 7月MTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "H37",
+              "formula": "=F37-G37",
+              "raw": -0.009191410910646902,
+              "text": "-0.92%",
+              "unit": "%",
+              "type": "number",
+              "context": "落差 7月MTD",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "I37",
+              "formula": "=F37/G37",
+              "raw": 0.95599563770354,
+              "text": "95.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 7月MTD",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "J37",
+              "formula": "=D37*H37",
+              "raw": -869749.3628332142,
+              "text": "-87.0",
+              "unit": "万",
+              "type": "number",
+              "context": "毛利盈余/缺口 7月MTD",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "K37",
+              "formula": "",
+              "raw": "截止13号0点",
+              "text": "截止13号0点",
+              "unit": "",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "excelRow": 38,
           "cells": [
             {
               "coord": "B38",
               "formula": "",
-              "raw": "全年目标",
-              "text": "全年目标",
+              "raw": "YTD",
+              "text": "YTD",
               "unit": "",
               "type": "text"
             },
             {
               "coord": "C38",
-              "formula": "=C37",
-              "raw": 2986246565.9387674,
-              "text": "29.86",
+              "formula": "=C36+C37",
+              "raw": 2985328421.782234,
+              "text": "29.85",
               "unit": "亿",
               "type": "number",
-              "context": "实收 555622780.1328487 全年目标",
+              "context": "实收 555622780.1328487 YTD",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "D38",
-              "formula": "=D37",
-              "raw": 2083470133.439179,
-              "text": "20.83",
+              "formula": "=D36+D37",
+              "raw": 2081323277.0764549,
+              "text": "20.81",
               "unit": "亿",
               "type": "number",
-              "context": "净收入 (毛利口径) 396706641.059715 全年目标",
+              "context": "净收入 (毛利口径) 396706641.059715 YTD",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "E38",
-              "formula": "=E37",
-              "raw": 402292269.6029943,
+              "formula": "=E36+E37",
+              "raw": 402337666.9668004,
               "text": "4.02",
               "unit": "亿",
               "type": "number",
-              "context": "毛利值 全年目标",
+              "context": "毛利值 YTD",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "F38",
-              "formula": "=F37",
-              "raw": 0.19308761049477174,
-              "text": "19.31%",
+              "formula": "=E38/D38",
+              "raw": 0.19330858949117544,
+              "text": "19.33%",
               "unit": "%",
               "type": "number",
-              "context": "商务考核毛利率 0.182220718877206 全年目标",
+              "context": "商务考核毛利率 0.182220718877206 YTD",
               "numberFormat": "0.00%"
             },
             {
               "coord": "G38",
-              "formula": "",
-              "raw": 0.1914701443277041,
-              "text": "19.15%",
+              "formula": "=F38-(J38/D38)",
+              "raw": 0.19480918330532132,
+              "text": "19.48%",
               "unit": "%",
               "type": "number",
-              "context": "毛利率目标 0.1909413295 全年目标",
+              "context": "毛利率目标 0.1909413295 YTD",
               "numberFormat": "0.00%"
             },
             {
               "coord": "H38",
               "formula": "=F38-G38",
-              "raw": 0.0016174661670676493,
-              "text": "0.16%",
+              "raw": -0.001500593814145884,
+              "text": "-0.15%",
               "unit": "%",
               "type": "number",
-              "context": "落差 全年目标",
+              "context": "落差 YTD",
               "numberFormat": "0.00%"
             },
             {
               "coord": "I38",
               "formula": "=F38/G38",
-              "raw": 1.0084476155420834,
-              "text": "100.8%",
+              "raw": 0.9922971094653478,
+              "text": "99.2%",
               "unit": "%",
               "type": "number",
-              "context": "完成率 全年目标",
+              "context": "完成率 YTD",
               "numberFormat": "0.0%"
             },
             {
               "coord": "J38",
-              "formula": "=D38*H38",
-              "raw": 3369942.4509337926,
-              "text": "337",
+              "formula": "=SUM(J34:J37)",
+              "raw": -3123220.834818789,
+              "text": "-312",
               "unit": "万",
               "type": "number",
-              "context": "毛利盈余/缺口 全年目标",
+              "context": "毛利盈余/缺口 YTD",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
