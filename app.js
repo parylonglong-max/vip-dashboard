@@ -102,7 +102,7 @@
 
   function renderPricePowerMtd(section){
     var headers=["小组","商品占比-曝光","商品占比-APP销售","APP占比-实际","APP占比-目标","APP占比-VS目标差距","APP占比-完成率","曝光","APP销售"];
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=132&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=133&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
     return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
   }
   function renderTrafficPanel(){
