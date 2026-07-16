@@ -105,7 +105,7 @@
     return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows(rows);
   }
   function renderGrossProfit(section){
-    var keepRows={27:true,34:true,35:true,36:true,37:true,38:true};
+    var keepRows={27:true,34:true,35:true,37:true,38:true};
     var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
     rows=markHeaders(rows,1);
     var cutoff='毛利数据截止13号0点';
