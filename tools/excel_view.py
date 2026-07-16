@@ -481,14 +481,53 @@ def cell_to_view(value_ws, formula_ws, row: int, col: int, section_start_row: in
     return base
 
 
+def should_hide_row(section_id: str, first_text: str, non_blank: int, row_index: int) -> bool:
+    """只隐藏龙哥截图框选确认的冗余行；不要泛化误删。"""
+    # 图片1：外网价指 MTD 的 MTD 标记行；外网价指历史的“历史月份得分”行
+    if section_id == "price_index_mtd" and first_text == "MTD" and non_blank <= 2:
+        return True
+    if section_id == "price_index_history" and first_text == "历史月份得分" and non_blank <= 2:
+        return True
+
+    # 图片2：内网折扣模块标题行
+    if section_id == "internal_discount" and first_text == "内网折扣" and non_blank <= 2:
+        return True
+
+    # 图片3：六高 MTD 中截图框选的“小组”表头行
+    if section_id == "six_high" and first_text == "小组" and row_index == 2:
+        return True
+
+    # 图片4：优质款 MTD 中截图框选的“小组”表头行；优质款历史的“历史月份”行
+    if section_id == "quality_product_mtd" and first_text == "小组" and row_index == 2:
+        return True
+    if section_id == "quality_product_history" and first_text == "历史月份" and non_blank <= 2:
+        return True
+
+    # 图片5：机采 MTD 的 MTD+链接行；机采历史的“历史月份完成”行
+    if section_id == "machine_purchase_mtd" and first_text == "MTD" and non_blank <= 2:
+        return True
+    if section_id == "machine_purchase_history" and first_text == "历史月份完成" and non_blank <= 2:
+        return True
+
+    return False
+
+
 def build_section(value_ws, formula_ws, spec: dict[str, Any]) -> dict[str, Any]:
     r1, r2, c1, c2 = spec["range"]
     rows = []
+    visible_index = 0
     for r in range(r1, r2 + 1):
         values = [cell_to_view(value_ws, formula_ws, r, c, r1) for c in range(c1, c2 + 1)]
         # Keep rows that contain at least one visible value.
-        if any(cell["text"] for cell in values):
-            rows.append({"excelRow": r, "cells": values})
+        if not any(cell["text"] for cell in values):
+            continue
+        non_blank = sum(1 for cell in values if cell.get("text", "").strip())
+        first_text = (values[0].get("text", "") or "").strip()
+        if should_hide_row(spec["id"], first_text, non_blank, visible_index):
+            visible_index += 1
+            continue
+        rows.append({"excelRow": r, "cells": values})
+        visible_index += 1
     return {
         "id": spec["id"],
         "title": spec["title"],
