@@ -505,6 +505,9 @@ body {
 .data-table tr:last-child td {
   border-bottom: none;
 }
+.positive { color: var(--up); font-weight: 600; }
+.negative { color: var(--down); font-weight: 600; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
 /* ---------- 状态标签 ---------- */
 .status-up {

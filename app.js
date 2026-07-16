@@ -28,6 +28,7 @@
     { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd", "quality_product_history"] },
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
+    { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
   ];
 
   var PERIOD_CONFIG = {
@@ -45,7 +46,7 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; renderDashboard(); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; renderDashboard(); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
+  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(td){state.trafficData=td;}).catch(function(){}).then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(td){state.trafficData=td;}).catch(function(){}).then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function parseNum(cell){ if(!cell) return null; var v=cell.raw; if(typeof v==="number") return v; var n=Number(v); return isNaN(n)?null:n; }
@@ -100,9 +101,39 @@
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 
   function renderPricePowerMtd(section){
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=131&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
-    rows=markHeaders(rows,2);
-    return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows(rows);
+    var headers=["小组","商品占比-曝光","商品占比-APP销售","APP占比-实际","APP占比-目标","APP占比-VS目标差距","APP占比-完成率","曝光","APP销售"];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=132&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+  }
+  function renderTrafficPanel(){
+    var data=state.trafficData;
+    if(!data) return '<div class="loading">暂无流量数据</div>';
+    var html='';
+    function fmt(n){ if(n==null) return '—'; if(n>=1e8) return (n/1e8).toFixed(2)+'亿'; if(n>=1e4) return (n/1e4).toFixed(0)+'万'; return n.toString(); }
+    function fmtYoy(y){ if(y==null) return '—'; var s=(y>0?'+':'')+y.toFixed(2)+'%'; return s; }
+    function yoyColor(y){ if(y==null) return ''; return y>=0?'positive':'negative'; }
+    function renderTable(title, items){
+      var h='<div class="section-title"><span></span>'+escapeHtml(title)+'</div>';
+      h+='<div class="table-scroll"><table class="data-table"><thead><tr>';
+      h+='<th>小组</th><th>曝光流量</th><th>曝光同比</th><th>商详UV</th><th>UV同比</th>';
+      h+='</tr></thead><tbody>';
+      items.forEach(function(it){
+        h+='<tr><td>'+escapeHtml(it.group)+'</td>';
+        h+='<td>'+fmt(it.exposureTraffic)+'</td>';
+        h+='<td class="'+yoyColor(it.exposureTrafficYoy)+'">'+fmtYoy(it.exposureTrafficYoy)+'</td>';
+        h+='<td>'+fmt(it.detailUv)+'</td>';
+        h+='<td class="'+yoyColor(it.detailUvYoy)+'">'+fmtYoy(it.detailUvYoy)+'</td>';
+        h+='</tr>';
+      });
+      h+='</tbody></table></div>';
+      return h;
+    }
+    var mainGroups=data.mtd?data.mtd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
+    var ytdGroups=data.ytd?data.ytd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
+    html+=renderTable('曝光流量 & 商详UV · MTD（7.1-7.14）', mainGroups);
+    html+=renderTable('曝光流量 & 商详UV · YTD（1.1-7.14）', ytdGroups);
+    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：ONEDP中台智能体API · 曝光流量=impressionFlow（跨商品累加值）</div>';
+    return html;
   }
   function renderGrossProfit(section){
     var keepRows={27:true,34:true,35:true,37:true,38:true};
@@ -121,6 +152,7 @@
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
     if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
     if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
+    if(section.id==='traffic') return renderTrafficPanel();
     var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
 
   function renderSalesPanel(){ var mtd=getSection('self_sales_mtd'), hist=getSection('self_sales_history'); return salesMtdTableSection(mtd)+renderTableSection(hist); }
@@ -148,7 +180,7 @@
 
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():renderGenericPanel(activeTab)))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():renderGenericPanel(activeTab))))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }
