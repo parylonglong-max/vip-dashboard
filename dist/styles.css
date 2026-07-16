@@ -1,0 +1,949 @@
+/* ============================================
+   精品货价监控数据看板 — 蓝白拟态风样式
+   ============================================ */
+
+/* ---------- 变量 ---------- */
+:root {
+  /* 主色板 */
+  --bg: #e8eef5;
+  --bg-gradient: linear-gradient(135deg, #e8eef5 0%, #dce6f0 100%);
+  --surface: #ffffff;
+  --surface-soft: #f0f5fa;
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --primary-soft: rgba(59, 130, 246, 0.08);
+
+  /* 文字色 */
+  --text: #1e3a5f;
+  --text-secondary: #5a7a9b;
+  --text-muted: #8aa5c1;
+
+  /* 状态色 */
+  --up: #10b981;
+  --up-soft: rgba(16, 185, 129, 0.12);
+  --down: #ef4444;
+  --down-soft: rgba(239, 68, 68, 0.12);
+  --neutral: #64748b;
+  --neutral-soft: rgba(100, 116, 139, 0.12);
+  --warning: #2563eb;
+  --warning-soft: rgba(37, 99, 235, 0.12);
+
+  /* 拟态阴影 */
+  --shadow-out: 8px 8px 20px rgba(163, 190, 220, 0.4),
+                -8px -8px 20px rgba(255, 255, 255, 0.9);
+  --shadow-out-sm: 4px 4px 10px rgba(163, 190, 220, 0.35),
+                   -4px -4px 10px rgba(255, 255, 255, 0.85);
+  --shadow-in: inset 4px 4px 10px rgba(163, 190, 220, 0.35),
+               inset -4px -4px 10px rgba(255, 255, 255, 0.85);
+  --shadow-in-sm: inset 2px 2px 6px rgba(163, 190, 220, 0.3),
+                  inset -2px -2px 6px rgba(255, 255, 255, 0.8);
+
+  /* 圆角 */
+  --r-lg: 20px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --r-xs: 8px;
+
+  /* 间距 */
+  --gap: 16px;
+  --gap-sm: 10px;
+  --gap-xs: 6px;
+
+  /* 字号 */
+  --fs-title: 22px;
+  --fs-h1: 20px;
+  --fs-h2: 17px;
+  --fs-body: 14px;
+  --fs-small: 12px;
+  --fs-xs: 11px;
+
+  /* 过渡 */
+  --transition: 0.25s ease;
+}
+
+/* ---------- 重置 ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   登录页
+   ============================================ */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-card {
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-out);
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.login-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: var(--bg);
+  border-radius: 50%;
+  box-shadow: var(--shadow-out-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.login-card__title {
+  font-size: var(--fs-title);
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.login-card__subtitle {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.login-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-card__input-wrap {
+  position: relative;
+}
+
+.login-card__input {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: var(--r-md);
+  background: var(--bg);
+  box-shadow: var(--shadow-in-sm);
+  font-size: var(--fs-body);
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.login-card__input::placeholder {
+  color: var(--text-muted);
+}
+
+.login-card__input:focus {
+  box-shadow: var(--shadow-in);
+}
+
+.login-card__btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--r-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-out-sm);
+}
+
+.login-card__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 6px 6px 16px rgba(59, 130, 246, 0.3),
+              -4px -4px 12px rgba(255, 255, 255, 0.85);
+}
+
+.login-card__btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-in-sm);
+}
+
+.login-card__error {
+  color: var(--down);
+  font-size: var(--fs-small);
+  min-height: 18px;
+}
+
+.login-card__hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+/* ============================================
+   看板页
+   ============================================ */
+.dashboard {
+  display: none;
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+.dashboard.active {
+  display: block;
+}
+
+/* ---------- 顶部导航栏 ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(163, 190, 220, 0.2);
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo {
+  font-size: 18px;
+}
+
+.navbar__title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--primary-dark);
+  white-space: nowrap;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.navbar__logout {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--r-sm);
+  background: var(--bg);
+  box-shadow: var(--shadow-out-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.navbar__logout:active {
+  box-shadow: var(--shadow-in-sm);
+}
+
+/* ---------- MTD/YTD 切换 ---------- */
+.period-toggle {
+  margin: 16px;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-in-sm);
+  display: flex;
+  gap: 4px;
+}
+
+.period-toggle__btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.period-toggle__btn.active {
+  background: var(--surface);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-out-sm);
+}
+
+/* ---------- 汇总概览条 ---------- */
+.overview {
+  margin: 0 16px 16px;
+  padding: 18px 20px;
+  background: var(--bg);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-out-sm);
+  display: flex;
+  justify-content: space-around;
+}
+
+.overview__item {
+  text-align: center;
+}
+
+.overview__label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.overview__value {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.overview__sub {
+  font-size: var(--fs-xs);
+  margin-top: 2px;
+}
+
+.overview__sub.up { color: var(--up); }
+.overview__sub.down { color: var(--down); }
+
+/* ---------- 模块卡片 ---------- */
+.module {
+  margin: 0 16px 16px;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-out-sm);
+  overflow: hidden;
+}
+
+.module__header {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition);
+}
+
+.module__header:active {
+  background: var(--surface-soft);
+}
+
+.module__header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.module__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
+  background: var(--bg);
+  box-shadow: var(--shadow-out-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.module__name {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.module__chevron {
+  font-size: 16px;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+}
+
+.module.collapsed .module__chevron {
+  transform: rotate(-90deg);
+}
+
+.module__body {
+  padding: 0 18px 18px;
+  display: block;
+  transition: var(--transition);
+}
+
+.module.collapsed .module__body {
+  display: none;
+}
+
+/* ---------- 汇总行 ---------- */
+.module__summary {
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  background: var(--primary-soft);
+  border-radius: var(--r-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module__summary-label {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.module__summary-values {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.module__summary-actual {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.module__summary-target {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.module__summary-rate {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- 小组表格 ---------- */
+.group {
+  margin-bottom: 12px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
+.group__name {
+  padding: 8px 12px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--surface-soft);
+  border-radius: var(--r-xs);
+  margin-bottom: 6px;
+}
+
+/* ---------- 数据表格 ---------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+}
+
+.data-table th {
+  text-align: right;
+  padding: 8px 6px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid rgba(163, 190, 220, 0.2);
+}
+
+.data-table th:first-child {
+  text-align: left;
+}
+
+.data-table td {
+  padding: 10px 6px;
+  text-align: right;
+  border-bottom: 1px solid rgba(163, 190, 220, 0.1);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.data-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+.positive { color: var(--up); font-weight: 600; }
+.negative { color: var(--down); font-weight: 600; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ---------- 状态标签 ---------- */
+.status-up {
+  color: var(--up);
+  background: var(--up-soft);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.status-down {
+  color: var(--down);
+  background: var(--down-soft);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.status-neutral {
+  color: var(--neutral);
+  background: var(--neutral-soft);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.status-warning {
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+/* 数值颜色 */
+.val-up { color: var(--up); }
+.val-down { color: var(--down); }
+
+/* ---------- 空状态 ---------- */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+/* ---------- 加载状态 ---------- */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+.loading__spinner {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 12px;
+  border: 3px solid var(--primary-soft);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   响应式适配
+   ============================================ */
+
+/* 平板 */
+@media (min-width: 768px) {
+  :root {
+    --fs-title: 26px;
+    --fs-h1: 22px;
+    --fs-h2: 18px;
+    --fs-body: 15px;
+  }
+
+  .login-card {
+    max-width: 400px;
+    padding: 48px 40px;
+  }
+
+  .dashboard {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .module {
+    margin: 0 auto 16px;
+  }
+}
+
+/* 桌面 */
+@media (min-width: 1024px) {
+  .dashboard {
+    max-width: 900px;
+  }
+
+  .data-table {
+    font-size: var(--fs-body);
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 12px 10px;
+  }
+}
+
+/* 小屏手机 */
+@media (max-width: 360px) {
+  :root {
+    --fs-title: 20px;
+    --fs-h2: 16px;
+    --fs-body: 13px;
+    --fs-small: 11px;
+    --fs-xs: 10px;
+  }
+
+  .navbar__title {
+    font-size: 15px;
+  }
+
+  .module__header {
+    padding: 14px 14px;
+  }
+
+  .module__body {
+    padding: 0 14px 14px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 4px;
+  }
+}
+
+/* 深色模式预留 */
+@media (prefers-color-scheme: dark) {
+  /* 未来可扩展深色主题 */
+}
+
+/* ===== Excel-like mobile table view ===== */
+.excel-hero {
+  margin: 12px 12px 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8fbff, #dce9f7);
+  box-shadow: 8px 8px 18px rgba(139, 163, 190, 0.24), -8px -8px 18px rgba(255, 255, 255, 0.9);
+}
+.excel-hero__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #17365d;
+}
+.excel-hero__sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #55708f;
+}
+.excel-hero__meta {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #7b91aa;
+}
+.excel-section {
+  margin: 12px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #eef5fc;
+  box-shadow: 6px 6px 16px rgba(139, 163, 190, 0.22), -6px -6px 16px rgba(255, 255, 255, 0.85);
+}
+.excel-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 12px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #f7fbff, #e3eef9);
+  border-bottom: 1px solid rgba(110, 146, 185, 0.16);
+}
+.excel-section__header h2 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #163a63;
+  font-weight: 800;
+}
+.excel-section__header p {
+  margin: 4px 0 0;
+  font-size: 10px;
+  color: #7d93aa;
+}
+.excel-section__chevron {
+  color: #4c7dad;
+  font-size: 12px;
+  transition: transform .2s ease;
+}
+.excel-section.collapsed .excel-section__chevron {
+  transform: rotate(-90deg);
+}
+.excel-section.collapsed .excel-section__body {
+  display: none;
+}
+.excel-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  background: rgba(255,255,255,.52);
+}
+.excel-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: max-content;
+  width: 100%;
+  font-size: 11px;
+  color: #213a56;
+}
+.excel-table tr:nth-child(even) .excel-cell:not(.is-header) {
+  background: rgba(244, 249, 255, .86);
+}
+.excel-cell {
+  min-width: 64px;
+  max-width: 116px;
+  padding: 7px 8px;
+  border-right: 1px solid rgba(135, 164, 194, .18);
+  border-bottom: 1px solid rgba(135, 164, 194, .18);
+  background: rgba(255,255,255,.78);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.25;
+}
+.excel-cell small {
+  margin-left: 1px;
+  font-size: 9px;
+  color: #7189a3;
+}
+.excel-cell.is-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #dcecff;
+  color: #17406c;
+  font-weight: 700;
+}
+.excel-cell.is-row-label {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  min-width: 76px;
+  max-width: 92px;
+  text-align: left;
+  font-weight: 700;
+  color: #173a62;
+  background: #edf6ff;
+  box-shadow: 4px 0 8px rgba(77, 115, 155, .08);
+}
+.excel-cell.is-header.is-row-label {
+  z-index: 4;
+  background: #cfe4fb;
+}
+.excel-cell.is-number {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.excel-cell.is-total-label,
+.excel-table tr[data-excel-row="12"] .excel-cell,
+.excel-table tr[data-excel-row="23"] .excel-cell,
+.excel-table tr[data-excel-row="51"] .excel-cell,
+.excel-table tr[data-excel-row="62"] .excel-cell,
+.excel-table tr[data-excel-row="74"] .excel-cell,
+.excel-table tr[data-excel-row="86"] .excel-cell,
+.excel-table tr[data-excel-row="98"] .excel-cell,
+.excel-table tr[data-excel-row="109"] .excel-cell {
+  background: #e3f0ff;
+  font-weight: 800;
+}
+.excel-cell.is-blank {
+  color: transparent;
+}
+@media (max-width: 480px) {
+  .overview { margin: 10px 12px; }
+  .overview__value { font-size: 17px; }
+  .excel-cell { min-width: 58px; padding: 6px 7px; font-size: 10.5px; }
+  .excel-cell.is-row-label { min-width: 72px; }
+  .excel-section__header h2 { font-size: 14px; }
+}
+
+/* ===== 2026-07-10 demo-inspired mobile layout / Codex neumorphism ===== */
+.mobile-tabs{
+  position:sticky;top:60px;z-index:90;display:flex;gap:8px;overflow-x:auto;
+  padding:10px 14px;background:rgba(232,238,245,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(128,161,196,.18);scrollbar-width:none;
+}
+.mobile-tabs::-webkit-scrollbar{display:none}
+.mobile-tabs .tab-btn{
+  flex:none;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;
+  color:#5a7a9b;background:#e8eef5;box-shadow:var(--shadow-out-sm);white-space:nowrap;
+}
+.mobile-tabs .tab-btn.active{
+  color:#fff;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:6px 6px 14px rgba(59,130,246,.26),-5px -5px 12px rgba(255,255,255,.86);
+}
+.mobile-panel{padding:12px 14px 28px}.excel-hero.slim{display:none}.section-title{font-size:13px;font-weight:800;color:#315b86;margin:16px 2px 9px;display:flex;align-items:center;gap:6px}.section-title span{width:6px;height:6px;border-radius:50%;background:#3b82f6;box-shadow:0 0 0 4px rgba(59,130,246,.1)}
+.sales-hero{padding:14px;margin:2px 0 12px;border-radius:22px;background:linear-gradient(145deg,#f4f9ff,#dce9f7);box-shadow:var(--shadow-out-sm);overflow:hidden}.sales-hero__top{display:flex;align-items:center;gap:12px}.hero-rings{display:flex;gap:8px;flex:none}.ring-card{position:relative;width:82px;height:82px;border-radius:24px;background:#e8eef5;box-shadow:var(--shadow-in-sm)}.ring-card svg{width:82px;height:82px;transform:rotate(-90deg)}.ring-bg{fill:none;stroke:#d5e2f0;stroke-width:10}.ring-fg{fill:none;stroke-width:10;stroke-linecap:round}.ring-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:translateY(1px)}.ring-label b{font-size:14px;color:#173a62;line-height:1}.ring-label span{font-size:9px;color:#6f89a5;margin-top:4px}.hero-copy{min-width:0}.hero-kicker{font-size:11px;color:#6e89a6;font-weight:700}.hero-main{font-size:25px;line-height:1.1;font-weight:900;color:#1d4f86;letter-spacing:-.5px;margin:4px 0}.hero-sub{font-size:11px;color:#617d99;line-height:1.45}.group-pie-wrap{margin-top:13px;padding:12px;border-radius:18px;background:rgba(255,255,255,.52);box-shadow:var(--shadow-in-sm);display:flex;gap:12px;align-items:center}.pie-box{position:relative;width:116px;height:116px;flex:none}.pie-svg{width:116px;height:116px;filter:drop-shadow(2px 4px 5px rgba(91,125,160,.14))}.pie-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.pie-center b{font-size:14px;color:#173a62}.pie-center span{font-size:10px;color:#7e96ae}.pie-legend{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:6px 8px;min-width:0}.pie-legend-row{display:grid;grid-template-columns:8px 1fr auto;grid-template-rows:auto auto;column-gap:5px;align-items:center;font-size:10px;color:#31506f;min-width:0}.pie-legend-row span{width:8px;height:8px;border-radius:50%;grid-row:1/3}.pie-legend-row b{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pie-legend-row em{font-style:normal;font-size:10px;color:#173a62;font-weight:800}.pie-legend-row i{font-style:normal;grid-column:2/4;font-size:9px;color:#7d93aa}.filterbar{display:flex;gap:7px;overflow-x:auto;margin:0 0 10px;scrollbar-width:none}.filterbar::-webkit-scrollbar{display:none}.filter-btn{flex:none;border:none;border-radius:12px;padding:7px 13px;font-size:12px;font-weight:800;color:#5c7894;background:#e8eef5;box-shadow:var(--shadow-out-sm)}.filter-btn.active{color:#fff;background:linear-gradient(135deg,#60a5fa,#2563eb)}
+.excel-scroll{border-radius:16px;background:#eaf1f8;box-shadow:var(--shadow-out-sm);border:1px solid rgba(123,157,193,.16);overflow:auto;-webkit-overflow-scrolling:touch;margin-bottom:12px}.excel-table{border-collapse:separate;border-spacing:0;min-width:max-content;width:100%;font-size:11px;color:#213a56}.excel-cell{min-width:74px;max-width:128px;padding:8px 9px;border-right:1px solid rgba(135,164,194,.2);border-bottom:1px solid rgba(135,164,194,.2);background:rgba(255,255,255,.72);white-space:nowrap;text-align:center;line-height:1.25}.excel-cell small{margin-left:1px;font-size:9px;color:#7189a3}.excel-cell.is-header{position:sticky;top:0;z-index:2;background:#dbeaf9;color:#315b86;font-weight:900}.excel-cell.is-row-label{position:sticky;left:0;z-index:3;min-width:84px;max-width:100px;text-align:left;font-weight:900;color:#173a62;background:#edf6ff;box-shadow:4px 0 8px rgba(77,115,155,.08)}.excel-cell.is-header.is-row-label{z-index:4;background:#cfe4fb}.excel-cell.is-number{text-align:right;font-variant-numeric:tabular-nums}.excel-cell.is-blank{color:transparent}.excel-table tr:nth-child(even) .excel-cell:not(.is-header){background:rgba(244,249,255,.88)}.excel-table tr.total-row .excel-cell{background:#e1edff!important;font-weight:900;color:#12385f}.excel-table tr.total-row .excel-cell.is-row-label{background:#d4e7ff!important}.progress-cell{display:flex;flex-direction:column;align-items:flex-end;gap:4px;min-width:58px}.progress-cell span{font-weight:900}.mini-progress{width:58px;height:5px;border-radius:999px;background:#d5e2f0;overflow:hidden;box-shadow:inset 1px 1px 3px rgba(113,139,166,.25)}.mini-progress i{display:block;height:100%;border-radius:999px}.mini-progress.good i{background:#10b981}.mini-progress.warn i{background:#2563eb}.mini-progress.bad i{background:#ef4444}.yoy-pill{display:inline-flex;align-items:center;justify-content:center;min-width:54px;padding:3px 7px;border-radius:999px;font-weight:900;font-size:10px}.yoy-pill.up{color:#059669;background:rgba(16,185,129,.12)}.yoy-pill.down{color:#dc2626;background:rgba(239,68,68,.12)}
+@media(max-width:480px){.navbar{padding:10px 12px}.mobile-tabs{top:56px;padding:9px 12px}.overview{margin:10px 12px 8px;padding:14px 12px}.overview__value{font-size:16px}.sales-hero{margin:0 0 10px;padding:12px}.sales-hero__top{align-items:flex-start}.hero-rings{gap:6px}.ring-card{width:72px;height:72px;border-radius:20px}.ring-card svg{width:72px;height:72px}.ring-label b{font-size:12px}.ring-label span{font-size:8px}.hero-main{font-size:22px}.group-pie-wrap{align-items:flex-start}.pie-box{width:102px;height:102px}.pie-svg{width:102px;height:102px}.pie-legend{grid-template-columns:1fr}.excel-cell{min-width:66px;padding:7px 8px;font-size:10.5px}.excel-cell.is-row-label{min-width:76px}.mini-progress{width:50px}}
+
+/* ===== Requested refinement: ring matrix, no top overview, fixed MTD header ===== */
+.overview{display:none!important}.sales-hero{padding:16px 14px 18px}.sales-hero-title{display:flex;align-items:center;justify-content:center;gap:8px;margin:2px 0 12px;color:#1d4f86;font-size:14px}.sales-hero-title span{width:7px;height:7px;border-radius:50%;background:#3b82f6;box-shadow:0 0 0 5px rgba(59,130,246,.12)}.overview-ring-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.group-ring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.dual-ring-card{position:relative;min-height:166px;border-radius:20px;background:linear-gradient(145deg,#f8fbff,#dce9f7);box-shadow:var(--shadow-in-sm);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:10px 6px 9px;overflow:hidden}.overview-ring-row .dual-ring-card{min-height:178px;padding-top:12px}.dual-ring-svg{width:96px;height:96px;transform:rotate(-90deg);filter:drop-shadow(2px 4px 5px rgba(91,125,160,.12))}.overview-ring-row .dual-ring-svg{width:106px;height:106px}.dual-ring-bg{fill:none;stroke:#d5e2f0;stroke-width:10}.dual-ring-bg.inner{stroke:#e5edf6;stroke-width:8}.dual-ring-outer,.dual-ring-inner{fill:none;stroke-width:10;stroke-linecap:round}.dual-ring-inner{stroke-width:8}.dual-ring-center{position:absolute;top:31px;left:0;right:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none}.overview-ring-row .dual-ring-center{top:35px}.dual-ring-center b{font-size:15px;line-height:1;color:#163a63;font-weight:900}.overview-ring-row .dual-ring-center b{font-size:17px}.dual-ring-center span{font-size:9px;color:#5d7894;margin-top:4px;max-width:86px;white-space:normal;line-height:1.12}.dual-ring-money{margin-top:6px;font-size:10px;color:#31506f;font-weight:800;text-align:center;line-height:1.25;white-space:normal}.dual-ring-money em{font-style:normal;color:#8aa5c1;margin:0 3px}.group-pie-wrap,.pie-box,.pie-legend,.hero-copy,.hero-rings{display:none!important}.mtd-fixed-head .excel-cell{background:#dbeaf9!important;color:#315b86!important;font-weight:900!important}.excel-table tr[data-excel-row="0"] .excel-cell{background:#dbeaf9!important;color:#315b86!important;font-weight:900!important}.excel-table tr[data-excel-row="0"] .excel-cell:first-child{position:sticky;left:0;z-index:4;background:#cfe4fb!important}.mobile-panel>.section-title{margin-top:14px}.filterbar+.excel-scroll{margin-top:4px}@media(max-width:480px){.sales-hero{padding:14px 12px}.overview-ring-row{gap:10px}.group-ring-grid{grid-template-columns:repeat(2,1fr);gap:9px}.dual-ring-card{min-height:154px}.overview-ring-row .dual-ring-card{min-height:166px}.dual-ring-svg{width:88px;height:88px}.overview-ring-row .dual-ring-svg{width:96px;height:96px}.dual-ring-center{top:29px}.overview-ring-row .dual-ring-center{top:33px}.dual-ring-center b{font-size:13px}.overview-ring-row .dual-ring-center b{font-size:15px}.dual-ring-center span{font-size:8px;max-width:76px}.dual-ring-money{font-size:9px}.excel-cell{min-width:68px}.excel-cell.is-row-label{min-width:78px}}
+
+/* ===== Clean BI refinement: remove chart overload, reduce visual noise ===== */
+:root{--bi-border:#d8e4ef;--bi-blue:#2563eb;--bi-blue-soft:#eaf2ff;--bi-red:#dc2626;--bi-green:#059669;--bi-text:#173a62;--bi-muted:#6b849e}.overview,.excel-hero,.sales-hero{display:none!important}.mobile-tabs{top:56px;background:#eef4fa;border-bottom:1px solid var(--bi-border);box-shadow:none;padding:8px 12px}.mobile-tabs .tab-btn{box-shadow:none;background:transparent;border:1px solid transparent;color:#617b96;border-radius:8px;padding:7px 12px}.mobile-tabs .tab-btn.active{background:#2563eb;color:#fff;border-color:#2563eb;box-shadow:none}.mobile-panel{padding:12px 12px 28px}.bi-card{background:rgba(255,255,255,.72);border:1px solid var(--bi-border);border-radius:14px;box-shadow:none;margin:0 0 12px;padding:14px}.bi-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-bottom:12px}.bi-section-head h2{font-size:15px;line-height:1.2;color:var(--bi-text);font-weight:800;margin:0}.bi-section-head span{font-size:11px;color:var(--bi-muted)}.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.kpi-card{border:1px solid #dce7f2;border-radius:12px;background:#f8fbff;padding:10px 8px;min-height:76px;box-shadow:none}.kpi-card__label{font-size:11px;color:var(--bi-muted);margin-bottom:5px}.kpi-card__value{font-size:17px;line-height:1.1;color:var(--bi-text);font-weight:900;letter-spacing:-.2px;white-space:nowrap}.kpi-card.primary .kpi-card__value{color:#1d4ed8}.kpi-card.bad .kpi-card__value,.kpi-card.down .kpi-card__value{color:var(--bi-red)}.kpi-card.up .kpi-card__value{color:var(--bi-green)}.kpi-card__sub{font-size:10px;color:var(--bi-muted);margin-top:6px;line-height:1.2}.yoy-mini.down{color:var(--bi-red)}.yoy-mini.up{color:var(--bi-green)}.progress-pair{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px}.bi-progress__head{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;color:#45627f;margin-bottom:6px}.bi-progress__head span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bi-progress__head b{font-size:14px;color:var(--bi-text)}.bi-progress.bad .bi-progress__head b{color:var(--bi-red)}.bi-progress__bar{height:7px;border-radius:999px;background:#dbe6f1;overflow:hidden}.bi-progress__bar i{display:block;height:100%;border-radius:999px;background:var(--bi-blue)}.bi-progress.bad .bi-progress__bar i{background:var(--bi-red)}.rank-title{font-size:12px;font-weight:800;color:var(--bi-text);margin:2px 0 10px}.rank-list{display:flex;flex-direction:column;gap:10px}.rank-row__meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-size:12px}.rank-row__meta b{color:var(--bi-text)}.rank-row__meta span{font-weight:800;color:#1d4ed8}.rank-row__bar{height:8px;border-radius:999px;background:#dbe6f1;overflow:hidden}.rank-row__bar i{display:block;height:100%;border-radius:999px;background:var(--bi-blue)}.rank-row__sub{margin-top:3px;font-size:10px;color:var(--bi-muted)}.section-title{font-size:13px;font-weight:800;color:var(--bi-text);margin:16px 2px 8px}.section-title span{background:var(--bi-blue);box-shadow:none}.excel-scroll{border:1px solid var(--bi-border);border-radius:12px;box-shadow:none;background:#fff}.excel-cell{background:#fff;border-right:1px solid #e1eaf3;border-bottom:1px solid #e1eaf3;color:#203b57}.excel-table tr:nth-child(even) .excel-cell:not(.is-header){background:#f8fbff}.excel-cell.is-header,.mtd-fixed-head .excel-cell,.excel-table tr[data-excel-row="0"] .excel-cell{background:#edf4fb!important;color:#385a7a!important;font-weight:800!important}.excel-cell.is-row-label{background:#f4f8fc!important;color:#173a62;box-shadow:none}.excel-table tr.total-row .excel-cell{background:#edf4ff!important;color:#12385f}.progress-cell{gap:4px}.progress-cell span{font-weight:800}.mini-progress{height:4px;background:#dbe6f1;box-shadow:none}.mini-progress i{background:var(--bi-blue)!important}.progress-cell.bad .mini-progress i{background:var(--bi-red)!important}.yoy-pill{border-radius:6px;background:transparent!important;padding:0;font-size:11px}.yoy-pill.up{color:var(--bi-green)}.yoy-pill.down{color:var(--bi-red)}.filterbar{gap:6px;margin-bottom:8px}.filter-btn{box-shadow:none;border:1px solid var(--bi-border);border-radius:8px;background:#fff;color:#617b96;font-weight:700}.filter-btn.active{background:var(--bi-blue);border-color:var(--bi-blue);color:#fff}@media(max-width:480px){.kpi-grid{grid-template-columns:repeat(4,minmax(72px,1fr));gap:6px}.kpi-card{padding:9px 6px;min-height:70px}.kpi-card__value{font-size:15px}.bi-card{padding:12px;border-radius:12px}.mobile-panel{padding:10px 10px 24px}.excel-cell{min-width:68px;padding:7px 8px}.excel-cell.is-row-label{min-width:78px}.mobile-tabs .tab-btn{padding:7px 11px}}
+
+/* ===== Rollback to previous version: keep ring matrix, remove pie only ===== */
+.overview{display:none!important}.excel-hero.slim{display:none!important}.sales-hero{display:block!important;padding:16px 14px 18px!important;margin:2px 0 12px!important;border-radius:22px!important;background:linear-gradient(145deg,#f4f9ff,#dce9f7)!important;box-shadow:var(--shadow-out-sm)!important;border:none!important}.sales-hero-title{display:flex!important;align-items:center;justify-content:center;gap:8px;margin:2px 0 12px;color:#1d4f86;font-size:14px}.sales-hero-title span{width:7px;height:7px;border-radius:50%;background:#3b82f6;box-shadow:0 0 0 5px rgba(59,130,246,.12)}.overview-ring-row{display:grid!important;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.group-ring-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:10px}.dual-ring-card{position:relative!important;display:flex!important;min-height:166px;border-radius:20px;background:linear-gradient(145deg,#f8fbff,#dce9f7);box-shadow:var(--shadow-in-sm);flex-direction:column;align-items:center;justify-content:flex-start;padding:10px 6px 9px;overflow:hidden}.overview-ring-row .dual-ring-card{min-height:178px;padding-top:12px}.dual-ring-svg{display:block!important;width:96px;height:96px;transform:rotate(-90deg);filter:drop-shadow(2px 4px 5px rgba(91,125,160,.12))}.overview-ring-row .dual-ring-svg{width:106px;height:106px}.dual-ring-bg{fill:none;stroke:#d5e2f0;stroke-width:10}.dual-ring-bg.inner{stroke:#e5edf6;stroke-width:8}.dual-ring-outer,.dual-ring-inner{fill:none;stroke-width:10;stroke-linecap:round}.dual-ring-inner{stroke-width:8}.dual-ring-center{position:absolute;top:31px;left:0;right:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none}.overview-ring-row .dual-ring-center{top:35px}.dual-ring-center b{font-size:15px;line-height:1;color:#163a63;font-weight:900}.overview-ring-row .dual-ring-center b{font-size:17px}.dual-ring-center span{font-size:9px;color:#5d7894;margin-top:4px;max-width:86px;white-space:normal;line-height:1.12}.dual-ring-money{margin-top:6px;font-size:10px;color:#31506f;font-weight:800;text-align:center;line-height:1.25;white-space:normal}.dual-ring-money em{font-style:normal;color:#8aa5c1;margin:0 3px}.group-pie-wrap,.pie-box,.pie-svg,.pie-legend,.pie-legend-row{display:none!important}.bi-card,.sales-overview,.department-card,.kpi-card,.rank-list,.rank-row{display:none!important}.mobile-tabs{position:sticky;top:56px;z-index:90;display:flex;gap:8px;overflow-x:auto;padding:9px 12px;background:rgba(232,238,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(128,161,196,.18);scrollbar-width:none}.mobile-tabs .tab-btn{flex:none;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;color:#5a7a9b;background:#e8eef5;box-shadow:var(--shadow-out-sm);white-space:nowrap}.mobile-tabs .tab-btn.active{color:#fff;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:6px 6px 14px rgba(59,130,246,.26),-5px -5px 12px rgba(255,255,255,.86)}.excel-scroll{border-radius:16px;background:#eaf1f8;box-shadow:var(--shadow-out-sm);border:1px solid rgba(123,157,193,.16)}.excel-cell.is-header,.mtd-fixed-head .excel-cell,.excel-table tr[data-excel-row="0"] .excel-cell{background:#dbeaf9!important;color:#315b86!important;font-weight:900!important}.mini-progress.good i{background:#10b981!important}.mini-progress.warn i{background:#2563eb!important}.mini-progress.bad i{background:#ef4444!important}.yoy-pill.up{color:#059669;background:rgba(16,185,129,.12)!important}.yoy-pill.down{color:#dc2626;background:rgba(239,68,68,.12)!important}@media(max-width:480px){.group-ring-grid{grid-template-columns:repeat(2,1fr)!important}.dual-ring-card{min-height:154px}.overview-ring-row .dual-ring-card{min-height:166px}.dual-ring-svg{width:88px;height:88px}.overview-ring-row .dual-ring-svg{width:96px;height:96px}.dual-ring-center{top:29px}.overview-ring-row .dual-ring-center{top:33px}.dual-ring-center b{font-size:13px}.overview-ring-row .dual-ring-center b{font-size:15px}.dual-ring-center span{font-size:8px;max-width:76px}.dual-ring-money{font-size:9px}}
+
+
+/* ===== Final color constraint: only blue / red / green ===== */
+:root{--warning:#2563eb!important;--warning-soft:rgba(37,99,235,.12)!important;}
+.dual-ring-outer[stroke="#2563eb"],.dual-ring-inner{stroke:#2563eb!important;}
+.mini-progress.good i{background:#10b981!important;}
+.mini-progress.warn i{background:#2563eb!important;}
+.mini-progress.bad i{background:#ef4444!important;}
+.progress-cell:not(.bad) .mini-progress i{background:#2563eb!important;}
+.yoy-pill.up{color:#059669!important;background:rgba(16,185,129,.12)!important;}
+.yoy-pill.down{color:#dc2626!important;background:rgba(239,68,68,.12)!important;}
+.filter-btn.active,.mobile-tabs .tab-btn.active{background:#2563eb!important;border-color:#2563eb!important;color:#fff!important;}
+.section-title span,.sales-hero-title span{background:#2563eb!important;}
+.group-pie-wrap,.pie-box,.pie-svg,.pie-legend,.pie-legend-row{display:none!important;}
+
+/* ===== 2026-07-10 hard fix: no pie/ring, percent normal, all history filters ===== */
+.dual-ring-card,.dual-ring-svg,.ring-card,.pie-box,.pie-svg,.group-pie-wrap,.pie-legend,.pie-legend-row{display:none!important;}
+.sales-hero.no-circle{display:block!important;padding:14px 12px 16px!important;margin:2px 0 12px!important;border-radius:18px!important;background:linear-gradient(145deg,#f4f9ff,#dce9f7)!important;box-shadow:var(--shadow-out-sm)!important;border:none!important;}
+.summary-progress-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.group-progress-list{display:grid!important;grid-template-columns:repeat(2,1fr);gap:9px;}
+.rate-card{display:block!important;border-radius:14px;background:rgba(255,255,255,.62);box-shadow:var(--shadow-in-sm);padding:10px 10px 9px;border:1px solid rgba(123,157,193,.12);}
+.rate-card__head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:11px;color:#31506f;margin-bottom:7px;}
+.rate-card__head b{font-size:11px;color:#173a62;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rate-card__head span{font-size:13px;font-weight:900;color:#2563eb;}
+.rate-card.good .rate-card__head span{color:#10b981;}
+.rate-card.bad .rate-card__head span{color:#ef4444;}
+.rate-card__bar{height:6px;border-radius:999px;background:#dbe6f1;overflow:hidden;}
+.rate-card__bar i{display:block;height:100%;border-radius:999px;background:#2563eb;}
+.rate-card.good .rate-card__bar i{background:#10b981;}
+.rate-card.bad .rate-card__bar i{background:#ef4444;}
+.rate-card__money{margin-top:5px;font-size:10px;color:#6b849e;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.filterbar{display:flex!important;gap:7px;overflow-x:auto;margin:0 0 10px;scrollbar-width:none;}
+.filterbar::-webkit-scrollbar{display:none;}
+.filter-btn{flex:none!important;border:none!important;border-radius:12px!important;padding:7px 13px!important;font-size:12px!important;font-weight:800!important;color:#5c7894!important;background:#e8eef5!important;box-shadow:var(--shadow-out-sm)!important;}
+.filter-btn.active{color:#fff!important;background:#2563eb!important;border-color:#2563eb!important;}
+.mini-progress.good i{background:#10b981!important;}
+.mini-progress.normal i,.mini-progress.warn i,.progress-cell:not(.bad) .mini-progress i{background:#2563eb!important;}
+.mini-progress.bad i,.progress-cell.bad .mini-progress i{background:#ef4444!important;}
+.yoy-pill.up{color:#059669!important;background:rgba(16,185,129,.12)!important;}
+.yoy-pill.down{color:#dc2626!important;background:rgba(239,68,68,.12)!important;}
+@media(max-width:480px){.summary-progress-grid{grid-template-columns:1fr 1fr;}.group-progress-list{grid-template-columns:1fr 1fr;}.rate-card{padding:9px 8px;}.rate-card__head b{font-size:10px}.rate-card__head span{font-size:12px}.rate-card__money{font-size:9px}}
+
+/* ===== Export button & internal index split ===== */
+.navbar__export{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 10px;border-radius:999px;background:#2563eb;color:#fff;text-decoration:none;font-size:12px;font-weight:800;box-shadow:var(--shadow-out-sm);margin-right:6px;white-space:nowrap;}
+.navbar__export:active{transform:scale(.98)}
+@media(max-width:480px){.navbar__export{height:26px;padding:0 8px;font-size:11px}.navbar__date{font-size:10px}}
+
+
+/* remove navbar logo icon */
+.navbar__logo{display:none!important;}
+
+
+/* remove all chart icon placeholders */
+.login-card__icon,.navbar__logo{display:none!important;}
+
+.blank-placeholder{color:#94a3b8;font-weight:600;letter-spacing:.02em;}
+.excel-cell.is-blank{background:rgba(148,163,184,.08);}
+
+/* 2026-07-15 表头修复：多级表头合并、移动端换行与对齐 */
+.excel-table td[rowspan],
+.excel-table td[colspan] {
+  vertical-align: middle;
+  text-align: center;
+}
+.excel-cell.is-header {
+  position: static !important;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-height: 1.18;
+  min-width: 76px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.excel-cell.is-header.is-merged-head {
+  min-width: 96px;
+  letter-spacing: .02em;
+}
+.excel-cell.is-row-label {
+  position: sticky !important;
+  left: 0;
+}
+.excel-cell.is-header.is-row-label {
+  z-index: 5;
+}
+@media(max-width:480px){
+  .excel-cell.is-header { min-width: 74px; font-size: 10px; }
+  .excel-cell.is-header.is-merged-head { min-width: 92px; }
+  .excel-cell { vertical-align: middle; }
+}
+
+/* 2026-07-15 毛利看板 */
+.gross-note{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin:0 0 10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:linear-gradient(145deg,#fff7ed,#fff1f2);
+  border:1px solid rgba(251,146,60,.24);
+  color:#7c2d12;
+  font-size:11px;
+  line-height:1.35;
+}
+.gross-note b{font-size:12px;color:#9a3412;}
+.excel-table tr[data-excel-row="36"] .excel-cell{background:#fff7cc!important;}
+.excel-table tr[data-excel-row="37"] .excel-cell,
+.excel-table tr[data-excel-row="38"] .excel-cell{background:#edf4ff!important;font-weight:900;}
+
+/* 2026-07-15 毛利展示收敛：日期只放标题处，表格只展示5-7月/YTD/全年目标 */
+.gross-title{align-items:flex-start!important;}
+.gross-title>div{display:flex;flex-direction:column;gap:2px;}
+.gross-title b{font-size:13px;color:var(--bi-text,#173a62);}
+.gross-title em{font-style:normal;font-size:10px;font-weight:700;color:#7b8fa6;}
+.gross-note.compact{gap:3px;margin-top:-2px;}
+.gross-note.compact span{display:block;}
