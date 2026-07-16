@@ -19,6 +19,77 @@ from openpyxl.utils.cell import column_index_from_string, range_boundaries
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
 
+# 行号动态定位
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', 'vip-price-monitor-email-pipeline-self-contained', 'scripts', 'modules'))
+try:
+    from row_locator import find_module_range as _find_module_range, find_section_header_row as _find_header, find_subsection_header as _find_sub, find_next_module_row as _find_next
+except ImportError:
+    _find_module_range = None
+    _find_header = None
+    _find_sub = None
+    _find_next = None
+
+# 模块定义：(关键词, 是否有子区域)
+_MODULE_DEFS = [
+    ("自营销售", True),
+    ("毛利", False),
+    ("外网价指", True),
+    ("内网折扣", True),
+    ("六高", True),
+    ("优质款", True),
+    ("机采", True),
+    ("五星价格力", True),
+]
+
+def _compute_section_ranges(ws):
+    """动态计算各模块的行范围，返回 {模块关键词: (start, end)}"""
+    ranges = {}
+    if _find_module_range is None:
+        return ranges
+    for i, (kw, has_sub) in enumerate(_MODULE_DEFS):
+        # 找模块标题行
+        header_row = _find_header(ws, [kw], search_col=2, start_row=1, end_row=200)
+        if header_row is None:
+            continue
+        # 找下一个模块的标题行作为结束
+        next_kws = [_MODULE_DEFS[j][0] for j in range(i+1, len(_MODULE_DEFS))]
+        end_row = 200
+        for r in range(header_row+1, 201):
+            val = str(ws.cell(r, 2).value or '').strip()
+            for nk in next_kws:
+                if nk in val:
+                    end_row = r - 1
+                    break
+            else:
+                continue
+            break
+        ranges[kw] = (header_row, end_row)
+    return ranges
+
+def _get_section_range(ws, module_kw, sub_section=None, fallback=None):
+    """获取模块内某个子区域的行范围"""
+    if _find_module_range is None:
+        return fallback
+    ranges = _compute_section_ranges(ws)
+    mod_range = ranges.get(module_kw)
+    if mod_range is None:
+        return fallback
+    start, end = mod_range
+    if sub_section:
+        sub_row = _find_sub(ws, [sub_section], search_col=2, start_row=start+1, end_row=end)
+        if sub_row:
+            # 子区域从标题行下一行开始到下一个子标题或模块结束
+            next_sub = None
+            for r in range(sub_row+1, end+1):
+                val = str(ws.cell(r, 2).value or '').strip()
+                if val in ('YTD', 'MTD', '历史月份', '历史月份得分'):
+                    next_sub = r
+                    break
+            sub_end = next_sub - 1 if next_sub else end
+            return (sub_row, sub_end)
+    return (start, end)
+
 SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
     {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
@@ -34,6 +105,38 @@ SECTION_SPECS = [
     {"id": "price_power_mtd", "title": "五星价格力 & 大爆款效率 · MTD", "range": (129, 134, 2, 10), "stickyCols": 1},
     {"id": "price_power_history", "title": "五星价格力 & 大爆款效率 · YTD / 历史月份", "range": (137, 152, 2, 11), "stickyCols": 2},
 ]
+
+# 动态范围映射：section_id -> (模块关键词, 子区域, fallback_range)
+_DYNAMIC_RANGE_MAP = {
+    "self_sales_mtd": ("自营销售", "MTD", (3, 12, 2, 11)),
+    "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 37)),
+    "gross_profit": ("毛利", None, (26, 38, 2, 11)),
+    "price_index_mtd": ("外网价指", "MTD", (41, 51, 2, 15)),
+    "price_index_history": ("外网价指", "YTD", (53, 62, 2, 79)),
+    "internal_discount": ("内网折扣", None, (65, 74, 2, 26)),
+    "six_high": ("六高", "MTD", (77, 86, 2, 16)),
+    "quality_product_mtd": ("优质款", "MTD", (89, 98, 2, 7)),
+    "quality_product_history": ("优质款", "YTD", (100, 109, 2, 37)),
+    "machine_purchase_mtd": ("机采", "MTD", (112, 118, 2, 9)),
+    "machine_purchase_history": ("机采", "YTD", (121, 126, 2, 37)),
+    "price_power_mtd": ("五星价格力", None, (129, 134, 2, 10)),
+    "price_power_history": ("五星价格力", "YTD", (137, 152, 2, 11)),
+}
+
+def _resolve_section_ranges(ws):
+    """动态计算所有section的行范围，替换硬编码。"""
+    if _find_module_range is None:
+        return  # 回退到硬编码
+    for spec in SECTION_SPECS:
+        sid = spec["id"]
+        if sid not in _DYNAMIC_RANGE_MAP:
+            continue
+        mod_kw, sub, fallback = _DYNAMIC_RANGE_MAP[sid]
+        dynamic = _get_section_range(ws, mod_kw, sub, fallback)
+        if dynamic:
+            r1, r2 = dynamic
+            c1, c2 = fallback[2], fallback[3]  # 列范围保持不变
+            spec["range"] = (r1, r2, c1, c2)
 
 RATE_KEYWORDS = ("率", "同比", "完成率", "权重", "占比", "折扣", "价指", "价格指数", "指数")
 SCORE_KEYWORDS = ("得分", "分")
@@ -401,6 +504,8 @@ def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
     formula_wb = load_workbook(excel_path, data_only=False)
     value_ws = value_wb["Sheet1"]
     formula_ws = formula_wb["Sheet1"]
+    # 动态计算各模块行范围（替代硬编码）
+    _resolve_section_ranges(value_ws)
     data_date = excel_date_to_str(evaluate_cell_value(value_ws, formula_ws, 1, 3))
     sections = [build_section(value_ws, formula_ws, spec) for spec in SECTION_SPECS]
     value_wb.close()
