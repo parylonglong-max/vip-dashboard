@@ -130,8 +130,20 @@
     }
     var mainGroups=data.mtd?data.mtd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
     var ytdGroups=data.ytd?data.ytd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
-    html+=renderTable('曝光流量 & 商详UV · MTD（7.1-7.14）', mainGroups);
-    html+=renderTable('曝光流量 & 商详UV · YTD（1.1-7.14）', ytdGroups);
+    var today=new Date();
+    var mtdStart='7.1';
+    var mtdEnd=(today.getMonth()+1)+'.'+today.getDate();
+    var ytdStart='1.1';
+    var ytdEnd=mtdEnd;
+    // 如果traffic_uv.json中有dateRange字段则优先使用
+    if(data.dateRange){
+      mtdStart=data.dateRange.mtdStart||mtdStart;
+      mtdEnd=data.dateRange.mtdEnd||mtdEnd;
+      ytdStart=data.dateRange.ytdStart||ytdStart;
+      ytdEnd=data.dateRange.ytdEnd||ytdEnd;
+    }
+    html+=renderTable('曝光流量 & 商详UV · MTD（'+mtdStart+'-'+mtdEnd+'）', mainGroups);
+    html+=renderTable('曝光流量 & 商详UV · YTD（'+ytdStart+'-'+ytdEnd+'）', ytdGroups);
     html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：ONEDP中台智能体API · 曝光流量=impressionFlow（跨商品累加值）</div>';
     return html;
   }

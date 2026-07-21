@@ -114,5 +114,11 @@
       "detailUv": 2387,
       "detailUvYoy": 29.94
     }
-  ]
+  ],
+  "dateRange": {
+    "mtdStart": "7.1",
+    "mtdEnd": "7.20",
+    "ytdStart": "1.1",
+    "ytdEnd": "7.20"
+  }
 }
