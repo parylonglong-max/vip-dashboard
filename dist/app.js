@@ -110,19 +110,31 @@
     if(!data) return '<div class="loading">暂无流量数据</div>';
     var html='';
     function fmt(n){ if(n==null) return '—'; if(n>=1e8) return (n/1e8).toFixed(2)+'亿'; if(n>=1e4) return (n/1e4).toFixed(0)+'万'; return n.toString(); }
-    function fmtYoy(y){ if(y==null) return '—'; var s=(y>0?'+':'')+y.toFixed(2)+'%'; return s; }
-    function yoyColor(y){ if(y==null) return ''; return y>=0?'positive':'negative'; }
+    function yoyPill(y){
+      if(y==null) return '<span class="yoy-pill" style="color:#6b849e">—</span>';
+      var cls=y>=0?'up':'down';
+      var arrow=y>=0?'↑':'↓';
+      var s=arrow+' '+Math.abs(y).toFixed(2)+'%';
+      return '<span class="yoy-pill '+cls+'">'+s+'</span>';
+    }
     function renderTable(title, items){
       var h='<div class="section-title"><span></span>'+escapeHtml(title)+'</div>';
-      h+='<div class="table-scroll"><table class="data-table"><thead><tr>';
-      h+='<th>小组</th><th>曝光流量</th><th>曝光同比</th><th>商详UV</th><th>UV同比</th>';
+      h+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
+      h+='<th class="excel-cell is-header is-row-label">小组</th>';
+      h+='<th class="excel-cell is-header">曝光流量</th>';
+      h+='<th class="excel-cell is-header">曝光同比</th>';
+      h+='<th class="excel-cell is-header">商详UV</th>';
+      h+='<th class="excel-cell is-header">UV同比</th>';
       h+='</tr></thead><tbody>';
       items.forEach(function(it){
-        h+='<tr><td>'+escapeHtml(it.group)+'</td>';
-        h+='<td>'+fmt(it.exposureTraffic)+'</td>';
-        h+='<td class="'+yoyColor(it.exposureTrafficYoy)+'">'+fmtYoy(it.exposureTrafficYoy)+'</td>';
-        h+='<td>'+fmt(it.detailUv)+'</td>';
-        h+='<td class="'+yoyColor(it.detailUvYoy)+'">'+fmtYoy(it.detailUvYoy)+'</td>';
+        var isTotal=(it.group==='精品总计'||it.group==='总');
+        var rowCls=isTotal?'total-row':'';
+        h+='<tr class="'+rowCls+'">';
+        h+='<td class="excel-cell is-row-label">'+escapeHtml(it.group)+'</td>';
+        h+='<td class="excel-cell">'+fmt(it.exposureTraffic)+'</td>';
+        h+='<td class="excel-cell">'+yoyPill(it.exposureTrafficYoy)+'</td>';
+        h+='<td class="excel-cell">'+fmt(it.detailUv)+'</td>';
+        h+='<td class="excel-cell">'+yoyPill(it.detailUvYoy)+'</td>';
         h+='</tr>';
       });
       h+='</tbody></table></div>';
