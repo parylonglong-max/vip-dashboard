@@ -1,0 +1,2261 @@
+{
+  "meta": {
+    "title": "精品货价监控数据看板",
+    "dataDate": "2026-07-05",
+    "lastUpdate": "2026-07-10 10:06:41",
+    "source": "货价监控指标 Sheet1 + VMA 穿戴 AC1",
+    "status": "MVP 第二轮统一接口"
+  },
+  "modules": [
+    {
+      "id": "self_sales",
+      "name": "自营销售",
+      "icon": "💎",
+      "summary": {
+        "mtd": {
+          "actual": 43996809.62528,
+          "target": 429637815.0,
+          "yoy": -1.3552882543555578,
+          "rule": "higher_better",
+          "unit": "元",
+          "precision": 1
+        },
+        "ytd": {
+          "actual": 2889460404.87113,
+          "target": 3306087726.820012,
+          "yoy": -0.4524589095090126,
+          "rule": "higher_better",
+          "unit": "元",
+          "precision": 1
+        }
+      },
+      "groups": [
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 8365729.168039998,
+                "target": 71810000.0,
+                "yoy": 6.043744901857395,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 491392188.5851,
+                "target": 479512800.9730024,
+                "yoy": 8.913950603097941,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 8365729.168039998,
+                "target": 9200000.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 11186465.20426,
+                "target": 132000000.0,
+                "yoy": -15.614155074668234,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 723308253.7466301,
+                "target": 915728372.695952,
+                "yoy": -4.7088305987559975,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 11186465.20426,
+                "target": 16627604.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 1377541.48113,
+                "target": 9437018.0,
+                "yoy": 65.2875090131471,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 96381464.07909998,
+                "target": 79021544.38737197,
+                "yoy": 43.07073845899099,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 1377541.48113,
+                "target": 1320000.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝1组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 10031145.92848,
+                "target": 88000000.0,
+                "yoy": 10.401968838068253,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 693900951.2208099,
+                "target": 748368382.7973013,
+                "yoy": 4.6420391198355615,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 10031145.92848,
+                "target": 9571860.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝2组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 6985790.939379999,
+                "target": 66000000.0,
+                "yoy": -2.0216056896100176,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 533815662.53038,
+                "target": 650783043.347976,
+                "yoy": -7.844845890978935,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 6985790.939379999,
+                "target": 7900000.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝3组",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 6050136.903990002,
+                "target": 62390797.0,
+                "yoy": -5.564627421949164,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 350661884.70910996,
+                "target": 432673582.6184083,
+                "yoy": -8.353769634966557,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 6050136.903990002,
+                "target": 7896160.52,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "总",
+          "rows": [
+            {
+              "metric": "销售完成",
+              "mtd": {
+                "actual": 43996809.62528,
+                "target": 429637815.0,
+                "yoy": -1.3552882543555578,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 2889460404.87113,
+                "target": 3306087726.820012,
+                "yoy": -0.4524589095090126,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 43996809.62528,
+                "target": 52515624.519999996,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "price_index",
+      "name": "外网价指",
+      "icon": "🌐",
+      "summary": {},
+      "groups": [
+        {
+          "name": "珠宝1组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 116.50956,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": -4.4081,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.6293297996611158,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 12.50260000000002,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 15.441150537169712,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝2组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 98.41350809522328,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": 0.3285,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -1.9225808332567595,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 6.575000000000003,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -1.9143742014668397,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝3组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 98.80018595208455,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": 0.9211,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -1.7069841521044404,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 10.67180000000002,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -2.395376645206615,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 96.852090984,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": -2.4329,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.9414380841802572,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 2.976500000000001,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 4.597667610622458,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": 6.4855,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 7.5310509959044865,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 4.258300000000006,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.7323317570659849,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 116.74617886426935,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": null,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -2.837308943213468,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": null,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "总",
+          "rows": [
+            {
+              "metric": "综合得分",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "分",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "分",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值pp",
+              "mtd": {
+                "actual": 1.6372,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 2.195397096666196,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值pp",
+              "mtd": {
+                "actual": 8.318200000000004,
+                "target": -2.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 3.685198729092587,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        }
+      ],
+      "note": "YTD 来自 Sheet1 外网价指历史月份得分 C:M 区块。"
+    },
+    {
+      "id": "internal_discount",
+      "name": "内网折扣",
+      "icon": "🏷️",
+      "summary": {},
+      "groups": [
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.003669911861046371,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.024000224369426393,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.05099345202291128,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.034897936766803084,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.0699459747056349,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.03102626703476652,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝1组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.08873224962054793,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.06547042472614029,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝2组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.14341601841054197,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.07951254795151586,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝3组",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.057699373536254095,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.04921176028970964,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "总",
+          "rows": [
+            {
+              "metric": "系数差",
+              "mtd": {
+                "actual": -0.06013941656047228,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.041499118695769166,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "",
+                "precision": 1
+              },
+              "rule": "lower_better",
+              "unit": "",
+              "precision": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "six_high",
+      "name": "六高",
+      "icon": "📦",
+      "summary": {},
+      "groups": [
+        {
+          "name": "精品总",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 70.0963523743978,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": 0.1383624848,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": 0.1598504816,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": -0.1240086517842105,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": 0.004780301412411099,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 22.12189616252822,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": -0.8082191781,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": 0.1318672422403509,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 71.23862841147655,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": 0.15917,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": 0.1714954816000001,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": 0.1917808219,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": -0.0103406872218589,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 79.19954904171364,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": 0.125283,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": 0.09684448160000003,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": -0.1317485898647059,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": 0.0140883390237602,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝1组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 50.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": -0.0611152139,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝2组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 62.5,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": 0.2722181194333333,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝3组",
+          "rows": [
+            {
+              "metric": "可比价率",
+              "mtd": {
+                "actual": 37.10526315789474,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "天猫价指差值",
+              "mtd": {
+                "actual": 0.0233552991,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "抖音价指差值",
+              "mtd": {
+                "actual": 0.07228248160000006,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "调价率差值",
+              "mtd": {
+                "actual": null,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "缺货率差值",
+              "mtd": {
+                "actual": -0.0550546078393939,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "lower_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "lower_better",
+              "unit": "pp",
+              "precision": 1
+            }
+          ]
+        }
+      ],
+      "note": "Sheet1 未提供 YTD，YTD 切换时不展示。"
+    },
+    {
+      "id": "quality_product",
+      "name": "优质款",
+      "icon": "⭐",
+      "summary": {},
+      "groups": [
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 100.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 1.0,
+                "target": 1.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 42.857142857142854,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 15.0,
+                "target": 35.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 16.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 18.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 4.0,
+                "target": 25.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝1组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 75.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 3.0,
+                "target": 4.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝2组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "珠宝3组",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": null,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 50.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 1.0,
+                "target": 2.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "精品总",
+          "rows": [
+            {
+              "metric": "引入率",
+              "mtd": {
+                "actual": 0.0,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 35.82089552238806,
+                "target": 100.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            },
+            {
+              "metric": "已引进款数",
+              "mtd": {
+                "actual": 0.0,
+                "target": 18.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 24.0,
+                "target": 67.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "款",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "款",
+              "precision": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "machine_purchase",
+      "name": "机采",
+      "icon": "🤖",
+      "summary": {
+        "mtd": null,
+        "ytd": null
+      },
+      "groups": [
+        {
+          "name": "精品总",
+          "rows": [
+            {
+              "metric": "机采完成",
+              "mtd": {
+                "actual": 527046.65,
+                "target": 5330303.154202142,
+                "yoy": -27.275262816976397,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 7029062.569999999,
+                "target": 37350090.986835256,
+                "yoy": -16.985639000054263,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 527046.65,
+                "target": 685184.8969684085,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "海淘组",
+          "rows": [
+            {
+              "metric": "机采完成",
+              "mtd": {
+                "actual": 179111.31,
+                "target": 1705697.009344685,
+                "yoy": 127.1913351575988,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 2687794.64,
+                "target": 11952029.11578728,
+                "yoy": 14.57020868546046,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 179111.31,
+                "target": 219259.1670298907,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品1组",
+          "rows": [
+            {
+              "metric": "机采完成",
+              "mtd": {
+                "actual": 347193.34,
+                "target": 2665151.577101071,
+                "yoy": -43.586832303150416,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 4156721.21,
+                "target": 18675045.493417628,
+                "yoy": -7.9511102799507904,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 347193.34,
+                "target": 342592.4484842043,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "饰品2组",
+          "rows": [
+            {
+              "metric": "机采完成",
+              "mtd": {
+                "actual": 742.0,
+                "target": 959454.5677563855,
+                "yoy": -97.56160560712405,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 184546.72,
+                "target": 6723016.377630344,
+                "yoy": -88.50555150932982,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            },
+            {
+              "metric": "阶段完成",
+              "mtd": {
+                "actual": 742.0,
+                "target": 123333.28145431355,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "元",
+                "precision": 1
+              },
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "元",
+              "precision": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "price_power",
+      "name": "五星价格力&大爆款效率",
+      "icon": "🚀",
+      "summary": {},
+      "groups": [
+        {
+          "name": "四五星",
+          "rows": [
+            {
+              "metric": "达成差值",
+              "mtd": {
+                "actual": -0.3792695890285245,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.05015669652573718,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "销售占比",
+              "mtd": {
+                "actual": 31.379800000000003,
+                "target": 203.76362786554952,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 42.709,
+                "target": 150.39372422979497,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            }
+          ]
+        },
+        {
+          "name": "大爆款",
+          "rows": [
+            {
+              "metric": "达成差值",
+              "mtd": {
+                "actual": 1.6013626865671644,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": -0.49389162770044104,
+                "target": 0.0,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "pp",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "pp",
+              "precision": 1
+            },
+            {
+              "metric": "销售占比",
+              "mtd": {
+                "actual": 3.02,
+                "target": 290.61,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "ytd": {
+                "actual": 6.934500019560072,
+                "target": 279.7809469211574,
+                "yoy": null,
+                "rule": "higher_better",
+                "unit": "%",
+                "precision": 1
+              },
+              "rule": "higher_better",
+              "unit": "%",
+              "precision": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wearable_ac1",
+      "name": "穿戴 AC1 销售",
+      "icon": "⌚",
+      "summary": {},
+      "groups": [
+        {
+          "name": "VMA 数据接入",
+          "rows": [
+            {
+              "metric": "MTD/YTD 数据",
+              "mtd": null,
+              "ytd": null,
+              "rule": "higher_better",
+              "unit": "",
+              "precision": 1,
+              "note": "等待 VMA 下载完成后接入。"
+            }
+          ]
+        }
+      ],
+      "note": "MTD 默认当月；YTD 为 2026-01-01 到更新日，由内部模型 agent 通过 vma-tools 下载到 valet。"
+    }
+  ]
+}
