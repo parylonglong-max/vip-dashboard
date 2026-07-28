@@ -24,7 +24,7 @@
     { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
     { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
-    { id: "liugao", label: "六高", sectionIds: ["six_high_price_index"] },
+    { id: "liugao", label: "六高", sectionIds: ["six_high"] },
     { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd", "quality_product_history"] },
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
@@ -33,7 +33,7 @@
 
   var PERIOD_CONFIG = {
     self_sales_history: { rowStart: 17, rowEnd: 23, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
-    price_index_history: { rowStart: 56, rowEnd: 62, periods: { "YTD": [0,1,2,3,4,5,6,7,8,9,10,11], "1月": [0,12,13,14,15,16,17,18,19,20,21,22], "2月": [0,23,24,25,26,27,28,29,30,31,32,33], "3月": [0,34,35,36,37,38,39,40,41,42,43,44], "4月": [0,45,46,47,48,49,50,51,52,53,54,55], "5月": [0,56,57,58,59,60,61,62,63,64,65,66], "6月": [0,67,68,69,70,71,72,73,74,75,76,77] }, headers: function(p){ return ["小组",p+"综合得分",p+"天猫得分",p+"抖音得分",p+"天猫权重",p+"抖音权重",p+"天猫价指",p+"天猫目标",p+"天猫差值",p+"抖音价指",p+"抖音目标",p+"抖音差值"]; } },
+    price_index_history: { rowStart: 56, rowEnd: 63, periods: { "YTD": [0,1,2,3,4,5,6,7,8,9,10,11], "1月": [0,12,13,14,15,16,17,18,19,20,21,22], "2月": [0,23,24,25,26,27,28,29,30,31,32,33], "3月": [0,34,35,36,37,38,39,40,41,42,43,44], "4月": [0,45,46,47,48,49,50,51,52,53,54,55], "5月": [0,56,57,58,59,60,61,62,63,64,65,66], "6月": [0,67,68,69,70,71,72,73,74,75,76,77] }, headers: function(p){ return ["小组",p+"综合得分",p+"天猫得分",p+"抖音得分",p+"天猫权重",p+"抖音权重",p+"天猫价指",p+"天猫目标",p+"天猫差值",p+"抖音价指",p+"抖音目标",p+"抖音差值"]; } },
     internal_discount: { rowStart: 68, rowEnd: 74, periods: { "MTD": [0,1,2,3], "YTD": [0,4,5,6], "1月": [0,7,8,9], "2月": [0,10,11,12], "3月": [0,13,14,15], "4月": [0,16,17,18], "5月": [0,19,20,21], "6月": [0,22,23,24] }, headers: function(p){ return ["小组",p+"去年内网价指",p+"今年内网价指",p+"系数差"]; }, periodList: ["MTD","YTD","1月","2月","3月","4月","5月","6月"] },
     quality_product_history: { rowStart: 103, rowEnd: 109, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return ["小组",p+"已引进",p+"未引进",p+"暂不引进",p+"总计",p+"引入率"]; } },
     machine_purchase_history: { rowStart: 123, rowEnd: 126, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
@@ -53,7 +53,7 @@
   function textWithUnit(cell){ if(!cell||!cell.text) return "—"; return cell.text + (cell.unit && cell.unit !== "%" ? cell.unit : ""); }
   function clamp(v,min,max){ return Math.max(min,Math.min(max,v)); }
   function getSection(id){ return (state.data.sections||[]).find(function(s){ return s.id===id; }); }
-  function isTotalRow(row){ return row&&row.cells&&row.cells[0]&&row.cells[0].text==="总"; }
+  function isTotalRow(row){ return !!(row&&(row.total||(row.cells&&row.cells[0]&&/^(总|精品总)$/.test(row.cells[0].text)))); }
   function activePeriod(sectionId){ return state.periods[sectionId] || (PERIOD_CONFIG[sectionId] && PERIOD_CONFIG[sectionId].periodList ? PERIOD_CONFIG[sectionId].periodList[0] : "YTD"); }
 
   function salesMtdRecords(){ var section=getSection("self_sales_mtd"); if(!section) return []; return section.rows.filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){return {group:row.cells[0].text, actual:parseNum(row.cells[2]), deptRate:parseNum(row.cells[7]), groupRate:parseNum(row.cells[9]), row:row};}); }
@@ -72,13 +72,13 @@
   }
   function progressCard(label, rate, actual, target){ var pct=clamp((rate||0)*100,0,120); var cls=(rate>=1?'good':rate<0.8?'bad':'normal'); return '<div class="rate-card '+cls+'"><div class="rate-card__head"><b>'+escapeHtml(label)+'</b><span>'+((rate==null||isNaN(rate))?'—':(rate*100).toFixed(1)+'%')+'</span></div><div class="rate-card__bar"><i style="width:'+pct+'%"></i></div><div class="rate-card__money">'+escapeHtml(actual)+' / '+escapeHtml(target)+'</div></div>'; }
 
-  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
+  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(cell&&cell.sectionDivider) classes.push("section-divider"); if(cell&&cell.trend==="up") classes.push("trend-up"); if(cell&&cell.trend==="down") classes.push("trend-down"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
   function renderEnhancedContent(cell){ if(!cell||!cell.text) return '<span class="blank-placeholder">—</span>'; var ctx=cell.context||""; var raw=parseNum(cell); var text=escapeHtml(cell.text); var unit=cell.unit&&cell.unit!=="%"?'<small>'+escapeHtml(cell.unit)+'</small>':""; if(/同比/.test(ctx)&&raw!=null){ var status=raw>=0?"up":"down"; return '<span class="yoy-pill '+status+'">'+(raw>=0?'↑':'↓')+' '+text+'</span>'; } if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)&&raw!=null&&cell.unit==="%"){ var pct=raw>2?raw:raw*100; var cls=pct>=100?"good":pct<80?"bad":"normal"; return '<div class="progress-cell '+cls+'"><span>'+text+'</span><div class="mini-progress"><i style="width:'+clamp(pct,0,120)+'%"></i></div></div>'; } return text+unit; }
   function renderCell(cell,rowIndex,colIndex){ if(cell&&cell.merge&&cell.merge.covered) return ''; var title=cell&&cell.coord&&cell.text?' title="'+escapeHtml(cell.coord+' '+(cell.raw==null?'':cell.raw))+'"':""; var span=''; if(cell&&cell.merge&&cell.merge.rowspan>1) span+=' rowspan="'+cell.merge.rowspan+'"'; if(cell&&cell.merge&&cell.merge.colspan>1) span+=' colspan="'+cell.merge.colspan+'"'; return '<td class="'+cellClass(cell,rowIndex,colIndex)+'"'+title+span+'>'+renderEnhancedContent(cell)+'</td>'; }
 
   function markHeaders(rows, count){ return (rows||[]).map(function(row,idx){ if(idx<count){ row={excelRow:row.excelRow,cells:(row.cells||[]).map(function(cell){ var c=Object.assign({},cell); c.header=true; return c; })}; } return row; }); }
   function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text",header:true};})}; }
-  function renderRows(rows){ var html='<div class="excel-scroll"><table class="excel-table">'; rows.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
+  function renderRows(rows, tableClass){ var html='<div class="excel-scroll"><table class="excel-table '+(tableClass||'')+'">'; rows.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
 
   function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
 
@@ -87,44 +87,22 @@
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
-  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,14)};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows); }
+  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){ var cells=row.cells.slice(0,14).map(function(cell,idx){ var c=Object.assign({},cell); if(idx===1||idx===6||idx===10)c.sectionDivider=true; if(row.excelRow>=45&&(idx===9||idx===13)&&typeof c.raw==='number'){c.text=(c.raw*100).toFixed(1)+'%';c.unit='%';} return c; }); return {excelRow:row.excelRow,cells:cells};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid'); }
   function renderSixHighMtd(section){
-    // 旧的六高 Excel 渲染 - 已弃用，保留兼容
-    return '';
+    var headers=["小组","款数目标","六高占比","天猫价指","天猫目标","vs天猫目标","抖音价指","抖音目标","vs抖音目标","折扣率","折扣目标","vs目标","动销率","动销目标","vs目标6.1%"];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=80&&row.excelRow<=86;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,15)};});
+    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
   }
   function renderSixHighPriceIndex(section){
     var d=section.data; if(!d) return '';
     var groups=d.groups||[]; var summary=d.summary||{};
-    var fmtPct=function(v){ if(v==='(NULL)'||v==null) return '<span class="blank-placeholder">—</span>'; var n=parseFloat(v); if(isNaN(n)) return escapeHtml(String(v)); return (n*100).toFixed(2)+'%'; };
-    var fmtDiff=function(v){ if(v==='(NULL)'||v==null) return '<span class="blank-placeholder">—</span>'; var n=parseFloat(v); if(isNaN(n)) return escapeHtml(String(v)); var pp=(n*100).toFixed(2); var cls=n>=0?'val-up':'val-down'; return '<span class="'+cls+'">'+(n>=0?'+':'')+pp+'pp</span>'; };
-    var html='<div class="section-title"><span></span>六高商品价格指标 · MTD <small style="color:#999;font-weight:400">（数据日期: '+escapeHtml(d.source_date||'')+'）</small></div>';
-    html+='<div class="excel-scroll"><table class="excel-table">';
-    // Header rows
-    html+='<tr class="is-header"><td colspan="7" style="text-align:center;background:#D4923D;color:#fff;font-weight:900">六高商品价格指标 · MTD</td></tr>';
-    html+='<tr class="is-header"><td>小组</td><td>天猫价指</td><td>天猫目标</td><td>天猫差值</td><td>抖音价指</td><td>抖音目标</td><td>抖音差值</td></tr>';
-    // Group rows
-    groups.forEach(function(g){
-      html+='<tr><td class="is-row-label">'+escapeHtml(g.group)+'</td>';
-      html+='<td>'+fmtPct(g['天猫价格指数'])+'</td>';
-      html+='<td>'+fmtPct(g['天猫价格指数目标'])+'</td>';
-      html+='<td>'+fmtDiff(g['天猫差值'])+'</td>';
-      html+='<td>'+fmtPct(g['抖音价格指数'])+'</td>';
-      html+='<td>'+fmtPct(g['抖音价格指数目标'])+'</td>';
-      html+='<td>'+fmtDiff(g['抖音差值'])+'</td></tr>';
-    });
-    // Summary row
-    if(summary&&summary.group){
-      html+='<tr class="total-row">';
-      html+='<td class="is-row-label" style="background:#FFF2CC;font-weight:900">'+escapeHtml(summary.group)+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['天猫价格指数'])+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['天猫价格指数目标'])+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtDiff(summary['天猫差值'])+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['抖音价格指数'])+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['抖音价格指数目标'])+'</td>';
-      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtDiff(summary['抖音差值'])+'</td></tr>';
-    }
-    html+='</table></div>';
-    return html;
+    function pctCell(v,diff){ if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'}; var n=parseFloat(v); if(isNaN(n))return {text:String(v),raw:v,type:'text'}; return {text:diff?((n>=0?'+':'')+(n*100).toFixed(1)):(n*100).toFixed(1)+'%',raw:n,type:'number',unit:diff?'pp':'%',trend:diff?(n>=0?'up':'down'):null}; }
+    var top={excelRow:0,cells:[{text:'小组',raw:'小组',type:'text',header:true,merge:{rowspan:2,colspan:1}},{text:'天猫',raw:'天猫',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}},{text:'抖音',raw:'抖音',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}}]};
+    var sub={excelRow:0,cells:[{merge:{covered:true}},{text:'价格指数',raw:'价格指数',type:'text',header:true,sectionDivider:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true},{text:'价格指数',raw:'价格指数',type:'text',header:true,sectionDivider:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true}]};
+    var rows=[top,sub];
+    groups.forEach(function(g,idx){rows.push({excelRow:1000+idx,cells:[{text:g.group,raw:g.group,type:'text'},pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true)].map(function(c,i){if(i===1||i===4)c.sectionDivider=true;return c;})});});
+    if(summary&&summary.group){rows.push({excelRow:1099,total:true,cells:[{text:'精品总',raw:'精品总',type:'text'},pctCell(summary['天猫价格指数']),pctCell(summary['天猫价格指数目标']),pctCell(summary['天猫差值'],true),pctCell(summary['抖音价格指数']),pctCell(summary['抖音价格指数目标']),pctCell(summary['抖音差值'],true)].map(function(c,i){if(i===1||i===4)c.sectionDivider=true;return c;})});}
+    return '<div class="section-title"><span></span>六高价指 · MTD <small>（数据日期：'+escapeHtml(d.source_date||'')+'）</small></div>'+renderRows(rows,'six-high-price-grid');
   }
   function renderQualityMtd(section){
     var headers=["小组","已引进","未引进","暂不引进","总计","引入率（目标50%）"];

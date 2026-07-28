@@ -947,3 +947,20 @@ body {
 .gross-title em{font-style:normal;font-size:10px;font-weight:700;color:#7b8fa6;}
 .gross-note.compact{gap:3px;margin-top:-2px;}
 .gross-note.compact span{display:block;}
+
+/* 2026-07-28 外网价指分区强化：考核结果｜天猫｜抖音 */
+.price-index-mtd-grid .excel-cell.section-divider,
+.six-high-price-grid .excel-cell.section-divider{
+  border-left:2px solid rgba(37,99,235,.58)!important;
+}
+.price-index-mtd-grid tr:first-child .excel-cell.section-divider,
+.six-high-price-grid tr:first-child .excel-cell.section-divider{
+  box-shadow:inset 3px 0 0 rgba(37,99,235,.12);
+}
+.six-high-price-grid .excel-cell.trend-up{color:#dc2626!important;font-weight:800;}
+.six-high-price-grid .excel-cell.trend-down{color:#059669!important;font-weight:800;}
+.section-title small{font-size:10px;font-weight:600;color:#7b8fa6;}
+@media(max-width:480px){
+  .price-index-mtd-grid .excel-cell.section-divider,
+  .six-high-price-grid .excel-cell.section-divider{border-left-width:2px!important;}
+}
