@@ -94,7 +94,7 @@ SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
     {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
     {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 38, 2, 11), "stickyCols": 1},
-    {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 51, 2, 15), "stickyCols": 1},
+    {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 52, 2, 15), "stickyCols": 1},
     {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
     {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 26), "stickyCols": 1},
     {"id": "six_high", "title": "六高 · MTD", "range": (77, 86, 2, 16), "stickyCols": 1},
@@ -549,6 +549,30 @@ def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
     sections = [build_section(value_ws, formula_ws, spec) for spec in SECTION_SPECS]
     value_wb.close()
     formula_wb.close()
+
+    # 注入六高商品价格指标（独立 JSON 文件，非 Excel 模板数据）
+    six_high_paths = [
+        Path(excel_path).parent / "six_high_price_index.json",
+        Path(args_output).parent / "six_high_price_index.json" if 'args_output' in dir() else None,
+        Path(excel_path).parent / "dashboard_project" / "frontend" / "data" / "six_high_price_index.json",
+    ]
+    six_high_path = None
+    for p in six_high_paths:
+        if p and p.exists():
+            six_high_path = p
+            break
+    if six_high_path and six_high_path.exists():
+        import json as _json
+        six_high_data = _json.loads(six_high_path.read_text(encoding="utf-8"))
+        sections.append({
+            "id": "six_high_price_index",
+            "title": "六高商品价格指标 · MTD",
+            "range": "",
+            "stickyCols": 1,
+            "customType": "six_high_price",
+            "data": six_high_data,
+        })
+
     return {
         "meta": {
             "title": "精品货价监控数据看板",

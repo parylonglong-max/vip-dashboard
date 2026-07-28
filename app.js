@@ -22,9 +22,9 @@
   var TABS = [
     { id: "sales", label: "自营销售", sectionIds: ["self_sales_mtd", "self_sales_history"] },
     { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
-    { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history"] },
+    { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
-    { id: "liugao", label: "六高", sectionIds: ["six_high"] },
+    { id: "liugao", label: "六高", sectionIds: ["six_high_price_index"] },
     { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd", "quality_product_history"] },
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
@@ -87,11 +87,44 @@
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
-  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=51;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,14)};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows); }
+  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,14)};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows); }
   function renderSixHighMtd(section){
-    var headers=["小组","款数目标","六高占比","天猫价指","天猫目标","vs天猫目标","抖音价指","抖音目标","vs抖音目标","折扣率","折扣目标","vs目标","动销率","动销目标","vs目标6.1%"];
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=80&&row.excelRow<=86;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,15)};});
-    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+    // 旧的六高 Excel 渲染 - 已弃用，保留兼容
+    return '';
+  }
+  function renderSixHighPriceIndex(section){
+    var d=section.data; if(!d) return '';
+    var groups=d.groups||[]; var summary=d.summary||{};
+    var fmtPct=function(v){ if(v==='(NULL)'||v==null) return '<span class="blank-placeholder">—</span>'; var n=parseFloat(v); if(isNaN(n)) return escapeHtml(String(v)); return (n*100).toFixed(2)+'%'; };
+    var fmtDiff=function(v){ if(v==='(NULL)'||v==null) return '<span class="blank-placeholder">—</span>'; var n=parseFloat(v); if(isNaN(n)) return escapeHtml(String(v)); var pp=(n*100).toFixed(2); var cls=n>=0?'val-up':'val-down'; return '<span class="'+cls+'">'+(n>=0?'+':'')+pp+'pp</span>'; };
+    var html='<div class="section-title"><span></span>六高商品价格指标 · MTD <small style="color:#999;font-weight:400">（数据日期: '+escapeHtml(d.source_date||'')+'）</small></div>';
+    html+='<div class="excel-scroll"><table class="excel-table">';
+    // Header rows
+    html+='<tr class="is-header"><td colspan="7" style="text-align:center;background:#D4923D;color:#fff;font-weight:900">六高商品价格指标 · MTD</td></tr>';
+    html+='<tr class="is-header"><td>小组</td><td>天猫价指</td><td>天猫目标</td><td>天猫差值</td><td>抖音价指</td><td>抖音目标</td><td>抖音差值</td></tr>';
+    // Group rows
+    groups.forEach(function(g){
+      html+='<tr><td class="is-row-label">'+escapeHtml(g.group)+'</td>';
+      html+='<td>'+fmtPct(g['天猫价格指数'])+'</td>';
+      html+='<td>'+fmtPct(g['天猫价格指数目标'])+'</td>';
+      html+='<td>'+fmtDiff(g['天猫差值'])+'</td>';
+      html+='<td>'+fmtPct(g['抖音价格指数'])+'</td>';
+      html+='<td>'+fmtPct(g['抖音价格指数目标'])+'</td>';
+      html+='<td>'+fmtDiff(g['抖音差值'])+'</td></tr>';
+    });
+    // Summary row
+    if(summary&&summary.group){
+      html+='<tr class="total-row">';
+      html+='<td class="is-row-label" style="background:#FFF2CC;font-weight:900">'+escapeHtml(summary.group)+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['天猫价格指数'])+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['天猫价格指数目标'])+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtDiff(summary['天猫差值'])+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['抖音价格指数'])+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtPct(summary['抖音价格指数目标'])+'</td>';
+      html+='<td style="background:#FFF2CC;font-weight:900">'+fmtDiff(summary['抖音差值'])+'</td></tr>';
+    }
+    html+='</table></div>';
+    return html;
   }
   function renderQualityMtd(section){
     var headers=["小组","已引进","未引进","暂不引进","总计","引入率（目标50%）"];
@@ -173,6 +206,7 @@
     if(section.id==='gross_profit') return renderGrossProfit(section);
     if(section.id==='price_index_mtd') return renderPriceIndexMtd(section);
     if(section.id==='six_high') return renderSixHighMtd(section);
+    if(section.id==='six_high_price_index') return renderSixHighPriceIndex(section);
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
     if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
     if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
