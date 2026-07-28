@@ -87,11 +87,15 @@
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
-  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){ var cells=row.cells.slice(0,14).map(function(cell,idx){ var c=Object.assign({},cell); if(idx===1||idx===6||idx===10)c.sectionDivider=true; if(row.excelRow>=45&&(idx===9||idx===13)&&typeof c.raw==='number'){c.text=(c.raw*100).toFixed(1)+'%';c.unit='%';} return c; }); return {excelRow:row.excelRow,cells:cells};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid'); }
+  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){ var cells=row.cells.slice(0,14).map(function(cell,idx){ var c=Object.assign({},cell); if(row.excelRow===44&&(idx===1||idx===6||idx===10))c.sectionDivider=true; if(row.excelRow>=45&&(idx===9||idx===13)&&typeof c.raw==='number'){c.text=(c.raw*100).toFixed(1)+'%';c.unit='%';} return c; }); return {excelRow:row.excelRow,cells:cells};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid'); }
   function renderSixHighMtd(section){
-    var headers=["小组","款数目标","六高占比","天猫价指","天猫目标","vs天猫目标","抖音价指","抖音目标","vs抖音目标","折扣率","折扣目标","vs目标","动销率","动销目标","vs目标6.1%"];
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=80&&row.excelRow<=86;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,15)};});
-    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+    var source=getSection('six_high_price_index'); var d=source&&source.data; if(!d)return '';
+    function numCell(v){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);return isNaN(n)?{text:String(v),raw:v,type:'text'}:{text:n.toLocaleString('zh-CN',{maximumFractionDigits:1}),raw:n,type:'number'};}
+    function pctCell(v,diff){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return {text:String(v),raw:v,type:'text'};return {text:(diff&&n>=0?'+':'')+(n*100).toFixed(1)+(diff?'pp':'%'),raw:n,type:'number',trend:diff?(n>=0?'up':'down'):null};}
+    function dataRow(g,total){return {excelRow:total?1099:1000,total:!!total,cells:[{text:total?'精品总':g.group,raw:g.group,type:'text'},numCell(g['日均商品数']),numCell(g['可比商品数']),pctCell(g['可比率']),pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true),pctCell(g['断货率']),pctCell(g['断货率目标']),pctCell(g['断货率差值'],true),pctCell(g['7天缺货率'])]};}
+    var headers=['小组','日均商品数','可比商品数','可比率','天猫价格指数','天猫目标','天猫差值','抖音价格指数','抖音目标','抖音差值','断货率','断货率目标','断货率差值','7天缺货率'];
+    var rows=[headerRow(headers)]; if(d.summary)rows.push(dataRow(d.summary,true)); (d.groups||[]).forEach(function(g){rows.push(dataRow(g,false));});
+    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows(rows,'six-high-detail-grid');
   }
   function renderSixHighPriceIndex(section){
     var d=section.data; if(!d) return '';
