@@ -83,7 +83,29 @@
   function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
 
   function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if(sectionId==='price_index_history'&&cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';} return {excelRow:row.excelRow,cells:cells};}); return markHeaders(rows,2); }
-  function pricePowerPeriodRows(section, period){ var rows=(section.rows||[]).filter(function(row){ if(row.excelRow===137||row.excelRow===138) return true; if(period==='YTD') return row.excelRow>=139&&row.excelRow<=140; return row.excelRow>=141&&row.excelRow<=152; }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); return markHeaders(rows,2); }
+  function pricePowerPeriodRows(section, period){
+    var wanted=period==='YTD'?'YTD':'202606';
+    var data=(section.rows||[]).filter(function(row){
+      var first=row.cells&&row.cells[0];
+      var raw=first&&first.raw;
+      var text=first&&first.text;
+      return wanted==='YTD'?text==='YTD':String(raw)==='202606';
+    }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10).map(function(c){return Object.assign({},c);})};});
+    var headers=["时间","维度","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"];
+    function qtyCell(c){
+      if(!c||typeof c.raw!=='number')return;
+      var n=c.raw;
+      if(Math.abs(n)>=1e8){c.text=(n/1e8).toFixed(2);c.unit='亿';}
+      else {c.text=(n/1e4).toFixed(0);c.unit='万';}
+    }
+    data.forEach(function(row){
+      if(wanted!=='YTD'&&row.cells[0]&&row.cells[0].merge&&!row.cells[0].merge.covered){row.cells[0].text='202606';row.cells[0].raw='202606';row.cells[0].unit='';}
+      qtyCell(row.cells[2]);
+      qtyCell(row.cells[4]);
+      [6,7,8].forEach(function(i){var c=row.cells[i];if(c&&typeof c.raw==='number'){c.text=c.raw.toFixed(2);c.unit='';}});
+    });
+    return [headerRow(headers)].concat(data);
+  }
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
@@ -137,7 +159,11 @@
 
   function renderPricePowerMtd(section){
     var headers=["小组","商品占比-曝光","商品占比-APP销售","APP占比-实际","APP占比-目标","APP占比-VS目标差距","APP占比-完成率","曝光","APP销售"];
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=133&&row.excelRow<=134;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    var rows=(section.rows||[]).filter(function(row){var label=row.cells&&row.cells[0]&&row.cells[0].text;return label==='四五星'||label==='大爆款';}).slice(0,2).map(function(row){
+      var cells=row.cells.slice(0,9).map(function(c){return Object.assign({},c);});
+      [3,4,5].forEach(function(i){var c=cells[i];if(c&&typeof c.raw==='number'){c.text=c.raw.toFixed(2);c.unit='';}});
+      return {excelRow:row.excelRow,cells:cells};
+    });
     return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
   }
   function renderTrafficPanel(){

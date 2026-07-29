@@ -138,6 +138,22 @@ def _resolve_section_ranges(ws):
             c1, c2 = fallback[2], fallback[3]  # 列范围保持不变
             spec["range"] = (r1, r2, c1, c2)
 
+    # 五星价格力&大爆款效率会因上游模块插行而整体下移，且模块内没有独立 YTD 标题。
+    # 以模块标题、历史月份标题和最后一条月份数据动态切分，禁止再依赖固定行号。
+    power_title = _find_header(ws, ["五星价格力&大爆款效率"], search_col=2, start_row=1, end_row=250)
+    if power_title:
+        history_title = _find_header(ws, ["历史月份"], search_col=2, start_row=power_title + 1, end_row=250)
+        if history_title:
+            last_row = history_title
+            for r in range(history_title + 1, min(ws.max_row, 250) + 1):
+                if any(ws.cell(r, c).value is not None for c in range(2, 12)):
+                    last_row = r
+            for spec in SECTION_SPECS:
+                if spec["id"] == "price_power_mtd":
+                    spec["range"] = (power_title, history_title - 1, 2, 10)
+                elif spec["id"] == "price_power_history":
+                    spec["range"] = (history_title, last_row, 2, 11)
+
 RATE_KEYWORDS = ("率", "同比", "完成率", "权重", "占比", "折扣", "价指", "价格指数", "指数")
 SCORE_KEYWORDS = ("得分", "分")
 DIFF_KEYWORDS = ("差值", "差距", "pp", "PP", "降幅", "vs", "VS")
