@@ -87,7 +87,27 @@
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
-  function renderPriceIndexMtd(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){ var cells=row.cells.slice(0,14).map(function(cell,idx){ var c=Object.assign({},cell); if(row.excelRow===44&&(idx===1||idx===6||idx===10))c.sectionDivider=true; if(row.excelRow>=45&&(idx===9||idx===13)&&typeof c.raw==='number'){c.text=(c.raw*100).toFixed(1)+'%';c.unit='%';} return c; }); if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';} return {excelRow:row.excelRow,cells:cells};}); rows=markHeaders(rows,2); return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid'); }
+  function renderPriceIndexMtd(section){
+    // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
+    // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
+    var keep=[0,1,2,3,4,5,6,7,8,10,11,12];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){
+      var cells=keep.map(function(srcIdx){
+        var c=Object.assign({},row.cells[srcIdx]);
+        if(row.excelRow===44&&(srcIdx===6||srcIdx===10)&&c.merge){ c.merge=Object.assign({},c.merge,{colspan:3}); }
+        return c;
+      });
+      if(row.excelRow===44&&(cells[1]||cells[6]||cells[9])){
+        if(cells[1]) cells[1].sectionDivider=true;
+        if(cells[6]) cells[6].sectionDivider=true;
+        if(cells[9]) cells[9].sectionDivider=true;
+      }
+      if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      return {excelRow:row.excelRow,cells:cells};
+    });
+    rows=markHeaders(rows,2);
+    return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid');
+  }
   function renderSixHighMtd(section){
     var source=getSection('six_high_price_index'); var d=source&&source.data; if(!d)return '';
     function numCell(v){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);return isNaN(n)?{text:String(v),raw:v,type:'text'}:{text:n.toLocaleString('zh-CN',{maximumFractionDigits:1}),raw:n,type:'number'};}
