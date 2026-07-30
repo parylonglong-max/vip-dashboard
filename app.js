@@ -253,14 +253,17 @@
   function discountRows(section, period){
     var cfg=PERIOD_CONFIG.internal_discount;
     var idx=cfg.periods[period] || cfg.periods.MTD;
-    var startHeader=Math.max(0,cfg.rowStart-2);
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){
+    var periodName=period==='MTD'?'MTD':period;
+    // 不复用 Excel 的跨期合并表头；每个视图独立四列表头，避免表头混入数值。
+    var headers=['小组',periodName+'去年内网价指',periodName+'今年内网价指','系数差'];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=69&&row.excelRow<=75;}).map(function(row){
       var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:'',type:'blank'});});
       // 去年/今年内网价指统一 xx.x%，系数差统一 ±x.xpp。
-      if(row.excelRow>=69){ pricePctCell(cells[1]); pricePctCell(cells[2]); ratioPpCell(cells[3]); }
-      return {excelRow:row.excelRow,cells:cells};
+      pricePctCell(cells[1]); pricePctCell(cells[2]); ratioPpCell(cells[3]);
+      if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      return {excelRow:row.excelRow,total:row.excelRow===75,cells:cells};
     });
-    return markHeaders(rows,2);
+    return [headerRow(headers)].concat(rows);
   }
 
   function renderDiscountPanel(){

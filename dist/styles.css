@@ -783,7 +783,6 @@ body {
 .excel-cell.is-total-label,
 .excel-table tr[data-excel-row="12"] .excel-cell,
 .excel-table tr[data-excel-row="23"] .excel-cell,
-.excel-table tr[data-excel-row="74"] .excel-cell,
 .excel-table tr[data-excel-row="98"] .excel-cell,
 .excel-table tr[data-excel-row="109"] .excel-cell {
   background: #e3f0ff;
