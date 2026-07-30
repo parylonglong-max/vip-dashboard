@@ -25,6 +25,7 @@
     { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
     { id: "liugao", label: "六高", sectionIds: ["six_high"] },
+    { id: "adjustment", label: "调价率", sectionIds: [] },
     { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd", "quality_product_history"] },
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
@@ -46,7 +47,8 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(td){state.trafficData=td;}).catch(function(){}).then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(td){state.trafficData=td;}).catch(function(){}).then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
+  function loadExtraData(){ return Promise.all([fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch('data/adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){})]); }
+  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function parseNum(cell){ if(!cell) return null; var v=cell.raw; if(typeof v==="number") return v; var n=Number(v); return isNaN(n)?null:n; }
@@ -280,9 +282,32 @@
     return html;
   }
 
+  function renderAdjustmentPanel(){
+    var d=state.adjustmentData;
+    if(!d) return '<div class="loading">暂无调价率数据</div>';
+    function num(v){return v==null?'—':Number(v).toLocaleString('zh-CN');}
+    function statusRate(block){
+      if(!block||block.rate==null) return '<span class="adjust-rate no-data">—</span>';
+      var pct=(block.rate*100).toFixed(1)+'%';
+      if(block.status==='fail') return '<span class="adjust-rate fail">'+pct+'<em>未达标</em></span>';
+      return '<span class="adjust-rate pass">'+pct+'</span>';
+    }
+    function row(item,total){
+      return '<tr class="'+(total?'total-row':'')+'"><td class="excel-cell is-row-label">'+escapeHtml(item.group)+'</td>'+
+        '<td class="excel-cell is-number">'+num(item.overall.denominator)+'</td><td class="excel-cell is-number">'+num(item.overall.adjusted)+'</td><td class="excel-cell">'+statusRate(item.overall)+'</td>'+
+        '<td class="excel-cell is-number section-divider">'+num(item.six_high.denominator)+'</td><td class="excel-cell is-number">'+num(item.six_high.adjusted)+'</td><td class="excel-cell">'+statusRate(item.six_high)+'</td></tr>';
+    }
+    var html='<div class="bi-card adjustment-head"><div class="bi-section-head"><h2>调价率</h2><span>整体目标 75% · 六高目标 80%</span></div><div class="adjustment-dates"><span>整体截至 '+escapeHtml(d.overall_source_date||'—')+'</span><span>六高截至 '+escapeHtml(d.six_high_source_date||'—')+'</span></div></div>';
+    html+='<div class="excel-scroll"><table class="excel-table adjustment-grid"><thead><tr><th rowspan="2" class="excel-cell is-header is-row-label">小组</th><th colspan="3" class="excel-cell is-header">整体调价率</th><th colspan="3" class="excel-cell is-header section-divider">六高商品调价率</th></tr><tr><th class="excel-cell is-header">价高商品数</th><th class="excel-cell is-header">调价数</th><th class="excel-cell is-header">调价率</th><th class="excel-cell is-header section-divider">价高商品数</th><th class="excel-cell is-header">调价数</th><th class="excel-cell is-header">调价率</th></tr></thead><tbody>';
+    (d.groups||[]).forEach(function(x){html+=row(x,false);});
+    if(d.summary) html+=row(d.summary,true);
+    html+='</tbody></table></div>';
+    return html;
+  }
+
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():renderGenericPanel(activeTab))))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():renderGenericPanel(activeTab)))))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }
