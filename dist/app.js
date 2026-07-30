@@ -26,7 +26,7 @@
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
     { id: "liugao", label: "六高", sectionIds: ["six_high"] },
     { id: "adjustment", label: "调价率", sectionIds: [] },
-    { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd", "quality_product_history"] },
+    { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd"] },
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
     { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
@@ -88,8 +88,8 @@
   }
   function progressCard(label, rate, actual, target){ var pct=clamp((rate||0)*100,0,120); var cls=(rate>=1?'good':rate<0.8?'bad':'normal'); return '<div class="rate-card '+cls+'"><div class="rate-card__head"><b>'+escapeHtml(label)+'</b><span>'+((rate==null||isNaN(rate))?'—':(rate*100).toFixed(1)+'%')+'</span></div><div class="rate-card__bar"><i style="width:'+pct+'%"></i></div><div class="rate-card__money">'+escapeHtml(actual)+' / '+escapeHtml(target)+'</div></div>'; }
 
-  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(cell&&cell.sectionDivider) classes.push("section-divider"); if(cell&&cell.trend==="up") classes.push("trend-up"); if(cell&&cell.trend==="down") classes.push("trend-down"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
-  function renderEnhancedContent(cell){ if(!cell||!cell.text) return '<span class="blank-placeholder">—</span>'; var ctx=cell.context||""; var raw=parseNum(cell); var text=escapeHtml(cell.text); var unit=cell.unit&&cell.unit!=="%"?'<small>'+escapeHtml(cell.unit)+'</small>':""; if(/同比/.test(ctx)&&raw!=null){ var status=raw>=0?"up":"down"; return '<span class="yoy-pill '+status+'">'+(raw>=0?'↑':'↓')+' '+text+'</span>'; } if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)&&raw!=null&&cell.unit==="%"){ var pct=raw>2?raw:raw*100; var cls=pct>=100?"good":pct<80?"bad":"normal"; return '<div class="progress-cell '+cls+'"><span>'+text+'</span><div class="mini-progress"><i style="width:'+clamp(pct,0,120)+'%"></i></div></div>'; } return text+unit; }
+  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(cell&&cell.sectionDivider) classes.push("section-divider"); if(cell&&cell.trend==="up") classes.push("trend-up"); if(cell&&cell.trend==="down") classes.push("trend-down"); if(cell&&cell.qualityFail) classes.push("quality-fail"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
+  function renderEnhancedContent(cell){ if(!cell||!cell.text) return '<span class="blank-placeholder">—</span>'; var ctx=cell.context||""; var raw=parseNum(cell); var text=escapeHtml(cell.text); var unit=cell.unit&&cell.unit!=="%"?'<small>'+escapeHtml(cell.unit)+'</small>':""; if(/同比/.test(ctx)&&raw!=null){ var status=raw>=0?"up":"down"; return '<span class="yoy-pill '+status+'">'+(raw>=0?'↑':'↓')+' '+text+'</span>'; } if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)&&raw!=null&&cell.unit==="%"){ var pct=raw>2?raw:raw*100; var cls=pct>=100?"good":pct<80?"bad":"normal"; var chip=cell.qualityFail?'<em class="status-chip">未达标</em>':''; return '<div class="progress-cell '+cls+'"><span>'+text+chip+'</span><div class="mini-progress"><i style="width:'+clamp(pct,0,120)+'%"></i></div></div>'; } return text+unit; }
   function renderCell(cell,rowIndex,colIndex){ if(cell&&cell.merge&&cell.merge.covered) return ''; var title=cell&&cell.coord&&cell.text?' title="'+escapeHtml(cell.coord+' '+(cell.raw==null?'':cell.raw))+'"':""; var span=''; if(cell&&cell.merge&&cell.merge.rowspan>1) span+=' rowspan="'+cell.merge.rowspan+'"'; if(cell&&cell.merge&&cell.merge.colspan>1) span+=' colspan="'+cell.merge.colspan+'"'; return '<td class="'+cellClass(cell,rowIndex,colIndex)+'"'+title+span+'>'+renderEnhancedContent(cell)+'</td>'; }
 
   function markHeaders(rows, count){ return (rows||[]).map(function(row,idx){ if(idx<count){ row={excelRow:row.excelRow,cells:(row.cells||[]).map(function(cell){ var c=Object.assign({},cell); c.header=true; return c; })}; } return row; }); }
@@ -200,10 +200,20 @@
     if(summary&&summary.group){rows.push({excelRow:1099,total:true,cells:[{text:'精品总',raw:'精品总',type:'text'},pctCell(summary['天猫价格指数']),pctCell(summary['天猫价格指数目标']),pctCell(summary['天猫差值'],true),pctCell(summary['抖音价格指数']),pctCell(summary['抖音价格指数目标']),pctCell(summary['抖音差值'],true)]});}
     return '<div class="section-title"><span></span>六高价指 · MTD <small>（数据日期：'+escapeHtml(d.source_date||'')+'）</small></div>'+renderRows(rows,'six-high-price-grid');
   }
+  // 唯一数据口径：经营会周报【优质款明细】C列=精品；不展示未同步的旧模板历史区。
   function renderQualityMtd(section){
-    var headers=["小组","已引进","未引进","暂不引进","总计","引入率（目标50%）"];
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=92&&row.excelRow<=98;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,6)};});
-    return '<div class="section-title"><span></span>优质款 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+    var headers=['小组','已引进','未引进','暂不引进','总计','引入率（目标50%）'];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=93&&row.excelRow<=99;}).map(function(row){
+      var cells=row.cells.slice(0,6).map(function(c){return Object.assign({},c);});
+      var rate=cells[5];
+      if(rate&&typeof rate.raw==='number'){
+        rate.text=(rate.raw*100).toFixed(1)+'%'; rate.unit='%';
+        if(Number(cells[4]&&cells[4].raw||0)>0&&rate.raw<0.5) rate.qualityFail=true;
+      }
+      return {excelRow:row.excelRow,cells:cells,total:normalizeGroupName(cells[0]&&cells[0].text)==='精品总'};
+    });
+    var date=(state.data&&state.data.dataDate)||'—';
+    return '<div class="section-title"><span></span>优质款 · MTD <small>周报优质款明细 · 部门=精品 · 数据截至 '+escapeHtml(date)+'</small></div>'+renderRows([headerRow(headers)].concat(rows),'quality-weekly-grid');
   }
   function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
 

@@ -2,12 +2,12 @@
   "meta": {
     "title": "精品货价监控数据看板",
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
-    "sourceFile": "货价监控指标副本-26.07.30_全流程更新_优质款周报口径.xlsx",
+    "sourceFile": "货价监控指标副本-26.07.30_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-07-30",
-    "generatedAt": "2026-07-30 17:57:32",
-    "updatedAtHour": "2026-07-30 17点",
-    "versionNote": "更新于 2026-07-30 17点"
+    "generatedAt": "2026-07-30 14:30:27",
+    "updatedAtHour": "2026-07-30 14点",
+    "versionNote": "更新于 2026-07-30 14点"
   },
   "sections": [
     {
@@ -29304,11 +29304,11 @@
             {
               "coord": "D93",
               "formula": "",
-              "raw": 0,
-              "text": "0",
+              "raw": 4,
+              "text": "4",
               "unit": "",
               "type": "number",
-              "context": "0 海淘组",
+              "context": "0 4 海淘组",
               "numberFormat": "General"
             },
             {
@@ -29324,20 +29324,22 @@
             {
               "coord": "F93",
               "formula": "=SUM(C93:E93)",
-              "raw": 0,
-              "text": "0",
+              "raw": 4,
+              "text": "4",
               "unit": "",
               "type": "number",
-              "context": "总计 0 海淘组",
+              "context": "总计 4 海淘组",
               "numberFormat": "General"
             },
             {
               "coord": "G93",
               "formula": "=IFERROR(C93/F93,\"-\")",
-              "raw": "-",
-              "text": "-",
-              "unit": "",
-              "type": "text"
+              "raw": 0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "引入率（目标50%） 0 海淘组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -29369,7 +29371,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "0 饰品1组",
+              "context": "0 4 饰品1组",
               "numberFormat": "General"
             },
             {
@@ -29389,7 +29391,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "总计 0 饰品1组",
+              "context": "总计 4 饰品1组",
               "numberFormat": "General"
             },
             {
@@ -29426,11 +29428,11 @@
             {
               "coord": "D95",
               "formula": "",
-              "raw": 4,
-              "text": "4",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
-              "context": "0 饰品2组",
+              "context": "0 4 饰品2组",
               "numberFormat": "General"
             },
             {
@@ -29446,22 +29448,20 @@
             {
               "coord": "F95",
               "formula": "=SUM(C95:E95)",
-              "raw": 4,
-              "text": "4",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
-              "context": "总计 0 饰品2组",
+              "context": "总计 4 饰品2组",
               "numberFormat": "General"
             },
             {
               "coord": "G95",
               "formula": "=IFERROR(C95/F95,\"-\")",
-              "raw": 0,
-              "text": "0.0%",
-              "unit": "%",
-              "type": "number",
-              "context": "引入率（目标50%） - 饰品2组",
-              "numberFormat": "General"
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -29493,7 +29493,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "0 珠宝1组",
+              "context": "0 4 珠宝1组",
               "numberFormat": "General"
             },
             {
@@ -29513,7 +29513,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "总计 0 珠宝1组",
+              "context": "总计 4 珠宝1组",
               "numberFormat": "General"
             },
             {
@@ -29554,7 +29554,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "0 珠宝2组",
+              "context": "0 4 珠宝2组",
               "numberFormat": "General"
             },
             {
@@ -29574,7 +29574,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "总计 0 珠宝2组",
+              "context": "总计 4 珠宝2组",
               "numberFormat": "General"
             },
             {
@@ -29615,7 +29615,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "0 珠宝3组",
+              "context": "0 4 珠宝3组",
               "numberFormat": "General"
             },
             {
@@ -29635,7 +29635,7 @@
               "text": "0",
               "unit": "",
               "type": "number",
-              "context": "总计 0 珠宝3组",
+              "context": "总计 4 珠宝3组",
               "numberFormat": "General"
             },
             {
@@ -29676,7 +29676,7 @@
               "text": "4",
               "unit": "",
               "type": "number",
-              "context": "0 精品总",
+              "context": "0 4 精品总",
               "numberFormat": "General"
             },
             {
@@ -29696,7 +29696,7 @@
               "text": "4",
               "unit": "",
               "type": "number",
-              "context": "总计 0 精品总",
+              "context": "总计 4 精品总",
               "numberFormat": "General"
             },
             {
@@ -29706,7 +29706,7 @@
               "text": "0.0%",
               "unit": "%",
               "type": "number",
-              "context": "引入率（目标50%） - 精品总",
+              "context": "引入率（目标50%） 0 精品总",
               "numberFormat": "General"
             }
           ]
@@ -30634,8 +30634,8 @@
             {
               "coord": "D93",
               "formula": "",
-              "raw": 0,
-              "text": "0",
+              "raw": 4,
+              "text": "4",
               "unit": "",
               "type": "number",
               "context": "0 海淘组",
@@ -30654,8 +30654,8 @@
             {
               "coord": "F93",
               "formula": "=SUM(C93:E93)",
-              "raw": 0,
-              "text": "0",
+              "raw": 4,
+              "text": "4",
               "unit": "",
               "type": "number",
               "context": "总计 海淘组",
@@ -30664,10 +30664,12 @@
             {
               "coord": "G93",
               "formula": "=IFERROR(C93/F93,\"-\")",
-              "raw": "-",
-              "text": "-",
-              "unit": "",
-              "type": "text"
+              "raw": 0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "引入率（目标50%） 海淘组",
+              "numberFormat": "General"
             },
             {
               "coord": "H93",
@@ -31236,8 +31238,8 @@
             {
               "coord": "D95",
               "formula": "",
-              "raw": 4,
-              "text": "4",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "0 饰品2组",
@@ -31256,8 +31258,8 @@
             {
               "coord": "F95",
               "formula": "=SUM(C95:E95)",
-              "raw": 4,
-              "text": "4",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "总计 饰品2组",
@@ -31266,12 +31268,10 @@
             {
               "coord": "G95",
               "formula": "=IFERROR(C95/F95,\"-\")",
-              "raw": 0,
-              "text": "0.0%",
-              "unit": "%",
-              "type": "number",
-              "context": "引入率（目标50%） 饰品2组",
-              "numberFormat": "General"
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             },
             {
               "coord": "H95",
@@ -33495,8 +33495,8 @@
             {
               "coord": "D104",
               "formula": "=D93+I104+N104+S104+X104+AC104+AH104",
-              "raw": 0,
-              "text": "0",
+              "raw": 4,
+              "text": "4",
               "unit": "",
               "type": "number",
               "context": "0 海淘组",
@@ -33515,8 +33515,8 @@
             {
               "coord": "F104",
               "formula": "=F93+K104+P104+U104+Z104+AE104+AJ104",
-              "raw": 1,
-              "text": "1",
+              "raw": 5,
+              "text": "5",
               "unit": "",
               "type": "number",
               "context": "总计 海淘组",
@@ -33525,8 +33525,8 @@
             {
               "coord": "G104",
               "formula": "=IFERROR(C104/F104,\"-\")",
-              "raw": 1,
-              "text": "100.0%",
+              "raw": 0.2,
+              "text": "20.0%",
               "unit": "%",
               "type": "number",
               "context": "引入率（目标50%） 海淘组",
@@ -34203,8 +34203,8 @@
             {
               "coord": "D106",
               "formula": "=D95+I106+N106+S106+X106+AC106+AH106",
-              "raw": 6,
-              "text": "6",
+              "raw": 2,
+              "text": "2",
               "unit": "",
               "type": "number",
               "context": "0 饰品2组",
@@ -34223,8 +34223,8 @@
             {
               "coord": "F106",
               "formula": "=F95+K106+P106+U106+Z106+AE106+AJ106",
-              "raw": 11,
-              "text": "11",
+              "raw": 7,
+              "text": "7",
               "unit": "",
               "type": "number",
               "context": "总计 饰品2组",
@@ -34233,8 +34233,8 @@
             {
               "coord": "G106",
               "formula": "=IFERROR(C106/F106,\"-\")",
-              "raw": 0.363636363636364,
-              "text": "36.4%",
+              "raw": 0.571428571428571,
+              "text": "57.1%",
               "unit": "%",
               "type": "number",
               "context": "引入率（目标50%） 饰品2组",
