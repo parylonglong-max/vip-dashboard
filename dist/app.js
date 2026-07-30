@@ -112,9 +112,9 @@
   // 价格指数统一展示：数值转百分比并保留 1 位小数；差值统一 pp。
   function pricePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1); cell.unit="%"; return cell; }
   // 外网价指的降幅/差值源值已是 pp；仅保留一位小数。
-  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>=0?"+":"")+Math.abs(n).toFixed(1); cell.unit="pp"; return cell; }
+  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n).toFixed(1); cell.unit="pp"; return cell; }
   // 内网系数差源值为比例，展示时转换为 pp。
-  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>=0?"+":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; return cell; }
+  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; return cell; }
   function renderPriceIndexMtd(section){
     // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
     // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
