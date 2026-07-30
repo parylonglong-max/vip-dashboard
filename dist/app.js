@@ -55,7 +55,21 @@
   function textWithUnit(cell){ if(!cell||!cell.text) return "—"; return cell.text + (cell.unit && cell.unit !== "%" ? cell.unit : ""); }
   function clamp(v,min,max){ return Math.max(min,Math.min(max,v)); }
   function getSection(id){ return (state.data.sections||[]).find(function(s){ return s.id===id; }); }
-  function isTotalRow(row){ return !!(row&&(row.total||(row.cells&&row.cells[0]&&/^(总|精品总)$/.test(row.cells[0].text)))); }
+  // 全局渲染规范：仅“精品总”可使用总计样式，且必须置于所属表格最后。
+  function normalizeGroupName(name){ return /^(总|精品|精品总计|精品总)$/.test(String(name||'').trim()) ? '精品总' : name; }
+  function isTotalRow(row){ return !!(row&&(row.total||(row.cells&&row.cells[0]&&normalizeGroupName(row.cells[0].text)==='精品总'))); }
+  function normalizeAndSortTotalRows(rows){
+    var headers=[], data=[];
+    (rows||[]).forEach(function(row){
+      var cloned=Object.assign({},row,{cells:(row.cells||[]).map(function(cell){return Object.assign({},cell);})});
+      var first=cloned.cells[0];
+      if(first && !first.header && !(first.merge&&first.merge.covered) && normalizeGroupName(first.text)==='精品总'){
+        first.text='精品总'; first.raw='精品总'; cloned.total=true;
+      }
+      if((cloned.cells||[]).some(function(cell){return cell&&cell.header;})) headers.push(cloned); else data.push(cloned);
+    });
+    return headers.concat(data.filter(function(row){return !isTotalRow(row);}),data.filter(isTotalRow));
+  }
   function activePeriod(sectionId){ return state.periods[sectionId] || (PERIOD_CONFIG[sectionId] && PERIOD_CONFIG[sectionId].periodList ? PERIOD_CONFIG[sectionId].periodList[0] : "YTD"); }
 
   function salesMtdRecords(){ var section=getSection("self_sales_mtd"); if(!section) return []; return section.rows.filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){return {group:row.cells[0].text, actual:parseNum(row.cells[2]), deptRate:parseNum(row.cells[7]), groupRate:parseNum(row.cells[9]), row:row};}); }
@@ -80,7 +94,7 @@
 
   function markHeaders(rows, count){ return (rows||[]).map(function(row,idx){ if(idx<count){ row={excelRow:row.excelRow,cells:(row.cells||[]).map(function(cell){ var c=Object.assign({},cell); c.header=true; return c; })}; } return row; }); }
   function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text",header:true};})}; }
-  function renderRows(rows, tableClass){ var html='<div class="excel-scroll"><table class="excel-table '+(tableClass||'')+'">'; rows.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
+  function renderRows(rows, tableClass){ var normalized=normalizeAndSortTotalRows(rows); var html='<div class="excel-scroll"><table class="excel-table '+(tableClass||'')+'">'; normalized.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
 
   function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
 
@@ -112,11 +126,11 @@
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
   // 价格指数统一展示：数值转百分比并保留 1 位小数；差值统一 pp。
-  function pricePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1); cell.unit="%"; return cell; }
+  function pricePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1)+"%"; cell.unit=""; return cell; }
   // 外网价指的降幅/差值源值已是 pp；仅保留一位小数。
-  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n).toFixed(1); cell.unit="pp"; return cell; }
+  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n).toFixed(1); cell.unit="pp"; cell.trend=n>0?'up':n<0?'down':null; return cell; }
   // 内网系数差源值为比例，展示时转换为 pp。
-  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; return cell; }
+  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; cell.trend=n>0?'up':n<0?'down':null; return cell; }
   function renderPriceIndexMtd(section){
     // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
     // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
@@ -146,13 +160,13 @@
     function pctCell(v,diff){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return {text:String(v),raw:v,type:'text'};return {text:(diff&&n>=0?'+':'')+(n*100).toFixed(1)+(diff?'pp':'%'),raw:n,type:'number',trend:diff?(n>=0?'up':'down'):null};}
     function dataRow(g,total){return {excelRow:total?1099:1000,total:!!total,cells:[{text:total?'精品总':g.group,raw:g.group,type:'text'},numCell(g['日均商品数']),numCell(g['可比商品数']),pctCell(g['可比率']),pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true),pctCell(g['调价率']),pctCell(g['调价率目标']),pctCell(g['调价率差值'],true),pctCell(g['断货率']),pctCell(g['断货率目标']),pctCell(g['断货率差值'],true),pctCell(g['7天缺货率'])]};}
     var headers=['小组','日均商品数','可比商品数','可比率','天猫价格指数','天猫目标','天猫差值','抖音价格指数','抖音目标','抖音差值','调价率','调价率目标','调价率差值','断货率','断货率目标','断货率差值','7天缺货率'];
-    var rows=[headerRow(headers)]; if(d.summary)rows.push(dataRow(d.summary,true)); (d.groups||[]).forEach(function(g){rows.push(dataRow(g,false));});
+    var rows=[headerRow(headers)]; (d.groups||[]).forEach(function(g){rows.push(dataRow(g,false));}); if(d.summary)rows.push(dataRow(d.summary,true));
     return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows(rows,'six-high-detail-grid');
   }
   function renderSixHighPriceIndex(section){
     var d=section.data; if(!d) return '';
     var groups=d.groups||[]; var summary=d.summary||{};
-    function pctCell(v,diff){ if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'}; var n=parseFloat(v); if(isNaN(n))return {text:String(v),raw:v,type:'text'}; return {text:diff?((n>=0?'+':'')+(n*100).toFixed(1)):(n*100).toFixed(1)+'%',raw:n,type:'number',unit:diff?'pp':'%'}; }
+    function pctCell(v,diff){ if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'}; var n=parseFloat(v); if(isNaN(n))return {text:String(v),raw:v,type:'text'}; return {text:diff?((n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)):(n*100).toFixed(1)+'%',raw:n,type:'number',unit:diff?'pp':'%',trend:diff?(n>0?'up':n<0?'down':null):null}; }
     var top={excelRow:0,cells:[{text:'小组',raw:'小组',type:'text',header:true,merge:{rowspan:2,colspan:1}},{text:'天猫',raw:'天猫',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}},{text:'抖音',raw:'抖音',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}}]};
     var sub={excelRow:0,cells:[{merge:{covered:true}},{text:'价格指数',raw:'价格指数',type:'text',header:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true},{text:'价格指数',raw:'价格指数',type:'text',header:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true}]};
     var rows=[top,sub];
@@ -197,8 +211,9 @@
       h+='<th class="excel-cell is-header">商详UV</th>';
       h+='<th class="excel-cell is-header">UV同比</th>';
       h+='</tr></thead><tbody>';
-      items.forEach(function(it){
-        var isTotal=(it.group==='精品总计'||it.group==='总');
+      var ordered=items.slice().map(function(it){return Object.assign({},it,{group:normalizeGroupName(it.group)});}).sort(function(a,b){return (a.group==='精品总')-(b.group==='精品总');});
+      ordered.forEach(function(it){
+        var isTotal=(it.group==='精品总');
         var rowCls=isTotal?'total-row':'';
         h+='<tr class="'+rowCls+'">';
         h+='<td class="excel-cell is-row-label">'+escapeHtml(it.group)+'</td>';
