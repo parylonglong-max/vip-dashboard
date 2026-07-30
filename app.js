@@ -82,7 +82,7 @@
 
   function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
 
-  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if(sectionId==='price_index_history'&&cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';} return {excelRow:row.excelRow,cells:cells};}); return markHeaders(rows,2); }
+  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if(sectionId==='price_index_history'&&cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';} if(sectionId==='price_index_history'&&row.excelRow>=56){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); } return {excelRow:row.excelRow,cells:cells};}); return markHeaders(rows,2); }
   function pricePowerPeriodRows(section, period){
     var wanted=period==='YTD'?'YTD':'202606';
     var data=(section.rows||[]).filter(function(row){
@@ -109,6 +109,12 @@
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
+  // 价格指数统一展示：数值转百分比并保留 1 位小数；差值统一 pp。
+  function pricePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1); cell.unit="%"; return cell; }
+  // 外网价指的降幅/差值源值已是 pp；仅保留一位小数。
+  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>=0?"+":"")+Math.abs(n).toFixed(1); cell.unit="pp"; return cell; }
+  // 内网系数差源值为比例，展示时转换为 pp。
+  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>=0?"+":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; return cell; }
   function renderPriceIndexMtd(section){
     // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
     // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
@@ -125,6 +131,8 @@
         if(cells[9]) cells[9].sectionDivider=true;
       }
       if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      // 天猫/抖音价格指数与对标值：均以百分比、1位小数展示；完成差值保留 pp。
+      if(row.excelRow>=46){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); }
       return {excelRow:row.excelRow,cells:cells};
     });
     rows=markHeaders(rows,2);
@@ -246,7 +254,12 @@
     var cfg=PERIOD_CONFIG.internal_discount;
     var idx=cfg.periods[period] || cfg.periods.MTD;
     var startHeader=Math.max(0,cfg.rowStart-2);
-    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){return {excelRow:row.excelRow,cells:idx.map(function(i){return row.cells[i]||{text:'',type:'blank'};})};});
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){
+      var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:'',type:'blank'});});
+      // 去年/今年内网价指统一 xx.x%，系数差统一 ±x.xpp。
+      if(row.excelRow>=69){ pricePctCell(cells[1]); pricePctCell(cells[2]); ratioPpCell(cells[3]); }
+      return {excelRow:row.excelRow,cells:cells};
+    });
     return markHeaders(rows,2);
   }
 
