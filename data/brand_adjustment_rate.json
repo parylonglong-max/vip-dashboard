@@ -1,0 +1,7974 @@
+{
+  "title": "品牌调价率",
+  "source_date": "2026-07-29",
+  "source_month": "202607",
+  "scope": "data分组=TOTAL；辅助列3=cur；本月按品牌SN汇总BK/BL",
+  "coverage_note": "品牌TOTAL与小组汇总覆盖范围不同，不做跨粒度总量对平。",
+  "brands": [
+    {
+      "sn": "10028986",
+      "brand": "依慧达EVITA PERONI",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 1745,
+      "adjusted": 1319,
+      "rate": 0.7558739255014326,
+      "row_count": 29
+    },
+    {
+      "sn": "10047008",
+      "brand": "万事利",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 412,
+      "adjusted": 306,
+      "rate": 0.7427184466019418,
+      "row_count": 29
+    },
+    {
+      "sn": "10028449",
+      "brand": "蕉下",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 362,
+      "adjusted": 330,
+      "rate": 0.9116022099447514,
+      "row_count": 29
+    },
+    {
+      "sn": "10033593",
+      "brand": "VVC",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 306,
+      "adjusted": 304,
+      "rate": 0.9934640522875817,
+      "row_count": 29
+    },
+    {
+      "sn": "10203880",
+      "brand": "阿吉豆",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 305,
+      "adjusted": 225,
+      "rate": 0.7377049180327869,
+      "row_count": 29
+    },
+    {
+      "sn": "10200546",
+      "brand": "小野和子",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 225,
+      "adjusted": 142,
+      "rate": 0.6311111111111111,
+      "row_count": 29
+    },
+    {
+      "sn": "10003482",
+      "brand": "潮宏基CHJ",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 199,
+      "adjusted": 51,
+      "rate": 0.2562814070351759,
+      "row_count": 29
+    },
+    {
+      "sn": "10203487",
+      "brand": "安铂洛利Amber lollipop",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 197,
+      "adjusted": 197,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10000484",
+      "brand": "卡尔文克雷恩Calvin Klein",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 138,
+      "adjusted": 123,
+      "rate": 0.8913043478260869,
+      "row_count": 58
+    },
+    {
+      "sn": "10025557",
+      "brand": "COACH",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 103,
+      "adjusted": 36,
+      "rate": 0.34951456310679613,
+      "row_count": 58
+    },
+    {
+      "sn": "10026180",
+      "brand": "EMPORIO ARMANI",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 103,
+      "adjusted": 56,
+      "rate": 0.5436893203883495,
+      "row_count": 87
+    },
+    {
+      "sn": "10020953",
+      "brand": "帕森PARZIN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 91,
+      "adjusted": 76,
+      "rate": 0.8351648351648352,
+      "row_count": 29
+    },
+    {
+      "sn": "10001392",
+      "brand": "古驰GUCCI",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 87,
+      "adjusted": 20,
+      "rate": 0.22988505747126436,
+      "row_count": 87
+    },
+    {
+      "sn": "10024102",
+      "brand": "范琦Fanci",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 81,
+      "adjusted": 22,
+      "rate": 0.2716049382716049,
+      "row_count": 29
+    },
+    {
+      "sn": "10000702",
+      "brand": "施华洛世奇SWAROVSKI",
+      "level": "国际B",
+      "group": "海淘组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 80,
+      "adjusted": 71,
+      "rate": 0.8875,
+      "row_count": 87
+    },
+    {
+      "sn": "10040983",
+      "brand": "周大生CHOW TAI SENG",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 71,
+      "adjusted": 66,
+      "rate": 0.9295774647887324,
+      "row_count": 29
+    },
+    {
+      "sn": "10027018",
+      "brand": "NEW ERA",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 66,
+      "adjusted": 32,
+      "rate": 0.48484848484848486,
+      "row_count": 52
+    },
+    {
+      "sn": "10000751",
+      "brand": "万宝龙MONTBLANC",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "珠宝3组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 65,
+      "adjusted": 8,
+      "rate": 0.12307692307692308,
+      "row_count": 87
+    },
+    {
+      "sn": "10030911",
+      "brand": "上海故事",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 63,
+      "adjusted": 55,
+      "rate": 0.873015873015873,
+      "row_count": 29
+    },
+    {
+      "sn": "10010950",
+      "brand": "周六福",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 60,
+      "adjusted": 35,
+      "rate": 0.5833333333333334,
+      "row_count": 29
+    },
+    {
+      "sn": "10003751",
+      "brand": "暴龙BOLON",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 57,
+      "adjusted": 54,
+      "rate": 0.9473684210526315,
+      "row_count": 29
+    },
+    {
+      "sn": "10000495",
+      "brand": "卡西欧CASIO",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 56,
+      "adjusted": 31,
+      "rate": 0.5535714285714286,
+      "row_count": 58
+    },
+    {
+      "sn": "10010075",
+      "brand": "天堂伞",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 54,
+      "adjusted": 48,
+      "rate": 0.8888888888888888,
+      "row_count": 29
+    },
+    {
+      "sn": "10000946",
+      "brand": "雷朋RayBan",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 53,
+      "adjusted": 31,
+      "rate": 0.5849056603773585,
+      "row_count": 29
+    },
+    {
+      "sn": "10024733",
+      "brand": "Zippo",
+      "level": "国际B",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 52,
+      "adjusted": 30,
+      "rate": 0.5769230769230769,
+      "row_count": 58
+    },
+    {
+      "sn": "10201679",
+      "brand": "京润",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 52,
+      "adjusted": 14,
+      "rate": 0.2692307692307692,
+      "row_count": 29
+    },
+    {
+      "sn": "10012721",
+      "brand": "天王TIAN WANG",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 51,
+      "adjusted": 39,
+      "rate": 0.7647058823529411,
+      "row_count": 29
+    },
+    {
+      "sn": "10012781",
+      "brand": "真享THANTRUE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 44,
+      "adjusted": 44,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10015112",
+      "brand": "唯一winy",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 42,
+      "adjusted": 42,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10029799",
+      "brand": "梦金园",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 41,
+      "adjusted": 33,
+      "rate": 0.8048780487804879,
+      "row_count": 29
+    },
+    {
+      "sn": "10026071",
+      "brand": "HEFANG Jewelry",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 40,
+      "adjusted": 8,
+      "rate": 0.2,
+      "row_count": 29
+    },
+    {
+      "sn": "10005335",
+      "brand": "周大福CHOW TAI FOOK",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 40,
+      "adjusted": 25,
+      "rate": 0.625,
+      "row_count": 29
+    },
+    {
+      "sn": "10024537",
+      "brand": "天使之泪",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 38,
+      "adjusted": 2,
+      "rate": 0.05263157894736842,
+      "row_count": 29
+    },
+    {
+      "sn": "10001201",
+      "brand": "依波EBOHR",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 34,
+      "adjusted": 27,
+      "rate": 0.7941176470588235,
+      "row_count": 29
+    },
+    {
+      "sn": "10048007",
+      "brand": "ARSIS",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 33,
+      "adjusted": 5,
+      "rate": 0.15151515151515152,
+      "row_count": 29
+    },
+    {
+      "sn": "10000171",
+      "brand": "茜子She's",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 32,
+      "adjusted": 32,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10000649",
+      "brand": "派克Parker",
+      "level": "国际B",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 30,
+      "adjusted": 24,
+      "rate": 0.8,
+      "row_count": 58
+    },
+    {
+      "sn": "10021253",
+      "brand": "黛米Daimi",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 29,
+      "adjusted": 6,
+      "rate": 0.20689655172413793,
+      "row_count": 29
+    },
+    {
+      "sn": "10039411",
+      "brand": "老凤祥",
+      "level": "国内A",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 28,
+      "adjusted": 12,
+      "rate": 0.42857142857142855,
+      "row_count": 58
+    },
+    {
+      "sn": "10010501",
+      "brand": "罗西尼ROSSINI",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 25,
+      "adjusted": 20,
+      "rate": 0.8,
+      "row_count": 29
+    },
+    {
+      "sn": "10013972",
+      "brand": "赛菲尔sunfeel",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 25,
+      "adjusted": 17,
+      "rate": 0.68,
+      "row_count": 29
+    },
+    {
+      "sn": "10006606",
+      "brand": "飞亚达FIYTA",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 23,
+      "adjusted": 17,
+      "rate": 0.7391304347826086,
+      "row_count": 29
+    },
+    {
+      "sn": "10000384",
+      "brand": "范思哲VERSACE",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 22,
+      "adjusted": 12,
+      "rate": 0.5454545454545454,
+      "row_count": 58
+    },
+    {
+      "sn": "10021771",
+      "brand": "潘多拉PANDORA",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 20,
+      "adjusted": 17,
+      "rate": 0.85,
+      "row_count": 29
+    },
+    {
+      "sn": "10010788",
+      "brand": "丝界",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 19,
+      "adjusted": 18,
+      "rate": 0.9473684210526315,
+      "row_count": 29
+    },
+    {
+      "sn": "10000651",
+      "brand": "皮尔·卡丹pierre cardin",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 19,
+      "adjusted": 18,
+      "rate": 0.9473684210526315,
+      "row_count": 29
+    },
+    {
+      "sn": "10027320",
+      "brand": "me.luxe",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 18,
+      "adjusted": 4,
+      "rate": 0.2222222222222222,
+      "row_count": 29
+    },
+    {
+      "sn": "10003277",
+      "brand": "Salvatore Ferragamo",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 17,
+      "adjusted": 15,
+      "rate": 0.8823529411764706,
+      "row_count": 58
+    },
+    {
+      "sn": "10202401",
+      "brand": "白岚BN",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 13,
+      "adjusted": 13,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10006296",
+      "brand": "海伦·凯勒Helen Keller",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 12,
+      "adjusted": 10,
+      "rate": 0.8333333333333334,
+      "row_count": 29
+    },
+    {
+      "sn": "10020427",
+      "brand": "海澜之家HLA",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 12,
+      "adjusted": 9,
+      "rate": 0.75,
+      "row_count": 29
+    },
+    {
+      "sn": "10036646",
+      "brand": "罗拉玫瑰LOLA ROSE",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 12,
+      "adjusted": 11,
+      "rate": 0.9166666666666666,
+      "row_count": 58
+    },
+    {
+      "sn": "10007193",
+      "brand": "MLB",
+      "level": "国际B",
+      "group": "海淘组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 10,
+      "adjusted": 3,
+      "rate": 0.3,
+      "row_count": 58
+    },
+    {
+      "sn": "10001210",
+      "brand": "派丽蒙PARIM",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 10,
+      "adjusted": 1,
+      "rate": 0.1,
+      "row_count": 29
+    },
+    {
+      "sn": "10026303",
+      "brand": "明牌珠宝MINGR",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 9,
+      "adjusted": 2,
+      "rate": 0.2222222222222222,
+      "row_count": 29
+    },
+    {
+      "sn": "10000623",
+      "brand": "缪缪MIU MIU",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 9,
+      "adjusted": 2,
+      "rate": 0.2222222222222222,
+      "row_count": 58
+    },
+    {
+      "sn": "10010103",
+      "brand": "六福珠宝LUKFOOK JEWELLERY",
+      "level": "国内A",
+      "group": "珠宝2组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 4,
+      "adjusted": 2,
+      "rate": 0.5,
+      "row_count": 29
+    },
+    {
+      "sn": "10022222",
+      "brand": "谢瑞麟TSL",
+      "level": "国内A",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 4,
+      "adjusted": 0,
+      "rate": 0.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10003177",
+      "brand": "喜钻",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 3,
+      "adjusted": 0,
+      "rate": 0.0,
+      "row_count": 30
+    },
+    {
+      "sn": "10013567",
+      "brand": "中国黄金China Gold",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 2,
+      "adjusted": 1,
+      "rate": 0.5,
+      "row_count": 29
+    },
+    {
+      "sn": "10030950",
+      "brand": "apm MONACO",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 1,
+      "adjusted": 1,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10000743",
+      "brand": "天梭TISSOT",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 1,
+      "adjusted": 0,
+      "rate": 0.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10001327",
+      "brand": "宝姿PORTS",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 1,
+      "adjusted": 1,
+      "rate": 1.0,
+      "row_count": 29
+    },
+    {
+      "sn": "10207023",
+      "brand": "7000年",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10032549",
+      "brand": "ADEXE",
+      "level": "国内D",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10028039",
+      "brand": "AX Armani Exchange",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10013836",
+      "brand": "Alexandre De Paris",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206496",
+      "brand": "BAX",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10007862",
+      "brand": "BCBGMAXAZRIA",
+      "level": "国际C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10026178",
+      "brand": "BURBERRY",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020693",
+      "brand": "Be in Lover",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10023150",
+      "brand": "Bertha",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10029255",
+      "brand": "CACUSS",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201449",
+      "brand": "CAPONI",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10024079",
+      "brand": "CAROMAY",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10030032",
+      "brand": "CATELLES",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001228",
+      "brand": "CELINE",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10044160",
+      "brand": "CGC",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204883",
+      "brand": "COLORE.IN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205972",
+      "brand": "DISCUS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200487",
+      "brand": "DODOGOGO",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022214",
+      "brand": "DOM",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006011",
+      "brand": "DPL",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004283",
+      "brand": "DTOTO",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025337",
+      "brand": "Dickies",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000057",
+      "brand": "ELLE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206359",
+      "brand": "EMIS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006934",
+      "brand": "FOLLI FOLLIE",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206719",
+      "brand": "FREERABBIT II",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004443",
+      "brand": "FURLA",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041807",
+      "brand": "FUSSEM",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011106",
+      "brand": "Filial&Love",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10026179",
+      "brand": "GIORGIO ARMANI",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206315",
+      "brand": "GOLDBEAR",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205641",
+      "brand": "GRACE GIRL",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205933",
+      "brand": "GUSKI 1819",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203727",
+      "brand": "HERB",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040536",
+      "brand": "I Do",
+      "level": "国内A",
+      "group": "珠宝3组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10028498",
+      "brand": "I&U",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206417",
+      "brand": "IDEAGEMER",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045670",
+      "brand": "JAY",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000103",
+      "brand": "JEEP",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10031385",
+      "brand": "JEEP SPIRIT 1941 ESTD",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005528",
+      "brand": "JOWISSA",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10024538",
+      "brand": "KANGOL",
+      "level": "国际C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10037902",
+      "brand": "Katie Ermilio",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000121",
+      "brand": "Kmonado",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205067",
+      "brand": "LAC",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207487",
+      "brand": "LAGUR",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10023271",
+      "brand": "LAMY",
+      "level": "国际B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10049380",
+      "brand": "LASHION",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000126",
+      "brand": "LEE",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000127",
+      "brand": "LEVI'S",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020929",
+      "brand": "LONGCHAMP",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10047585",
+      "brand": "LUMI NOX",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202200",
+      "brand": "M.Y.S.H",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10012739",
+      "brand": "MARY WINDSOR",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10048390",
+      "brand": "MAXMARA",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041521",
+      "brand": "MCK",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004644",
+      "brand": "MCM",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004185",
+      "brand": "MICHAEL KORS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204718",
+      "brand": "MICO KIVI",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205571",
+      "brand": "MISS JOJO",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205395",
+      "brand": "MISSION UV",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003749",
+      "brand": "MT·MIT",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010925",
+      "brand": "Mbox",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025556",
+      "brand": "OAKLEY",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10036219",
+      "brand": "OLIVIA BURTON",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202058",
+      "brand": "ONE&ONE",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10032834",
+      "brand": "Ohsunny",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202924",
+      "brand": "PDPAOLA",
+      "level": "国际C",
+      "group": "海淘组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025830",
+      "brand": "PRADA LINEA ROSSA",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011875",
+      "brand": "Piara",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003961",
+      "brand": "R",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000166",
+      "brand": "RENA CHRIS",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205838",
+      "brand": "RENOVO",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202280",
+      "brand": "RIOTLILY",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204459",
+      "brand": "ROSE & CROWN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10036622",
+      "brand": "S&A",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10046222",
+      "brand": "SAINT LAURENT PARIS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201843",
+      "brand": "SEVENFRIDAY",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201568",
+      "brand": "SHAWN LEE",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039708",
+      "brand": "SLEEK",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204790",
+      "brand": "SUKDULI",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020687",
+      "brand": "Siggi",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011845",
+      "brand": "Silhouette",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206131",
+      "brand": "S•LABELLE",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005923",
+      "brand": "T400",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003405",
+      "brand": "TAMINA",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203726",
+      "brand": "TILTIL MITIL",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041079",
+      "brand": "TIMESS",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043685",
+      "brand": "TOS THE SECOND SIGHT",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10038837",
+      "brand": "Touch mark",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10015852",
+      "brand": "UNAFORTE",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10049719",
+      "brand": "UV 100",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004163",
+      "brand": "VIVIENNE WESTWOOD",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10023952",
+      "brand": "Vnox",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050639",
+      "brand": "WEEKISS",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041723",
+      "brand": "WithLove",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004434",
+      "brand": "YOUR-D",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050410",
+      "brand": "ZAUO",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045074",
+      "brand": "ZEGL",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201722",
+      "brand": "ZOBO",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10028524",
+      "brand": "adidas",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022132",
+      "brand": "aojo",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025066",
+      "brand": "eyeplay",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021118",
+      "brand": "special",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044559",
+      "brand": "uni",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10032926",
+      "brand": "welly merck",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045948",
+      "brand": "wpc.",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044248",
+      "brand": "一马珠宝",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207140",
+      "brand": "七七银饰77 SILVER",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000656",
+      "brand": "七匹狼SEPTWOLVES",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043738",
+      "brand": "七可",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000008",
+      "brand": "七度SEVEN DEGREE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206972",
+      "brand": "万晨WOALMORN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000098",
+      "brand": "三宅一生ISSEY MIYAKE",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014171",
+      "brand": "上海SHANGHAI",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200881",
+      "brand": "世纪缘珠宝",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044191",
+      "brand": "东方ORIENT",
+      "level": "国际C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014963",
+      "brand": "东方翡翠",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040814",
+      "brand": "东方雅翠",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10048265",
+      "brand": "中华",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204840",
+      "brand": "中单",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200662",
+      "brand": "中国珠宝SINO GEM",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043521",
+      "brand": "中鑫珠宝",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207919",
+      "brand": "中银亿金",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020526",
+      "brand": "丹尼尔惠灵顿DANIEL WELLINGTON",
+      "level": "国际B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组",
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045009",
+      "brand": "九乐",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10046437",
+      "brand": "京工美作",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021371",
+      "brand": "亿珍阁",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205355",
+      "brand": "仙源",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003803",
+      "brand": "仙蒂瑞拉珠宝SANDYRILLA",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041771",
+      "brand": "仟丝百变",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000809",
+      "brand": "伊泰莲娜ITALINA",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041788",
+      "brand": "优奇",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004888",
+      "brand": "优悦生活UVE",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205805",
+      "brand": "传呈CHUM",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001294",
+      "brand": "佐卡伊",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050077",
+      "brand": "佐川",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205676",
+      "brand": "佐野一郎",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043171",
+      "brand": "佰丝堂",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000288",
+      "brand": "佰色传情",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022293",
+      "brand": "佳明GARMIN",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021978",
+      "brand": "依波路ERNEST BOREL",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202298",
+      "brand": "依视路",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203597",
+      "brand": "俏佳银",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010007",
+      "brand": "保罗史密斯Paul Smith",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10007678",
+      "brand": "俞兆林",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044534",
+      "brand": "倾爱",
+      "level": "国内D",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004363",
+      "brand": "兆君",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041002",
+      "brand": "六桂福LUK KWAI FOOK",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206132",
+      "brand": "兰诺LANO",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020985",
+      "brand": "冠琴GUANQIN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200202",
+      "brand": "净心石",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10012404",
+      "brand": "凤凰涅磐",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003319",
+      "brand": "凤禧Phoenisess",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020644",
+      "brand": "劳士顿ROSDN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000652",
+      "brand": "匹克PEAK",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10042336",
+      "brand": "十瑞",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10026666",
+      "brand": "千叶KEER",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10028669",
+      "brand": "千年CEMNI",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10208107",
+      "brand": "南珠宫PEARL ROYAL",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000333",
+      "brand": "博柏利BURBERRY",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 58
+    },
+    {
+      "sn": "10046030",
+      "brand": "卡伦顿",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200150",
+      "brand": "卡兰薇",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000481",
+      "brand": "卡帝乐鳄鱼CARTELO",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200091",
+      "brand": "印象眸",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10016753",
+      "brand": "厚木Atsugi",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014831",
+      "brand": "古尊GOLGEN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10029221",
+      "brand": "吉盟珠宝GMOND",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10031292",
+      "brand": "名创优品MINISO",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021192",
+      "brand": "名爵Manjaz",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200363",
+      "brand": "吴越老银铺",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204086",
+      "brand": "周大金CHOW TAI KING",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003235",
+      "brand": "周生生Chow Sang Sang",
+      "level": "国内A",
+      "group": "珠宝2组",
+      "shenyin": "神舟",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10037841",
+      "brand": "品彩pincai",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200587",
+      "brand": "唐科",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010709",
+      "brand": "啄木鸟TUCANO",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10027955",
+      "brand": "嘉乐琥珀carol",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10031878",
+      "brand": "国誉KOKUYO",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206289",
+      "brand": "夏秦",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006059",
+      "brand": "夏蒙Charmant",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10034050",
+      "brand": "夕阳红",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206088",
+      "brand": "大溪地",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10027630",
+      "brand": "天珺TANGIN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200113",
+      "brand": "天空树",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003711",
+      "brand": "太阳城SUNCITY",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205515",
+      "brand": "央创时尚",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10012782",
+      "brand": "奇美拉CHIMERA",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10034606",
+      "brand": "契意坊cuneiform",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205450",
+      "brand": "奢凌羊",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001010",
+      "brand": "奥康AOKANG",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005419",
+      "brand": "威古氏VEGOOS",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10033824",
+      "brand": "娉饰珠宝PINKBOX",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000018",
+      "brand": "安妮克莱因ANNE KLEIN",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006264",
+      "brand": "宏达HONDAR",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207119",
+      "brand": "宜生缘ILIFEYAL",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010245",
+      "brand": "宝亨达BOHENGDA",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000307",
+      "brand": "宝娜斯BONAS",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10037336",
+      "brand": "宝时捷POSCER",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000304",
+      "brand": "宝格丽BVLGARI",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203507",
+      "brand": "宝若岚",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10015164",
+      "brand": "宾爵BEGEEL",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10038294",
+      "brand": "尤珂IL&Co.",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206844",
+      "brand": "峨眉山",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004688",
+      "brand": "巴黎世家BALENCIAGA",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022501",
+      "brand": "布加迪BONEST GATTI",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010201",
+      "brand": "帕莎Prsr",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206379",
+      "brand": "度享",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205520",
+      "brand": "康洛薇COMLORVEI",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050511",
+      "brand": "建禄",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041389",
+      "brand": "德克力时DRIKLUX",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000351",
+      "brand": "德玛纳",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10028032",
+      "brand": "慈元阁",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014824",
+      "brand": "拜戈balco",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011544",
+      "brand": "摩纹MARVIN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004114",
+      "brand": "斐乐FILA",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201531",
+      "brand": "斑马牌ZEBRA",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000723",
+      "brand": "斯沃琪swatch",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10033201",
+      "brand": "斯诺威登RUNOSD",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10048504",
+      "brand": "施洛华",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10023618",
+      "brand": "时刻美SKMEI",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10049389",
+      "brand": "明月镜片",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011551",
+      "brand": "星皇STARKING",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10030425",
+      "brand": "晨光M&G",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043976",
+      "brand": "普先生MR.PUTIAN",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000654",
+      "brand": "普拉达PRADA",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10021315",
+      "brand": "普莱斯PULAIS",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203684",
+      "brand": "普陀山",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207005",
+      "brand": "晶甜坊",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206239",
+      "brand": "晶贵坊CMILL",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10043544",
+      "brand": "智盛ZS",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020436",
+      "brand": "曼卡龙MCLON",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10004235",
+      "brand": "曼古银MGS",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200283",
+      "brand": "月印百川",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205938",
+      "brand": "月老祠堂DESTINY TEMPLE",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10012332",
+      "brand": "木九十",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001264",
+      "brand": "朵岚D'ORLAN",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206670",
+      "brand": "杭丝府",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200700",
+      "brand": "杭丝路",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10026565",
+      "brand": "杰尼亚ERMENEGILDO ZEGNA",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004074",
+      "brand": "柒牌",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205625",
+      "brand": "柯百年",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10042383",
+      "brand": "格林GRAND PRIX",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005242",
+      "brand": "格雅GEYA",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025512",
+      "brand": "梅花表",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005254",
+      "brand": "梦娜MengNa",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10029305",
+      "brand": "梦祥银MYSHINE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040369",
+      "brand": "欧利时OLEVS",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10042121",
+      "brand": "欧品客",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200729",
+      "brand": "欧拿",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040169",
+      "brand": "正港ZGO",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000326",
+      "brand": "毕加索PICASSO",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205776",
+      "brand": "永传承",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022426",
+      "brand": "汉米尔顿HAMILTON",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010163",
+      "brand": "汤丽柏琦Tory Burch",
+      "level": "国际A",
+      "group": "海淘组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005582",
+      "brand": "汤姆福特TOM FORD",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014207",
+      "brand": "法拉利Ferrari",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050510",
+      "brand": "洛伊士",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005848",
+      "brand": "浪琴LONGINES",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10006176",
+      "brand": "海俪恩",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041196",
+      "brand": "海蒂",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010218",
+      "brand": "海螺hailuo",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011284",
+      "brand": "海鸥SEA-GULL",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020554",
+      "brand": "漫威MARVEL",
+      "level": "国内D",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039988",
+      "brand": "灵菲",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200710",
+      "brand": "熊银匠",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022468",
+      "brand": "爱丽丝ALICE",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040403",
+      "brand": "爱勒AGELOCER",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200296",
+      "brand": "爱蒂尔",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10004593",
+      "brand": "爱迪尔IDEAL",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206645",
+      "brand": "牛大叔",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039840",
+      "brand": "牛老爹",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202173",
+      "brand": "牧尔西MOERCIAN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202040",
+      "brand": "玉品堂",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044286",
+      "brand": "玖慕",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201495",
+      "brand": "玛丽亚.古琦",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005749",
+      "brand": "珂兰Kela",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044053",
+      "brand": "珍·如金",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10048432",
+      "brand": "珍·尚银",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045187",
+      "brand": "珍宝银楼",
+      "level": "国内D",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10046946",
+      "brand": "珍爱妮丝JANE ALICE JAJ",
+      "level": "国内D",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050488",
+      "brand": "珍珠皇后",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006364",
+      "brand": "珍视明",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203179",
+      "brand": "瑞茜REESE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039732",
+      "brand": "瑞贝卡REBECCA",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041667",
+      "brand": "瑷瑞DP",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10027309",
+      "brand": "百乐PILOT",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011400",
+      "brand": "百年宝诚",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10027963",
+      "brand": "百泰首饰BATAR JEWELLERY",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206938",
+      "brand": "皇家天选",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10024187",
+      "brand": "眼镜生活LOHO",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202821",
+      "brand": "礼兰",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10202871",
+      "brand": "福来岛",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040777",
+      "brand": "积优JEAYOU",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10031139",
+      "brand": "稻草人",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206238",
+      "brand": "穆百年",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020483",
+      "brand": "穗南",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044190",
+      "brand": "米兰茜M&Q",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014674",
+      "brand": "米格MIGE",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000469",
+      "brand": "精工SEIKO",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201741",
+      "brand": "索柏SHOWBIZS",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041323",
+      "brand": "索缇朵SOFTDORA",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10016754",
+      "brand": "紫宝ZEAPO",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010348",
+      "brand": "紫气东来ZI QI DONG LAI",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006562",
+      "brand": "红豆HOdo",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205971",
+      "brand": "纪思梵CHEESEFAN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10016220",
+      "brand": "纪梵希GIVENCHY",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001263",
+      "brand": "纳维凯尔NAVIGARE",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10016647",
+      "brand": "织布人Zhiburen",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207917",
+      "brand": "绣娘丝绸",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207410",
+      "brand": "绳之运",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025431",
+      "brand": "维氏VICTORINOX",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045692",
+      "brand": "缔晶",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200134",
+      "brand": "罗兰度ROLENDO R",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003287",
+      "brand": "罗意威LOEWE",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001179",
+      "brand": "罗蒙ROMON",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003423",
+      "brand": "美度MIDO",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006689",
+      "brand": "羽兰JOLEE",
+      "level": "国内D",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207633",
+      "brand": "翠王妃",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10050119",
+      "brand": "翠雅金楼",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045391",
+      "brand": "翡拉拉FELLALA",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10015435",
+      "brand": "老庙",
+      "level": "国内A",
+      "group": "珠宝1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10206029",
+      "brand": "老福黄金",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10015960",
+      "brand": "老银匠",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204431",
+      "brand": "老银坊",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000630",
+      "brand": "耐克Nike",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005773",
+      "brand": "聚利时Julius",
+      "level": "国际C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205932",
+      "brand": "肯默",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205475",
+      "brand": "色菲尔",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022266",
+      "brand": "艾米龙Emile Chouriet",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10026891",
+      "brand": "艾美表Maurice Lacroix",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000395",
+      "brand": "芬迪FENDI",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000280",
+      "brand": "芭比BARBIE",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041063",
+      "brand": "若华",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10007025",
+      "brand": "英纳格ENICAR",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10011158",
+      "brand": "英雄HERO",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200592",
+      "brand": "莫拉克",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000388",
+      "brand": "菲拉格慕FERRAGAMO",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10012562",
+      "brand": "萃华CUI HUA",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10024730",
+      "brand": "萧邦",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10047395",
+      "brand": "萱子SHINE SHINE DESIGN CO.ACCESSORIES",
+      "level": "国内A",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10006009",
+      "brand": "蒂芙尼TIFFANY&CO.",
+      "level": "国际A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021431",
+      "brand": "蓝婷凯丝Lightingkiss",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003869",
+      "brand": "蓝色海洋",
+      "level": "国内D",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010437",
+      "brand": "蔡司ZEISS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001286",
+      "brand": "蔻依Chloé",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10013947",
+      "brand": "蔻斯琦Agovski",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204208",
+      "brand": "行金银中",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001091",
+      "brand": "西铁城Citizen",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200757",
+      "brand": "诗普琳MEMORA",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204418",
+      "brand": "诤友JOYO",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039780",
+      "brand": "语唐",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003564",
+      "brand": "诺帝卡NAUTICA",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10037278",
+      "brand": "诺米美物NOME",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010336",
+      "brand": "豪利时Oris",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041064",
+      "brand": "豫银",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206092",
+      "brand": "赛浪",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207715",
+      "brand": "赫生",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10046431",
+      "brand": "轩曼",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10038138",
+      "brand": "辉柏嘉FABER-CASTELL",
+      "level": "国际C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044181",
+      "brand": "迦堤Galtiscopio",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000363",
+      "brand": "迪士尼DISNEY",
+      "level": "国内C",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000359",
+      "brand": "迪奥Dior",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "海淘组",
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 58
+    },
+    {
+      "sn": "10012651",
+      "brand": "邦顿Bestdon",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10200730",
+      "brand": "酷宝仕",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041452",
+      "brand": "金仕盾JSDUN",
+      "level": "国内C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10203524",
+      "brand": "金六福吉祥",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10204465",
+      "brand": "金冠森",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000466",
+      "brand": "金利来goldlion",
+      "level": "国内A",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10045608",
+      "brand": "金嘉福",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10003259",
+      "brand": "金大生KTS",
+      "level": "国内B",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041199",
+      "brand": "金大福King Tai Fook",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206468",
+      "brand": "金楼",
+      "level": "国内B",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044158",
+      "brand": "金海湾银楼",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044696",
+      "brand": "金盾",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10022221",
+      "brand": "金至尊3DG Jewellery​",
+      "level": "国内A",
+      "group": "珠宝2组",
+      "shenyin": "新银河",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 29
+    },
+    {
+      "sn": "10205521",
+      "brand": "金至福GOLDEN FORTUNE",
+      "level": "国内B",
+      "group": "珠宝1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10014287",
+      "brand": "鑫万福",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205778",
+      "brand": "铂思亚",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10039380",
+      "brand": "银千惠YINCHIE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10201669",
+      "brand": "银奥",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10041074",
+      "brand": "银意坊YF",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206739",
+      "brand": "银色饰界",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10021976",
+      "brand": "阪织屋Bandgewoo",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10047488",
+      "brand": "阮仕珍珠",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10013781",
+      "brand": "陌森Molsion",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040334",
+      "brand": "集藏JC",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000090",
+      "brand": "雨果博斯HUGO BOSS",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10001252",
+      "brand": "雷诺RARONE",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005858",
+      "brand": "雷达RADO",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10007554",
+      "brand": "静风格STYLEJING",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10010543",
+      "brand": "顶瓜瓜",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10040223",
+      "brand": "顺钦银楼",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10020646",
+      "brand": "颂拓SUUNTO",
+      "level": "国际B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10205700",
+      "brand": "首爱",
+      "level": "国内C",
+      "group": "珠宝2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10207636",
+      "brand": "香雪羽秀",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000566",
+      "brand": "马克华菲FAIRWHALE",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10005924",
+      "brand": "高特OUTDO",
+      "level": "国内B",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10042986",
+      "brand": "魅丝黛儿",
+      "level": "国内D",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10000376",
+      "brand": "鳄鱼恤CROCODILE",
+      "level": "国内B",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10044325",
+      "brand": "鸣钻国际",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10013308",
+      "brand": "黛慕妮DEMONE",
+      "level": "国内C",
+      "group": "珠宝3组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "珠宝3组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10025795",
+      "brand": "齐博林Zeppelin",
+      "level": "国际C",
+      "group": "饰品1组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品1组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    },
+    {
+      "sn": "10206720",
+      "brand": "龙之初",
+      "level": "国内C",
+      "group": "饰品2组",
+      "shenyin": "非神银",
+      "info_date": "2026-07-29",
+      "groups": [
+        "饰品2组"
+      ],
+      "date": "2026-07-29",
+      "month": "7月截至29日",
+      "denominator": 0,
+      "adjusted": 0,
+      "rate": null,
+      "row_count": 0
+    }
+  ],
+  "summary": {
+    "catalog_count": 466,
+    "metric_brand_count": 63,
+    "denominator": 5856,
+    "adjusted": 4175
+  },
+  "validation": {
+    "status": "PASS",
+    "errors": []
+  },
+  "generated_at": "2026-07-30 19:33:37"
+}

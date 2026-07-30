@@ -7,7 +7,7 @@
   var STATIC_PREVIEW_PASSWORD = "vip2026";
   var PERIODS = ["YTD", "1月", "2月", "3月", "4月", "5月", "6月"];
 
-  var state = { token: null, data: null, activeTab: "sales", periods: {} };
+  var state = { token: null, data: null, activeTab: "sales", viewMode: "group", activeBrandTab: "brand-adjustment", selectedBrandSn: null, brandQuery: "", periods: {} };
 
   var $loginPage = document.getElementById("loginPage");
   var $dashboard = document.getElementById("dashboard");
@@ -31,6 +31,9 @@
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
     { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
   ];
+  var BRAND_TABS = [
+    { id: "brand-adjustment", label: "调价率" },
+  ];
 
   var PERIOD_CONFIG = {
     self_sales_history: { rowStart: 17, rowEnd: 23, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
@@ -47,7 +50,7 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function loadExtraData(){ return Promise.all([fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch('data/adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){})]); }
+  function loadExtraData(){ return Promise.all([fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch('data/adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch('data/brand_adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -356,9 +359,65 @@
     return html;
   }
 
+  function normalizeSearchText(value){ return String(value||'').toLowerCase().replace(/\s+/g,''); }
+  function brandMatches(query){
+    var data=state.brandAdjustmentData; if(!data) return [];
+    var q=normalizeSearchText(query);
+    var rows=(data.brands||[]).map(function(b){
+      var sn=String(b.sn||''), name=normalizeSearchText(b.brand), score=99;
+      if(!q) score=b.denominator>0?20:30;
+      else if(sn===q) score=0;
+      else if(name===q) score=1;
+      else if(sn.indexOf(q)===0) score=2;
+      else if(name.indexOf(q)===0) score=3;
+      else if(sn.indexOf(q)>=0) score=4;
+      else if(name.indexOf(q)>=0) score=5;
+      return {brand:b,score:score};
+    }).filter(function(x){return x.score<99;});
+    rows.sort(function(a,b){return a.score-b.score || b.brand.denominator-a.brand.denominator || String(a.brand.brand).localeCompare(String(b.brand.brand),'zh-CN');});
+    return rows.slice(0,8).map(function(x){return x.brand;});
+  }
+  function brandTag(text,kind){ return text?'<span class="brand-tag '+(kind||'')+'">'+escapeHtml(text)+'</span>':''; }
+  function renderBrandSearchResults(matches){
+    if(!state.brandQuery) return '';
+    if(!matches.length) return '<div class="brand-suggestions"><div class="brand-empty">未找到匹配品牌，请检查品牌名或SN</div></div>';
+    var html='<div class="brand-suggestions">';
+    matches.forEach(function(b){
+      html+='<button type="button" class="brand-option" data-brand-sn="'+escapeHtml(b.sn)+'"><span><b>'+escapeHtml(b.brand||'未命名品牌')+'</b><small>SN '+escapeHtml(b.sn)+'</small></span><span class="brand-option-tags">'+brandTag(b.level,'level')+brandTag(b.shenyin,'shenyin')+'</span></button>';
+    });
+    return html+'</div>';
+  }
+  function renderBrandAdjustmentPanel(){
+    var d=state.brandAdjustmentData;
+    if(!d) return '<div class="loading">暂无品牌调价率数据</div>';
+    var matches=brandMatches(state.brandQuery);
+    var selected=(d.brands||[]).find(function(b){return b.sn===state.selectedBrandSn;});
+    var html='<section class="brand-search-card"><label for="brandSearchInput">搜索品牌</label><div class="brand-search-wrap"><span class="brand-search-icon">⌕</span><input id="brandSearchInput" type="search" autocomplete="off" inputmode="search" placeholder="输入品牌名称或品牌SN" value="'+escapeHtml(state.brandQuery)+'"><button type="button" class="brand-clear" aria-label="清空品牌搜索">×</button></div>'+renderBrandSearchResults(matches)+'</section>';
+    if(!selected){
+      html+='<section class="brand-onboarding"><b>选择品牌查看本月调价率</b><span>支持中文、英文品牌名和品牌SN模糊搜索</span><small>数据截至 '+escapeHtml(d.source_date||'—')+'</small></section>';
+      return html;
+    }
+    var rate=selected.rate==null?'—':(selected.rate*100).toFixed(1)+'%';
+    var fail=selected.rate!=null&&selected.rate<0.75;
+    html+='<section class="brand-context-card"><div class="brand-context-head"><div><h2>'+escapeHtml(selected.brand)+'</h2><p>品牌SN '+escapeHtml(selected.sn)+'</p></div><button type="button" class="brand-change">更换品牌</button></div><div class="brand-tags">'+brandTag(selected.level,'level')+brandTag(selected.shenyin,'shenyin')+(selected.groups||[]).map(function(g){return brandTag(g,'group');}).join('')+'</div></section>';
+    html+='<div class="excel-scroll"><table class="excel-table brand-adjustment-grid"><thead><tr><th class="excel-cell is-header is-row-label">品牌名</th><th class="excel-cell is-header">时间日期</th><th class="excel-cell is-header">价高商品</th><th class="excel-cell is-header">调价商品数</th><th class="excel-cell is-header">调价率</th></tr></thead><tbody><tr><td class="excel-cell is-row-label"><b>'+escapeHtml(selected.brand)+'</b><small class="brand-sn-inline">SN '+escapeHtml(selected.sn)+'</small></td><td class="excel-cell">'+escapeHtml(selected.month)+'</td><td class="excel-cell is-number">'+Number(selected.denominator||0).toLocaleString('zh-CN')+'</td><td class="excel-cell is-number">'+Number(selected.adjusted||0).toLocaleString('zh-CN')+'</td><td class="excel-cell"><span class="adjust-rate '+(selected.rate==null?'no-data':fail?'fail':'pass')+'">'+rate+(fail?'<em>未达标</em>':'')+'</span></td></tr></tbody></table></div>';
+    html+='<p class="brand-scope-note">月度口径：按品牌SN汇总当月价高商品与调价商品；整体目标75%。数据截至 '+escapeHtml(selected.date||d.source_date||'—')+'</p>';
+    return html;
+  }
+
+  function renderViewModeSwitch(){ return '<div class="view-mode-switch" role="tablist" aria-label="数据视角"><button type="button" role="tab" class="view-mode-btn '+(state.viewMode==='group'?'active':'')+'" data-view-mode="group">小组视角</button><button type="button" role="tab" class="view-mode-btn '+(state.viewMode==='brand'?'active':'')+'" data-view-mode="brand">品牌视角</button></div>'; }
+  function renderBrandTabs(){ var html='<div class="mobile-tabs brand-tabs">'; BRAND_TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeBrandTab===tab.id?'active':'')+'" data-brand-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';});return html+'</div>'; }
+
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; $modulesContainer.innerHTML=renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():renderGenericPanel(activeTab)))))+'</main>'; document.querySelectorAll('.tab-btn').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); }
+  function bindBrandInteractions(){
+    var input=document.getElementById('brandSearchInput');
+    if(input){ input.oninput=function(){state.brandQuery=input.value;var old=document.querySelector('.brand-suggestions');var html=renderBrandSearchResults(brandMatches(state.brandQuery));if(old)old.outerHTML=html;else if(html)input.closest('.brand-search-card').insertAdjacentHTML('beforeend',html);bindBrandInteractions();var fresh=document.getElementById('brandSearchInput');if(fresh){fresh.focus();fresh.setSelectionRange(fresh.value.length,fresh.value.length);}}; }
+    document.querySelectorAll('.brand-option').forEach(function(btn){btn.onclick=function(){state.selectedBrandSn=btn.getAttribute('data-brand-sn');state.brandQuery='';renderDashboard();};});
+    var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
+    var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
+  }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; var body=state.viewMode==='brand'?(renderBrandTabs()+'<main class="mobile-panel">'+renderBrandAdjustmentPanel()+'</main>'):(renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():renderGenericPanel(activeTab)))))+'</main>'); $modulesContainer.innerHTML=renderViewModeSwitch()+body; document.querySelectorAll('.view-mode-btn').forEach(function(btn){btn.onclick=function(){state.viewMode=btn.getAttribute('data-view-mode');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-tab]').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-brand-tab]').forEach(function(btn){btn.onclick=function(){state.activeBrandTab=btn.getAttribute('data-brand-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); bindBrandInteractions(); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }

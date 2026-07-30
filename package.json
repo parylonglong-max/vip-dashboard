@@ -5,6 +5,7 @@
   "scripts": {
     "build": "rm -rf dist && mkdir -p dist && cp -R index.html styles.css app.js data downloads dist/",
     "backup:frontend": "./scripts/backup_before_frontend_change.sh",
-    "check:rendering": "node --check app.js && python3 scripts/validate_rendering_rules.py"
+    "check:rendering": "node --check app.js && python3 scripts/validate_rendering_rules.py",
+    "generate:brand-adjustment": "python3 scripts/generate_brand_adjustment_rate.py --source '../../销售看板_2026-07-29 23：59.xlsx' --output data/brand_adjustment_rate.json"
   }
 }

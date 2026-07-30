@@ -23,4 +23,17 @@ assert fields[23:34]==['综合得分','天猫价指','对标值','天猫降幅',
 assert 'function priceIndexHistoryRows' in app and '天猫外网加总' in app, '缺少外网历史独立字段驱动渲染'
 assert "[2,3,5,6,10,11]" in app and "[4,7]" in app, '外网单月比例/pp字段映射缺失'
 assert "price_power_history" in app and "最新月份" in app, '五星价格力历史月份仍存在硬编码风险'
+# 品牌视角门禁：SN唯一、原始计数可重算、无分母不得判定未达标。
+brand_path=root/'data/brand_adjustment_rate.json'
+assert brand_path.exists(), '缺少品牌调价率数据'
+brand=json.loads(brand_path.read_text(encoding='utf-8'))
+assert brand['validation']['status']=='PASS'
+sns=[x['sn'] for x in brand['brands']]
+assert len(sns)==len(set(sns)), '品牌SN不唯一'
+for x in brand['brands']:
+    assert x['adjusted']<=x['denominator'], f"{x['sn']} 调价商品数大于价高商品数"
+    if x['denominator']==0: assert x['rate'] is None, f"{x['sn']} 无分母时rate必须为null"
+    else: assert abs(x['rate']-x['adjusted']/x['denominator'])<1e-12, f"{x['sn']} 调价率不可重算"
+for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','brandSearchInput','输入品牌名称或品牌SN']:
+    assert token in app, f'品牌视角实现缺失: {token}'
 print('RENDERING_RULES_GATE PASS')
