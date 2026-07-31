@@ -429,34 +429,10 @@
 
   function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
   function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
-  function updateBrandSuggestions(){
-    var input=document.getElementById('brandSearchInput'); if(!input) return;
-    var card=input.closest('.brand-search-card'); if(!card) return;
-    var old=card.querySelector('.brand-suggestions');
-    var html=renderBrandSearchResults(brandMatches(state.brandQuery));
-    if(old) old.remove();
-    if(html) card.insertAdjacentHTML('beforeend',html);
-    bindBrandOptionClicks(card);
-  }
-  function bindBrandOptionClicks(scope){
-    (scope||document).querySelectorAll('.brand-option').forEach(function(btn){
-      btn.onclick=function(){state.selectedBrandSn=btn.getAttribute('data-brand-sn');state.brandQuery='';renderDashboard();};
-      btn.ontouchstart=function(){state.selectedBrandSn=btn.getAttribute('data-brand-sn');state.brandQuery='';renderDashboard();};
-    });
-  }
   function bindBrandInteractions(){
     var input=document.getElementById('brandSearchInput');
-    if(input&&!input.dataset.bound){
-      input.dataset.bound='1';
-      input.addEventListener('compositionstart',function(){state.brandComposing=true;});
-      input.addEventListener('compositionend',function(){state.brandComposing=false;state.brandQuery=input.value;updateBrandSuggestions();});
-      input.addEventListener('input',function(){
-        if(state.brandComposing) return;
-        state.brandQuery=input.value;
-        updateBrandSuggestions();
-      });
-    }
-    bindBrandOptionClicks(document);
+    if(input){ input.oninput=function(){state.brandQuery=input.value;var old=document.querySelector('.brand-suggestions');var html=renderBrandSearchResults(brandMatches(state.brandQuery));if(old)old.outerHTML=html;else if(html)input.closest('.brand-search-card').insertAdjacentHTML('beforeend',html);bindBrandInteractions();var fresh=document.getElementById('brandSearchInput');if(fresh){fresh.focus();fresh.setSelectionRange(fresh.value.length,fresh.value.length);}}; }
+    document.querySelectorAll('.brand-option').forEach(function(btn){btn.onclick=function(){state.selectedBrandSn=btn.getAttribute('data-brand-sn');state.brandQuery='';renderDashboard();};});
     var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
     var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
   }
