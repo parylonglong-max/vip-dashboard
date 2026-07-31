@@ -23,11 +23,25 @@ assert fields[23:34]==['综合得分','天猫价指','对标值','天猫降幅',
 assert 'function priceIndexHistoryRows' in app and '天猫外网加总' in app, '缺少外网历史独立字段驱动渲染'
 assert "[2,3,5,6,10,11]" in app and "[4,7]" in app, '外网单月比例/pp字段映射缺失'
 assert "price_power_history" in app and "最新月份" in app, '五星价格力历史月份仍存在硬编码风险'
-# 品牌视角门禁：SN唯一、原始计数可重算、无分母不得判定未达标。
+# 品牌视角门禁：必须先生成品牌SN+日期标准层，再由标准层生成前端聚合。
+daily_path=root/'data/brand_adjustment_daily.json'
 brand_path=root/'data/brand_adjustment_rate.json'
+assert daily_path.exists(), '缺少品牌调价率标准日明细'
 assert brand_path.exists(), '缺少品牌调价率数据'
+daily=json.loads(daily_path.read_text(encoding='utf-8'))
 brand=json.loads(brand_path.read_text(encoding='utf-8'))
+assert daily['quality']['status']=='PASS'
+assert daily['grain']=='brand_sn + date'
+assert set(daily['filters']['source_sheets'])=={'data','data非神银'}, '品牌指标必须合并data与data非神银'
+assert daily['quality']['source_overlap_count']==0, '两张指标表存在品牌重叠'
+assert daily['quality']['indicator_brand_count']>=300, '指标品牌覆盖异常下降'
+record_keys=[(x['brand_sn'],x['date']) for x in daily['records']]
+assert len(record_keys)==len(set(record_keys)), '标准层品牌SN+日期不唯一'
+assert all(x['adjusted_count']<=x['high_price_count'] for x in daily['records']), '标准层存在分子大于分母'
 assert brand['validation']['status']=='PASS'
+assert brand['summary']['indicator_brand_count']==daily['quality']['indicator_brand_count'], '标准层与前端指标品牌覆盖不一致'
+assert brand['summary']['denominator']==sum(x['high_price_count'] for x in daily['records']), '前端价高总数与标准层不一致'
+assert brand['summary']['adjusted']==sum(x['adjusted_count'] for x in daily['records']), '前端调价总数与标准层不一致'
 sns=[x['sn'] for x in brand['brands']]
 assert len(sns)==len(set(sns)), '品牌SN不唯一'
 for x in brand['brands']:
@@ -43,4 +57,7 @@ for x in brand['brands']:
     assert x['adjusted']==sum(z['adjusted'] for z in x['daily']), f"{x['sn']} 月调价数不等于日汇总"
     assert all(z['adjusted']<=z['denominator'] for z in x['daily']), f"{x['sn']} 日调价数大于价高数"
     assert all(z['rate'] is None for z in x['daily'] if not z['has_data']), f"{x['sn']} 无明细日期不得显示0%"
+    source_rows=[z for z in daily['records'] if z['brand_sn']==x['sn']]
+    assert x['denominator']==sum(z['high_price_count'] for z in source_rows), f"{x['sn']} 月价高数与标准层不一致"
+    assert x['adjusted']==sum(z['adjusted_count'] for z in source_rows), f"{x['sn']} 月调价数与标准层不一致"
 print('RENDERING_RULES_GATE PASS')

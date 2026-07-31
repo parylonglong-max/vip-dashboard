@@ -1,0 +1,45 @@
+{
+  "title": "品牌调价率标准层清洗复核报告",
+  "source_file": "销售看板_2026-07-30 23：59.xlsx",
+  "source_sha256": "6bfe3b76655d215d5fc3cc341850514ca662d97742a213c76b79438a0665a989",
+  "source_date": "2026-07-30",
+  "grain": "brand_sn + date",
+  "filters": {
+    "data_group": "TOTAL",
+    "period_flag": "cur",
+    "source_sheets": [
+      "data",
+      "data非神银"
+    ]
+  },
+  "quality": {
+    "status": "PASS",
+    "errors": [],
+    "latest_date": "2026-07-30",
+    "catalog_count": 523,
+    "indicator_brand_count": 366,
+    "metric_brand_count": 95,
+    "standard_record_count": 10926,
+    "source_brand_counts": {
+      "data": 74,
+      "data非神银": 292
+    },
+    "source_overlap_count": 0
+  },
+  "records_by_source": {
+    "data": {
+      "standard_record_count": 2220,
+      "brand_count": 74,
+      "high_price_count": 5968,
+      "adjusted_count": 4252,
+      "source_row_count": 2876
+    },
+    "data非神银": {
+      "standard_record_count": 8706,
+      "brand_count": 292,
+      "high_price_count": 643,
+      "adjusted_count": 415,
+      "source_row_count": 9223
+    }
+  }
+}
