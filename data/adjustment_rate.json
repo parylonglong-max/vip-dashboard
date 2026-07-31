@@ -1,6 +1,6 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-07-29",
+  "overall_source_date": "2026-07-30",
   "six_high_source_date": "2026-07-28",
   "overall_target": 0.75,
   "six_high_target": 0.8,
@@ -8,9 +8,9 @@
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 3863,
-        "adjusted": 3151,
-        "rate": 0.8156872896712399,
+        "denominator": 3950,
+        "adjusted": 3218,
+        "rate": 0.8146835443037974,
         "target": 0.75,
         "status": "pass"
       },
@@ -25,9 +25,9 @@
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 4549,
-        "adjusted": 3704,
-        "rate": 0.8142448889865904,
+        "denominator": 4596,
+        "adjusted": 3751,
+        "rate": 0.8161444734551784,
         "target": 0.75,
         "status": "pass"
       },
@@ -59,9 +59,9 @@
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 462,
-        "adjusted": 225,
-        "rate": 0.487012987012987,
+        "denominator": 507,
+        "adjusted": 257,
+        "rate": 0.5069033530571992,
         "target": 0.75,
         "status": "fail"
       },
@@ -76,9 +76,9 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 334,
-        "adjusted": 269,
-        "rate": 0.8053892215568862,
+        "denominator": 345,
+        "adjusted": 280,
+        "rate": 0.8115942028985508,
         "target": 0.75,
         "status": "pass"
       },
@@ -93,9 +93,9 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 3066,
-        "adjusted": 2375,
-        "rate": 0.7746249184605349,
+        "denominator": 3178,
+        "adjusted": 2427,
+        "rate": 0.7636878539962241,
         "target": 0.75,
         "status": "pass"
       },
@@ -111,9 +111,9 @@
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 12323,
-      "adjusted": 9759,
-      "rate": 0.791933782358192,
+      "denominator": 12625,
+      "adjusted": 9968,
+      "rate": 0.7895445544554456,
       "target": 0.75,
       "status": "pass"
     },
@@ -125,7 +125,7 @@
       "status": "pass"
     }
   },
-  "generated_at": "2026-07-30 15:42:34",
+  "generated_at": "2026-07-31 11:59:11",
   "validation": {
     "status": "PASS",
     "errors": []

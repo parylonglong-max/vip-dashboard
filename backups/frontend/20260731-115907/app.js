@@ -1,0 +1,426 @@
+/* 精品货价监控数据看板 — Mobile BI / No Pie, No Ring */
+(function () {
+  "use strict";
+
+  var API_BASE = window.DASHBOARD_API_BASE || "http://127.0.0.1:8900";
+  var FALLBACK_URL = "data/excel_view.json";
+  var STATIC_PREVIEW_PASSWORD = "vip2026";
+  var PERIODS = ["YTD", "1月", "2月", "3月", "4月", "5月", "6月"];
+
+  var state = { token: null, data: null, activeTab: "sales", viewMode: "group", activeBrandTab: "brand-adjustment", selectedBrandSn: null, brandQuery: "", periods: {} };
+
+  var $loginPage = document.getElementById("loginPage");
+  var $dashboard = document.getElementById("dashboard");
+  var $passwordInput = document.getElementById("passwordInput");
+  var $loginBtn = document.getElementById("loginBtn");
+  var $loginError = document.getElementById("loginError");
+  var $logoutBtn = document.getElementById("logoutBtn");
+  var $modulesContainer = document.getElementById("modulesContainer");
+  var $navbarDate = document.getElementById("navbarDate");
+  var $periodToggle = document.querySelector(".period-toggle");
+
+  var TABS = [
+    { id: "sales", label: "自营销售", sectionIds: ["self_sales_mtd", "self_sales_history"] },
+    { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
+    { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
+    { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
+    { id: "liugao", label: "六高", sectionIds: ["six_high"] },
+    { id: "adjustment", label: "调价率", sectionIds: [] },
+    { id: "quality", label: "优质款", sectionIds: ["quality_product_mtd"] },
+    { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
+    { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
+    { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
+  ];
+  var BRAND_TABS = [
+    { id: "brand-adjustment", label: "调价率" },
+  ];
+
+  var PERIOD_CONFIG = {
+    self_sales_history: { rowStart: 17, rowEnd: 23, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
+    price_index_history: { rowStart: 56, rowEnd: 63, periods: { "YTD": [0,1,2,3,4,5,6,7,8,9,10,11], "1月": [0,12,13,14,15,16,17,18,19,20,21,22], "2月": [0,23,24,25,26,27,28,29,30,31,32,33], "3月": [0,34,35,36,37,38,39,40,41,42,43,44], "4月": [0,45,46,47,48,49,50,51,52,53,54,55], "5月": [0,56,57,58,59,60,61,62,63,64,65,66], "6月": [0,67,68,69,70,71,72,73,74,75,76,77] }, headers: function(p){ return ["小组",p+"综合得分",p+"天猫得分",p+"抖音得分",p+"天猫权重",p+"抖音权重",p+"天猫价指",p+"天猫目标",p+"天猫差值",p+"抖音价指",p+"抖音目标",p+"抖音差值"]; } },
+    internal_discount: { rowStart: 68, rowEnd: 74, periods: { "MTD": [0,1,2,3], "YTD": [0,4,5,6], "1月": [0,7,8,9], "2月": [0,10,11,12], "3月": [0,13,14,15], "4月": [0,16,17,18], "5月": [0,19,20,21], "6月": [0,22,23,24] }, headers: function(p){ return ["小组",p+"去年内网价指",p+"今年内网价指",p+"系数差"]; }, periodList: ["MTD","YTD","1月","2月","3月","4月","5月","6月"] },
+    quality_product_history: { rowStart: 103, rowEnd: 109, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return ["小组",p+"已引进",p+"未引进",p+"暂不引进",p+"总计",p+"引入率"]; } },
+    machine_purchase_history: { rowStart: 123, rowEnd: 126, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
+    price_power_history: { rowStart: 139, rowEnd: 152, periods: { "YTD": null, "最新月份": null }, headers: function(p){ return ["时间","维度","指标","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"]; }, periodList: ["YTD","最新月份"] }
+  };
+
+  function apiFetch(path, options) {
+    options = options || {}; options.headers = options.headers || {};
+    if (state.token && state.token !== "static-preview") options.headers.Authorization = "Bearer " + state.token;
+    return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
+  }
+  function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
+  function loadExtraData(){ return Promise.all([fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch('data/adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch('data/brand_adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
+  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
+
+  function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function parseNum(cell){ if(!cell) return null; var v=cell.raw; if(typeof v==="number") return v; var n=Number(v); return isNaN(n)?null:n; }
+  function textWithUnit(cell){ if(!cell||!cell.text) return "—"; return cell.text + (cell.unit && cell.unit !== "%" ? cell.unit : ""); }
+  function clamp(v,min,max){ return Math.max(min,Math.min(max,v)); }
+  function getSection(id){ return (state.data.sections||[]).find(function(s){ return s.id===id; }); }
+  // 全局渲染规范：仅“精品总”可使用总计样式，且必须置于所属表格最后。
+  function normalizeGroupName(name){ return /^(总|精品|精品总计|精品总)$/.test(String(name||'').trim()) ? '精品总' : name; }
+  function isTotalRow(row){ return !!(row&&(row.total||(row.cells&&row.cells[0]&&normalizeGroupName(row.cells[0].text)==='精品总'))); }
+  function normalizeAndSortTotalRows(rows){
+    var headers=[], data=[];
+    (rows||[]).forEach(function(row){
+      var cloned=Object.assign({},row,{cells:(row.cells||[]).map(function(cell){return Object.assign({},cell);})});
+      var first=cloned.cells[0];
+      if(first && !first.header && !(first.merge&&first.merge.covered) && normalizeGroupName(first.text)==='精品总'){
+        first.text='精品总'; first.raw='精品总'; cloned.total=true;
+      }
+      if((cloned.cells||[]).some(function(cell){return cell&&cell.header;})) headers.push(cloned); else data.push(cloned);
+    });
+    return headers.concat(data.filter(function(row){return !isTotalRow(row);}),data.filter(isTotalRow));
+  }
+  function activePeriod(sectionId){ return state.periods[sectionId] || (PERIOD_CONFIG[sectionId] && PERIOD_CONFIG[sectionId].periodList ? PERIOD_CONFIG[sectionId].periodList[0] : "YTD"); }
+
+  function salesMtdRecords(){ var section=getSection("self_sales_mtd"); if(!section) return []; return section.rows.filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){return {group:row.cells[0].text, actual:parseNum(row.cells[2]), deptRate:parseNum(row.cells[7]), groupRate:parseNum(row.cells[9]), row:row};}); }
+
+  function renderSalesSummary(){
+    var records=salesMtdRecords(); var total=records.find(function(r){return r.group==="总";})||records[records.length-1]; if(!total) return "";
+    var groups=records.filter(function(r){return r.group!=="总";});
+    var html='<section class="sales-hero neu-card no-circle"><div class="sales-hero-title"><span></span><b>自营销售达成率总览</b></div>';
+    html+='<div class="summary-progress-grid">';
+    html+=progressCard("部门阶段目标完成率", total.deptRate, textWithUnit(total.row.cells[2]), textWithUnit(total.row.cells[6]));
+    html+=progressCard("小组阶段目标完成率", total.groupRate, textWithUnit(total.row.cells[2]), textWithUnit(total.row.cells[8]));
+    html+='</div><div class="group-progress-list">';
+    groups.forEach(function(r){ html+=progressCard(r.group, r.groupRate, textWithUnit(r.row.cells[2]), textWithUnit(r.row.cells[8])); });
+    html+='</div></section>';
+    return html;
+  }
+  function progressCard(label, rate, actual, target){ var pct=clamp((rate||0)*100,0,120); var cls=(rate>=1?'good':rate<0.8?'bad':'normal'); return '<div class="rate-card '+cls+'"><div class="rate-card__head"><b>'+escapeHtml(label)+'</b><span>'+((rate==null||isNaN(rate))?'—':(rate*100).toFixed(1)+'%')+'</span></div><div class="rate-card__bar"><i style="width:'+pct+'%"></i></div><div class="rate-card__money">'+escapeHtml(actual)+' / '+escapeHtml(target)+'</div></div>'; }
+
+  function cellClass(cell,rowIndex,colIndex){ var classes=["excel-cell"]; var ctx=(cell&&cell.context||"")+" "+(cell&&cell.text||""); if(!cell||!cell.text) classes.push("is-blank"); if(cell&&cell.type==="number") classes.push("is-number"); if(rowIndex===0 || (cell&&cell.header)) classes.push("is-header"); if(colIndex===0) classes.push("is-row-label"); if(cell&&cell.merge&&cell.merge.colspan>1) classes.push("is-merged-head"); if(cell&&cell.sectionDivider) classes.push("section-divider"); if(cell&&cell.trend==="up") classes.push("trend-up"); if(cell&&cell.trend==="down") classes.push("trend-down"); if(cell&&cell.qualityFail) classes.push("quality-fail"); if(/同比/.test(ctx)) classes.push("is-yoy"); if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)) classes.push("is-progress"); return classes.join(" "); }
+  function renderEnhancedContent(cell){ if(!cell||!cell.text) return '<span class="blank-placeholder">—</span>'; var ctx=cell.context||""; var raw=parseNum(cell); var text=escapeHtml(cell.text); var unit=cell.unit&&cell.unit!=="%"?'<small>'+escapeHtml(cell.unit)+'</small>':""; if(/同比/.test(ctx)&&raw!=null){ var status=raw>=0?"up":"down"; return '<span class="yoy-pill '+status+'">'+(raw>=0?'↑':'↓')+' '+text+'</span>'; } if(/完成率|达成率|阶段完成率|引入率|占比/.test(ctx)&&raw!=null&&cell.unit==="%"){ var pct=raw>2?raw:raw*100; var cls=pct>=100?"good":pct<80?"bad":"normal"; var chip=cell.qualityFail?'<em class="status-chip">未达标</em>':''; return '<div class="progress-cell '+cls+'"><span>'+text+chip+'</span><div class="mini-progress"><i style="width:'+clamp(pct,0,120)+'%"></i></div></div>'; } return text+unit; }
+  function renderCell(cell,rowIndex,colIndex){ if(cell&&cell.merge&&cell.merge.covered) return ''; var title=cell&&cell.coord&&cell.text?' title="'+escapeHtml(cell.coord+' '+(cell.raw==null?'':cell.raw))+'"':""; var span=''; if(cell&&cell.merge&&cell.merge.rowspan>1) span+=' rowspan="'+cell.merge.rowspan+'"'; if(cell&&cell.merge&&cell.merge.colspan>1) span+=' colspan="'+cell.merge.colspan+'"'; return '<td class="'+cellClass(cell,rowIndex,colIndex)+'"'+title+span+'>'+renderEnhancedContent(cell)+'</td>'; }
+
+  function markHeaders(rows, count){ return (rows||[]).map(function(row,idx){ if(idx<count){ row={excelRow:row.excelRow,cells:(row.cells||[]).map(function(cell){ var c=Object.assign({},cell); c.header=true; return c; })}; } return row; }); }
+  function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text",header:true};})}; }
+  function renderRows(rows, tableClass){ var normalized=normalizeAndSortTotalRows(rows); var html='<div class="excel-scroll"><table class="excel-table '+(tableClass||'')+'">'; normalized.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
+
+  function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
+
+  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_index_history') return priceIndexHistoryRows(section, period); if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if((sectionId==='self_sales_history'||sectionId==='machine_purchase_history')&&row.excelRow>=cfg.rowStart){ratePctCell(cells[3]); growthPctCell(cells[5]);} if(sectionId==='quality_product_history'&&row.excelRow>=cfg.rowStart){ratePctCell(cells[5]);} return {excelRow:row.excelRow,cells:cells};}); return markHeaders(rows,2); }
+  // 外网价指历史：YTD(11业务列)与单月(11业务列，但字段语义不同)必须分别切片，禁止用索引硬套。
+  function priceIndexHistoryRows(section, period){
+    var isYtd=period==='YTD';
+    var start=isYtd?1:({"1月":12,"2月":23,"3月":34,"4月":45,"5月":56,"6月":67}[period]);
+    var fields=isYtd?
+      ['小组','综合得分','天猫得分','抖音得分','天猫权重','抖音权重','天猫价指','天猫目标','天猫降幅','抖音价指','抖音目标','抖音降幅']:
+      ['小组','综合得分','天猫价指','对标值','天猫降幅','抖音价指','对标值','抖音降幅','天猫外网加总','抖音外网加总','天猫权重','抖音权重'];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=57&&row.excelRow<=63;}).map(function(row){
+      var cells=[Object.assign({},row.cells[0]||{text:'',type:'blank'})];
+      for(var i=0;i<11;i++) cells.push(Object.assign({},row.cells[start+i]||{text:'',type:'blank'}));
+      if(cells[0]&&normalizeGroupName(cells[0].text)==='精品总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      // 价指/对标是比例；降幅是源表已计算的 pp；外网加总是数量，必须保持数量格式。
+      if(isYtd){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); }
+      else { [2,3,5,6,10,11].forEach(function(i){pricePctCell(cells[i]);}); [4,7].forEach(function(i){pricePpCell(cells[i]);}); }
+      return {excelRow:row.excelRow,cells:cells};
+    });
+    return [headerRow(fields)].concat(rows);
+  }
+  function pricePowerPeriodRows(section, period){
+    // 仅展示源表已有实际数据的最新月份，禁止硬编码月份造成跨月后取错列。
+    var monthRows=(section.rows||[]).filter(function(row){var c=row.cells&&row.cells[0]; return c&&/^20\d{4}$/.test(String(c.raw||''))&&row.cells[2]&&typeof row.cells[2].raw==='number'&&row.cells[6]&&typeof row.cells[6].raw==='number';});
+    var latest=monthRows.map(function(row){return String(row.cells[0].raw);}).sort().pop();
+    var wanted=period==='YTD'?'YTD':latest;
+    var data=(section.rows||[]).filter(function(row){
+      var first=row.cells&&row.cells[0];
+      var raw=first&&first.raw;
+      var text=first&&first.text;
+      return wanted==='YTD'?text==='YTD':String(raw)===String(wanted);
+    }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10).map(function(c){return Object.assign({},c);})};});
+    var headers=["时间","维度","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"];
+    function qtyCell(c){
+      if(!c||typeof c.raw!=='number')return;
+      var n=c.raw;
+      if(Math.abs(n)>=1e8){c.text=(n/1e8).toFixed(2);c.unit='亿';}
+      else {c.text=(n/1e4).toFixed(0);c.unit='万';}
+    }
+    data.forEach(function(row){
+      if(wanted!=='YTD'&&row.cells[0]&&row.cells[0].merge&&!row.cells[0].merge.covered){row.cells[0].text=latest ? (latest.slice(4,6).replace(/^0/,'')+'月') : '—';row.cells[0].raw=latest||'';row.cells[0].unit='';}
+      qtyCell(row.cells[2]); qtyCell(row.cells[4]);
+      // 曝光/销售占比、实际/目标/完成率均为比例；VS目标差距为百分点差。
+      [3,5,6,7,9].forEach(function(i){ratePctCell(row.cells[i]);});
+      ppRatioCell(row.cells[8]);
+    });
+    return [headerRow(headers)].concat(data);
+  }
+  function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
+
+  function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
+  // 价格指数统一展示：数值转百分比并保留 1 位小数；差值统一 pp。
+  function pricePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1)+"%"; cell.unit=""; return cell; }
+  // 通用比例与同比：源值为比例，统一保留1位百分比；同比保留正负号和颜色。
+  function ratePctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; cell.text=(cell.raw*100).toFixed(1)+"%"; cell.unit=""; return cell; }
+  function growthPctCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)+'%'; cell.unit=''; cell.trend=n>0?'up':n<0?'down':null; return cell; }
+  function ppRatioCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)+'pp'; cell.unit=''; cell.trend=n>0?'up':n<0?'down':null; return cell; }
+  // 外网价指的降幅/差值源值已是 pp；仅保留一位小数。
+  function pricePpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n).toFixed(1); cell.unit="pp"; cell.trend=n>0?'up':n<0?'down':null; return cell; }
+  // 内网系数差源值为比例，展示时转换为 pp。
+  function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; cell.trend=n>0?'up':n<0?'down':null; return cell; }
+  function renderPriceIndexMtd(section){
+    // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
+    // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
+    var keep=[0,1,2,3,4,5,6,7,8,10,11,12];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){
+      var cells=keep.map(function(srcIdx){
+        var c=Object.assign({},row.cells[srcIdx]);
+        if(row.excelRow===44&&(srcIdx===6||srcIdx===10)&&c.merge){ c.merge=Object.assign({},c.merge,{colspan:3}); }
+        return c;
+      });
+      if(row.excelRow===44&&(cells[1]||cells[6]||cells[9])){
+        if(cells[1]) cells[1].sectionDivider=true;
+        if(cells[6]) cells[6].sectionDivider=true;
+        if(cells[9]) cells[9].sectionDivider=true;
+      }
+      if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      // 天猫/抖音价格指数与对标值：均以百分比、1位小数展示；完成差值保留 pp。
+      if(row.excelRow>=46){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); }
+      return {excelRow:row.excelRow,cells:cells};
+    });
+    rows=markHeaders(rows,2);
+    return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid');
+  }
+  function renderSixHighMtd(section){
+    var source=getSection('six_high_price_index'); var d=source&&source.data; if(!d)return '';
+    function numCell(v){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);return isNaN(n)?{text:String(v),raw:v,type:'text'}:{text:n.toLocaleString('zh-CN',{maximumFractionDigits:1}),raw:n,type:'number'};}
+    function pctCell(v,diff){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return {text:String(v),raw:v,type:'text'};return {text:diff?((n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)+'pp'):(n*100).toFixed(1)+'%',raw:n,type:'number',trend:diff?(n>0?'up':n<0?'down':null):null};}
+    function dataRow(g,total){return {excelRow:total?1099:1000,total:!!total,cells:[{text:total?'精品总':g.group,raw:g.group,type:'text'},numCell(g['日均商品数']),numCell(g['可比商品数']),pctCell(g['可比率']),pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true),pctCell(g['调价率']),pctCell(g['调价率目标']),pctCell(g['调价率差值'],true),pctCell(g['断货率']),pctCell(g['断货率目标']),pctCell(g['断货率差值'],true),pctCell(g['7天缺货率'])]};}
+    var headers=['小组','日均商品数','可比商品数','可比率','天猫价格指数','天猫目标','天猫差值','抖音价格指数','抖音目标','抖音差值','调价率','调价率目标','调价率差值','断货率','断货率目标','断货率差值','7天缺货率'];
+    var rows=[headerRow(headers)]; (d.groups||[]).forEach(function(g){rows.push(dataRow(g,false));}); if(d.summary)rows.push(dataRow(d.summary,true));
+    return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows(rows,'six-high-detail-grid');
+  }
+  function renderSixHighPriceIndex(section){
+    var d=section.data; if(!d) return '';
+    var groups=d.groups||[]; var summary=d.summary||{};
+    function pctCell(v,diff){ if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'}; var n=parseFloat(v); if(isNaN(n))return {text:String(v),raw:v,type:'text'}; return {text:diff?((n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)):(n*100).toFixed(1)+'%',raw:n,type:'number',unit:diff?'pp':'%',trend:diff?(n>0?'up':n<0?'down':null):null}; }
+    var top={excelRow:0,cells:[{text:'小组',raw:'小组',type:'text',header:true,merge:{rowspan:2,colspan:1}},{text:'天猫',raw:'天猫',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}},{text:'抖音',raw:'抖音',type:'text',header:true,sectionDivider:true,merge:{rowspan:1,colspan:3}},{merge:{covered:true}},{merge:{covered:true}}]};
+    var sub={excelRow:0,cells:[{merge:{covered:true}},{text:'价格指数',raw:'价格指数',type:'text',header:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true},{text:'价格指数',raw:'价格指数',type:'text',header:true},{text:'目标',raw:'目标',type:'text',header:true},{text:'差值',raw:'差值',type:'text',header:true}]};
+    var rows=[top,sub];
+    groups.forEach(function(g,idx){rows.push({excelRow:1000+idx,cells:[{text:g.group,raw:g.group,type:'text'},pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true)]});});
+    if(summary&&summary.group){rows.push({excelRow:1099,total:true,cells:[{text:'精品总',raw:'精品总',type:'text'},pctCell(summary['天猫价格指数']),pctCell(summary['天猫价格指数目标']),pctCell(summary['天猫差值'],true),pctCell(summary['抖音价格指数']),pctCell(summary['抖音价格指数目标']),pctCell(summary['抖音差值'],true)]});}
+    return '<div class="section-title"><span></span>六高价指 · MTD <small>（数据日期：'+escapeHtml(d.source_date||'')+'）</small></div>'+renderRows(rows,'six-high-price-grid');
+  }
+  // 唯一数据口径：经营会周报【优质款明细】C列=精品；不展示未同步的旧模板历史区。
+  function renderQualityMtd(section){
+    var headers=['小组','已引进','未引进','暂不引进','总计','引入率（目标50%）'];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=93&&row.excelRow<=99;}).map(function(row){
+      var cells=row.cells.slice(0,6).map(function(c){return Object.assign({},c);});
+      var rate=cells[5];
+      if(rate&&typeof rate.raw==='number'){
+        rate.text=(rate.raw*100).toFixed(1)+'%'; rate.unit='%';
+        if(Number(cells[4]&&cells[4].raw||0)>0&&rate.raw<0.5) rate.qualityFail=true;
+      }
+      return {excelRow:row.excelRow,cells:cells,total:normalizeGroupName(cells[0]&&cells[0].text)==='精品总'};
+    });
+    var date=(state.data&&state.data.dataDate)||'—';
+    return '<div class="section-title"><span></span>优质款 · MTD <small>周报优质款明细 · 部门=精品 · 数据截至 '+escapeHtml(date)+'</small></div>'+renderRows([headerRow(headers)].concat(rows),'quality-weekly-grid');
+  }
+  function renderMtdWithoutTitle(section, title, firstRow, lastRow, cols){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=firstRow&&row.excelRow<=lastRow;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,cols)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderRows(rows); }
+
+  function renderPricePowerMtd(section){
+    var headers=["小组","商品占比-曝光","商品占比-APP销售","APP占比-实际","APP占比-目标","APP占比-VS目标差距","APP占比-完成率","曝光","APP销售"];
+    var rows=(section.rows||[]).filter(function(row){var label=row.cells&&row.cells[0]&&row.cells[0].text;return label==='四五星'||label==='大爆款';}).slice(0,2).map(function(row){
+      var cells=row.cells.slice(0,9).map(function(c){return Object.assign({},c);});
+      [3,4,5].forEach(function(i){var c=cells[i];if(c&&typeof c.raw==='number'){c.text=c.raw.toFixed(2);c.unit='';}});
+      return {excelRow:row.excelRow,cells:cells};
+    });
+    return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
+  }
+  function renderTrafficPanel(){
+    var data=state.trafficData;
+    if(!data) return '<div class="loading">暂无流量数据</div>';
+    var html='';
+    function fmt(n){ if(n==null) return '—'; if(n>=1e8) return (n/1e8).toFixed(2)+'亿'; if(n>=1e4) return (n/1e4).toFixed(0)+'万'; return n.toString(); }
+    function yoyPill(y){
+      if(y==null) return '<span class="yoy-pill" style="color:#6b849e">—</span>';
+      var cls=y>=0?'up':'down';
+      var arrow=y>=0?'↑':'↓';
+      var s=arrow+' '+Math.abs(y).toFixed(2)+'%';
+      return '<span class="yoy-pill '+cls+'">'+s+'</span>';
+    }
+    function renderTable(title, items){
+      var h='<div class="section-title"><span></span>'+escapeHtml(title)+'</div>';
+      h+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
+      h+='<th class="excel-cell is-header is-row-label">小组</th>';
+      h+='<th class="excel-cell is-header">曝光流量</th>';
+      h+='<th class="excel-cell is-header">曝光同比</th>';
+      h+='<th class="excel-cell is-header">商详UV</th>';
+      h+='<th class="excel-cell is-header">UV同比</th>';
+      h+='</tr></thead><tbody>';
+      var ordered=items.slice().map(function(it){return Object.assign({},it,{group:normalizeGroupName(it.group)});}).sort(function(a,b){return (a.group==='精品总')-(b.group==='精品总');});
+      ordered.forEach(function(it){
+        var isTotal=(it.group==='精品总');
+        var rowCls=isTotal?'total-row':'';
+        h+='<tr class="'+rowCls+'">';
+        h+='<td class="excel-cell is-row-label">'+escapeHtml(it.group)+'</td>';
+        h+='<td class="excel-cell">'+fmt(it.exposureTraffic)+'</td>';
+        h+='<td class="excel-cell">'+yoyPill(it.exposureTrafficYoy)+'</td>';
+        h+='<td class="excel-cell">'+fmt(it.detailUv)+'</td>';
+        h+='<td class="excel-cell">'+yoyPill(it.detailUvYoy)+'</td>';
+        h+='</tr>';
+      });
+      h+='</tbody></table></div>';
+      return h;
+    }
+    var mainGroups=data.mtd?data.mtd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
+    var ytdGroups=data.ytd?data.ytd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
+    var today=new Date();
+    var mtdStart='7.1';
+    var mtdEnd=(today.getMonth()+1)+'.'+today.getDate();
+    var ytdStart='1.1';
+    var ytdEnd=mtdEnd;
+    // 如果traffic_uv.json中有dateRange字段则优先使用
+    if(data.dateRange){
+      mtdStart=data.dateRange.mtdStart||mtdStart;
+      mtdEnd=data.dateRange.mtdEnd||mtdEnd;
+      ytdStart=data.dateRange.ytdStart||ytdStart;
+      ytdEnd=data.dateRange.ytdEnd||ytdEnd;
+    }
+    html+=renderTable('曝光流量 & 商详UV · MTD（'+mtdStart+'-'+mtdEnd+'）', mainGroups);
+    html+=renderTable('曝光流量 & 商详UV · YTD（'+ytdStart+'-'+ytdEnd+'）', ytdGroups);
+    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：ONEDP中台智能体API · 曝光流量=impressionFlow（跨商品累加值）</div>';
+    return html;
+  }
+  function renderGrossProfit(section){
+    var keepRows={27:true,34:true,35:true,37:true,38:true};
+    var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,9)};});
+    rows=markHeaders(rows,1);
+    var cutoff='毛利数据截止13号0点';
+    var title='<div class="section-title gross-title"><span></span><div><b>毛利</b><em>'+escapeHtml(cutoff)+'</em></div></div>';
+    return title+renderRows(rows);
+  }
+
+  function renderTableSection(section){
+    if(!section) return "";
+    if(section.id==='gross_profit') return renderGrossProfit(section);
+    if(section.id==='price_index_mtd') return renderPriceIndexMtd(section);
+    if(section.id==='six_high') return renderSixHighMtd(section);
+    if(section.id==='six_high_price_index') return renderSixHighPriceIndex(section);
+    if(section.id==='quality_product_mtd') return renderQualityMtd(section);
+    if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
+    if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
+    if(section.id==='traffic') return renderTrafficPanel();
+    var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
+
+  function renderSalesPanel(){ var mtd=getSection('self_sales_mtd'), hist=getSection('self_sales_history'); return salesMtdTableSection(mtd)+renderTableSection(hist); }
+  function discountRows(section, period){
+    var cfg=PERIOD_CONFIG.internal_discount;
+    var idx=cfg.periods[period] || cfg.periods.MTD;
+    var periodName=period==='MTD'?'MTD':period;
+    // 不复用 Excel 的跨期合并表头；每个视图独立四列表头，避免表头混入数值。
+    var headers=['小组',periodName+'去年内网价指',periodName+'今年内网价指','系数差'];
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=69&&row.excelRow<=75;}).map(function(row){
+      var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:'',type:'blank'});});
+      // 去年/今年内网价指统一 xx.x%，系数差统一 ±x.xpp。
+      pricePctCell(cells[1]); pricePctCell(cells[2]); ratioPpCell(cells[3]);
+      if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
+      return {excelRow:row.excelRow,total:row.excelRow===75,cells:cells};
+    });
+    return [headerRow(headers)].concat(rows);
+  }
+
+  function renderDiscountPanel(){
+    var section=getSection('internal_discount');
+    if(!section) return '<div class="loading">暂无数据</div>';
+    var historyPeriod=state.periods.internal_discount_history || '1月';
+    var html='';
+    html+='<div class="section-title"><span></span>内网价指数 · MTD</div>'+renderRows(discountRows(section,'MTD'));
+    html+='<div class="section-title"><span></span>内网价指数 · YTD</div>'+renderRows(discountRows(section,'YTD'));
+    html+='<div class="section-title"><span></span>内网价指数 · 历史月份 · '+historyPeriod+'</div>';
+    html+='<div class="filterbar">';
+    ['1月','2月','3月','4月','5月','6月'].forEach(function(p){ html+='<button class="filter-btn '+(historyPeriod===p?'active':'')+'" data-section="internal_discount_history" data-period="'+p+'">'+p+'</button>'; });
+    html+='</div>'+renderRows(discountRows(section,historyPeriod));
+    return html;
+  }
+
+  function renderAdjustmentPanel(){
+    var d=state.adjustmentData;
+    if(!d) return '<div class="loading">暂无调价率数据</div>';
+    function num(v){return v==null?'—':Number(v).toLocaleString('zh-CN');}
+    function statusRate(block){
+      if(!block||block.rate==null) return '<span class="adjust-rate no-data">—</span>';
+      var pct=(block.rate*100).toFixed(1)+'%';
+      if(block.status==='fail') return '<span class="adjust-rate fail">'+pct+'<em>未达标</em></span>';
+      return '<span class="adjust-rate pass">'+pct+'</span>';
+    }
+    function row(item,total){
+      return '<tr class="'+(total?'total-row':'')+'"><td class="excel-cell is-row-label">'+escapeHtml(item.group)+'</td>'+
+        '<td class="excel-cell is-number">'+num(item.overall.denominator)+'</td><td class="excel-cell is-number">'+num(item.overall.adjusted)+'</td><td class="excel-cell">'+statusRate(item.overall)+'</td>'+
+        '<td class="excel-cell is-number section-divider">'+num(item.six_high.denominator)+'</td><td class="excel-cell is-number">'+num(item.six_high.adjusted)+'</td><td class="excel-cell">'+statusRate(item.six_high)+'</td></tr>';
+    }
+    var html='<div class="bi-card adjustment-head"><div class="bi-section-head"><h2>调价率</h2><span>整体目标 75% · 六高目标 80%</span></div><div class="adjustment-dates"><span>整体截至 '+escapeHtml(d.overall_source_date||'—')+'</span><span>六高截至 '+escapeHtml(d.six_high_source_date||'—')+'</span></div></div>';
+    html+='<div class="excel-scroll"><table class="excel-table adjustment-grid"><thead><tr><th rowspan="2" class="excel-cell is-header is-row-label">小组</th><th colspan="3" class="excel-cell is-header">整体调价率</th><th colspan="3" class="excel-cell is-header section-divider">六高商品调价率</th></tr><tr><th class="excel-cell is-header">价高商品数</th><th class="excel-cell is-header">调价数</th><th class="excel-cell is-header">调价率</th><th class="excel-cell is-header section-divider">价高商品数</th><th class="excel-cell is-header">调价数</th><th class="excel-cell is-header">调价率</th></tr></thead><tbody>';
+    (d.groups||[]).forEach(function(x){html+=row(x,false);});
+    if(d.summary) html+=row(d.summary,true);
+    html+='</tbody></table></div>';
+    return html;
+  }
+
+  function normalizeSearchText(value){ return String(value||'').toLowerCase().replace(/\s+/g,''); }
+  function brandMatches(query){
+    var data=state.brandAdjustmentData; if(!data) return [];
+    var q=normalizeSearchText(query);
+    var rows=(data.brands||[]).map(function(b){
+      var sn=String(b.sn||''), name=normalizeSearchText(b.brand), score=99;
+      if(!q) score=b.denominator>0?20:30;
+      else if(sn===q) score=0;
+      else if(name===q) score=1;
+      else if(sn.indexOf(q)===0) score=2;
+      else if(name.indexOf(q)===0) score=3;
+      else if(sn.indexOf(q)>=0) score=4;
+      else if(name.indexOf(q)>=0) score=5;
+      return {brand:b,score:score};
+    }).filter(function(x){return x.score<99;});
+    rows.sort(function(a,b){return a.score-b.score || b.brand.denominator-a.brand.denominator || String(a.brand.brand).localeCompare(String(b.brand.brand),'zh-CN');});
+    return rows.slice(0,8).map(function(x){return x.brand;});
+  }
+  function brandTag(text,kind){ return text?'<span class="brand-tag '+(kind||'')+'">'+escapeHtml(text)+'</span>':''; }
+  function renderBrandSearchResults(matches){
+    if(!state.brandQuery) return '';
+    if(!matches.length) return '<div class="brand-suggestions"><div class="brand-empty">未找到匹配品牌，请检查品牌名或SN</div></div>';
+    var html='<div class="brand-suggestions">';
+    matches.forEach(function(b){
+      html+='<button type="button" class="brand-option" data-brand-sn="'+escapeHtml(b.sn)+'"><span><b>'+escapeHtml(b.brand||'未命名品牌')+'</b><small>SN '+escapeHtml(b.sn)+'</small></span><span class="brand-option-tags">'+brandTag(b.level,'level')+brandTag(b.shenyin,'shenyin')+'</span></button>';
+    });
+    return html+'</div>';
+  }
+  function renderBrandAdjustmentPanel(){
+    var d=state.brandAdjustmentData;
+    if(!d) return '<div class="loading">暂无品牌调价率数据</div>';
+    var matches=brandMatches(state.brandQuery);
+    var selected=(d.brands||[]).find(function(b){return b.sn===state.selectedBrandSn;});
+    var html='<section class="brand-search-card"><label for="brandSearchInput">搜索品牌</label><div class="brand-search-wrap"><span class="brand-search-icon">⌕</span><input id="brandSearchInput" type="search" autocomplete="off" inputmode="search" placeholder="输入品牌名称或品牌SN" value="'+escapeHtml(state.brandQuery)+'"><button type="button" class="brand-clear" aria-label="清空品牌搜索">×</button></div>'+renderBrandSearchResults(matches)+'</section>';
+    if(!selected){
+      html+='<section class="brand-onboarding"><b>选择品牌查看本月调价率</b><span>支持中文、英文品牌名和品牌SN模糊搜索</span><small>数据截至 '+escapeHtml(d.source_date||'—')+'</small></section>';
+      return html;
+    }
+    var rate=selected.rate==null?'—':(selected.rate*100).toFixed(1)+'%';
+    var fail=selected.rate!=null&&selected.rate<0.75;
+    html+='<section class="brand-context-card"><div class="brand-context-head"><div><h2>'+escapeHtml(selected.brand)+'</h2><p>品牌SN '+escapeHtml(selected.sn)+'</p></div><button type="button" class="brand-change">更换品牌</button></div><div class="brand-tags">'+brandTag(selected.level,'level')+brandTag(selected.shenyin,'shenyin')+(selected.groups||[]).map(function(g){return brandTag(g,'group');}).join('')+'</div></section>';
+    html+='<div class="excel-scroll"><table class="excel-table brand-adjustment-grid"><thead><tr><th class="excel-cell is-header is-row-label">品牌名</th><th class="excel-cell is-header">时间日期</th><th class="excel-cell is-header">价高商品</th><th class="excel-cell is-header">调价商品数</th><th class="excel-cell is-header">调价率</th></tr></thead><tbody><tr><td class="excel-cell is-row-label"><b>'+escapeHtml(selected.brand)+'</b><small class="brand-sn-inline">SN '+escapeHtml(selected.sn)+'</small></td><td class="excel-cell">'+escapeHtml(selected.month)+'</td><td class="excel-cell is-number">'+Number(selected.denominator||0).toLocaleString('zh-CN')+'</td><td class="excel-cell is-number">'+Number(selected.adjusted||0).toLocaleString('zh-CN')+'</td><td class="excel-cell"><span class="adjust-rate '+(selected.rate==null?'no-data':fail?'fail':'pass')+'">'+rate+(fail?'<em>未达标</em>':'')+'</span></td></tr></tbody></table></div>';
+    html+='<p class="brand-scope-note">月度口径：按品牌SN汇总当月价高商品与调价商品；整体目标75%。数据截至 '+escapeHtml(selected.date||d.source_date||'—')+'</p>';
+    return html;
+  }
+
+  function renderViewModeSwitch(){ return '<div class="view-mode-switch" role="tablist" aria-label="数据视角"><button type="button" role="tab" class="view-mode-btn '+(state.viewMode==='group'?'active':'')+'" data-view-mode="group">小组视角</button><button type="button" role="tab" class="view-mode-btn '+(state.viewMode==='brand'?'active':'')+'" data-view-mode="brand">品牌视角</button></div>'; }
+  function renderBrandTabs(){ var html='<div class="mobile-tabs brand-tabs">'; BRAND_TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeBrandTab===tab.id?'active':'')+'" data-brand-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';});return html+'</div>'; }
+
+  function renderGenericPanel(tab){ var html=""; tab.sectionIds.forEach(function(id){ var s=getSection(id); if(s) html+=renderTableSection(s); }); return html||'<div class="loading">暂无数据</div>'; }
+  function renderTabs(){ var html='<div class="mobile-tabs">'; TABS.forEach(function(tab){html+='<button class="tab-btn '+(state.activeTab===tab.id?'active':'')+'" data-tab="'+tab.id+'">'+escapeHtml(tab.label)+'</button>';}); return html+'</div>'; }
+  function bindBrandInteractions(){
+    var input=document.getElementById('brandSearchInput');
+    if(input){ input.oninput=function(){state.brandQuery=input.value;var old=document.querySelector('.brand-suggestions');var html=renderBrandSearchResults(brandMatches(state.brandQuery));if(old)old.outerHTML=html;else if(html)input.closest('.brand-search-card').insertAdjacentHTML('beforeend',html);bindBrandInteractions();var fresh=document.getElementById('brandSearchInput');if(fresh){fresh.focus();fresh.setSelectionRange(fresh.value.length,fresh.value.length);}}; }
+    document.querySelectorAll('.brand-option').forEach(function(btn){btn.onclick=function(){state.selectedBrandSn=btn.getAttribute('data-brand-sn');state.brandQuery='';renderDashboard();};});
+    var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
+    var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
+  }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; var body=state.viewMode==='brand'?(renderBrandTabs()+'<main class="mobile-panel">'+renderBrandAdjustmentPanel()+'</main>'):(renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():renderGenericPanel(activeTab)))))+'</main>'); $modulesContainer.innerHTML=renderViewModeSwitch()+body; document.querySelectorAll('.view-mode-btn').forEach(function(btn){btn.onclick=function(){state.viewMode=btn.getAttribute('data-view-mode');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-tab]').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-brand-tab]').forEach(function(btn){btn.onclick=function(){state.activeBrandTab=btn.getAttribute('data-brand-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); bindBrandInteractions(); }
+
+  function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
+  function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }
+
+  window.dashboardLogin=handleLogin; $loginBtn.onclick=handleLogin; $loginBtn.addEventListener('click',handleLogin); $passwordInput.addEventListener('keydown',function(e){if(e.key==='Enter')handleLogin();}); $logoutBtn.addEventListener('click',function(){state.token=null;state.data=null;$passwordInput.value='';$dashboard.classList.remove('active');$loginPage.style.display='flex';$loginError.textContent='';});
+})();
