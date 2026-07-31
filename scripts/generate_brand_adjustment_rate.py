@@ -8,7 +8,7 @@
 注意：品牌 TOTAL 与小组汇总覆盖范围不同，不做跨粒度总量强行对平。
 """
 from __future__ import annotations
-import argparse, datetime as dt, json, re
+import argparse, calendar, datetime as dt, json, re
 from collections import defaultdict
 from pathlib import Path
 import openpyxl
@@ -65,27 +65,40 @@ def main():
     if not valid_dates: raise RuntimeError('未找到 TOTAL + cur 的有效品牌日期')
     latest=max(valid_dates); month=latest[:6]
     agg=defaultdict(lambda:{'denominator':0.0,'adjusted':0.0,'row_count':0})
+    daily=defaultdict(lambda:defaultdict(lambda:{'denominator':0.0,'adjusted':0.0,'row_count':0}))
     for r in rows:
         sn=sn_text(r[di['sn']]); d=sn_text(r[di['日期']])
         if r[di['数据分组\n（选TOTAL来用）']]!='TOTAL' or r[di['辅助列3']]!='cur' or not d.startswith(month) or not sn or sn in ('(NULL)','NULL'):
             continue
-        agg[sn]['denominator']+=float(r[di['价高商品数']] or 0)
-        agg[sn]['adjusted']+=float(r[di['价高调价商品数']] or 0)
+        den=float(r[di['价高商品数']] or 0); adj=float(r[di['价高调价商品数']] or 0)
+        agg[sn]['denominator']+=den
+        agg[sn]['adjusted']+=adj
         agg[sn]['row_count']+=1
+        daily[sn][d]['denominator']+=den
+        daily[sn][d]['adjusted']+=adj
+        daily[sn][d]['row_count']+=1
         if sn not in catalog:
             catalog[sn]={'sn':sn,'brand':str(r[di['品牌']] or '').strip(),'level':str(r[di['等级']] or '').strip(),
                          'group':str(r[di['小组']] or '').strip(),'groups':[str(r[di['小组']] or '').strip()],
                          'shenyin':str(r[di['神银']] or '').strip(),'info_date':date_text(latest)}
     brands=[]; errors=[]
+    year=int(month[:4]); mon=int(month[4:6]); month_days=calendar.monthrange(year,mon)[1]
     for sn,item in catalog.items():
         a=agg[sn]; den=int(round(a['denominator'])); adj=int(round(a['adjusted']))
         if adj>den: errors.append(f'{sn} 调价商品数大于价高商品数: {adj}>{den}')
-        brands.append({**item,'date':date_text(latest),'month':f'{int(month[4:6])}月截至{int(latest[6:])}日',
-                       'denominator':den,'adjusted':adj,'rate':adj/den if den else None,'row_count':a['row_count']})
+        day_rows=[]
+        for day in range(1,month_days+1):
+            ds=f'{month}{day:02d}'; z=daily[sn][ds]; dd=int(round(z['denominator'])); aa=int(round(z['adjusted']))
+            if aa>dd: errors.append(f'{sn} {ds} 调价商品数大于价高商品数: {aa}>{dd}')
+            day_rows.append({'date':date_text(ds),'day':day,'denominator':dd,'adjusted':aa,
+                             'rate':aa/dd if dd else None,'has_data':z['row_count']>0,'is_future':ds>latest})
+        brands.append({**item,'date':date_text(latest),'month':f'{mon}月截至{int(latest[6:])}日',
+                       'denominator':den,'adjusted':adj,'rate':adj/den if den else None,'row_count':a['row_count'],
+                       'daily':day_rows})
     if errors: raise RuntimeError('; '.join(errors[:10]))
     brands.sort(key=lambda x:(-x['denominator'],x['brand'],x['sn']))
     payload={'title':'品牌调价率','source_date':date_text(latest),'source_month':month,
-             'scope':'data分组=TOTAL；辅助列3=cur；本月按品牌SN汇总BK/BL',
+             'scope':'data分组=TOTAL；辅助列3=cur；按品牌SN+日期汇总BK/BL，月度汇总为日数据原始计数之和',
              'coverage_note':'品牌TOTAL与小组汇总覆盖范围不同，不做跨粒度总量对平。',
              'brands':brands,'summary':{'catalog_count':len(brands),'metric_brand_count':sum(x['denominator']>0 for x in brands),
              'denominator':sum(x['denominator'] for x in brands),'adjusted':sum(x['adjusted'] for x in brands)},

@@ -34,6 +34,13 @@ for x in brand['brands']:
     assert x['adjusted']<=x['denominator'], f"{x['sn']} 调价商品数大于价高商品数"
     if x['denominator']==0: assert x['rate'] is None, f"{x['sn']} 无分母时rate必须为null"
     else: assert abs(x['rate']-x['adjusted']/x['denominator'])<1e-12, f"{x['sn']} 调价率不可重算"
-for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','brandSearchInput','输入品牌名称或品牌SN']:
+for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历']:
     assert token in app, f'品牌视角实现缺失: {token}'
+# 品牌日历门禁：当月每日数据完整，月汇总必须等于日汇总；未来日期不得伪造为0。
+for x in brand['brands']:
+    assert x.get('daily') and len(x['daily']) in (28,29,30,31), f"{x['sn']} 缺少完整日历"
+    assert x['denominator']==sum(z['denominator'] for z in x['daily']), f"{x['sn']} 月价高数不等于日汇总"
+    assert x['adjusted']==sum(z['adjusted'] for z in x['daily']), f"{x['sn']} 月调价数不等于日汇总"
+    assert all(z['adjusted']<=z['denominator'] for z in x['daily']), f"{x['sn']} 日调价数大于价高数"
+    assert all(z['rate'] is None for z in x['daily'] if not z['has_data']), f"{x['sn']} 无明细日期不得显示0%"
 print('RENDERING_RULES_GATE PASS')

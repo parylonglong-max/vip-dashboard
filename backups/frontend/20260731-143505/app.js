@@ -387,21 +387,6 @@
     });
     return html+'</div>';
   }
-  function brandMetricCard(label,value,kind){ return '<div class="brand-month-metric '+(kind||'')+'"><small>'+escapeHtml(label)+'</small><strong>'+escapeHtml(value)+'</strong></div>'; }
-  function renderBrandCalendar(selected){
-    var daily=selected.daily||[];
-    if(!daily.length) return '<section class="brand-calendar-card"><div class="brand-calendar-empty">暂无日粒度数据</div></section>';
-    var first=new Date(daily[0].date+'T00:00:00'); var offset=(first.getDay()+6)%7;
-    var html='<section class="brand-calendar-card"><div class="brand-calendar-head"><div><b>'+escapeHtml(selected.month.split('截至')[0])+'调价日历</b><span>目标 75% · 数据截至 '+escapeHtml(selected.date)+'</span></div><div class="brand-calendar-legend"><i></i>未达标</div></div><div class="brand-weekdays"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div class="brand-calendar-grid">';
-    for(var i=0;i<offset;i++) html+='<div class="brand-day spacer"></div>';
-    daily.forEach(function(x){
-      var rate=x.rate==null?'—':(x.rate*100).toFixed(1)+'%';
-      var cls=x.is_future?'future':(!x.has_data?'empty':(x.rate<0.75?'fail':'pass'));
-      var note=x.is_future?'待更新':(!x.has_data?'无明细':'');
-      html+='<article class="brand-day '+cls+'"><div class="brand-day-date"><b>'+x.day+'</b>'+(note?'<em>'+note+'</em>':'')+'</div><dl><div><dt>价高</dt><dd>'+(x.has_data?Number(x.denominator).toLocaleString('zh-CN'):'—')+'</dd></div><div><dt>调价</dt><dd>'+(x.has_data?Number(x.adjusted).toLocaleString('zh-CN'):'—')+'</dd></div><div class="rate"><dt>调价率</dt><dd>'+rate+'</dd></div></dl></article>';
-    });
-    return html+'</div></section>';
-  }
   function renderBrandAdjustmentPanel(){
     var d=state.brandAdjustmentData;
     if(!d) return '<div class="loading">暂无品牌调价率数据</div>';
@@ -415,9 +400,8 @@
     var rate=selected.rate==null?'—':(selected.rate*100).toFixed(1)+'%';
     var fail=selected.rate!=null&&selected.rate<0.75;
     html+='<section class="brand-context-card"><div class="brand-context-head"><div><h2>'+escapeHtml(selected.brand)+'</h2><p>品牌SN '+escapeHtml(selected.sn)+'</p></div><button type="button" class="brand-change">更换品牌</button></div><div class="brand-tags">'+brandTag(selected.level,'level')+brandTag(selected.shenyin,'shenyin')+(selected.groups||[]).map(function(g){return brandTag(g,'group');}).join('')+'</div></section>';
-    html+='<section class="brand-month-summary">'+brandMetricCard('本月价高数',Number(selected.denominator||0).toLocaleString('zh-CN'),'den')+brandMetricCard('本月调价数',Number(selected.adjusted||0).toLocaleString('zh-CN'),'adj')+brandMetricCard('本月调价率',rate,selected.rate==null?'empty':fail?'fail':'pass')+'</section>';
-    html+=renderBrandCalendar(selected);
-    html+='<p class="brand-scope-note">日历口径：销售看板 data 表按品牌SN+日期汇总价高商品数与调价商品数；月度汇总为每日原始计数之和。无明细显示“—”，截至日之后显示“待更新”。</p>';
+    html+='<div class="excel-scroll"><table class="excel-table brand-adjustment-grid"><thead><tr><th class="excel-cell is-header is-row-label">品牌名</th><th class="excel-cell is-header">时间日期</th><th class="excel-cell is-header">价高商品</th><th class="excel-cell is-header">调价商品数</th><th class="excel-cell is-header">调价率</th></tr></thead><tbody><tr><td class="excel-cell is-row-label"><b>'+escapeHtml(selected.brand)+'</b><small class="brand-sn-inline">SN '+escapeHtml(selected.sn)+'</small></td><td class="excel-cell">'+escapeHtml(selected.month)+'</td><td class="excel-cell is-number">'+Number(selected.denominator||0).toLocaleString('zh-CN')+'</td><td class="excel-cell is-number">'+Number(selected.adjusted||0).toLocaleString('zh-CN')+'</td><td class="excel-cell"><span class="adjust-rate '+(selected.rate==null?'no-data':fail?'fail':'pass')+'">'+rate+(fail?'<em>未达标</em>':'')+'</span></td></tr></tbody></table></div>';
+    html+='<p class="brand-scope-note">月度口径：按品牌SN汇总当月价高商品与调价商品；整体目标75%。数据截至 '+escapeHtml(selected.date||d.source_date||'—')+'</p>';
     return html;
   }
 
