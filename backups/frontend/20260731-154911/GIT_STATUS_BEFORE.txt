@@ -1,0 +1,2 @@
+?? backups/frontend/20260731-154911/
+?? scripts/__pycache__/

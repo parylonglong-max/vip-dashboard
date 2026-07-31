@@ -412,12 +412,10 @@
       html+='<section class="brand-onboarding"><b>选择品牌查看本月调价率</b><span>支持中文、英文品牌名和品牌SN模糊搜索</span><small>数据截至 '+escapeHtml(d.source_date||'—')+'</small></section>';
       return html;
     }
-    var hasMetric=Number(selected.row_count||0)>0;
     var rate=selected.rate==null?'—':(selected.rate*100).toFixed(1)+'%';
     var fail=selected.rate!=null&&selected.rate<0.75;
     html+='<section class="brand-context-card"><div class="brand-context-head"><div><h2>'+escapeHtml(selected.brand)+'</h2><p>品牌SN '+escapeHtml(selected.sn)+'</p></div><button type="button" class="brand-change">更换品牌</button></div><div class="brand-tags">'+brandTag(selected.level,'level')+brandTag(selected.shenyin,'shenyin')+(selected.groups||[]).map(function(g){return brandTag(g,'group');}).join('')+'</div></section>';
-    html+='<section class="brand-month-summary">'+brandMetricCard('本月价高数',hasMetric?Number(selected.denominator).toLocaleString('zh-CN'):'—',hasMetric?'den':'empty')+brandMetricCard('本月调价数',hasMetric?Number(selected.adjusted).toLocaleString('zh-CN'):'—',hasMetric?'adj':'empty')+brandMetricCard('本月调价率',rate,selected.rate==null?'empty':fail?'fail':'pass')+'</section>';
-    if(!hasMetric) html+='<div class="brand-no-metric">该品牌本月无调价指标明细；品牌存在于销售看板目录，但 data 指标表无对应记录。</div>';
+    html+='<section class="brand-month-summary">'+brandMetricCard('本月价高数',Number(selected.denominator||0).toLocaleString('zh-CN'),'den')+brandMetricCard('本月调价数',Number(selected.adjusted||0).toLocaleString('zh-CN'),'adj')+brandMetricCard('本月调价率',rate,selected.rate==null?'empty':fail?'fail':'pass')+'</section>';
     html+=renderBrandCalendar(selected);
     html+='<p class="brand-scope-note">日历口径：销售看板 data 表按品牌SN+日期汇总价高商品数与调价商品数；月度汇总为每日原始计数之和。无明细显示“—”，截至日之后显示“待更新”。</p>';
     return html;

@@ -34,7 +34,7 @@ for x in brand['brands']:
     assert x['adjusted']<=x['denominator'], f"{x['sn']} 调价商品数大于价高商品数"
     if x['denominator']==0: assert x['rate'] is None, f"{x['sn']} 无分母时rate必须为null"
     else: assert abs(x['rate']-x['adjusted']/x['denominator'])<1e-12, f"{x['sn']} 调价率不可重算"
-for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历','brand-no-metric','该品牌本月无调价指标明细']:
+for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历']:
     assert token in app, f'品牌视角实现缺失: {token}'
 # 品牌日历门禁：当月每日数据完整，月汇总必须等于日汇总；未来日期不得伪造为0。
 for x in brand['brands']:
