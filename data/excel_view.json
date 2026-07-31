@@ -2,12 +2,12 @@
   "meta": {
     "title": "精品货价监控数据看板",
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
-    "sourceFile": "货价监控指标副本-26.07.30_全流程更新_优质款周报口径.xlsx",
+    "sourceFile": "货价监控指标副本-26.07.31_全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-07-30",
-    "generatedAt": "2026-07-30 17:57:32",
-    "updatedAtHour": "2026-07-30 17点",
-    "versionNote": "更新于 2026-07-30 17点"
+    "generatedAt": "2026-07-31 09:55",
+    "updatedAtHour": "2026-07-31 09点",
+    "versionNote": "更新于 2026-07-31 09点"
   },
   "sections": [
     {
@@ -11147,8 +11147,8 @@
             {
               "coord": "C52",
               "formula": "",
-              "raw": 60.00589491,
-              "text": "60",
+              "raw": 60.41119084,
+              "text": "60.4",
               "unit": "",
               "type": "number",
               "context": "考核结果 综合得分 总",
