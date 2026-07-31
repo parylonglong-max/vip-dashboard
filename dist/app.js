@@ -50,7 +50,8 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function loadExtraData(){ return Promise.all([fetch('data/traffic_uv.json').then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch('data/adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch('data/brand_adjustment_rate.json').then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
+  function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202607311640'); }
+  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -417,7 +418,7 @@
     var fail=selected.rate!=null&&selected.rate<0.75;
     html+='<section class="brand-context-card"><div class="brand-context-head"><div><h2>'+escapeHtml(selected.brand)+'</h2><p>品牌SN '+escapeHtml(selected.sn)+'</p></div><button type="button" class="brand-change">更换品牌</button></div><div class="brand-tags">'+brandTag(selected.level,'level')+brandTag(selected.shenyin,'shenyin')+(selected.groups||[]).map(function(g){return brandTag(g,'group');}).join('')+'</div></section>';
     html+='<section class="brand-month-summary">'+brandMetricCard('本月价高数',hasMetric?Number(selected.denominator).toLocaleString('zh-CN'):'—',hasMetric?'den':'empty')+brandMetricCard('本月调价数',hasMetric?Number(selected.adjusted).toLocaleString('zh-CN'):'—',hasMetric?'adj':'empty')+brandMetricCard('本月调价率',rate,selected.rate==null?'empty':fail?'fail':'pass')+'</section>';
-    if(!hasMetric) html+='<div class="brand-no-metric">该品牌本月无调价指标明细；品牌存在于销售看板目录，但 data 指标表无对应记录。</div>';
+    if(!hasMetric) html+='<div class="brand-no-metric">该品牌本月无调价指标明细；品牌存在于销售看板目录，但 data 与 data非神银指标表均无对应记录。</div>';
     html+=renderBrandCalendar(selected);
     html+='<p class="brand-scope-note">日历口径：销售看板 data 表按品牌SN+日期汇总价高商品数与调价商品数；月度汇总为每日原始计数之和。无明细显示“—”，截至日之后显示“待更新”。</p>';
     return html;
