@@ -376,13 +376,13 @@
   function renderDiscountPanel(){
     var section=getSection('internal_discount');
     if(!section) return '<div class="loading">暂无数据</div>';
-    var historyPeriod=state.periods.internal_discount_history || '1月';
+    var historyPeriod=state.periods.internal_discount || '1月';
     var html='';
     html+='<div class="section-title"><span></span>内网价指数 · MTD</div>'+renderRows(discountRows(section,'MTD'));
     html+='<div class="section-title"><span></span>内网价指数 · YTD</div>'+renderRows(discountRows(section,'YTD'));
     html+='<div class="section-title"><span></span>内网价指数 · 历史月份 · '+historyPeriod+'</div>';
     html+='<div class="filterbar">';
-    ['1月','2月','3月','4月','5月','6月','7月'].forEach(function(p){ html+='<button class="filter-btn '+(historyPeriod===p?'active':'')+'" data-section="internal_discount_history" data-period="'+p+'">'+p+'</button>'; });
+    ['1月','2月','3月','4月','5月','6月','7月'].forEach(function(p){ html+='<button class="filter-btn '+(historyPeriod===p?'active':'')+'" data-section="internal_discount" data-period="'+p+'">'+p+'</button>'; });
     html+='</div>'+renderRows(discountRows(section,historyPeriod));
     return html;
   }
