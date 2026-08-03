@@ -211,23 +211,23 @@
   // 内网系数差源值为比例，展示时转换为 pp。
   function ratioPpCell(cell){ if(!cell||typeof cell.raw!=="number") return cell; var n=cell.raw; cell.text=(n>0?"+":n<0?"-":"")+Math.abs(n*100).toFixed(1); cell.unit="pp"; cell.trend=n>0?'up':n<0?'down':null; return cell; }
   function renderPriceIndexMtd(section){
-    // 删除天猫/抖音两侧“差值目标（pp）”：源数组索引 9、13。
-    // 同时将一级表头天猫/抖音分区由 4 列收窄为 3 列，保证合并表头不偏位。
-    var keep=[0,1,2,3,4,5,6,7,8,10,11,12];
+    // 保留全部14列：保留天猫/抖音的“本月目标”，同时展示“完成差值”。
+    // 一级表头天猫/抖音分区各4列（价指、对标值、本月目标、完成差值）。
+    var keep=[0,1,2,3,4,5,6,7,8,9,10,11,12,13];
     var rows=(section.rows||[]).filter(function(row){return row.excelRow>=43&&row.excelRow<=52;}).map(function(row){
       var cells=keep.map(function(srcIdx){
         var c=Object.assign({},row.cells[srcIdx]);
-        if(row.excelRow===44&&(srcIdx===6||srcIdx===10)&&c.merge){ c.merge=Object.assign({},c.merge,{colspan:3}); }
+        if(row.excelRow===44&&(srcIdx===6||srcIdx===10)&&c.merge){ c.merge=Object.assign({},c.merge,{colspan:4}); }
         return c;
       });
-      if(row.excelRow===44&&(cells[1]||cells[6]||cells[9])){
+      if(row.excelRow===44&&(cells[1]||cells[6]||cells[10])){
         if(cells[1]) cells[1].sectionDivider=true;
         if(cells[6]) cells[6].sectionDivider=true;
-        if(cells[9]) cells[9].sectionDivider=true;
+        if(cells[10]) cells[10].sectionDivider=true;
       }
       if(cells[0]&&cells[0].text==='总'){cells[0].text='精品总';cells[0].raw='精品总';}
-      // 天猫/抖音价格指数与对标值：均以百分比、1位小数展示；完成差值保留 pp。
-      if(row.excelRow>=46){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); }
+      // 价格指数、对标值、本月目标：百分比展示；完成差值：pp 展示。
+      if(row.excelRow>=46){ [6,7,8,10,11,12].forEach(function(i){pricePctCell(cells[i]);}); [9,13].forEach(function(i){pricePpCell(cells[i]);}); }
       return {excelRow:row.excelRow,cells:cells};
     });
     rows=markHeaders(rows,2);

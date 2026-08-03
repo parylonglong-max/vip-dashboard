@@ -4,10 +4,10 @@
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
     "sourceFile": "货价监控指标副本-26.08.03_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
-    "dataDate": "2026-08-02",
-    "generatedAt": "2026-08-03 09:40",
-    "updatedAtHour": "2026-08-03 09点",
-    "versionNote": "更新于 2026-08-03 09点；可靠源已更新至2026-08-02，优质款08-01，六高07-31，机采阻塞"
+    "dataDate": "2026-08-03",
+    "generatedAt": "2026-08-03 14:16:37",
+    "updatedAtHour": "2026-08-03 14点",
+    "versionNote": "更新于 2026-08-03 14点"
   },
   "sections": [
     {
@@ -10234,16 +10234,16 @@
             {
               "coord": "J45",
               "formula": "",
-              "raw": "完成差值 （pp）",
-              "text": "完成差值 （pp）",
+              "raw": "本月目标",
+              "text": "本月目标",
               "unit": "",
               "type": "text"
             },
             {
               "coord": "K45",
               "formula": "",
-              "raw": "差值目标 （pp）",
-              "text": "差值目标 （pp）",
+              "raw": "完成差值 （pp）",
+              "text": "完成差值 （pp）",
               "unit": "",
               "type": "text"
             },
@@ -10266,16 +10266,16 @@
             {
               "coord": "N45",
               "formula": "",
-              "raw": "完成差值 （pp）",
-              "text": "完成差值 （pp）",
+              "raw": "本月目标",
+              "text": "本月目标",
               "unit": "",
               "type": "text"
             },
             {
               "coord": "O45",
               "formula": "",
-              "raw": "差值目标 （pp）",
-              "text": "差值目标 （pp）",
+              "raw": "完成差值 （pp）",
+              "text": "完成差值 （pp）",
               "unit": "",
               "type": "text"
             }
@@ -10365,21 +10365,21 @@
             {
               "coord": "J46",
               "formula": "",
-              "raw": 0.3583,
-              "text": "0.4",
+              "raw": 0.763747,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 珠宝1组",
+              "context": "天猫 本月目标 珠宝1组",
               "numberFormat": "General"
             },
             {
               "coord": "K46",
               "formula": "",
-              "raw": 0.763747,
-              "text": "0.8",
+              "raw": 2.3583,
+              "text": "2.4",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 珠宝1组",
+              "context": "天猫 完成差值 （pp） 珠宝1组",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -10405,21 +10405,21 @@
             {
               "coord": "N46",
               "formula": "",
-              "raw": 21.3514,
-              "text": "21.4",
+              "raw": 0.794747,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 珠宝1组",
+              "context": "抖音 本月目标 珠宝1组",
               "numberFormat": "General"
             },
             {
               "coord": "O46",
               "formula": "",
-              "raw": 0.794747,
-              "text": "0.8",
+              "raw": 20.2514,
+              "text": "20.3",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 珠宝1组",
+              "context": "抖音 完成差值 （pp） 珠宝1组",
               "numberFormat": "General"
             }
           ]
@@ -10508,21 +10508,21 @@
             {
               "coord": "J47",
               "formula": "",
-              "raw": 1.81,
-              "text": "1.8",
+              "raw": 0.802269,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 珠宝2组",
+              "context": "天猫 本月目标 珠宝2组",
               "numberFormat": "General"
             },
             {
               "coord": "K47",
               "formula": "",
-              "raw": 0.802269,
-              "text": "0.8",
+              "raw": 3.81,
+              "text": "3.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 珠宝2组",
+              "context": "天猫 完成差值 （pp） 珠宝2组",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -10548,21 +10548,21 @@
             {
               "coord": "N47",
               "formula": "",
-              "raw": -8.8652,
-              "text": "-8.9",
+              "raw": 0.833269,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 珠宝2组",
+              "context": "抖音 本月目标 珠宝2组",
               "numberFormat": "General"
             },
             {
               "coord": "O47",
               "formula": "",
-              "raw": 0.833269,
-              "text": "0.8",
+              "raw": -9.9652,
+              "text": "-10",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 珠宝2组",
+              "context": "抖音 完成差值 （pp） 珠宝2组",
               "numberFormat": "General"
             }
           ]
@@ -10651,21 +10651,21 @@
             {
               "coord": "J48",
               "formula": "",
-              "raw": -8.0031,
-              "text": "-8",
+              "raw": 0.736934,
+              "text": "0.7",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 珠宝3组",
+              "context": "天猫 本月目标 珠宝3组",
               "numberFormat": "General"
             },
             {
               "coord": "K48",
               "formula": "",
-              "raw": 0.736934,
-              "text": "0.7",
+              "raw": -6.0031,
+              "text": "-6",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 珠宝3组",
+              "context": "天猫 完成差值 （pp） 珠宝3组",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -10691,21 +10691,21 @@
             {
               "coord": "N48",
               "formula": "",
-              "raw": -6.4347,
-              "text": "-6.4",
+              "raw": 0.767934,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 珠宝3组",
+              "context": "抖音 本月目标 珠宝3组",
               "numberFormat": "General"
             },
             {
               "coord": "O48",
               "formula": "",
-              "raw": 0.767934,
-              "text": "0.8",
+              "raw": -7.5347,
+              "text": "-7.5",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 珠宝3组",
+              "context": "抖音 完成差值 （pp） 珠宝3组",
               "numberFormat": "General"
             }
           ]
@@ -10794,21 +10794,21 @@
             {
               "coord": "J49",
               "formula": "",
-              "raw": -2.7947,
-              "text": "-2.8",
+              "raw": 0.809631,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 饰品1组",
+              "context": "天猫 本月目标 饰品1组",
               "numberFormat": "General"
             },
             {
               "coord": "K49",
               "formula": "",
-              "raw": 0.809631,
-              "text": "0.8",
+              "raw": -0.7947,
+              "text": "-0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 饰品1组",
+              "context": "天猫 完成差值 （pp） 饰品1组",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -10834,21 +10834,21 @@
             {
               "coord": "N49",
               "formula": "",
-              "raw": 2.9336,
-              "text": "2.9",
+              "raw": 0.840631,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 饰品1组",
+              "context": "抖音 本月目标 饰品1组",
               "numberFormat": "General"
             },
             {
               "coord": "O49",
               "formula": "",
-              "raw": 0.840631,
-              "text": "0.8",
+              "raw": 1.8336,
+              "text": "1.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 饰品1组",
+              "context": "抖音 完成差值 （pp） 饰品1组",
               "numberFormat": "General"
             }
           ]
@@ -10937,21 +10937,21 @@
             {
               "coord": "J50",
               "formula": "",
-              "raw": 3.6969,
-              "text": "3.7",
+              "raw": 0.827818,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 饰品2组",
+              "context": "天猫 本月目标 饰品2组",
               "numberFormat": "General"
             },
             {
               "coord": "K50",
               "formula": "",
-              "raw": 0.827818,
-              "text": "0.8",
+              "raw": 5.6969,
+              "text": "5.7",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 饰品2组",
+              "context": "天猫 完成差值 （pp） 饰品2组",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -10977,21 +10977,21 @@
             {
               "coord": "N50",
               "formula": "",
-              "raw": 3.4973,
-              "text": "3.5",
+              "raw": 0.858818,
+              "text": "0.9",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 饰品2组",
+              "context": "抖音 本月目标 饰品2组",
               "numberFormat": "General"
             },
             {
               "coord": "O50",
               "formula": "",
-              "raw": 0.858818,
-              "text": "0.9",
+              "raw": 2.3973,
+              "text": "2.4",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 饰品2组",
+              "context": "抖音 完成差值 （pp） 饰品2组",
               "numberFormat": "General"
             }
           ]
@@ -11068,20 +11068,20 @@
             {
               "coord": "J51",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "K51",
-              "formula": "",
               "raw": 0.822729,
               "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 海淘组",
-              "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
+              "context": "天猫 本月目标 海淘组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "K51",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             },
             {
               "coord": "L51",
@@ -11104,20 +11104,20 @@
             {
               "coord": "N51",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "O51",
-              "formula": "",
               "raw": 0.853729,
               "text": "0.9",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 海淘组",
+              "context": "抖音 本月目标 海淘组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "O51",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -11205,21 +11205,21 @@
             {
               "coord": "J52",
               "formula": "",
-              "raw": -2.1876,
-              "text": "-2.2",
+              "raw": 0.798874,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "天猫 完成差值 （pp） 总",
+              "context": "天猫 本月目标 总",
               "numberFormat": "General"
             },
             {
               "coord": "K52",
               "formula": "",
-              "raw": 0.798874,
-              "text": "0.8",
+              "raw": -0.1876,
+              "text": "-0.2",
               "unit": "",
               "type": "number",
-              "context": "天猫 差值目标 （pp） 总",
+              "context": "天猫 完成差值 （pp） 总",
               "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
             },
             {
@@ -11245,21 +11245,21 @@
             {
               "coord": "N52",
               "formula": "",
-              "raw": 3.6609,
-              "text": "3.7",
+              "raw": 0.829874,
+              "text": "0.8",
               "unit": "",
               "type": "number",
-              "context": "抖音 完成差值 （pp） 总",
+              "context": "抖音 本月目标 总",
               "numberFormat": "General"
             },
             {
               "coord": "O52",
               "formula": "",
-              "raw": 0.829874,
-              "text": "0.8",
+              "raw": 2.5609,
+              "text": "2.6",
               "unit": "",
               "type": "number",
-              "context": "抖音 差值目标 （pp） 总",
+              "context": "抖音 完成差值 （pp） 总",
               "numberFormat": "General"
             }
           ]
@@ -13297,16 +13297,16 @@
             {
               "coord": "J45",
               "formula": "",
-              "raw": "完成差值 （pp）",
-              "text": "完成差值 （pp）",
+              "raw": "本月目标",
+              "text": "本月目标",
               "unit": "",
               "type": "text"
             },
             {
               "coord": "K45",
               "formula": "",
-              "raw": "差值目标 （pp）",
-              "text": "差值目标 （pp）",
+              "raw": "完成差值 （pp）",
+              "text": "完成差值 （pp）",
               "unit": "",
               "type": "text"
             },
@@ -13329,16 +13329,16 @@
             {
               "coord": "N45",
               "formula": "",
-              "raw": "完成差值 （pp）",
-              "text": "完成差值 （pp）",
+              "raw": "本月目标",
+              "text": "本月目标",
               "unit": "",
               "type": "text"
             },
             {
               "coord": "O45",
               "formula": "",
-              "raw": "差值目标 （pp）",
-              "text": "差值目标 （pp）",
+              "raw": "完成差值 （pp）",
+              "text": "完成差值 （pp）",
               "unit": "",
               "type": "text"
             },
@@ -13940,8 +13940,8 @@
             {
               "coord": "J46",
               "formula": "",
-              "raw": 0.3583,
-              "text": "0.4",
+              "raw": 0.763747,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝1组",
@@ -13950,8 +13950,8 @@
             {
               "coord": "K46",
               "formula": "",
-              "raw": 0.763747,
-              "text": "0.8",
+              "raw": 2.3583,
+              "text": "2.4",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝1组",
@@ -13980,8 +13980,8 @@
             {
               "coord": "N46",
               "formula": "",
-              "raw": 21.3514,
-              "text": "21.4",
+              "raw": 0.794747,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝1组",
@@ -13990,8 +13990,8 @@
             {
               "coord": "O46",
               "formula": "",
-              "raw": 0.794747,
-              "text": "0.8",
+              "raw": 20.2514,
+              "text": "20.3",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝1组",
@@ -14595,8 +14595,8 @@
             {
               "coord": "J47",
               "formula": "",
-              "raw": 1.81,
-              "text": "1.8",
+              "raw": 0.802269,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝2组",
@@ -14605,8 +14605,8 @@
             {
               "coord": "K47",
               "formula": "",
-              "raw": 0.802269,
-              "text": "0.8",
+              "raw": 3.81,
+              "text": "3.8",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝2组",
@@ -14635,8 +14635,8 @@
             {
               "coord": "N47",
               "formula": "",
-              "raw": -8.8652,
-              "text": "-8.9",
+              "raw": 0.833269,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝2组",
@@ -14645,8 +14645,8 @@
             {
               "coord": "O47",
               "formula": "",
-              "raw": 0.833269,
-              "text": "0.8",
+              "raw": -9.9652,
+              "text": "-10",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝2组",
@@ -15250,8 +15250,8 @@
             {
               "coord": "J48",
               "formula": "",
-              "raw": -8.0031,
-              "text": "-8",
+              "raw": 0.736934,
+              "text": "0.7",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝3组",
@@ -15260,8 +15260,8 @@
             {
               "coord": "K48",
               "formula": "",
-              "raw": 0.736934,
-              "text": "0.7",
+              "raw": -6.0031,
+              "text": "-6",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝3组",
@@ -15290,8 +15290,8 @@
             {
               "coord": "N48",
               "formula": "",
-              "raw": -6.4347,
-              "text": "-6.4",
+              "raw": 0.767934,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝3组",
@@ -15300,8 +15300,8 @@
             {
               "coord": "O48",
               "formula": "",
-              "raw": 0.767934,
-              "text": "0.8",
+              "raw": -7.5347,
+              "text": "-7.5",
               "unit": "",
               "type": "number",
               "context": "抖音 珠宝3组",
@@ -15905,8 +15905,8 @@
             {
               "coord": "J49",
               "formula": "",
-              "raw": -2.7947,
-              "text": "-2.8",
+              "raw": 0.809631,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品1组",
@@ -15915,8 +15915,8 @@
             {
               "coord": "K49",
               "formula": "",
-              "raw": 0.809631,
-              "text": "0.8",
+              "raw": -0.7947,
+              "text": "-0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品1组",
@@ -15945,8 +15945,8 @@
             {
               "coord": "N49",
               "formula": "",
-              "raw": 2.9336,
-              "text": "2.9",
+              "raw": 0.840631,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "抖音 饰品1组",
@@ -15955,8 +15955,8 @@
             {
               "coord": "O49",
               "formula": "",
-              "raw": 0.840631,
-              "text": "0.8",
+              "raw": 1.8336,
+              "text": "1.8",
               "unit": "",
               "type": "number",
               "context": "抖音 饰品1组",
@@ -16560,8 +16560,8 @@
             {
               "coord": "J50",
               "formula": "",
-              "raw": 3.6969,
-              "text": "3.7",
+              "raw": 0.827818,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品2组",
@@ -16570,8 +16570,8 @@
             {
               "coord": "K50",
               "formula": "",
-              "raw": 0.827818,
-              "text": "0.8",
+              "raw": 5.6969,
+              "text": "5.7",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品2组",
@@ -16600,8 +16600,8 @@
             {
               "coord": "N50",
               "formula": "",
-              "raw": 3.4973,
-              "text": "3.5",
+              "raw": 0.858818,
+              "text": "0.9",
               "unit": "",
               "type": "number",
               "context": "抖音 饰品2组",
@@ -16610,8 +16610,8 @@
             {
               "coord": "O50",
               "formula": "",
-              "raw": 0.858818,
-              "text": "0.9",
+              "raw": 2.3973,
+              "text": "2.4",
               "unit": "",
               "type": "number",
               "context": "抖音 饰品2组",
@@ -17203,20 +17203,20 @@
             {
               "coord": "J51",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "K51",
-              "formula": "",
               "raw": 0.822729,
               "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 海淘组",
-              "numberFormat": "[>=100000000]0.00\\.00,,\\亿;[>=10000]0.00\\.0,\\万;#,##0.00"
+              "numberFormat": "General"
+            },
+            {
+              "coord": "K51",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             },
             {
               "coord": "L51",
@@ -17239,20 +17239,20 @@
             {
               "coord": "N51",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "O51",
-              "formula": "",
               "raw": 0.853729,
               "text": "0.9",
               "unit": "",
               "type": "number",
               "context": "抖音 海淘组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "O51",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             },
             {
               "coord": "P51",
@@ -17852,8 +17852,8 @@
             {
               "coord": "J52",
               "formula": "",
-              "raw": -2.1876,
-              "text": "-2.2",
+              "raw": 0.798874,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "天猫 总",
@@ -17862,8 +17862,8 @@
             {
               "coord": "K52",
               "formula": "",
-              "raw": 0.798874,
-              "text": "0.8",
+              "raw": -0.1876,
+              "text": "-0.2",
               "unit": "",
               "type": "number",
               "context": "天猫 总",
@@ -17892,8 +17892,8 @@
             {
               "coord": "N52",
               "formula": "",
-              "raw": 3.6609,
-              "text": "3.7",
+              "raw": 0.829874,
+              "text": "0.8",
               "unit": "",
               "type": "number",
               "context": "抖音 总",
@@ -17902,8 +17902,8 @@
             {
               "coord": "O52",
               "formula": "",
-              "raw": 0.829874,
-              "text": "0.8",
+              "raw": 2.5609,
+              "text": "2.6",
               "unit": "",
               "type": "number",
               "context": "抖音 总",
@@ -20036,9 +20036,9 @@
             },
             {
               "coord": "D57",
-              "formula": "=IF((J57/(-2)*40+60)>120,120,IF(J57>0,0,(J57/(-2)*40+60)))",
-              "raw": 53.19,
-              "text": "53.19",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝1组",
@@ -20046,9 +20046,9 @@
             },
             {
               "coord": "E57",
-              "formula": "=IFERROR(IF((M57/(-2)*40+60)>120,120,IF(M57>0,0,(M57/(-2)*40+60))),\"(NULL)\")",
-              "raw": 0.0,
-              "text": "0.0",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝1组",
@@ -20096,9 +20096,9 @@
             },
             {
               "coord": "J57",
-              "formula": "=(H57-I57)*100",
+              "formula": "",
               "raw": 1.3102,
-              "text": "1.3102pp",
+              "text": "1.3",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝1组",
@@ -20126,13 +20126,11 @@
             },
             {
               "coord": "M57",
-              "formula": "=IFERROR(((K57-L57)*100),\"(NULL)\")",
-              "raw": 16.70526648145548,
-              "text": "16.7",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 珠宝1组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N57",
@@ -20819,9 +20817,9 @@
             },
             {
               "coord": "D58",
-              "formula": "=IF((J58/(-2)*40+60)>120,120,IF(J58>0,0,(J58/(-2)*40+60)))",
-              "raw": 85.71,
-              "text": "85.71",
+              "formula": "",
+              "raw": 94.22,
+              "text": "94.2",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝2组",
@@ -20829,9 +20827,9 @@
             },
             {
               "coord": "E58",
-              "formula": "=IFERROR(IF((M58/(-2)*40+60)>120,120,IF(M58>0,0,(M58/(-2)*40+60))),\"(NULL)\")",
-              "raw": 68.57,
-              "text": "68.57",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝2组",
@@ -20879,9 +20877,9 @@
             },
             {
               "coord": "J58",
-              "formula": "=(H58-I58)*100",
+              "formula": "",
               "raw": -1.7109,
-              "text": "-1.7109pp",
+              "text": "-1.7",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝2组",
@@ -20909,13 +20907,11 @@
             },
             {
               "coord": "M58",
-              "formula": "=IFERROR(((K58-L58)*100),\"(NULL)\")",
-              "raw": -4.120109945752515,
-              "text": "-4.1",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 珠宝2组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N58",
@@ -21602,9 +21598,9 @@
             },
             {
               "coord": "D59",
-              "formula": "=IF((J59/(-2)*40+60)>120,120,IF(J59>0,0,(J59/(-2)*40+60)))",
-              "raw": 118.02,
-              "text": "118.02",
+              "formula": "",
+              "raw": 119.64,
+              "text": "119.6",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝3组",
@@ -21612,9 +21608,9 @@
             },
             {
               "coord": "E59",
-              "formula": "=IFERROR(IF((M59/(-2)*40+60)>120,120,IF(M59>0,0,(M59/(-2)*40+60))),\"(NULL)\")",
-              "raw": 120.0,
-              "text": "120.0",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
               "unit": "",
               "type": "number",
               "context": "考核结果 珠宝3组",
@@ -21662,9 +21658,9 @@
             },
             {
               "coord": "J59",
-              "formula": "=(H59-I59)*100",
+              "formula": "",
               "raw": -2.9819,
-              "text": "-2.9819pp",
+              "text": "-3",
               "unit": "",
               "type": "number",
               "context": "天猫 珠宝3组",
@@ -21692,13 +21688,11 @@
             },
             {
               "coord": "M59",
-              "formula": "=IFERROR(((K59-L59)*100),\"(NULL)\")",
-              "raw": -4.8391644923494574,
-              "text": "-4.8",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 珠宝3组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N59",
@@ -22385,9 +22379,9 @@
             },
             {
               "coord": "D60",
-              "formula": "=IF((J60/(-2)*40+60)>120,120,IF(J60>0,0,(J60/(-2)*40+60)))",
-              "raw": 74.18,
-              "text": "74.18",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 饰品1组",
@@ -22395,9 +22389,9 @@
             },
             {
               "coord": "E60",
-              "formula": "=IFERROR(IF((M60/(-2)*40+60)>120,120,IF(M60>0,0,(M60/(-2)*40+60))),\"(NULL)\")",
-              "raw": 25.09,
-              "text": "25.09",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 饰品1组",
@@ -22445,9 +22439,9 @@
             },
             {
               "coord": "J60",
-              "formula": "=(H60-I60)*100",
+              "formula": "",
               "raw": 0.8898,
-              "text": "0.8898pp",
+              "text": "0.9",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品1组",
@@ -22475,13 +22469,11 @@
             },
             {
               "coord": "M60",
-              "formula": "=IFERROR(((K60-L60)*100),\"(NULL)\")",
-              "raw": 4.591539097765329,
-              "text": "4.6",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 饰品1组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N60",
@@ -23168,9 +23160,9 @@
             },
             {
               "coord": "D61",
-              "formula": "=IF((J61/(-2)*40+60)>120,120,IF(J61>0,0,(J61/(-2)*40+60)))",
-              "raw": 0.0,
-              "text": "0.0",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 饰品2组",
@@ -23178,9 +23170,9 @@
             },
             {
               "coord": "E61",
-              "formula": "=IFERROR(IF((M61/(-2)*40+60)>120,120,IF(M61>0,0,(M61/(-2)*40+60))),\"(NULL)\")",
-              "raw": 68.57,
-              "text": "68.57",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 饰品2组",
@@ -23228,9 +23220,9 @@
             },
             {
               "coord": "J61",
-              "formula": "=(H61-I61)*100",
+              "formula": "",
               "raw": 7.1327,
-              "text": "7.1327pp",
+              "text": "7.1",
               "unit": "",
               "type": "number",
               "context": "天猫 饰品2组",
@@ -23258,13 +23250,11 @@
             },
             {
               "coord": "M61",
-              "formula": "=IFERROR(((K61-L61)*100),\"(NULL)\")",
-              "raw": 0.6236174042088538,
-              "text": "0.6",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 饰品2组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N61",
@@ -23951,9 +23941,9 @@
             },
             {
               "coord": "D62",
-              "formula": "=IF((J62/(-2)*40+60)>120,120,IF(J62>0,0,(J62/(-2)*40+60)))",
-              "raw": 74.36,
-              "text": "74.36",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
               "unit": "",
               "type": "number",
               "context": "考核结果 海淘组",
@@ -23961,9 +23951,9 @@
             },
             {
               "coord": "E62",
-              "formula": "=IFERROR(IF((M62/(-2)*40+60)>120,120,IF(M62>0,0,(M62/(-2)*40+60))),\"(NULL)\")",
-              "raw": 0,
-              "text": "0",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
               "unit": "",
               "type": "number",
               "context": "考核结果 海淘组",
@@ -24011,9 +24001,9 @@
             },
             {
               "coord": "J62",
-              "formula": "=(H62-I62)*100",
+              "formula": "",
               "raw": -13.989,
-              "text": "-13.989pp",
+              "text": "-14",
               "unit": "",
               "type": "number",
               "context": "天猫 海淘组",
@@ -24041,13 +24031,11 @@
             },
             {
               "coord": "M62",
-              "formula": "=IFERROR(((K62-L62)*100),\"(NULL)\")",
-              "raw": -83.5331880076482,
-              "text": "-83.5",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 海淘组",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N62",
@@ -24710,9 +24698,9 @@
             },
             {
               "coord": "D63",
-              "formula": "=IF((J63/(-2)*40+60)>120,120,IF(J63>0,0,(J63/(-2)*40+60)))",
-              "raw": 47.8,
-              "text": "47.8",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 总",
@@ -24720,9 +24708,9 @@
             },
             {
               "coord": "E63",
-              "formula": "=IFERROR(IF((M63/(-2)*40+60)>120,120,IF(M63>0,0,(M63/(-2)*40+60))),\"(NULL)\")",
-              "raw": 27.51,
-              "text": "27.51",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
               "unit": "",
               "type": "number",
               "context": "考核结果 总",
@@ -24770,9 +24758,9 @@
             },
             {
               "coord": "J63",
-              "formula": "=(H63-I63)*100",
+              "formula": "",
               "raw": 1.649,
-              "text": "1.649pp",
+              "text": "1.6",
               "unit": "",
               "type": "number",
               "context": "天猫 总",
@@ -24800,13 +24788,11 @@
             },
             {
               "coord": "M63",
-              "formula": "=IFERROR(((K63-L63)*100),\"(NULL)\")",
-              "raw": 3.0198763705211573,
-              "text": "3",
+              "formula": "",
+              "raw": null,
+              "text": "",
               "unit": "",
-              "type": "number",
-              "context": "抖音 总",
-              "numberFormat": "General"
+              "type": "blank"
             },
             {
               "coord": "N63",
