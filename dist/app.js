@@ -234,12 +234,30 @@
     return '<div class="section-title"><span></span>外网价指 · MTD</div>'+renderRows(rows,'price-index-mtd-grid');
   }
   function renderSixHighMtd(section){
-    var source=getSection('six_high_price_index'); var d=source&&source.data; if(!d)return '';
-    function numCell(v){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);return isNaN(n)?{text:String(v),raw:v,type:'text'}:{text:n.toLocaleString('zh-CN',{maximumFractionDigits:1}),raw:n,type:'number'};}
-    function pctCell(v,diff){if(v==='(NULL)'||v==null)return {text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return {text:String(v),raw:v,type:'text'};return {text:diff?((n>0?'+':n<0?'-':'')+Math.abs(n*100).toFixed(1)+'pp'):(n*100).toFixed(1)+'%',raw:n,type:'number',trend:diff?(n>0?'up':n<0?'down':null):null};}
-    function dataRow(g,total){return {excelRow:total?1099:1000,total:!!total,cells:[{text:total?'精品总':g.group,raw:g.group,type:'text'},numCell(g['日均商品数']),numCell(g['可比商品数']),pctCell(g['可比率']),pctCell(g['天猫价格指数']),pctCell(g['天猫价格指数目标']),pctCell(g['天猫差值'],true),pctCell(g['抖音价格指数']),pctCell(g['抖音价格指数目标']),pctCell(g['抖音差值'],true),pctCell(g['调价率']),pctCell(g['调价率目标']),pctCell(g['调价率差值'],true),pctCell(g['断货率']),pctCell(g['断货率目标']),pctCell(g['断货率差值'],true),pctCell(g['7天缺货率'])]};}
-    var headers=['小组','日均商品数','可比商品数','可比率','天猫价格指数','天猫目标','天猫差值','抖音价格指数','抖音目标','抖音差值','调价率','调价率目标','调价率差值','断货率','断货率目标','断货率差值','7天缺货率'];
-    var rows=[headerRow(headers)]; (d.groups||[]).forEach(function(g){rows.push(dataRow(g,false));}); if(d.summary)rows.push(dataRow(d.summary,true));
+    var keepRows={81:true,82:true,83:true,84:true,85:true,86:true,87:true};
+    var headers=['小组','日均6高商品数','可比率','天猫价格指数','天猫价指目标','vs天猫目标','抖音价格指数','抖音价指目标','vs抖音目标','调价率'];
+    var rows=(section.rows||[]).filter(function(row){return !!keepRows[row.excelRow];}).map(function(row){
+      var cells=row.cells.slice(0,10).map(function(c){return Object.assign({},c);});
+      // 格式化百分比列: 可比率(2),天猫价指(3),天猫目标(4),抖音价指(6),抖音目标(7),调价率(9)
+      [2,3,4,6,7,9].forEach(function(i){
+        var cell=cells[i];
+        if(cell&&typeof cell.raw==='number'){
+          cell.text=(cell.raw*100).toFixed(1)+'%';
+          cell.unit='%';
+        }
+      });
+      // 差值列: vs天猫目标(5), vs抖音目标(8) — 带正负号pp
+      [5,8].forEach(function(i){
+        var cell=cells[i];
+        if(cell&&typeof cell.raw==='number'){
+          cell.text=(cell.raw>0?'+':cell.raw<0?'-':'')+Math.abs(cell.raw*100).toFixed(1)+'pp';
+          cell.unit='pp';
+          cell.trend=cell.raw>0?'up':cell.raw<0?'down':null;
+        }
+      });
+      return {excelRow:row.excelRow,cells:cells,total:normalizeGroupName(cells[0]&&cells[0].text)==='精品总'};
+    });
+    rows=markHeaders(rows,1);
     return '<div class="section-title"><span></span>六高 · MTD</div>'+renderRows(rows,'six-high-detail-grid');
   }
   function renderSixHighPriceIndex(section){
