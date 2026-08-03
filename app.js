@@ -337,41 +337,39 @@
   function renderGrossProfit(section){
     var d=section&&section.data; if(!d)return '';
     var period=state.periods.gross_profit||'YTD';
-    var fields=[{key:'period',label:'时间'},{key:'实收',label:'实收',pct:false,unit:true},{key:'净收入',label:'净收入(毛利口径)',pct:false,unit:true},{key:'毛利值',label:'毛利值',pct:false,unit:true},{key:'毛利率',label:'毛利率',pct:true},{key:'毛利率目标',label:'目标',pct:true},{key:'落差',label:'落差',pct:true,delta:true},{key:'完成率',label:'完成率',pct:true},{key:'毛利盈余',label:'毛利盈余/缺口',pct:false,unit:true}];
-    function pctCell(v){if(v==null||v==='')return{text:'',raw:null,type:'blank'};var n=typeof v==='number'?v:parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};return{text:(n*100).toFixed(2)+'%',raw:n,type:'number'};}
-    function deltaCell(v){if(v==null||v==='')return{text:'',raw:null,type:'blank'};var n=typeof v==='number'?v:parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};var sign=n>0?'+':'';return{text:sign+(n*100).toFixed(2)+'pp',raw:n,type:'number'};}
-    function moneyCell(v){if(v==null||v==='')return{text:'',raw:null,type:'blank'};var n=typeof v==='number'?v:parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};return{text:Math.abs(n)>=1e8?(n/1e8).toFixed(2)+'亿':(n/1e4).toFixed(0)+'万',raw:n,type:'number'};}
-    function renderDataRow(rowData,rowIdx,isTotal){
-      var cells=fields.map(function(f){
-        var v=rowData[f.key];
-        if(f.delta) return deltaCell(v);
-        if(f.pct) return pctCell(v);
-        if(f.unit) return moneyCell(v);
-        return{text:typeof v==='number'?v.toLocaleString('zh-CN',{maximumFractionDigits:2}):String(v||''),raw:v,type:'number'};
-      });
-      return {excelRow:rowIdx,cells:cells,isTotal:!!isTotal};
+    var headers=['时间','实收','净收入(毛利口径)','毛利值','毛利率','目标','落差','完成率','毛利盈余/缺口'];
+    function pctCell(v){if(v==null)return{text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};return{text:(n*100).toFixed(2)+'%',raw:n,type:'number',unit:'%'};}
+    function deltaCell(v){if(v==null)return{text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};var sign=n>0?'+':'';var trend=n>0?'up':n<0?'down':null;return{text:sign+(n*100).toFixed(2),raw:n,type:'number',unit:'pp',trend:trend};}
+    function moneyCell(v){if(v==null)return{text:'',raw:null,type:'blank'};var n=parseFloat(v);if(isNaN(n))return{text:String(v),raw:v,type:'text'};var abs=Math.abs(n);var val=abs>=1e8?(n/1e8).toFixed(2):(n/1e4).toFixed(0);var unit=abs>=1e8?'亿':'万';return{text:val.toLocaleString('zh-CN'),raw:n,type:'number',unit:unit};}
+    function dataRow(rowData,rowIdx,totalFlag){
+      var cells=[{text:String(rowData.period),raw:rowData.period,type:'text'}];
+      cells.push(moneyCell(rowData['实收']));
+      cells.push(moneyCell(rowData['净收入']));
+      cells.push(moneyCell(rowData['毛利值']));
+      cells.push(pctCell(rowData['毛利率']));
+      cells.push(pctCell(rowData['毛利率目标']));
+      cells.push(deltaCell(rowData['落差']));
+      cells.push(pctCell(rowData['完成率']));
+      cells.push(moneyCell(rowData['毛利盈余']));
+      return {excelRow:rowIdx,cells:cells,total:totalFlag};
     }
-    function renderTable(rows,label){
-      var headerCells=fields.map(function(f,i){return{text:f.label,raw:f.label,type:'text',isHeader:true};});
-      var html='<div class="section-title" style="margin-top:8px;font-size:13px;font-weight:600"><span></span>'+escapeHtml(label)+'</div>';
-      html+='<div class="excel-scroll"><table class="excel-table gross-profit-grid"><thead><tr>'+headerCells.map(function(c,i){var cls='excel-cell is-header'+(i===0?' is-row-label':'');return'<th class="'+cls+'">'+escapeHtml(c.text)+'</th>';}).join('')+'</tr></thead><tbody>'+rows.map(function(row){return'<tr class="'+(row.isTotal?' total-row':'')+'">'+row.cells.map(function(c,i){var cls='excel-cell'+(i===0?' is-row-label':'');return'<td class="'+cls+'">'+(c.text||'')+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
-      return html;
-    }
-    // MTD 区域：固定展示
-    var mtdRows=[renderDataRow(d.mtd,1,true)];
-    var mtdHtml=renderTable(mtdRows,'MTD · '+d.mtd.period);
-    // YTD + 历史月份区域：可切换
+    // MTD 区
+    var mtdHeader=markHeaders([{excelRow:0,cells:headers.map(function(h){return{text:h,raw:h,type:'text',header:true};})}],1);
+    var mtdRows=[dataRow(d.mtd,1,true)];
+    var mtdHtml='<div class="section-title" style="margin-top:8px;font-size:13px;font-weight:600"><span></span>MTD · '+escapeHtml(d.mtd.period)+'</div>'+renderRows(mtdHeader.concat(mtdRows));
+    // YTD + 历史月份区
     var subPeriods=['YTD','历史月份'];
     var filterHtml='<div class="filter-bar">'+subPeriods.map(function(p){return'<button class="filter-btn'+(period===p?' active':'')+'" data-section="gross_profit" data-period="'+p+'">'+p+'</button>';}).join('')+'</div>';
     var subRows=[];
     if(period==='YTD'){
-      subRows.push(renderDataRow(d.ytd,2,true));
-      subRows.push(renderDataRow(d.year_target,3,true));
+      subRows.push(dataRow(d.ytd,2,true));
+      subRows.push(dataRow(d.year_target,3,true));
     }else{
-      d.months.forEach(function(m,i){subRows.push(renderDataRow(m,i+4,false));});
+      d.months.forEach(function(m,i){subRows.push(dataRow(m,i+4,false));});
     }
-    var subHtml=renderTable(subRows,period==='YTD'?'YTD':'各月明细');
-    // 更新时间标注
+    var subHeader=markHeaders([{excelRow:0,cells:headers.map(function(h){return{text:h,raw:h,type:'text',header:true};})}],1);
+    var subHtml='<div class="section-title" style="margin-top:8px;font-size:13px;font-weight:600"><span></span>'+escapeHtml(period==='YTD'?'YTD':'各月明细')+'</div>'+renderRows(subHeader.concat(subRows));
+    // 标题+更新时间
     var sourceDate=d.source_date||'2026-08-03';
     var updatedAt=d.updated_at||'2026-08-03 14:28';
     var title='<div class="section-title gross-title"><span></span><div><b>毛利</b><em> · 数据截止 '+escapeHtml(sourceDate)+'</em></div><div style="font-size:11px;color:#999;margin-top:2px">更新于 '+escapeHtml(updatedAt)+'</div></div>';
