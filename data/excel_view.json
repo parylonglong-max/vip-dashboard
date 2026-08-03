@@ -28020,8 +28020,8 @@
             {
               "coord": "F93",
               "formula": "=SUM(C93:E93)",
-              "raw": 0.0,
-              "text": "0",
+              "raw": 0,
+              "text": "0.0",
               "unit": "",
               "type": "number",
               "context": "总计 海淘组",
@@ -28061,8 +28061,8 @@
             {
               "coord": "D94",
               "formula": "",
-              "raw": 2,
-              "text": "2",
+              "raw": 3,
+              "text": "3",
               "unit": "",
               "type": "number",
               "context": "0 饰品1组",
@@ -28081,8 +28081,8 @@
             {
               "coord": "F94",
               "formula": "=SUM(C94:E94)",
-              "raw": 2.0,
-              "text": "2",
+              "raw": 3,
+              "text": "3",
               "unit": "",
               "type": "number",
               "context": "总计 饰品1组",
@@ -28124,8 +28124,8 @@
             {
               "coord": "D95",
               "formula": "",
-              "raw": 18,
-              "text": "18",
+              "raw": 13,
+              "text": "13",
               "unit": "",
               "type": "number",
               "context": "0 饰品2组",
@@ -28144,8 +28144,8 @@
             {
               "coord": "F95",
               "formula": "=SUM(C95:E95)",
-              "raw": 18.0,
-              "text": "18",
+              "raw": 13,
+              "text": "13",
               "unit": "",
               "type": "number",
               "context": "总计 饰品2组",
@@ -28207,8 +28207,8 @@
             {
               "coord": "F96",
               "formula": "=SUM(C96:E96)",
-              "raw": 0.0,
-              "text": "0",
+              "raw": 0,
+              "text": "0.0",
               "unit": "",
               "type": "number",
               "context": "总计 珠宝1组",
@@ -28268,8 +28268,8 @@
             {
               "coord": "F97",
               "formula": "=SUM(C97:E97)",
-              "raw": 0.0,
-              "text": "0",
+              "raw": 0,
+              "text": "0.0",
               "unit": "",
               "type": "number",
               "context": "总计 珠宝2组",
@@ -28329,8 +28329,8 @@
             {
               "coord": "F98",
               "formula": "=SUM(C98:E98)",
-              "raw": 0.0,
-              "text": "0",
+              "raw": 0,
+              "text": "0.0",
               "unit": "",
               "type": "number",
               "context": "总计 珠宝3组",
@@ -28360,7 +28360,7 @@
             {
               "coord": "C99",
               "formula": "=SUM(C93:C98)",
-              "raw": 0.0,
+              "raw": 0,
               "text": "0",
               "unit": "",
               "type": "number",
@@ -28370,8 +28370,8 @@
             {
               "coord": "D99",
               "formula": "=SUM(D93:D98)",
-              "raw": 20.0,
-              "text": "20",
+              "raw": 16,
+              "text": "16",
               "unit": "",
               "type": "number",
               "context": "0 精品总",
@@ -28380,7 +28380,7 @@
             {
               "coord": "E99",
               "formula": "=SUM(E93:E98)",
-              "raw": 0.0,
+              "raw": 0,
               "text": "0",
               "unit": "",
               "type": "number",
@@ -28390,8 +28390,8 @@
             {
               "coord": "F99",
               "formula": "=SUM(C99:E99)",
-              "raw": 20.0,
-              "text": "20",
+              "raw": 16,
+              "text": "16",
               "unit": "",
               "type": "number",
               "context": "总计 精品总",
@@ -34755,7 +34755,7 @@
             {
               "coord": "D116",
               "formula": "=SUM(D117:D119)",
-              "raw": 259956.3,
+              "raw": 23969.96,
               "text": "26.0",
               "unit": "万",
               "type": "number",
@@ -34775,7 +34775,7 @@
             {
               "coord": "F116",
               "formula": "=SUM(F117:F119)",
-              "raw": 742686.66,
+              "raw": 52766.2,
               "text": "74.3",
               "unit": "万",
               "type": "number",
@@ -34838,7 +34838,7 @@
             {
               "coord": "D117",
               "formula": "",
-              "raw": 79161.15,
+              "raw": 11448.96,
               "text": "7.9",
               "unit": "万",
               "type": "number",
@@ -34858,7 +34858,7 @@
             {
               "coord": "F117",
               "formula": "",
-              "raw": 360445.58,
+              "raw": 12743.96,
               "text": "36.0",
               "unit": "万",
               "type": "number",
@@ -34921,7 +34921,7 @@
             {
               "coord": "D118",
               "formula": "",
-              "raw": 180795.15,
+              "raw": 12521,
               "text": "18.1",
               "unit": "万",
               "type": "number",
@@ -34941,7 +34941,7 @@
             {
               "coord": "F118",
               "formula": "",
-              "raw": 377869.71,
+              "raw": 39199.24,
               "text": "37.8",
               "unit": "万",
               "type": "number",
@@ -35024,7 +35024,7 @@
             {
               "coord": "F119",
               "formula": "",
-              "raw": 4371.37,
+              "raw": 823,
               "text": "4,371.4",
               "unit": "",
               "type": "number",
@@ -35336,7 +35336,7 @@
             {
               "coord": "D124",
               "formula": "=SUM(D125:D127)",
-              "raw": 6761972.22,
+              "raw": 23969.96,
               "text": "676",
               "unit": "万",
               "type": "number",
@@ -35356,7 +35356,7 @@
             {
               "coord": "F124",
               "formula": "=SUM(F125:F127)",
-              "raw": 8485257.29,
+              "raw": 52766.2,
               "text": "849",
               "unit": "万",
               "type": "number",
@@ -35419,7 +35419,7 @@
             {
               "coord": "D125",
               "formula": "=I125+D117+N125+S125+X125+AC125+AH125",
-              "raw": 2587844.48,
+              "raw": 11448.96,
               "text": "259",
               "unit": "万",
               "type": "number",
@@ -35439,7 +35439,7 @@
             {
               "coord": "F125",
               "formula": "=K125+F117+P125+U125+Z125+AE125+AJ125",
-              "raw": 2627588.77,
+              "raw": 12743.96,
               "text": "263",
               "unit": "万",
               "type": "number",
@@ -35502,7 +35502,7 @@
             {
               "coord": "D126",
               "formula": "=I126+D118+N126+S126+X126+AC126+AH126",
-              "raw": 3990323.0200000005,
+              "raw": 12521,
               "text": "399",
               "unit": "万",
               "type": "number",
@@ -35522,7 +35522,7 @@
             {
               "coord": "F126",
               "formula": "=K126+F118+P126+U126+Z126+AE126+AJ126",
-              "raw": 4278197.869999999,
+              "raw": 39199.24,
               "text": "428",
               "unit": "万",
               "type": "number",
@@ -35585,7 +35585,7 @@
             {
               "coord": "D127",
               "formula": "=I127+D119+N127+S127+X127+AC127+AH127",
-              "raw": 183804.72,
+              "raw": 0,
               "text": "18.4",
               "unit": "万",
               "type": "number",
@@ -35605,7 +35605,7 @@
             {
               "coord": "F127",
               "formula": "=K127+F119+P127+U127+Z127+AE127+AJ127",
-              "raw": 1579470.6500000001,
+              "raw": 823,
               "text": "158",
               "unit": "万",
               "type": "number",
@@ -36624,7 +36624,7 @@
             {
               "coord": "D116",
               "formula": "=SUM(D117:D119)",
-              "raw": 259956.3,
+              "raw": 23969.96,
               "text": "26.0",
               "unit": "万",
               "type": "number",
@@ -36644,7 +36644,7 @@
             {
               "coord": "F116",
               "formula": "=SUM(F117:F119)",
-              "raw": 742686.66,
+              "raw": 52766.2,
               "text": "74.3",
               "unit": "万",
               "type": "number",
@@ -36931,7 +36931,7 @@
             {
               "coord": "D117",
               "formula": "",
-              "raw": 79161.15,
+              "raw": 11448.96,
               "text": "7.9",
               "unit": "万",
               "type": "number",
@@ -36951,7 +36951,7 @@
             {
               "coord": "F117",
               "formula": "",
-              "raw": 360445.58,
+              "raw": 12743.96,
               "text": "36.0",
               "unit": "万",
               "type": "number",
@@ -37238,7 +37238,7 @@
             {
               "coord": "D118",
               "formula": "",
-              "raw": 180795.15,
+              "raw": 12521,
               "text": "18.1",
               "unit": "万",
               "type": "number",
@@ -37258,7 +37258,7 @@
             {
               "coord": "F118",
               "formula": "",
-              "raw": 377869.71,
+              "raw": 39199.24,
               "text": "37.8",
               "unit": "万",
               "type": "number",
@@ -37565,7 +37565,7 @@
             {
               "coord": "F119",
               "formula": "",
-              "raw": 4371.37,
+              "raw": 823,
               "text": "4,371.4",
               "unit": "",
               "type": "number",
@@ -38602,7 +38602,7 @@
             {
               "coord": "D124",
               "formula": "=SUM(D125:D127)",
-              "raw": 6761972.22,
+              "raw": 23969.96,
               "text": "676",
               "unit": "万",
               "type": "number",
@@ -38622,7 +38622,7 @@
             {
               "coord": "F124",
               "formula": "=SUM(F125:F127)",
-              "raw": 8485257.29,
+              "raw": 52766.2,
               "text": "849",
               "unit": "万",
               "type": "number",
@@ -38965,7 +38965,7 @@
             {
               "coord": "D125",
               "formula": "=I125+D117+N125+S125+X125+AC125+AH125",
-              "raw": 2587844.48,
+              "raw": 11448.96,
               "text": "259",
               "unit": "万",
               "type": "number",
@@ -38985,7 +38985,7 @@
             {
               "coord": "F125",
               "formula": "=K125+F117+P125+U125+Z125+AE125+AJ125",
-              "raw": 2627588.77,
+              "raw": 12743.96,
               "text": "263",
               "unit": "万",
               "type": "number",
@@ -39328,7 +39328,7 @@
             {
               "coord": "D126",
               "formula": "=I126+D118+N126+S126+X126+AC126+AH126",
-              "raw": 3990323.0200000005,
+              "raw": 12521,
               "text": "399",
               "unit": "万",
               "type": "number",
@@ -39348,7 +39348,7 @@
             {
               "coord": "F126",
               "formula": "=K126+F118+P126+U126+Z126+AE126+AJ126",
-              "raw": 4278197.869999999,
+              "raw": 39199.24,
               "text": "428",
               "unit": "万",
               "type": "number",
@@ -39687,7 +39687,7 @@
             {
               "coord": "D127",
               "formula": "=I127+D119+N127+S127+X127+AC127+AH127",
-              "raw": 183804.72,
+              "raw": 0,
               "text": "18.4",
               "unit": "万",
               "type": "number",
@@ -39707,7 +39707,7 @@
             {
               "coord": "F127",
               "formula": "=K127+F119+P127+U127+Z127+AE127+AJ127",
-              "raw": 1579470.6500000001,
+              "raw": 823,
               "text": "158",
               "unit": "万",
               "type": "number",
@@ -40929,7 +40929,7 @@
             {
               "coord": "D132",
               "formula": "",
-              "raw": 0.333799,
+              "raw": 23969.96,
               "text": "0.3",
               "unit": "",
               "type": "number",
@@ -40949,7 +40949,7 @@
             {
               "coord": "F132",
               "formula": "",
-              "raw": 2.0376362786555,
+              "raw": 52766.2,
               "text": "2",
               "unit": "",
               "type": "number",
@@ -41238,7 +41238,7 @@
             {
               "coord": "D133",
               "formula": "",
-              "raw": 0.0287326608018543,
+              "raw": 11448.96,
               "text": "0",
               "unit": "",
               "type": "number",
@@ -41258,7 +41258,7 @@
             {
               "coord": "F133",
               "formula": "",
-              "raw": 2.9061,
+              "raw": 12743.96,
               "text": "2.9",
               "unit": "",
               "type": "number",
@@ -41547,7 +41547,7 @@
             {
               "coord": "D134",
               "formula": "",
-              "raw": 521141.55,
+              "raw": 12521,
               "text": "52.1",
               "unit": "万",
               "type": "number",
@@ -41567,7 +41567,7 @@
             {
               "coord": "F134",
               "formula": "",
-              "raw": 303834.57,
+              "raw": 39199.24,
               "text": "30.4",
               "unit": "万",
               "type": "number",
@@ -41854,7 +41854,7 @@
             {
               "coord": "D135",
               "formula": "",
-              "raw": 9187479.37,
+              "raw": 0,
               "text": "919",
               "unit": "万",
               "type": "number",
@@ -41874,7 +41874,7 @@
             {
               "coord": "F135",
               "formula": "",
-              "raw": 11601360.87,
+              "raw": 823,
               "text": "1,160",
               "unit": "万",
               "type": "number",
@@ -42801,7 +42801,7 @@
             {
               "coord": "D140",
               "formula": "=SUM(D141:D143)",
-              "raw": 9708620.94873266,
+              "raw": 23969.96,
               "text": "971",
               "unit": "万",
               "type": "number",
@@ -42821,7 +42821,7 @@
             {
               "coord": "F140",
               "formula": "=SUM(F141:F143)",
-              "raw": 11905198.346099999,
+              "raw": 52766.2,
               "text": "1,191",
               "unit": "万",
               "type": "number",
@@ -43110,7 +43110,7 @@
             {
               "coord": "D141",
               "formula": "=I141+D133+N141+S141+X141+AC141+AH141",
-              "raw": 0.0287326608018543,
+              "raw": 11448.96,
               "text": "0",
               "unit": "",
               "type": "number",
@@ -43130,7 +43130,7 @@
             {
               "coord": "F141",
               "formula": "=K141+F133+P141+U141+Z141+AE141+AJ141",
-              "raw": 2.9061,
+              "raw": 12743.96,
               "text": "2.9",
               "unit": "",
               "type": "number",
@@ -43413,7 +43413,7 @@
             {
               "coord": "D142",
               "formula": "=I142+D134+N142+S142+X142+AC142+AH142",
-              "raw": 521141.55,
+              "raw": 12521,
               "text": "52.1",
               "unit": "万",
               "type": "number",
@@ -43433,7 +43433,7 @@
             {
               "coord": "F142",
               "formula": "=K142+F134+P142+U142+Z142+AE142+AJ142",
-              "raw": 303834.57,
+              "raw": 39199.24,
               "text": "30.4",
               "unit": "万",
               "type": "number",
@@ -43716,7 +43716,7 @@
             {
               "coord": "D143",
               "formula": "=I143+D135+N143+S143+X143+AC143+AH143",
-              "raw": 9187479.37,
+              "raw": 0,
               "text": "919",
               "unit": "万",
               "type": "number",
@@ -43736,7 +43736,7 @@
             {
               "coord": "F143",
               "formula": "=K143+F135+P143+U143+Z143+AE143+AJ143",
-              "raw": 11601360.87,
+              "raw": 823,
               "text": "1,160",
               "unit": "万",
               "type": "number",
