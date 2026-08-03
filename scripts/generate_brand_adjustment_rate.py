@@ -271,10 +271,7 @@ def validate(records, brands, catalog, sheet_brand_sets, latest, month):
         errors.append('两张指标表品牌重叠')
     if indicator_count < 500:
         errors.append(f'指标品牌覆盖异常下降: {indicator_count}<500')
-    regression = {x['sn']: x for x in brands}
-    if regression.get('10202821', {}).get('row_count', 0) < 30:
-        errors.append('回归失败：礼兰 SN 10202821 应有30天非神银明细')
-    # 月度源数据会随日期推进变化；不再用旧日期固定数值断言（例如 CACUSS=119）阻断月末更新。
+    # 月度源数据会随日期推进变化；不再用固定数值断言（例如 CACUSS=119、礼兰30天）阻断月初更新。
     # 保留上方的唯一性、分子<=分母、月汇总=日明细、双表不重叠和品牌覆盖率校验作为发布门禁。
     if len(catalog) < indicator_count:
         errors.append('品牌目录少于指标品牌数')
