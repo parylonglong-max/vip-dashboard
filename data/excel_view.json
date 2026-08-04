@@ -5,7 +5,7 @@
     "sourceFile": "货价监控指标副本-26.08.04_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-08-04",
-    "generatedAt": "2026-08-04 09:45:26",
+    "generatedAt": "2026-08-04 09:52:19",
     "updatedAtHour": "2026-08-04 9点",
     "versionNote": "更新于 2026-08-04"
   },
@@ -55196,9 +55196,9 @@
             },
             {
               "coord": "D116",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 260252.3,
+              "text": "260252.3",
+              "type": "number"
             },
             {
               "coord": "E116",
@@ -55208,9 +55208,9 @@
             },
             {
               "coord": "F116",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 742686.66,
+              "text": "742686.66",
+              "type": "number"
             },
             {
               "coord": "G116",
@@ -55220,9 +55220,9 @@
             },
             {
               "coord": "H116",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 515835.7891163357,
+              "text": "515835.7891163357",
+              "type": "number"
             },
             {
               "coord": "I116",
@@ -55675,8 +55675,8 @@
             },
             {
               "coord": "D117",
-              "raw": 79161.15,
-              "text": "79161.15",
+              "raw": 79195.15,
+              "text": "79195.15",
               "type": "number"
             },
             {
@@ -55699,9 +55699,9 @@
             },
             {
               "coord": "H117",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 165067.4525172271,
+              "text": "165067.4525172271",
+              "type": "number"
             },
             {
               "coord": "I117",
@@ -56154,8 +56154,8 @@
             },
             {
               "coord": "D118",
-              "raw": 180795.15,
-              "text": "180795.15",
+              "raw": 181057.15,
+              "text": "181057.15",
               "type": "number"
             },
             {
@@ -56178,9 +56178,9 @@
             },
             {
               "coord": "H118",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 257917.894558168,
+              "text": "257917.894558168",
+              "type": "number"
             },
             {
               "coord": "I118",
@@ -56633,9 +56633,9 @@
             },
             {
               "coord": "D119",
-              "raw": 0,
-              "text": "0",
-              "type": "number"
+              "raw": null,
+              "text": "",
+              "type": "blank"
             },
             {
               "coord": "E119",
@@ -56657,9 +56657,9 @@
             },
             {
               "coord": "H119",
-              "raw": null,
-              "text": "",
-              "type": "blank"
+              "raw": 92850.44204094059,
+              "text": "92850.44204094059",
+              "type": "number"
             },
             {
               "coord": "I119",
