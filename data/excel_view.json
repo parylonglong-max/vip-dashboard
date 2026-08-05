@@ -19377,6 +19377,11 @@
               "text": "6月",
               "unit": "",
               "type": "text"
+            },
+            {
+              "text": "7月",
+              "raw": "7月",
+              "type": "text"
             }
           ]
         },
@@ -20009,6 +20014,61 @@
               "raw": "抖音权重",
               "text": "抖音权重",
               "unit": "",
+              "type": "text"
+            },
+            {
+              "text": "综合得分",
+              "raw": "综合得分",
+              "type": "text"
+            },
+            {
+              "text": "天猫价指",
+              "raw": "天猫价指",
+              "type": "text"
+            },
+            {
+              "text": "对标值",
+              "raw": "对标值",
+              "type": "text"
+            },
+            {
+              "text": "天猫降幅",
+              "raw": "天猫降幅",
+              "type": "text"
+            },
+            {
+              "text": "抖音价指",
+              "raw": "抖音价指",
+              "type": "text"
+            },
+            {
+              "text": "对标值",
+              "raw": "对标值",
+              "type": "text"
+            },
+            {
+              "text": "抖音降幅",
+              "raw": "抖音降幅",
+              "type": "text"
+            },
+            {
+              "text": "天猫外网加总",
+              "raw": "天猫外网加总",
+              "type": "text"
+            },
+            {
+              "text": "抖音外网加总",
+              "raw": "抖音外网加总",
+              "type": "text"
+            },
+            {
+              "text": "天猫权重",
+              "raw": "天猫权重",
+              "type": "text"
+            },
+            {
+              "text": "抖音权重",
+              "raw": "抖音权重",
               "type": "text"
             }
           ]
@@ -20791,6 +20851,61 @@
               "type": "number",
               "context": "珠宝1组",
               "numberFormat": "General"
+            },
+            {
+              "text": "61.367555478",
+              "raw": 61.367555478,
+              "type": "number"
+            },
+            {
+              "text": "0.819251",
+              "raw": 0.819251,
+              "type": "number"
+            },
+            {
+              "text": "0.824372",
+              "raw": 0.824372,
+              "type": "number"
+            },
+            {
+              "text": "-0.5121",
+              "raw": -0.5121,
+              "type": "number"
+            },
+            {
+              "text": "0.865359",
+              "raw": 0.865359,
+              "type": "number"
+            },
+            {
+              "text": "0.8550719999999999",
+              "raw": 0.8550719999999999,
+              "type": "number"
+            },
+            {
+              "text": "1.0287000000000006",
+              "raw": 1.0287000000000006,
+              "type": "number"
+            },
+            {
+              "text": "208869237.93",
+              "raw": 208869237.93,
+              "type": "number"
+            },
+            {
+              "text": "30204802.81",
+              "raw": 30204802.81,
+              "type": "number"
+            },
+            {
+              "text": "0.873659",
+              "raw": 0.873659,
+              "type": "number"
+            },
+            {
+              "text": "0.126341",
+              "raw": 0.126341,
+              "type": "number"
             }
           ]
         },
@@ -21572,6 +21687,61 @@
               "type": "number",
               "context": "珠宝2组",
               "numberFormat": "General"
+            },
+            {
+              "text": "85.862892024",
+              "raw": 85.862892024,
+              "type": "number"
+            },
+            {
+              "text": "0.8107",
+              "raw": 0.8107,
+              "type": "number"
+            },
+            {
+              "text": "0.829624",
+              "raw": 0.829624,
+              "type": "number"
+            },
+            {
+              "text": "-1.8924",
+              "raw": -1.8924,
+              "type": "number"
+            },
+            {
+              "text": "0.869411",
+              "raw": 0.869411,
+              "type": "number"
+            },
+            {
+              "text": "0.860324",
+              "raw": 0.860324,
+              "type": "number"
+            },
+            {
+              "text": "0.9087000000000103",
+              "raw": 0.9087000000000103,
+              "type": "number"
+            },
+            {
+              "text": "113136457.95",
+              "raw": 113136457.95,
+              "type": "number"
+            },
+            {
+              "text": "15792072.6",
+              "raw": 15792072.6,
+              "type": "number"
+            },
+            {
+              "text": "0.877513",
+              "raw": 0.877513,
+              "type": "number"
+            },
+            {
+              "text": "0.122487",
+              "raw": 0.122487,
+              "type": "number"
             }
           ]
         },
@@ -22353,6 +22523,61 @@
               "type": "number",
               "context": "珠宝3组",
               "numberFormat": "General"
+            },
+            {
+              "text": "0.0",
+              "raw": 0.0,
+              "type": "number"
+            },
+            {
+              "text": "0.887603",
+              "raw": 0.887603,
+              "type": "number"
+            },
+            {
+              "text": "0.834442",
+              "raw": 0.834442,
+              "type": "number"
+            },
+            {
+              "text": "5.3161",
+              "raw": 5.3161,
+              "type": "number"
+            },
+            {
+              "text": "0.885297",
+              "raw": 0.885297,
+              "type": "number"
+            },
+            {
+              "text": "0.8651419999999999",
+              "raw": 0.8651419999999999,
+              "type": "number"
+            },
+            {
+              "text": "2.015500000000017",
+              "raw": 2.015500000000017,
+              "type": "number"
+            },
+            {
+              "text": "50806423.53",
+              "raw": 50806423.53,
+              "type": "number"
+            },
+            {
+              "text": "11295567.94",
+              "raw": 11295567.94,
+              "type": "number"
+            },
+            {
+              "text": "0.818113",
+              "raw": 0.818113,
+              "type": "number"
+            },
+            {
+              "text": "0.181887",
+              "raw": 0.181887,
+              "type": "number"
             }
           ]
         },
@@ -23134,6 +23359,61 @@
               "type": "number",
               "context": "饰品1组",
               "numberFormat": "General"
+            },
+            {
+              "text": "120.0",
+              "raw": 120.0,
+              "type": "number"
+            },
+            {
+              "text": "0.733507",
+              "raw": 0.733507,
+              "type": "number"
+            },
+            {
+              "text": "0.85674",
+              "raw": 0.85674,
+              "type": "number"
+            },
+            {
+              "text": "-12.3233",
+              "raw": -12.3233,
+              "type": "number"
+            },
+            {
+              "text": "",
+              "raw": null,
+              "type": "blank"
+            },
+            {
+              "text": "0.88744",
+              "raw": 0.88744,
+              "type": "number"
+            },
+            {
+              "text": "",
+              "raw": null,
+              "type": "blank"
+            },
+            {
+              "text": "20312.0",
+              "raw": 20312.0,
+              "type": "number"
+            },
+            {
+              "text": "0.0",
+              "raw": 0.0,
+              "type": "number"
+            },
+            {
+              "text": "1.0",
+              "raw": 1.0,
+              "type": "number"
+            },
+            {
+              "text": "0.0",
+              "raw": 0.0,
+              "type": "number"
             }
           ]
         },
@@ -23915,6 +24195,61 @@
               "type": "number",
               "context": "饰品2组",
               "numberFormat": "General"
+            },
+            {
+              "text": "116.48496",
+              "raw": 116.48496,
+              "type": "number"
+            },
+            {
+              "text": "0.797802",
+              "raw": 0.797802,
+              "type": "number"
+            },
+            {
+              "text": "0.840804",
+              "raw": 0.840804,
+              "type": "number"
+            },
+            {
+              "text": "-4.3002",
+              "raw": -4.3002,
+              "type": "number"
+            },
+            {
+              "text": "0.983585",
+              "raw": 0.983585,
+              "type": "number"
+            },
+            {
+              "text": "0.871504",
+              "raw": 0.871504,
+              "type": "number"
+            },
+            {
+              "text": "11.208100000000016",
+              "raw": 11.208100000000016,
+              "type": "number"
+            },
+            {
+              "text": "16315365.63",
+              "raw": 16315365.63,
+              "type": "number"
+            },
+            {
+              "text": "492337.08",
+              "raw": 492337.08,
+              "type": "number"
+            },
+            {
+              "text": "0.970708",
+              "raw": 0.970708,
+              "type": "number"
+            },
+            {
+              "text": "0.029292",
+              "raw": 0.029292,
+              "type": "number"
             }
           ]
         },
@@ -24672,6 +25007,61 @@
               "type": "number",
               "context": "海淘组",
               "numberFormat": "General"
+            },
+            {
+              "text": "0.0",
+              "raw": 0.0,
+              "type": "number"
+            },
+            {
+              "text": "0.860463",
+              "raw": 0.860463,
+              "type": "number"
+            },
+            {
+              "text": "0.839347",
+              "raw": 0.839347,
+              "type": "number"
+            },
+            {
+              "text": "2.1116",
+              "raw": 2.1116,
+              "type": "number"
+            },
+            {
+              "text": "0.949736",
+              "raw": 0.949736,
+              "type": "number"
+            },
+            {
+              "text": "0.870047",
+              "raw": 0.870047,
+              "type": "number"
+            },
+            {
+              "text": "7.968900000000005",
+              "raw": 7.968900000000005,
+              "type": "number"
+            },
+            {
+              "text": "140759.96",
+              "raw": 140759.96,
+              "type": "number"
+            },
+            {
+              "text": "110329.1",
+              "raw": 110329.1,
+              "type": "number"
+            },
+            {
+              "text": "0.560598",
+              "raw": 0.560598,
+              "type": "number"
+            },
+            {
+              "text": "0.439402",
+              "raw": 0.439402,
+              "type": "number"
             }
           ]
         },
@@ -25453,6 +25843,61 @@
               "type": "number",
               "context": "总",
               "numberFormat": "General"
+            },
+            {
+              "text": "120.0",
+              "raw": 120.0,
+              "type": "number"
+            },
+            {
+              "text": "0.743141",
+              "raw": 0.743141,
+              "type": "number"
+            },
+            {
+              "text": "0.777447",
+              "raw": 0.777447,
+              "type": "number"
+            },
+            {
+              "text": "-3.4306",
+              "raw": -3.4306,
+              "type": "number"
+            },
+            {
+              "text": "0.723498",
+              "raw": 0.723498,
+              "type": "number"
+            },
+            {
+              "text": "0.8081469999999998",
+              "raw": 0.8081469999999998,
+              "type": "number"
+            },
+            {
+              "text": "-8.464899999999986",
+              "raw": -8.464899999999986,
+              "type": "number"
+            },
+            {
+              "text": "28415238.86",
+              "raw": 28415238.86,
+              "type": "number"
+            },
+            {
+              "text": "2514496.09",
+              "raw": 2514496.09,
+              "type": "number"
+            },
+            {
+              "text": "0.918703",
+              "raw": 0.918703,
+              "type": "number"
+            },
+            {
+              "text": "0.081297",
+              "raw": 0.081297,
+              "type": "number"
             }
           ]
         }
