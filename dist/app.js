@@ -51,7 +51,7 @@
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
   function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608030940'); }
-  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
+  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -295,10 +295,12 @@
     return '<div class="section-title"><span></span>五星价格力 & 大爆款效率 · MTD</div>'+renderRows([headerRow(headers)].concat(rows));
   }
   function renderTrafficPanel(){
-    var data=state.trafficData;
+    var data=state.trafficFlowData;
     if(!data) return '<div class="loading">暂无流量数据</div>';
     var html='';
-    function fmt(n){ if(n==null) return '—'; if(n>=1e8) return (n/1e8).toFixed(2)+'亿'; if(n>=1e4) return (n/1e4).toFixed(0)+'万'; return n.toString(); }
+    var selectedGroup=state.periods.traffic_group||'精品总';
+    
+    function fmt(n){ if(n==null) return '—'; if(n>=1e8) return (n/1e8).toFixed(2)+'亿'; if(n>=1e4) return (n/1e4).toFixed(0)+'万'; return n.toLocaleString('zh-CN'); }
     function yoyPill(y){
       if(y==null) return '<span class="yoy-pill" style="color:#6b849e">—</span>';
       var cls=y>=0?'up':'down';
@@ -306,47 +308,69 @@
       var s=arrow+' '+Math.abs(y).toFixed(2)+'%';
       return '<span class="yoy-pill '+cls+'">'+s+'</span>';
     }
-    function renderTable(title, items){
-      var h='<div class="section-title"><span></span>'+escapeHtml(title)+'</div>';
-      h+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
-      h+='<th class="excel-cell is-header is-row-label">小组</th>';
-      h+='<th class="excel-cell is-header">曝光流量</th>';
-      h+='<th class="excel-cell is-header">曝光同比</th>';
-      h+='<th class="excel-cell is-header">商详UV</th>';
-      h+='<th class="excel-cell is-header">UV同比</th>';
-      h+='</tr></thead><tbody>';
-      var ordered=items.slice().map(function(it){return Object.assign({},it,{group:normalizeGroupName(it.group)});}).sort(function(a,b){return (a.group==='精品总')-(b.group==='精品总');});
-      ordered.forEach(function(it){
-        var isTotal=(it.group==='精品总');
-        var rowCls=isTotal?'total-row':'';
-        h+='<tr class="'+rowCls+'">';
-        h+='<td class="excel-cell is-row-label">'+escapeHtml(it.group)+'</td>';
-        h+='<td class="excel-cell">'+fmt(it.exposureTraffic)+'</td>';
-        h+='<td class="excel-cell">'+yoyPill(it.exposureTrafficYoy)+'</td>';
-        h+='<td class="excel-cell">'+fmt(it.detailUv)+'</td>';
-        h+='<td class="excel-cell">'+yoyPill(it.detailUvYoy)+'</td>';
-        h+='</tr>';
-      });
-      h+='</tbody></table></div>';
-      return h;
-    }
-    var mainGroups=data.mtd?data.mtd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
-    var ytdGroups=data.ytd?data.ytd.filter(function(x){return ['精品总计','饰品2组','珠宝1组','饰品1组','珠宝2组','珠宝3组','海淘组'].indexOf(x.group)>=0;}):[];
-    var today=new Date();
-    var mtdStart='7.1';
-    var mtdEnd=(today.getMonth()+1)+'.'+today.getDate();
-    var ytdStart='1.1';
-    var ytdEnd=mtdEnd;
-    // 如果traffic_uv.json中有dateRange字段则优先使用
-    if(data.dateRange){
-      mtdStart=data.dateRange.mtdStart||mtdStart;
-      mtdEnd=data.dateRange.mtdEnd||mtdEnd;
-      ytdStart=data.dateRange.ytdStart||ytdStart;
-      ytdEnd=data.dateRange.ytdEnd||ytdEnd;
-    }
-    html+=renderTable('曝光流量 & 商详UV · MTD（'+mtdStart+'-'+mtdEnd+'）', mainGroups);
-    html+=renderTable('曝光流量 & 商详UV · YTD（'+ytdStart+'-'+ytdEnd+'）', ytdGroups);
-    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：ONEDP中台智能体API · 曝光流量=impressionFlow（跨商品累加值）</div>';
+    
+    // 模块1：当月MTD汇总
+    var sourceDate=data.source_date||'—';
+    html+='<div class="section-title"><span></span>曝光流量 & 浏览流量 · 当月MTD（截止 '+escapeHtml(sourceDate)+'）</div>';
+    html+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
+    html+='<th class="excel-cell is-header is-row-label">小组</th>';
+    html+='<th class="excel-cell is-header">曝光流量</th>';
+    html+='<th class="excel-cell is-header">曝光同比</th>';
+    html+='<th class="excel-cell is-header">浏览流量</th>';
+    html+='<th class="excel-cell is-header">浏览同比</th>';
+    html+='<th class="excel-cell is-header">商详UV</th>';
+    html+='</tr></thead><tbody>';
+    
+    var mtdData=data.mtd||[];
+    var ordered=mtdData.slice().sort(function(a,b){return (a.group==='精品总')-(b.group==='精品总');});
+    ordered.forEach(function(it){
+      var isTotal=(it.group==='精品总');
+      var rowCls=isTotal?'total-row':'';
+      html+='<tr class="'+rowCls+'">';
+      html+='<td class="excel-cell is-row-label">'+escapeHtml(it.group)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.exposure)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(it.exposure_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.browse)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(it.browse_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.uv)+'</td>';
+      html+='</tr>';
+    });
+    html+='</tbody></table></div>';
+    
+    // 模块2：当月明细（支持筛选小组）
+    html+='<div class="section-title" style="margin-top:16px"><span></span>当月流量明细</div>';
+    html+='<div class="filter-bar">';
+    var groups=['精品总','海淘组','珠宝1组','珠宝2组','珠宝3组','饰品1组','饰品2组'];
+    groups.forEach(function(g){
+      var active=selectedGroup===g?' active':'';
+      html+='<button class="filter-btn'+active+'" data-section="traffic_group" data-period="'+g+'">'+g+'</button>';
+    });
+    html+='</div>';
+    
+    // 显示筛选小组的每日数据
+    var dailyData=data.daily||[];
+    html+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
+    html+='<th class="excel-cell is-header is-row-label">日期</th>';
+    html+='<th class="excel-cell is-header">曝光流量</th>';
+    html+='<th class="excel-cell is-header">曝光同比</th>';
+    html+='<th class="excel-cell is-header">浏览流量</th>';
+    html+='<th class="excel-cell is-header">浏览同比</th>';
+    html+='<th class="excel-cell is-header">商详UV</th>';
+    html+='</tr></thead><tbody>';
+    
+    dailyData.forEach(function(it){
+      html+='<tr>';
+      html+='<td class="excel-cell is-row-label">'+escapeHtml(it.date)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.exposure)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(it.exposure_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.browse)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(it.browse_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(it.uv)+'</td>';
+      html+='</tr>';
+    });
+    html+='</tbody></table></div>';
+    
+    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：销售看板Excel · 总览表O-P列+BY-BZ列</div>';
     return html;
   }
   function renderGrossProfit(section){
