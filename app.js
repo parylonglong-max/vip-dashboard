@@ -348,7 +348,7 @@
     html+='</div>';
     
     // 显示筛选小组的每日数据
-    var dailyData=data.daily||[];
+    var dailyData=(data.daily&&data.daily[selectedGroup])||[];
     html+='<div class="excel-scroll"><table class="excel-table"><thead><tr>';
     html+='<th class="excel-cell is-header is-row-label">日期</th>';
     html+='<th class="excel-cell is-header">曝光流量</th>';
