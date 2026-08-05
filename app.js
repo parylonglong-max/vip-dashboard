@@ -51,7 +51,7 @@
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
   function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608030940'); }
-  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){})]); }
+  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -525,12 +525,75 @@
     });
     return html+'</div></section>';
   }
+  function renderProblemBrandsSection(){
+    var data=state.problemBrandsData;
+    if(!data||!data.problems||data.problems.length===0) return '';
+    
+    var html='<section class="problem-brands-section">';
+    html+='<div class="section-title"><span></span>问题品牌提醒 <small>（数据截至 '+escapeHtml(data.source_date||'—')+'）</small></div>';
+    html+='<div class="problem-brands-summary">';
+    html+='<span class="problem-count">共 <b>'+data.total_problem_count+'</b> 个问题品牌</span>';
+    if(data.overall_problem_count>0) html+='<span class="problem-tag overall">整体调价率≤10%: '+data.overall_problem_count+'个</span>';
+    if(data.six_high_problem_count>0) html+='<span class="problem-tag six-high">六高调价率<80%: '+data.six_high_problem_count+'个</span>';
+    html+='</div>';
+    
+    html+='<div class="excel-scroll"><table class="excel-table problem-brands-table"><thead><tr>';
+    html+='<th class="excel-cell is-header is-row-label">品牌</th>';
+    html+='<th class="excel-cell is-header">小组</th>';
+    html+='<th class="excel-cell is-header">价高商品数<br><small>(整体)</small></th>';
+    html+='<th class="excel-cell is-header">调价数<br><small>(整体)</small></th>';
+    html+='<th class="excel-cell is-header">调价率<br><small>(整体)</small></th>';
+    html+='<th class="excel-cell is-header">六高价高数</th>';
+    html+='<th class="excel-cell is-header">六高调价数</th>';
+    html+='<th class="excel-cell is-header">六高调价率</th>';
+    html+='<th class="excel-cell is-header">问题类型</th>';
+    html+='</tr></thead><tbody>';
+    
+    data.problems.forEach(function(p){
+      html+='<tr>';
+      html+='<td class="excel-cell is-row-label"><b>'+escapeHtml(p.brand||'—')+'</b><br><small>SN: '+escapeHtml(p.sn||'')+'</small></td>';
+      html+='<td class="excel-cell">'+escapeHtml(p.group||'—')+'</td>';
+      
+      // 整体调价率
+      var overallRate=p.overall_rate;
+      var overallRateText=overallRate!=null?(overallRate*100).toFixed(1)+'%':'—';
+      var overallRateClass=overallRate!=null&&overallRate<=0.10?'problem-rate':'normal-rate';
+      html+='<td class="excel-cell">'+(p.overall_denominator||0).toLocaleString('zh-CN')+'</td>';
+      html+='<td class="excel-cell">'+(p.overall_adjusted||0).toLocaleString('zh-CN')+'</td>';
+      html+='<td class="excel-cell '+overallRateClass+'">'+overallRateText+'</td>';
+      
+      // 六高调价率
+      var sixHighRate=p.six_high_rate;
+      var sixHighRateText=sixHighRate!=null?(sixHighRate*100).toFixed(1)+'%':'—';
+      var sixHighRateClass=sixHighRate!=null&&sixHighRate<0.80?'problem-rate':'normal-rate';
+      html+='<td class="excel-cell">'+(p.six_high_price_high||0).toLocaleString('zh-CN')+'</td>';
+      html+='<td class="excel-cell">'+(p.six_high_adjusted||0).toLocaleString('zh-CN')+'</td>';
+      html+='<td class="excel-cell '+sixHighRateClass+'">'+sixHighRateText+'</td>';
+      
+      // 问题类型
+      var issueTypes=[];
+      if(p.is_overall_problem) issueTypes.push('<span class="issue-tag overall">整体≤10%</span>');
+      if(p.is_six_high_problem) issueTypes.push('<span class="issue-tag six-high">六高<80%</span>');
+      html+='<td class="excel-cell">'+issueTypes.join(' ')+'</td>';
+      html+='</tr>';
+    });
+    
+    html+='</tbody></table></div>';
+    html+='<div class="problem-brands-note"><small>筛选规则：① 整体调价率：价高商品数>10 且 调价率≤10%；② 六高调价率：调价率<80%</small></div>';
+    html+='</section>';
+    return html;
+  }
+
   function renderBrandAdjustmentPanel(){
     var d=state.brandAdjustmentData;
     if(!d) return '<div class="loading">暂无品牌调价率数据</div>';
     var matches=brandMatches(state.brandQuery);
     var selected=(d.brands||[]).find(function(b){return b.sn===state.selectedBrandSn;});
     var html='<section class="brand-search-card"><label for="brandSearchInput">搜索品牌</label><div class="brand-search-wrap"><span class="brand-search-icon">⌕</span><input id="brandSearchInput" type="search" autocomplete="off" inputmode="search" placeholder="输入品牌名称或品牌SN" value="'+escapeHtml(state.brandQuery)+'"><button type="button" class="brand-clear" aria-label="清空品牌搜索">×</button></div>'+renderBrandSearchResults(matches)+'</section>';
+    
+    // 问题品牌提醒区域
+    html+=renderProblemBrandsSection();
+    
     if(!selected){
       html+='<section class="brand-onboarding"><b>选择品牌查看本月调价率</b><span>支持中文、英文品牌名和品牌SN模糊搜索</span><small>数据截至 '+escapeHtml(d.source_date||'—')+'</small></section>';
       return html;
