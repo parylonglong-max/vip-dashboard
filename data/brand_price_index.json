@@ -1,0 +1,46 @@
+{
+  "source_date": "2026-08-01",
+  "updated_at": "2026-08-05 19:27",
+  "groups": [
+    {
+      "group": "饰品2组",
+      "brands": [
+        {
+          "sn": "10202401",
+          "brand": "白岚BN",
+          "level": "国内C",
+          "high_value_tag": "非高价值品牌",
+          "shenyin_tag": "新银河",
+          "tmall": {
+            "mtd": {
+              "records": 284.0,
+              "inner_price": 165746.0,
+              "outer_price": 167130.7,
+              "rate": 99.17148674660011
+            },
+            "ytd": {
+              "records": 284.0,
+              "inner_price": 165746.0,
+              "outer_price": 167130.7,
+              "rate": 99.17148674660011
+            }
+          },
+          "douyin": {
+            "mtd": {
+              "records": 94.0,
+              "inner_price": 50456.0,
+              "outer_price": 51646.0,
+              "rate": 97.6958525345622
+            },
+            "ytd": {
+              "records": 94.0,
+              "inner_price": 50456.0,
+              "outer_price": 51646.0,
+              "rate": 97.6958525345622
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

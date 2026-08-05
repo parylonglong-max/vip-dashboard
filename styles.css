@@ -1004,3 +1004,18 @@ body {
 .problem-brands-note{margin-top:8px;padding:6px 8px;background:#f9fafb;border-radius:6px}
 .problem-brands-note small{font-size:9px;color:#6b7280;line-height:1.4}
 @media(max-width:480px){.problem-brands-section{padding:10px}.problem-brands-table{font-size:10px}.problem-brands-table th,.problem-brands-table td{padding:5px 6px}.problem-brands-table td.is-row-label b{font-size:11px}}
+
+/* 品牌视角外网价格指数 */
+.brand-price-index-section{margin:0 0 12px;padding:12px;border:1px solid var(--bi-border);border-radius:14px;background:#fff}
+.brand-price-index-section .section-title{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:13px;font-weight:800;color:var(--bi-text)}
+.brand-price-index-section .section-title small{font-size:10px;font-weight:600;color:#7b8fa6}
+.price-index-subsection{margin:12px 0 0}
+.price-index-subsection:first-child{margin-top:8px}
+.subsection-title{font-size:12px;font-weight:800;color:#1d4ed8;margin-bottom:8px;padding:6px 10px;background:rgba(29,78,216,.06);border-radius:6px;border-left:3px solid #1d4ed8}
+.brand-price-index-table{width:100%;border-collapse:collapse;font-size:11px}
+.brand-price-index-table th,.brand-price-index-table td{padding:6px 8px;border:1px solid #e5e7eb;text-align:left;vertical-align:middle}
+.brand-price-index-table th{background:#f9fafb;font-weight:700;color:#374151;font-size:10px}
+.brand-price-index-table td.is-row-label{background:#f9fafb;font-weight:600}
+.brand-price-index-table td.is-row-label b{display:block;color:#1f2937;font-size:12px}
+.brand-price-index-table td.is-row-label small{display:block;color:#6b7280;font-size:9px;font-weight:400;margin-top:2px}
+@media(max-width:480px){.brand-price-index-section{padding:10px}.brand-price-index-table{font-size:10px}.brand-price-index-table th,.brand-price-index-table td{padding:5px 6px}.brand-price-index-table td.is-row-label b{font-size:11px}}
