@@ -1,0 +1,13 @@
+ M app.js
+ M data/adjustment_rate.json
+ M data/brand_adjustment_rate.json
+ M data/excel_view.json
+ M data/six_high_price_index.json
+ M dist/app.js
+ M dist/data/adjustment_rate.json
+ M dist/data/brand_adjustment_rate.json
+ M dist/data/excel_view.json
+ M dist/data/six_high_price_index.json
+?? backups/frontend/20260804-100438/
+?? backups/frontend/20260804-153938/
+?? backups/frontend/20260805-141508/

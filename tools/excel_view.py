@@ -561,7 +561,15 @@ def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
     formula_ws = formula_wb["Sheet1"]
     # 动态计算各模块行范围（替代硬编码）
     _resolve_section_ranges(value_ws)
-    data_date = excel_date_to_str(evaluate_cell_value(value_ws, formula_ws, 1, 3))
+    raw_cutoff = evaluate_cell_value(value_ws, formula_ws, 1, 3)
+    # 监控表 C1 记录的是“数据次日零点”（例如 8月5日 00:00），
+    # 前端业务口径必须显示实际数据截止日（例如 8月4日）。
+    if isinstance(raw_cutoff, datetime):
+        data_date = (raw_cutoff - timedelta(days=1)).strftime("%Y-%m-%d")
+    elif isinstance(raw_cutoff, (int, float)):
+        data_date = (datetime(1899, 12, 30) + timedelta(days=int(raw_cutoff) - 1)).strftime("%Y-%m-%d")
+    else:
+        data_date = excel_date_to_str(raw_cutoff)
     sections = [build_section(value_ws, formula_ws, spec) for spec in SECTION_SPECS]
     value_wb.close()
     formula_wb.close()
@@ -610,6 +618,8 @@ if __name__ == "__main__":
     parser.add_argument("excel_path")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
+    # 供 build_excel_view 定位输出目录旁的 six_high_price_index.json。
+    args_output = args.output
     data = build_excel_view(args.excel_path)
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)

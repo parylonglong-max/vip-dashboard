@@ -100,7 +100,22 @@
   function headerRow(names){ return {excelRow:0,cells:names.map(function(name){return {text:name,raw:name,type:"text",header:true};})}; }
   function renderRows(rows, tableClass){ var normalized=normalizeAndSortTotalRows(rows); var html='<div class="excel-scroll"><table class="excel-table '+(tableClass||'')+'">'; normalized.forEach(function(row,rowIndex){ var total=isTotalRow(row)?" total-row":""; html+='<tr class="'+total+'" data-excel-row="'+row.excelRow+'">'; (row.cells||[]).forEach(function(cell,colIndex){html+=renderCell(cell,rowIndex,colIndex);}); html+='</tr>'; }); html+='</table></div>'; return html; }
 
-  function salesMtdTableSection(section){ var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10)};}); rows=markHeaders(rows,1); return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows); }
+  function salesMoneyDisplayCell(cell){
+    if(!cell||typeof cell.raw!=="number") return cell;
+    var n=cell.raw, abs=Math.abs(n);
+    if(abs>=1e8){cell.text=(n/1e8).toFixed(2);cell.unit='亿';}
+    else if(abs>=1e4){cell.text=(n/1e4).toFixed(1);cell.unit='万';}
+    return cell;
+  }
+  function salesMtdTableSection(section){
+    var rows=(section.rows||[]).filter(function(row){return row.excelRow>=5&&row.excelRow<=12;}).map(function(row){
+      var cells=cloneCells(row.cells).slice(0,10);
+      [1,2,4,6,8].forEach(function(i){salesMoneyDisplayCell(cells[i]);});
+      return {excelRow:row.excelRow,cells:cells};
+    });
+    rows=markHeaders(rows,1);
+    return '<div class="section-title"><span></span>自营销售 · MTD</div>'+renderRows(rows);
+  }
 
   function blankCell(){ return {text:"",raw:null,type:"blank"}; }
   function cloneCells(cells){ return (cells||[]).map(function(c){return Object.assign({},c||blankCell());}); }
@@ -109,7 +124,7 @@
     if(sectionId==='self_sales_history'){
       var mtd=getSection('self_sales_mtd');
       var rows=(mtd&&mtd.rows||[]).filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){
-        var cells=cloneCells(row.cells).slice(0,6); normalizeTotalCell(cells[0]); ratePctCell(cells[3]); growthPctCell(cells[5]); return {excelRow:row.excelRow,cells:cells};
+        var cells=cloneCells(row.cells).slice(0,6); normalizeTotalCell(cells[0]); [1,2,4].forEach(function(i){salesMoneyDisplayCell(cells[i]);}); ratePctCell(cells[3]); growthPctCell(cells[5]); return {excelRow:row.excelRow,cells:cells};
       });
       return [headerRow(['小组','7月目标','7月完成','7月完成率','同期','业绩同比'])].concat(rows);
     }
