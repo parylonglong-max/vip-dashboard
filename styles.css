@@ -1015,7 +1015,7 @@ body {
 .brand-price-index-table{width:100%;border-collapse:collapse;font-size:11px}
 .brand-price-index-table th,.brand-price-index-table td{padding:6px 8px;border:1px solid #e5e7eb;text-align:left;vertical-align:middle}
 .brand-price-index-table th{background:#f9fafb;font-weight:700;color:#374151;font-size:10px}
-.brand-price-index-table td.is-row-label{background:#f9fafb;font-weight:600}
-.brand-price-index-table td.is-row-label b{display:block;color:#1f2937;font-size:12px}
-.brand-price-index-table td.is-row-label small{display:block;color:#6b7280;font-size:9px;font-weight:400;margin-top:2px}
+.brand-price-index-table td.is-row-label{background:#f9fafb;font-weight:600;max-width:120px;overflow:hidden}
+.brand-price-index-table td.is-row-label b{display:block;color:#1f2937;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand-price-index-table td.is-row-label small{display:block;color:#6b7280;font-size:9px;font-weight:400;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media(max-width:480px){.brand-price-index-section{padding:10px}.brand-price-index-table{font-size:10px}.brand-price-index-table th,.brand-price-index-table td{padding:5px 6px}.brand-price-index-table td.is-row-label b{font-size:11px}}
