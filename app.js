@@ -593,6 +593,10 @@
     var groups=d.groups||[];
     var currentGroup=groups.find(function(g){return g.group===selectedGroup;})||groups[0];
     
+    function fmtRate(v){ if(v==null) return '—'; return (v*100).toFixed(1)+'%'; }
+    function fmtDiff(v){ if(v==null) return '—'; var s=v>=0?'+':''; return s+v.toFixed(1)+'pp'; }
+    function diffClass(v){ if(v==null) return ''; return v>=0?'normal-rate':'problem-rate'; }
+    
     var html='<section class="brand-price-index-section">';
     html+='<div class="section-title"><span></span>品牌外网价格指数 <small>（数据截至 '+escapeHtml(d.source_date||'—')+'）</small></div>';
     
@@ -610,56 +614,37 @@
       return html;
     }
     
-    // 天猫区域
-    html+='<div class="price-index-subsection">';
-    html+='<div class="subsection-title">天猫</div>';
+    // 合并表格：天猫+抖音
     html+='<div class="excel-scroll"><table class="excel-table brand-price-index-table"><thead><tr>';
-    html+='<th class="excel-cell is-header is-row-label">品牌</th>';
-    html+='<th class="excel-cell is-header">等级</th>';
-    html+='<th class="excel-cell is-header">MTD 实际</th>';
-    html+='<th class="excel-cell is-header">YTD 实际</th>';
+    html+='<th class="excel-cell is-header is-row-label" rowspan="2">品牌</th>';
+    html+='<th class="excel-cell is-header" rowspan="2">等级</th>';
+    html+='<th class="excel-cell is-header" colspan="3">天猫</th>';
+    html+='<th class="excel-cell is-header" colspan="3">抖音</th>';
+    html+='</tr><tr>';
+    html+='<th class="excel-cell is-header">价格指数</th>';
+    html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
+    html+='<th class="excel-cell is-header">价格指数</th>';
+    html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
     html+='</tr></thead><tbody>';
     
     currentGroup.brands.forEach(function(b){
-      var tmallMtdRate=b.tmall&&b.tmall.mtd&&b.tmall.mtd.rate;
-      var tmallYtdRate=b.tmall&&b.tmall.ytd&&b.tmall.ytd.rate;
-      
       html+='<tr>';
       html+='<td class="excel-cell is-row-label"><b>'+escapeHtml(b.brand||'—')+'</b><br><small>SN: '+escapeHtml(b.sn||'')+'</small></td>';
       html+='<td class="excel-cell">'+escapeHtml(b.level||'—')+'</td>';
-      html+='<td class="excel-cell">'+(tmallMtdRate!=null?tmallMtdRate.toFixed(1)+'%':'—')+'</td>';
-      html+='<td class="excel-cell">'+(tmallYtdRate!=null?tmallYtdRate.toFixed(1)+'%':'—')+'</td>';
+      // 天猫
+      html+='<td class="excel-cell">'+fmtRate(b.tmall_rate)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.tmall_target)+'</td>';
+      html+='<td class="excel-cell '+diffClass(b.tmall_diff)+'">'+fmtDiff(b.tmall_diff)+'</td>';
+      // 抖音
+      html+='<td class="excel-cell">'+fmtRate(b.douyin_rate)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.douyin_target)+'</td>';
+      html+='<td class="excel-cell '+diffClass(b.douyin_diff)+'">'+fmtDiff(b.douyin_diff)+'</td>';
       html+='</tr>';
     });
     
     html+='</tbody></table></div>';
-    html+='</div>';
-    
-    // 抖音区域
-    html+='<div class="price-index-subsection">';
-    html+='<div class="subsection-title">抖音</div>';
-    html+='<div class="excel-scroll"><table class="excel-table brand-price-index-table"><thead><tr>';
-    html+='<th class="excel-cell is-header is-row-label">品牌</th>';
-    html+='<th class="excel-cell is-header">等级</th>';
-    html+='<th class="excel-cell is-header">MTD 实际</th>';
-    html+='<th class="excel-cell is-header">YTD 实际</th>';
-    html+='</tr></thead><tbody>';
-    
-    currentGroup.brands.forEach(function(b){
-      var douyinMtdRate=b.douyin&&b.douyin.mtd&&b.douyin.mtd.rate;
-      var douyinYtdRate=b.douyin&&b.douyin.ytd&&b.douyin.ytd.rate;
-      
-      html+='<tr>';
-      html+='<td class="excel-cell is-row-label"><b>'+escapeHtml(b.brand||'—')+'</b><br><small>SN: '+escapeHtml(b.sn||'')+'</small></td>';
-      html+='<td class="excel-cell">'+escapeHtml(b.level||'—')+'</td>';
-      html+='<td class="excel-cell">'+(douyinMtdRate!=null?douyinMtdRate.toFixed(1)+'%':'—')+'</td>';
-      html+='<td class="excel-cell">'+(douyinYtdRate!=null?douyinYtdRate.toFixed(1)+'%':'—')+'</td>';
-      html+='</tr>';
-    });
-    
-    html+='</tbody></table></div>';
-    html+='</div>';
-    
     html+='</section>';
     return html;
   }
