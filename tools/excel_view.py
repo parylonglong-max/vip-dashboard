@@ -71,6 +71,11 @@ def _get_section_range(ws, module_kw, sub_section=None, fallback=None):
     """获取模块内某个子区域的行范围"""
     if _find_module_range is None:
         return fallback
+    # 机采模块有两个区域（旧+新），动态检测会找到旧的，直接用 fallback
+    if module_kw == '机采':
+        if fallback:
+            return (fallback[0], fallback[1])
+        return fallback
     ranges = _compute_section_ranges(ws)
     mod_range = ranges.get(module_kw)
     if mod_range is None:
@@ -100,9 +105,9 @@ SECTION_SPECS = [
     {"id": "six_high", "title": "六高 · MTD", "range": (77, 86, 2, 16), "stickyCols": 1},
     {"id": "quality_product_mtd", "title": "优质款 · MTD", "range": (89, 98, 2, 7), "stickyCols": 1},
     {"id": "quality_product_history", "title": "优质款 · YTD / 历史月份", "range": (100, 109, 2, 37), "stickyCols": 1},
-    {"id": "machine_purchase_mtd", "title": "机采 · MTD", "range": (112, 118, 2, 9), "stickyCols": 1},
-    {"id": "machine_purchase_history", "title": "机采 · YTD / 历史月份", "range": (121, 126, 2, 37), "stickyCols": 1},
-    {"id": "price_power_mtd", "title": "五星价格力 & 大爆款效率 · MTD", "range": (129, 134, 2, 10), "stickyCols": 1},
+    {"id": "machine_purchase_mtd", "title": "机采 · MTD", "range": (128, 135, 2, 9), "stickyCols": 1},
+    {"id": "machine_purchase_history", "title": "机采 · YTD / 历史月份", "range": (137, 143, 2, 37), "stickyCols": 1},
+    {"id": "price_power_mtd", "title": "五星价格力 & 大爆款效率 · MTD", "range": (145, 150, 2, 10), "stickyCols": 1},
     {"id": "price_power_history", "title": "五星价格力 & 大爆款效率 · YTD / 历史月份", "range": (137, 152, 2, 11), "stickyCols": 2},
 ]
 
@@ -117,9 +122,9 @@ _DYNAMIC_RANGE_MAP = {
     "six_high": ("六高", "MTD", (77, 86, 2, 16)),
     "quality_product_mtd": ("优质款", "MTD", (89, 98, 2, 7)),
     "quality_product_history": ("优质款", "YTD", (100, 109, 2, 37)),
-    "machine_purchase_mtd": ("机采", "MTD", (112, 118, 2, 9)),
-    "machine_purchase_history": ("机采", "YTD", (121, 126, 2, 37)),
-    "price_power_mtd": ("五星价格力", None, (129, 134, 2, 10)),
+    "machine_purchase_mtd": ("机采", "MTD", (128, 135, 2, 9)),
+    "machine_purchase_history": ("机采", "YTD", (137, 143, 2, 37)),
+    "price_power_mtd": ("五星价格力", None, (145, 150, 2, 10)),
     "price_power_history": ("五星价格力", "YTD", (137, 152, 2, 11)),
 }
 
