@@ -5,9 +5,9 @@
     "sourceFile": "货价监控指标副本-26.08.06_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-08-05",
-    "generatedAt": "2026-08-06 10:00:55",
-    "updatedAtHour": "2026-08-06 10点",
-    "versionNote": "更新于 2026-08-06 10点"
+    "generatedAt": "2026-08-06 15:44:51",
+    "updatedAtHour": "2026-08-06 15点",
+    "versionNote": "更新于 2026-08-06 15点"
   },
   "sections": [
     {
@@ -35945,22 +35945,22 @@
     {
       "id": "machine_purchase_mtd",
       "title": "机采 · MTD",
-      "range": "B128:I135",
+      "range": "B113:I119",
       "stickyCols": 1,
       "rows": [
         {
-          "excelRow": 129,
+          "excelRow": 113,
           "cells": [
             {
-              "coord": "B129",
+              "coord": "B113",
               "formula": "",
-              "raw": "高价值",
-              "text": "高价值",
+              "raw": "机采",
+              "text": "机采",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "C129",
+              "coord": "C113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -35968,7 +35968,7 @@
               "type": "blank"
             },
             {
-              "coord": "D129",
+              "coord": "D113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -35976,7 +35976,7 @@
               "type": "blank"
             },
             {
-              "coord": "E129",
+              "coord": "E113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -35984,7 +35984,7 @@
               "type": "blank"
             },
             {
-              "coord": "F129",
+              "coord": "F113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -35992,7 +35992,7 @@
               "type": "blank"
             },
             {
-              "coord": "G129",
+              "coord": "G113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -36000,7 +36000,7 @@
               "type": "blank"
             },
             {
-              "coord": "H129",
+              "coord": "H113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -36008,7 +36008,7 @@
               "type": "blank"
             },
             {
-              "coord": "I129",
+              "coord": "I113",
               "formula": "",
               "raw": null,
               "text": "",
@@ -36018,10 +36018,10 @@
           ]
         },
         {
-          "excelRow": 131,
+          "excelRow": 115,
           "cells": [
             {
-              "coord": "B131",
+              "coord": "B115",
               "formula": "",
               "raw": "小组",
               "text": "小组",
@@ -36029,7 +36029,7 @@
               "type": "text"
             },
             {
-              "coord": "C131",
+              "coord": "C115",
               "formula": "",
               "raw": "月度目标",
               "text": "月度目标",
@@ -36037,7 +36037,7 @@
               "type": "text"
             },
             {
-              "coord": "D131",
+              "coord": "D115",
               "formula": "",
               "raw": "月度完成",
               "text": "月度完成",
@@ -36045,7 +36045,7 @@
               "type": "text"
             },
             {
-              "coord": "E131",
+              "coord": "E115",
               "formula": "",
               "raw": "月完成率",
               "text": "月完成率",
@@ -36053,7 +36053,7 @@
               "type": "text"
             },
             {
-              "coord": "F131",
+              "coord": "F115",
               "formula": "",
               "raw": "同期",
               "text": "同期",
@@ -36061,7 +36061,7 @@
               "type": "text"
             },
             {
-              "coord": "G131",
+              "coord": "G115",
               "formula": "",
               "raw": "业绩同比",
               "text": "业绩同比",
@@ -36069,7 +36069,7 @@
               "type": "text"
             },
             {
-              "coord": "H131",
+              "coord": "H115",
               "formula": "",
               "raw": "阶段目标",
               "text": "阶段目标",
@@ -36077,7 +36077,7 @@
               "type": "text"
             },
             {
-              "coord": "I131",
+              "coord": "I115",
               "formula": "",
               "raw": "阶段完成",
               "text": "阶段完成",
@@ -36087,10 +36087,10 @@
           ]
         },
         {
-          "excelRow": 132,
+          "excelRow": 116,
           "cells": [
             {
-              "coord": "B132",
+              "coord": "B116",
               "formula": "",
               "raw": "精品总",
               "text": "精品总",
@@ -36098,82 +36098,82 @@
               "type": "text"
             },
             {
-              "coord": "C132",
-              "formula": "",
-              "raw": 0.203019128835018,
-              "text": "0.2",
-              "unit": "",
+              "coord": "C116",
+              "formula": "=SUM(C117:C119)",
+              "raw": 5330303.154202135,
+              "text": "533",
+              "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 精品总",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D132",
+              "coord": "D116",
               "formula": "",
-              "raw": 0.333799,
-              "text": "0.3",
-              "unit": "",
+              "raw": 260252.3,
+              "text": "26.0",
+              "unit": "万",
               "type": "number",
-              "context": "精品总",
+              "context": "月度完成 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E132",
-              "formula": "=D132/C132",
-              "raw": 1.6441751174652086,
-              "text": "1.6",
-              "unit": "",
+              "coord": "E116",
+              "formula": "=D116/C116",
+              "raw": 0.048825046619502405,
+              "text": "4.9%",
+              "unit": "%",
               "type": "number",
-              "context": "精品总",
+              "context": "月完成率 精品总",
               "numberFormat": "General"
             },
             {
-              "coord": "F132",
+              "coord": "F116",
               "formula": "",
-              "raw": 2.0376362786555,
-              "text": "2",
-              "unit": "",
+              "raw": 742686.66,
+              "text": "74.3",
+              "unit": "万",
               "type": "number",
-              "context": "精品总",
+              "context": "同期 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G132",
-              "formula": "=D132/F132-1",
-              "raw": -0.8361832268611493,
-              "text": "-0.8",
-              "unit": "",
+              "coord": "G116",
+              "formula": "=D116/F116-1",
+              "raw": -0.6495799453298381,
+              "text": "-65.0%",
+              "unit": "%",
               "type": "number",
-              "context": "精品总",
+              "context": "业绩同比 精品总",
               "numberFormat": "General"
             },
             {
-              "coord": "H132",
-              "formula": "=SUM(H133:H135)",
-              "raw": 5157137.875461616,
-              "text": "516",
+              "coord": "H116",
+              "formula": "",
+              "raw": 515835.7891163357,
+              "text": "51.6",
               "unit": "万",
               "type": "number",
-              "context": "精品总",
+              "context": "阶段目标 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "I132",
-              "formula": "",
-              "raw": 7673062.86206897,
-              "text": "767",
-              "unit": "万",
+              "coord": "I116",
+              "formula": "=D116/H116",
+              "raw": 0.5045254817348582,
+              "text": "0.5",
+              "unit": "",
               "type": "number",
-              "context": "精品总",
+              "context": "阶段完成 精品总",
               "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 133,
+          "excelRow": 117,
           "cells": [
             {
-              "coord": "B133",
+              "coord": "B117",
               "formula": "",
               "raw": "海淘组",
               "text": "海淘组",
@@ -36181,82 +36181,82 @@
               "type": "text"
             },
             {
-              "coord": "C133",
+              "coord": "C117",
               "formula": "",
-              "raw": 0.0074680784267923,
-              "text": "0",
-              "unit": "",
-              "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 海淘组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "D133",
-              "formula": "",
-              "raw": 0.0287326608018543,
-              "text": "0",
-              "unit": "",
-              "type": "number",
-              "context": "海淘组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "E133",
-              "formula": "=D133/C133",
-              "raw": 3.8473967679254266,
-              "text": "3.8",
-              "unit": "",
-              "type": "number",
-              "context": "海淘组",
-              "numberFormat": "General"
-            },
-            {
-              "coord": "F133",
-              "formula": "",
-              "raw": 2.9061,
-              "text": "2.9",
-              "unit": "",
-              "type": "number",
-              "context": "海淘组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "G133",
-              "formula": "=D133/F133-1",
-              "raw": -0.9901129827597624,
-              "text": "-1",
-              "unit": "",
-              "type": "number",
-              "context": "海淘组",
-              "numberFormat": "General"
-            },
-            {
-              "coord": "H133",
-              "formula": "=C133*H12/C12",
-              "raw": 0.0014419957493235103,
-              "text": "0",
-              "unit": "",
-              "type": "number",
-              "context": "海淘组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "I133",
-              "formula": "",
-              "raw": 11419110,
-              "text": "1,142",
+              "raw": 1705697.00934468,
+              "text": "171",
               "unit": "万",
               "type": "number",
-              "context": "海淘组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "D117",
+              "formula": "",
+              "raw": 79195.15,
+              "text": "7.9",
+              "unit": "万",
+              "type": "number",
+              "context": "月度完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "E117",
+              "formula": "=D117/C117",
+              "raw": 0.046429787685695924,
+              "text": "4.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "月完成率 海淘组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "F117",
+              "formula": "",
+              "raw": 360445.58,
+              "text": "36.0",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "G117",
+              "formula": "=D117/F117-1",
+              "raw": -0.7802854178431041,
+              "text": "-78.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 海淘组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "H117",
+              "formula": "",
+              "raw": 165067.4525172271,
+              "text": "16.5",
+              "unit": "万",
+              "type": "number",
+              "context": "阶段目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "I117",
+              "formula": "=D117/H117",
+              "raw": 0.47977447275219126,
+              "text": "0.5",
+              "unit": "",
+              "type": "number",
+              "context": "阶段完成 海淘组",
               "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 134,
+          "excelRow": 118,
           "cells": [
             {
-              "coord": "B134",
+              "coord": "B118",
               "formula": "",
               "raw": "饰品1组",
               "text": "饰品1组",
@@ -36264,82 +36264,82 @@
               "type": "text"
             },
             {
-              "coord": "C134",
+              "coord": "C118",
               "formula": "",
-              "raw": 1413193.74949892,
-              "text": "141",
+              "raw": 2665151.57710107,
+              "text": "267",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 饰品1组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D134",
+              "coord": "D118",
               "formula": "",
-              "raw": 521141.55,
-              "text": "52.1",
+              "raw": 181057.15,
+              "text": "18.1",
               "unit": "万",
               "type": "number",
-              "context": "饰品1组",
+              "context": "月度完成 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E134",
-              "formula": "=D134/C134",
-              "raw": 0.36876864915711843,
-              "text": "0.4",
-              "unit": "",
+              "coord": "E118",
+              "formula": "=D118/C118",
+              "raw": 0.06793502912015942,
+              "text": "6.8%",
+              "unit": "%",
               "type": "number",
-              "context": "饰品1组",
+              "context": "月完成率 饰品1组",
               "numberFormat": "General"
             },
             {
-              "coord": "F134",
+              "coord": "F118",
               "formula": "",
-              "raw": 303834.57,
-              "text": "30.4",
+              "raw": 377869.71,
+              "text": "37.8",
               "unit": "万",
               "type": "number",
-              "context": "饰品1组",
+              "context": "同期 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G134",
-              "formula": "=D134/F134-1",
-              "raw": 0.71521479599902,
+              "coord": "G118",
+              "formula": "=D118/F118-1",
+              "raw": -0.5208476752476403,
+              "text": "-52.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "H118",
+              "formula": "",
+              "raw": 257917.894558168,
+              "text": "25.8",
+              "unit": "万",
+              "type": "number",
+              "context": "阶段目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "I118",
+              "formula": "=D118/H118",
+              "raw": 0.7019953009083142,
               "text": "0.7",
               "unit": "",
               "type": "number",
-              "context": "饰品1组",
-              "numberFormat": "General"
-            },
-            {
-              "coord": "H134",
-              "formula": "=C134*H12/C12",
-              "raw": 272870.6453372482,
-              "text": "27.3",
-              "unit": "万",
-              "type": "number",
-              "context": "饰品1组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "I134",
-              "formula": "=D134/H134",
-              "raw": 1.9098483435472036,
-              "text": "1.9",
-              "unit": "",
-              "type": "number",
-              "context": "饰品1组",
+              "context": "阶段完成 饰品1组",
               "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 135,
+          "excelRow": 119,
           "cells": [
             {
-              "coord": "B135",
+              "coord": "B119",
               "formula": "",
               "raw": "饰品2组",
               "text": "饰品2组",
@@ -36347,73 +36347,71 @@
               "type": "text"
             },
             {
-              "coord": "C135",
+              "coord": "C119",
               "formula": "",
-              "raw": 25295560.5023965,
-              "text": "2,530",
+              "raw": 959454.567756386,
+              "text": "95.9",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 饰品2组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D135",
+              "coord": "D119",
               "formula": "",
-              "raw": 9187479.37,
-              "text": "919",
-              "unit": "万",
-              "type": "number",
-              "context": "饰品2组",
-              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
-            },
-            {
-              "coord": "E135",
-              "formula": "=D135/C135",
-              "raw": 0.36320521022372987,
-              "text": "0.4",
+              "raw": null,
+              "text": "",
               "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "E119",
+              "formula": "=D119/C119",
+              "raw": 0.0,
+              "text": "0.0%",
+              "unit": "%",
               "type": "number",
-              "context": "饰品2组",
+              "context": "月完成率 饰品2组",
               "numberFormat": "General"
             },
             {
-              "coord": "F135",
+              "coord": "F119",
               "formula": "",
-              "raw": 11601360.87,
-              "text": "1,160",
-              "unit": "万",
+              "raw": 4371.37,
+              "text": "4,371.4",
+              "unit": "",
               "type": "number",
-              "context": "饰品2组",
+              "context": "同期 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G135",
-              "formula": "=D135/F135-1",
-              "raw": -0.20806882287767337,
-              "text": "-0.2",
-              "unit": "",
+              "coord": "G119",
+              "formula": "=D119/F119-1",
+              "raw": -1.0,
+              "text": "-100.0%",
+              "unit": "%",
               "type": "number",
-              "context": "饰品2组",
+              "context": "业绩同比 饰品2组",
               "numberFormat": "General"
             },
             {
-              "coord": "H135",
-              "formula": "=C135*H12/C12",
-              "raw": 4884267.228682372,
-              "text": "488",
+              "coord": "H119",
+              "formula": "",
+              "raw": 92850.44204094059,
+              "text": "9.3",
               "unit": "万",
               "type": "number",
-              "context": "饰品2组",
+              "context": "阶段目标 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "I135",
-              "formula": "=D135/H135",
-              "raw": 1.8810353610563,
-              "text": "1.9",
+              "coord": "I119",
+              "formula": "=D119/H119",
+              "raw": 0.0,
+              "text": "0",
               "unit": "",
               "type": "number",
-              "context": "饰品2组",
+              "context": "阶段完成 饰品2组",
               "numberFormat": "General"
             }
           ]
@@ -36423,20 +36421,20 @@
     {
       "id": "machine_purchase_history",
       "title": "机采 · YTD / 历史月份",
-      "range": "B137:AK143",
+      "range": "B121:AK127",
       "stickyCols": 1,
       "rows": [
         {
-          "excelRow": 138,
+          "excelRow": 122,
           "cells": [
             {
-              "coord": "B138",
+              "coord": "B122",
               "formula": "",
               "merge": {
                 "rowspan": 2,
                 "colspan": 1,
                 "covered": false,
-                "range": "B138:B139"
+                "range": "B122:B123"
               },
               "raw": "小组",
               "text": "小组",
@@ -36444,13 +36442,13 @@
               "type": "text"
             },
             {
-              "coord": "C138",
+              "coord": "C122",
               "formula": "",
               "merge": {
                 "rowspan": 1,
                 "colspan": 5,
                 "covered": false,
-                "range": "C138:G138"
+                "range": "C122:G122"
               },
               "raw": "YTD",
               "text": "YTD",
@@ -36458,11 +36456,11 @@
               "type": "text"
             },
             {
-              "coord": "D138",
+              "coord": "D122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "C138:G138"
+                "range": "C122:G122"
               },
               "raw": "YTD",
               "text": "YTD",
@@ -36470,11 +36468,11 @@
               "type": "text"
             },
             {
-              "coord": "E138",
+              "coord": "E122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "C138:G138"
+                "range": "C122:G122"
               },
               "raw": "YTD",
               "text": "YTD",
@@ -36482,11 +36480,11 @@
               "type": "text"
             },
             {
-              "coord": "F138",
+              "coord": "F122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "C138:G138"
+                "range": "C122:G122"
               },
               "raw": "YTD",
               "text": "YTD",
@@ -36494,11 +36492,11 @@
               "type": "text"
             },
             {
-              "coord": "G138",
+              "coord": "G122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "C138:G138"
+                "range": "C122:G122"
               },
               "raw": "YTD",
               "text": "YTD",
@@ -36506,278 +36504,388 @@
               "type": "text"
             },
             {
-              "coord": "H138",
+              "coord": "H122",
               "formula": "",
               "merge": {
                 "rowspan": 1,
                 "colspan": 5,
                 "covered": false,
-                "range": "H138:L138"
+                "range": "H122:L122"
               },
-              "raw": "7月",
-              "text": "7月",
+              "raw": "1月",
+              "text": "1月",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "I138",
+              "coord": "I122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "H138:L138"
+                "range": "H122:L122"
               },
-              "raw": "7月",
-              "text": "7月",
+              "raw": "1月",
+              "text": "1月",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "J138",
+              "coord": "J122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "H138:L138"
+                "range": "H122:L122"
               },
-              "raw": "7月",
-              "text": "7月",
+              "raw": "1月",
+              "text": "1月",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "K138",
+              "coord": "K122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "H138:L138"
+                "range": "H122:L122"
               },
-              "raw": "7月",
-              "text": "7月",
+              "raw": "1月",
+              "text": "1月",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "L138",
+              "coord": "L122",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "H138:L138"
+                "range": "H122:L122"
               },
-              "raw": "7月",
-              "text": "7月",
+              "raw": "1月",
+              "text": "1月",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "M138",
+              "coord": "M122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "rowspan": 1,
+                "colspan": 5,
+                "covered": false,
+                "range": "M122:Q122"
+              },
+              "raw": "2月",
+              "text": "2月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "N138",
+              "coord": "N122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "M122:Q122"
+              },
+              "raw": "2月",
+              "text": "2月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "O138",
+              "coord": "O122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "M122:Q122"
+              },
+              "raw": "2月",
+              "text": "2月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "P138",
+              "coord": "P122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "M122:Q122"
+              },
+              "raw": "2月",
+              "text": "2月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Q138",
+              "coord": "Q122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "M122:Q122"
+              },
+              "raw": "2月",
+              "text": "2月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "R138",
+              "coord": "R122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "rowspan": 1,
+                "colspan": 5,
+                "covered": false,
+                "range": "R122:V122"
+              },
+              "raw": "3月",
+              "text": "3月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "S138",
+              "coord": "S122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "R122:V122"
+              },
+              "raw": "3月",
+              "text": "3月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "T138",
+              "coord": "T122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "R122:V122"
+              },
+              "raw": "3月",
+              "text": "3月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "U138",
+              "coord": "U122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "R122:V122"
+              },
+              "raw": "3月",
+              "text": "3月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "V138",
+              "coord": "V122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "R122:V122"
+              },
+              "raw": "3月",
+              "text": "3月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "W138",
+              "coord": "W122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "rowspan": 1,
+                "colspan": 5,
+                "covered": false,
+                "range": "W122:AA122"
+              },
+              "raw": "4月",
+              "text": "4月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "X138",
+              "coord": "X122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "W122:AA122"
+              },
+              "raw": "4月",
+              "text": "4月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Y138",
+              "coord": "Y122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "W122:AA122"
+              },
+              "raw": "4月",
+              "text": "4月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Z138",
+              "coord": "Z122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "W122:AA122"
+              },
+              "raw": "4月",
+              "text": "4月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AA138",
+              "coord": "AA122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "W122:AA122"
+              },
+              "raw": "4月",
+              "text": "4月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AB138",
+              "coord": "AB122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "rowspan": 1,
+                "colspan": 5,
+                "covered": false,
+                "range": "AB122:AF122"
+              },
+              "raw": "5月",
+              "text": "5月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AC138",
+              "coord": "AC122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AB122:AF122"
+              },
+              "raw": "5月",
+              "text": "5月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AD138",
+              "coord": "AD122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AB122:AF122"
+              },
+              "raw": "5月",
+              "text": "5月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AE138",
+              "coord": "AE122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AB122:AF122"
+              },
+              "raw": "5月",
+              "text": "5月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AF138",
+              "coord": "AF122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AB122:AF122"
+              },
+              "raw": "5月",
+              "text": "5月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AG138",
+              "coord": "AG122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "rowspan": 1,
+                "colspan": 5,
+                "covered": false,
+                "range": "AG122:AK122"
+              },
+              "raw": "6月",
+              "text": "6月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AH138",
+              "coord": "AH122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AG122:AK122"
+              },
+              "raw": "6月",
+              "text": "6月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AI138",
+              "coord": "AI122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AG122:AK122"
+              },
+              "raw": "6月",
+              "text": "6月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AJ138",
+              "coord": "AJ122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AG122:AK122"
+              },
+              "raw": "6月",
+              "text": "6月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AK138",
+              "coord": "AK122",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "merge": {
+                "covered": true,
+                "range": "AG122:AK122"
+              },
+              "raw": "6月",
+              "text": "6月",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             }
           ]
         },
         {
-          "excelRow": 139,
+          "excelRow": 123,
           "cells": [
             {
-              "coord": "B139",
+              "coord": "B123",
               "formula": "",
               "merge": {
                 "covered": true,
-                "range": "B138:B139"
+                "range": "B122:B123"
               },
               "raw": "小组",
               "text": "小组",
@@ -36785,7 +36893,7 @@
               "type": "text"
             },
             {
-              "coord": "C139",
+              "coord": "C123",
               "formula": "",
               "raw": "YTD目标",
               "text": "YTD目标",
@@ -36793,7 +36901,7 @@
               "type": "text"
             },
             {
-              "coord": "D139",
+              "coord": "D123",
               "formula": "",
               "raw": "YTD完成",
               "text": "YTD完成",
@@ -36801,7 +36909,7 @@
               "type": "text"
             },
             {
-              "coord": "E139",
+              "coord": "E123",
               "formula": "",
               "raw": "YTD完成率",
               "text": "YTD完成率",
@@ -36809,7 +36917,7 @@
               "type": "text"
             },
             {
-              "coord": "F139",
+              "coord": "F123",
               "formula": "",
               "raw": "YTD同期",
               "text": "YTD同期",
@@ -36817,7 +36925,7 @@
               "type": "text"
             },
             {
-              "coord": "G139",
+              "coord": "G123",
               "formula": "",
               "raw": "YTD业绩同比",
               "text": "YTD业绩同比",
@@ -36825,31 +36933,31 @@
               "type": "text"
             },
             {
-              "coord": "H139",
+              "coord": "H123",
               "formula": "",
-              "raw": "7月目标",
-              "text": "7月目标",
+              "raw": "1月目标",
+              "text": "1月目标",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "I139",
+              "coord": "I123",
               "formula": "",
-              "raw": "7月完成",
-              "text": "7月完成",
+              "raw": "1月完成",
+              "text": "1月完成",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "J139",
+              "coord": "J123",
               "formula": "",
-              "raw": "7月完成率",
-              "text": "7月完成率",
+              "raw": "1月完成率",
+              "text": "1月完成率",
               "unit": "",
               "type": "text"
             },
             {
-              "coord": "K139",
+              "coord": "K123",
               "formula": "",
               "raw": "同期",
               "text": "同期",
@@ -36857,7 +36965,7 @@
               "type": "text"
             },
             {
-              "coord": "L139",
+              "coord": "L123",
               "formula": "",
               "raw": "业绩同比",
               "text": "业绩同比",
@@ -36865,212 +36973,212 @@
               "type": "text"
             },
             {
-              "coord": "M139",
+              "coord": "M123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "2月目标",
+              "text": "2月目标",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "N139",
+              "coord": "N123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "2月完成",
+              "text": "2月完成",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "O139",
+              "coord": "O123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "2月完成率",
+              "text": "2月完成率",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "P139",
+              "coord": "P123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "同期",
+              "text": "同期",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Q139",
+              "coord": "Q123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "R139",
+              "coord": "R123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "3月目标",
+              "text": "3月目标",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "S139",
+              "coord": "S123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "3月完成",
+              "text": "3月完成",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "T139",
+              "coord": "T123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "3月完成率",
+              "text": "3月完成率",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "U139",
+              "coord": "U123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "同期",
+              "text": "同期",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "V139",
+              "coord": "V123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "W139",
+              "coord": "W123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "4月目标",
+              "text": "4月目标",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "X139",
+              "coord": "X123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "4月完成",
+              "text": "4月完成",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Y139",
+              "coord": "Y123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "4月完成率",
+              "text": "4月完成率",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "Z139",
+              "coord": "Z123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "同期",
+              "text": "同期",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AA139",
+              "coord": "AA123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AB139",
+              "coord": "AB123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "5月目标",
+              "text": "5月目标",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AC139",
+              "coord": "AC123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "5月完成",
+              "text": "5月完成",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AD139",
+              "coord": "AD123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "5月完成率",
+              "text": "5月完成率",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AE139",
+              "coord": "AE123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "同期",
+              "text": "同期",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AF139",
+              "coord": "AF123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AG139",
+              "coord": "AG123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "6月目标",
+              "text": "6月目标",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AH139",
+              "coord": "AH123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "6月完成",
+              "text": "6月完成",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AI139",
+              "coord": "AI123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "6月完成率",
+              "text": "6月完成率",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AJ139",
+              "coord": "AJ123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "同期",
+              "text": "同期",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             },
             {
-              "coord": "AK139",
+              "coord": "AK123",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
               "unit": "",
-              "type": "blank"
+              "type": "text"
             }
           ]
         },
         {
-          "excelRow": 140,
+          "excelRow": 124,
           "cells": [
             {
-              "coord": "B140",
+              "coord": "B124",
               "formula": "",
               "raw": "精品总",
               "text": "精品总",
@@ -37078,308 +37186,362 @@
               "type": "text"
             },
             {
-              "coord": "C140",
-              "formula": "=SUM(C141:C143)",
-              "raw": 5157137.875461616,
-              "text": "516",
+              "coord": "C124",
+              "formula": "=SUM(C125:C127)",
+              "raw": 37180741.878983185,
+              "text": "3,718",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D140",
-              "formula": "=SUM(D141:D143)",
-              "raw": 9708620.94873266,
-              "text": "971",
+              "coord": "D124",
+              "formula": "=SUM(D125:D127)",
+              "raw": 6762268.22,
+              "text": "676",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E140",
-              "formula": "=D140/C140",
-              "raw": 1.8825598972111328,
-              "text": "188.3%",
+              "coord": "E124",
+              "formula": "=D124/C124",
+              "raw": 0.1818755591808792,
+              "text": "18.2%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 精品总",
               "numberFormat": "General"
             },
             {
-              "coord": "F140",
-              "formula": "=SUM(F141:F143)",
-              "raw": 11905198.346099999,
-              "text": "1,191",
+              "coord": "F124",
+              "formula": "=SUM(F125:F127)",
+              "raw": 8485257.29,
+              "text": "849",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G140",
-              "formula": "=D140/F140-1",
-              "raw": -0.18450573720066676,
-              "text": "-18.5%",
+              "coord": "G124",
+              "formula": "=D124/F124-1",
+              "raw": -0.20305678556507267,
+              "text": "-20.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 精品总",
               "numberFormat": "General"
             },
             {
-              "coord": "H140",
-              "formula": "=SUM(H141:H143)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "coord": "H124",
+              "formula": "",
+              "raw": 5747034.29584542,
+              "text": "575",
+              "unit": "万",
               "type": "number",
-              "context": "7月 7月目标 精品总",
+              "context": "1月 1月目标 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "I140",
-              "formula": "=SUM(I141:I143)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "coord": "I124",
+              "formula": "=SUM(I125:I127)",
+              "raw": 845779.0,
+              "text": "84.6",
+              "unit": "万",
               "type": "number",
-              "context": "7月 7月完成 精品总",
+              "context": "1月 1月完成 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "J140",
-              "formula": "=IFERROR(I140/H140,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "J124",
+              "formula": "=I124/H124",
+              "raw": 0.1471679054728142,
+              "text": "14.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 1月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "K140",
-              "formula": "=SUM(K141:K143)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "coord": "K124",
+              "formula": "=SUM(K125:K127)",
+              "raw": 799685.0,
+              "text": "80.0",
+              "unit": "万",
               "type": "number",
-              "context": "7月 同期 精品总",
+              "context": "1月 同期 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "L140",
-              "formula": "=IFERROR(I140/K140-1,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "L124",
+              "formula": "=I124/K124-1",
+              "raw": 0.05764019582710689,
+              "text": "5.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 业绩同比 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "M140",
+              "coord": "M124",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 5230006.03568873,
+              "text": "523",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "N140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "N124",
+              "formula": "=SUM(N125:N127)",
+              "raw": 730436.0,
+              "text": "73.0",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "O140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "O124",
+              "formula": "=N124/M124",
+              "raw": 0.1396625539273991,
+              "text": "14.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 2月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "P140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "P124",
+              "formula": "=SUM(P125:P127)",
+              "raw": 1339073.0,
+              "text": "134",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Q140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Q124",
+              "formula": "=N124/P124-1",
+              "raw": -0.4545211500791966,
+              "text": "-45.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 业绩同比 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "R140",
+              "coord": "R124",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 7095165.87472315,
+              "text": "710",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "S140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "S124",
+              "formula": "=SUM(S125:S127)",
+              "raw": 1233361.0,
+              "text": "123",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "T140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "T124",
+              "formula": "=S124/R124",
+              "raw": 0.17383117206518095,
+              "text": "17.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 3月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "U140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "U124",
+              "formula": "=SUM(U125:U127)",
+              "raw": 1427333.0,
+              "text": "143",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "V140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "V124",
+              "formula": "=S124/U124-1",
+              "raw": -0.13589821015838632,
+              "text": "-13.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 业绩同比 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "W140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "W124",
+              "formula": "=SUM(W125:W127)",
+              "raw": 6787221.21582434,
+              "text": "679",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "X140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "X124",
+              "formula": "=SUM(X125:X127)",
+              "raw": 1506893.66,
+              "text": "151",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Y140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Y124",
+              "formula": "=X124/W124",
+              "raw": 0.22201923468866644,
+              "text": "22.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 4月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "Z140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Z124",
+              "formula": "=SUM(Z125:Z127)",
+              "raw": 1409640.6099999999,
+              "text": "141",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AA140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AA124",
+              "formula": "=X124/Z124-1",
+              "raw": 0.06899137929915344,
+              "text": "6.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 业绩同比 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "AB140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AB124",
+              "formula": "=SUM(AB125:AB127)",
+              "raw": 6929463.97156346,
+              "text": "693",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AC140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AC124",
+              "formula": "=SUM(AC125:AC127)",
+              "raw": 1331898.44,
+              "text": "133",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AD140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AD124",
+              "formula": "=AC124/AB124",
+              "raw": 0.19220800417835066,
+              "text": "19.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 5月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "AE140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AE124",
+              "formula": "=SUM(AE125:AE127)",
+              "raw": 1583363.2000000002,
+              "text": "158",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AF140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AF124",
+              "formula": "=AC124/AE124-1",
+              "raw": -0.15881685263368517,
+              "text": "-15.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 业绩同比 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "AG140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AG124",
+              "formula": "=SUM(AG125:AG127)",
+              "raw": 4876014.696221745,
+              "text": "488",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AH140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AH124",
+              "formula": "=SUM(AH125:AH127)",
+              "raw": 853647.8200000001,
+              "text": "85.4",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AI140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AI124",
+              "formula": "=AH124/AG124",
+              "raw": 0.17507080539799486,
+              "text": "17.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 6月完成率 精品总",
+              "numberFormat": "General"
             },
             {
-              "coord": "AJ140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AJ124",
+              "formula": "=SUM(AJ125:AJ127)",
+              "raw": 1183475.82,
+              "text": "118",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AK140",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AK124",
+              "formula": "=AH124/AJ124-1",
+              "raw": -0.27869432938646777,
+              "text": "-27.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 业绩同比 精品总",
+              "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 141,
+          "excelRow": 125,
           "cells": [
             {
-              "coord": "B141",
+              "coord": "B125",
               "formula": "",
               "raw": "海淘组",
               "text": "海淘组",
@@ -37387,302 +37549,362 @@
               "type": "text"
             },
             {
-              "coord": "C141",
-              "formula": "=H141+H133+M141+R141+W141+AB141+AG141",
-              "raw": 0.0014419957493235103,
-              "text": "0",
-              "unit": "",
+              "coord": "C125",
+              "formula": "=H125+H117+M125+R125+W125+AB125+AG125",
+              "raw": 11897837.401274629,
+              "text": "1,190",
+              "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 海淘组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D141",
-              "formula": "=I141+D133+N141+S141+X141+AC141+AH141",
-              "raw": 0.0287326608018543,
-              "text": "0",
-              "unit": "",
+              "coord": "D125",
+              "formula": "=I125+D117+N125+S125+X125+AC125+AH125",
+              "raw": 2587878.48,
+              "text": "259",
+              "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 海淘组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E141",
-              "formula": "=D141/C141",
-              "raw": 19.925621011943882,
-              "text": "19.9",
-              "unit": "",
+              "coord": "E125",
+              "formula": "=D125/C125",
+              "raw": 0.21750830783103134,
+              "text": "21.8%",
+              "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 海淘组",
               "numberFormat": "General"
             },
             {
-              "coord": "F141",
-              "formula": "=K141+F133+P141+U141+Z141+AE141+AJ141",
-              "raw": 2.9061,
-              "text": "2.9",
-              "unit": "",
+              "coord": "F125",
+              "formula": "=K125+F117+P125+U125+Z125+AE125+AJ125",
+              "raw": 2627588.77,
+              "text": "263",
+              "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 海淘组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G141",
-              "formula": "=D141/F141-1",
-              "raw": -0.9901129827597624,
-              "text": "-99.0%",
+              "coord": "G125",
+              "formula": "=D125/F125-1",
+              "raw": -0.015112825284300468,
+              "text": "-1.5%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 海淘组",
               "numberFormat": "General"
             },
             {
-              "coord": "H141",
+              "coord": "H125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1839050.97467054,
+              "text": "184",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "I141",
+              "coord": "I125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 543948,
+              "text": "54.4",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "J141",
-              "formula": "=IFERROR(I141/H141,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "J125",
+              "formula": "=I125/H125",
+              "raw": 0.29577646704297933,
+              "text": "29.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 1月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "K141",
+              "coord": "K125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 493939,
+              "text": "49.4",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "L141",
-              "formula": "=IFERROR(I141/K141-1,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "L125",
+              "formula": "=I125/K125-1",
+              "raw": 0.10124529547170802,
+              "text": "10.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 业绩同比 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "M141",
+              "coord": "M125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1673601.93142039,
+              "text": "167",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "N141",
+              "coord": "N125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 363354,
+              "text": "36.3",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "O141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "O125",
+              "formula": "=N125/M125",
+              "raw": 0.21710897506650256,
+              "text": "21.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 2月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "P141",
+              "coord": "P125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 695613,
+              "text": "69.6",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Q141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Q125",
+              "formula": "=N125/P125-1",
+              "raw": -0.4776492101211449,
+              "text": "-47.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 业绩同比 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "R141",
+              "coord": "R125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 2270453.07991141,
+              "text": "227",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "S141",
+              "coord": "S125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 462400,
+              "text": "46.2",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "T141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "T125",
+              "formula": "=S125/R125",
+              "raw": 0.2036597911188908,
+              "text": "20.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 3月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "U141",
+              "coord": "U125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 193409,
+              "text": "19.3",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "V141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "V125",
+              "formula": "=S125/U125-1",
+              "raw": 1.3907884328030238,
+              "text": "139.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 业绩同比 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "W141",
+              "coord": "W125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 2171910.78906379,
+              "text": "217",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "X141",
+              "coord": "X125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 567045.51,
+              "text": "56.7",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Y141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Y125",
+              "formula": "=X125/W125",
+              "raw": 0.26108140023763454,
+              "text": "26.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 4月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "Z141",
+              "coord": "Z125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 299838.7,
+              "text": "30.0",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AA141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AA125",
+              "formula": "=X125/Z125-1",
+              "raw": 0.8911685182733249,
+              "text": "89.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 业绩同比 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AB141",
+              "coord": "AB125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 2217428.47090031,
+              "text": "222",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AC141",
+              "coord": "AC125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 302341.3,
+              "text": "30.2",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AD141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AD125",
+              "formula": "=AC125/AB125",
+              "raw": 0.13634771266251702,
+              "text": "13.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 5月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AE141",
+              "coord": "AE125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 433835.86,
+              "text": "43.4",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AF141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AF125",
+              "formula": "=AC125/AE125-1",
+              "raw": -0.30309748945142523,
+              "text": "-30.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 业绩同比 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AG141",
+              "coord": "AG125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1560324.70279096,
+              "text": "156",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月目标 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AH141",
+              "coord": "AH125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 269594.52,
+              "text": "27.0",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月完成 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AI141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AI125",
+              "formula": "=AH125/AG125",
+              "raw": 0.17278103686865628,
+              "text": "17.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 6月完成率 海淘组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AJ141",
+              "coord": "AJ125",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 150507.63,
+              "text": "15.1",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 同期 海淘组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AK141",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AK125",
+              "formula": "=AH125/AJ125-1",
+              "raw": 0.7912349028418029,
+              "text": "79.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 业绩同比 海淘组",
+              "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 142,
+          "excelRow": 126,
           "cells": [
             {
-              "coord": "B142",
+              "coord": "B126",
               "formula": "",
               "raw": "饰品1组",
               "text": "饰品1组",
@@ -37690,57 +37912,87 @@
               "type": "text"
             },
             {
-              "coord": "C142",
-              "formula": "=H142+H134+M142+R142+W142+AB142+AG142",
-              "raw": 272870.6453372482,
-              "text": "27.3",
+              "coord": "C126",
+              "formula": "=H126+H118+M126+R126+W126+AB126+AG126",
+              "raw": 18590370.939491577,
+              "text": "1,859",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D142",
-              "formula": "=I142+D134+N142+S142+X142+AC142+AH142",
-              "raw": 521141.55,
-              "text": "52.1",
+              "coord": "D126",
+              "formula": "=I126+D118+N126+S126+X126+AC126+AH126",
+              "raw": 3990585.0200000005,
+              "text": "399",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E142",
-              "formula": "=D142/C142",
-              "raw": 1.9098483435472036,
-              "text": "191.0%",
+              "coord": "E126",
+              "formula": "=D126/C126",
+              "raw": 0.2146587086932617,
+              "text": "21.5%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品1组",
               "numberFormat": "General"
             },
             {
-              "coord": "F142",
-              "formula": "=K142+F134+P142+U142+Z142+AE142+AJ142",
-              "raw": 303834.57,
-              "text": "30.4",
+              "coord": "F126",
+              "formula": "=K126+F118+P126+U126+Z126+AE126+AJ126",
+              "raw": 4278197.869999999,
+              "text": "428",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G142",
-              "formula": "=D142/F142-1",
-              "raw": 0.71521479599902,
-              "text": "71.5%",
+              "coord": "G126",
+              "formula": "=D126/F126-1",
+              "raw": -0.06722757075282237,
+              "text": "-6.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品1组",
               "numberFormat": "General"
             },
             {
-              "coord": "H142",
+              "coord": "H126",
+              "formula": "",
+              "raw": 2873517.14792271,
+              "text": "287",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "I126",
+              "formula": "",
+              "raw": 228668,
+              "text": "22.9",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "J126",
+              "formula": "=I126/H126",
+              "raw": 0.07957773983193595,
+              "text": "8.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 1月完成率 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "K126",
               "formula": "",
               "raw": null,
               "text": "",
@@ -37748,244 +38000,270 @@
               "type": "blank"
             },
             {
-              "coord": "I142",
+              "coord": "L126",
+              "formula": "=IFERROR(I126/K126-1,\"\")",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "M126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 2615003.01784436,
+              "text": "262",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "J142",
-              "formula": "=IFERROR(I142/H142,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "K142",
+              "coord": "N126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 332027,
+              "text": "33.2",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "L142",
-              "formula": "=IFERROR(I142/K142-1,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "O126",
+              "formula": "=N126/M126",
+              "raw": 0.12697002555419676,
+              "text": "12.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 2月完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "M142",
+              "coord": "P126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 59893,
+              "text": "6.0",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "N142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Q126",
+              "formula": "=N126/P126-1",
+              "raw": 4.543669544020169,
+              "text": "454.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 业绩同比 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "O142",
+              "coord": "R126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 3547582.93736157,
+              "text": "355",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "P142",
+              "coord": "S126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 714665,
+              "text": "71.5",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Q142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "T126",
+              "formula": "=S126/R126",
+              "raw": 0.20145124514876458,
+              "text": "20.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 3月完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "R142",
+              "coord": "U126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 843867,
+              "text": "84.4",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "S142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "V126",
+              "formula": "=S126/U126-1",
+              "raw": -0.15310706544988728,
+              "text": "-15.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 业绩同比 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "T142",
+              "coord": "W126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 3393610.60791217,
+              "text": "339",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "U142",
+              "coord": "X126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 926447.93,
+              "text": "92.6",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "V142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Y126",
+              "formula": "=X126/W126",
+              "raw": 0.2729977115936625,
+              "text": "27.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 4月完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "W142",
+              "coord": "Z126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 919084.22,
+              "text": "91.9",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "X142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AA126",
+              "formula": "=X126/Z126-1",
+              "raw": 0.008012007865829895,
+              "text": "0.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 业绩同比 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "Y142",
+              "coord": "AB126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 3464731.98578173,
+              "text": "346",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Z142",
+              "coord": "AC126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1024408.64,
+              "text": "102",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AA142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AD126",
+              "formula": "=AC126/AB126",
+              "raw": 0.29566749872829423,
+              "text": "29.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 5月完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AB142",
+              "coord": "AE126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1089877.47,
+              "text": "109",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AC142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AF126",
+              "formula": "=AC126/AE126-1",
+              "raw": -0.06006989941722529,
+              "text": "-6.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 业绩同比 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AD142",
+              "coord": "AG126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 2438007.34811087,
+              "text": "244",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AE142",
+              "coord": "AH126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 583311.3,
+              "text": "58.3",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AF142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AI126",
+              "formula": "=AH126/AG126",
+              "raw": 0.2392574002912618,
+              "text": "23.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 6月完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AG142",
+              "coord": "AJ126",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 987606.47,
+              "text": "98.8",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AH142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "AI142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "AJ142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
-            },
-            {
-              "coord": "AK142",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AK126",
+              "formula": "=AH126/AJ126-1",
+              "raw": -0.4093686931799869,
+              "text": "-40.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 业绩同比 饰品1组",
+              "numberFormat": "General"
             }
           ]
         },
         {
-          "excelRow": 143,
+          "excelRow": 127,
           "cells": [
             {
-              "coord": "B143",
+              "coord": "B127",
               "formula": "",
               "raw": "饰品2组",
               "text": "饰品2组",
@@ -37993,294 +38271,354 @@
               "type": "text"
             },
             {
-              "coord": "C143",
-              "formula": "=H143+H135+M143+R143+W143+AB143+AG143",
-              "raw": 4884267.228682372,
-              "text": "488",
+              "coord": "C127",
+              "formula": "=H127+H119+M127+R127+W127+AB127+AG127",
+              "raw": 6692533.538216975,
+              "text": "669",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "D143",
-              "formula": "=I143+D135+N143+S143+X143+AC143+AH143",
-              "raw": 9187479.37,
-              "text": "919",
+              "coord": "D127",
+              "formula": "=I127+D119+N127+S127+X127+AC127+AH127",
+              "raw": 183804.72,
+              "text": "18.4",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "E143",
-              "formula": "=D143/C143",
-              "raw": 1.8810353610563,
-              "text": "188.1%",
+              "coord": "E127",
+              "formula": "=D127/C127",
+              "raw": 0.027464146268435328,
+              "text": "2.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品2组",
               "numberFormat": "General"
             },
             {
-              "coord": "F143",
-              "formula": "=K143+F135+P143+U143+Z143+AE143+AJ143",
-              "raw": 11601360.87,
-              "text": "1,160",
+              "coord": "F127",
+              "formula": "=K127+F119+P127+U127+Z127+AE127+AJ127",
+              "raw": 1579470.6500000001,
+              "text": "158",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "G143",
-              "formula": "=D143/F143-1",
-              "raw": -0.20806882287767337,
-              "text": "-20.8%",
+              "coord": "G127",
+              "formula": "=D127/F127-1",
+              "raw": -0.8836289107366446,
+              "text": "-88.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品2组",
               "numberFormat": "General"
             },
             {
-              "coord": "H143",
+              "coord": "H127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1034466.17325218,
+              "text": "103",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "I143",
+              "coord": "I127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 73163,
+              "text": "7.3",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 1月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "J143",
-              "formula": "=IFERROR(I143/H143,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "J127",
+              "formula": "=I127/H127",
+              "raw": 0.07072536723940269,
+              "text": "7.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 1月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "K143",
+              "coord": "K127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 305746,
+              "text": "30.6",
+              "unit": "万",
+              "type": "number",
+              "context": "1月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "L143",
-              "formula": "=IFERROR(I143/K143-1,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "L127",
+              "formula": "=I127/K127-1",
+              "raw": -0.7607065995957429,
+              "text": "-76.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "1月 业绩同比 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "M143",
+              "coord": "M127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 941401.086423971,
+              "text": "94.1",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "N143",
+              "coord": "N127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 35055,
+              "text": "3.5",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 2月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "O143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "O127",
+              "formula": "=N127/M127",
+              "raw": 0.03723705071677873,
+              "text": "3.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 2月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "P143",
+              "coord": "P127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 583567,
+              "text": "58.4",
+              "unit": "万",
+              "type": "number",
+              "context": "2月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Q143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Q127",
+              "formula": "=N127/P127-1",
+              "raw": -0.9399297767008759,
+              "text": "-94.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "2月 业绩同比 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "R143",
+              "coord": "R127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1277129.85745017,
+              "text": "128",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "S143",
+              "coord": "S127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 56296,
+              "text": "5.6",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 3月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "T143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "T127",
+              "formula": "=S127/R127",
+              "raw": 0.04408009073752041,
+              "text": "4.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 3月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "U143",
+              "coord": "U127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 390057,
+              "text": "39.0",
+              "unit": "万",
+              "type": "number",
+              "context": "3月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "V143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "V127",
+              "formula": "=S127/U127-1",
+              "raw": -0.8556723760886229,
+              "text": "-85.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "3月 业绩同比 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "W143",
+              "coord": "W127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1221699.81884838,
+              "text": "122",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "X143",
+              "coord": "X127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 13400.22,
+              "text": "1.3",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 4月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "Y143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "Y127",
+              "formula": "=X127/W127",
+              "raw": 0.010968504532178411,
+              "text": "1.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 4月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "Z143",
+              "coord": "Z127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 190717.69,
+              "text": "19.1",
+              "unit": "万",
+              "type": "number",
+              "context": "4月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AA143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AA127",
+              "formula": "=X127/Z127-1",
+              "raw": -0.92973792834844,
+              "text": "-93.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "4月 业绩同比 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AB143",
+              "coord": "AB127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1247303.51488142,
+              "text": "125",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 5月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AC143",
+              "coord": "AC127",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 5148.5,
+              "text": "5,148.5",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "5月 5月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AD143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AD127",
+              "formula": "=AC127/AB127",
+              "raw": 0.00412770423443364,
+              "text": "0.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 5月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AE143",
+              "coord": "AE127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 59649.87,
+              "text": "6.0",
+              "unit": "万",
+              "type": "number",
+              "context": "5月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AF143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AF127",
+              "formula": "=AC127/AE127-1",
+              "raw": -0.9136879929495236,
+              "text": "-91.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "5月 业绩同比 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AG143",
+              "coord": "AG127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 877682.645319914,
+              "text": "87.8",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 6月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AH143",
+              "coord": "AH127",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 742,
+              "text": "742",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "6月 6月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AI143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AI127",
+              "formula": "=AH127/AG127",
+              "raw": 0.000845408079966697,
+              "text": "0.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 6月完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
-              "coord": "AJ143",
+              "coord": "AJ127",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 45361.72,
+              "text": "4.5",
+              "unit": "万",
+              "type": "number",
+              "context": "6月 同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
-              "coord": "AK143",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "coord": "AK127",
+              "formula": "=AH127/AJ127-1",
+              "raw": -0.9836425955629549,
+              "text": "-98.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "6月 业绩同比 饰品2组",
+              "numberFormat": "General"
             }
           ]
         }
