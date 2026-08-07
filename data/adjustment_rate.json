@@ -1,38 +1,38 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-08-05",
-  "six_high_source_date": "2026-08-05",
+  "overall_source_date": "2026-08-06",
+  "six_high_source_date": "2026-08-06",
   "groups": [
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 1143,
-        "adjusted": 975,
-        "rate": 0.8530183727034121,
+        "denominator": 1201,
+        "adjusted": 1014,
+        "rate": 0.8442964196502915,
         "target": 0.75,
         "status": "pass"
       },
       "six_high": {
         "denominator": 4,
-        "adjusted": 4,
-        "rate": 1.0,
+        "adjusted": 2,
+        "rate": 0.5,
         "target": 0.8,
-        "status": "pass"
+        "status": "fail"
       }
     },
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 1478,
-        "adjusted": 677,
-        "rate": 0.4580514208389716,
+        "denominator": 1940,
+        "adjusted": 751,
+        "rate": 0.3871134020618557,
         "target": 0.75,
         "status": "fail"
       },
       "six_high": {
-        "denominator": 34,
-        "adjusted": 9,
-        "rate": 0.2647058823529412,
+        "denominator": 24,
+        "adjusted": 1,
+        "rate": 0.041666666666666664,
         "target": 0.8,
         "status": "fail"
       }
@@ -40,28 +40,28 @@
     {
       "group": "海淘组",
       "overall": {
-        "denominator": 12,
+        "denominator": 15,
         "adjusted": 9,
-        "rate": 0.75,
+        "rate": 0.6,
         "target": 0.75,
-        "status": "pass"
+        "status": "fail"
       },
       "six_high": {
-        "denominator": 2,
-        "adjusted": 2,
-        "rate": 1.0,
+        "denominator": 0,
+        "adjusted": 0,
+        "rate": null,
         "target": 0.8,
-        "status": "pass"
+        "status": "no_data"
       }
     },
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 48,
-        "adjusted": 36,
-        "rate": 0.75,
+        "denominator": 55,
+        "adjusted": 38,
+        "rate": 0.6909090909090909,
         "target": 0.75,
-        "status": "pass"
+        "status": "fail"
       },
       "six_high": {
         "denominator": 0,
@@ -74,9 +74,9 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 81,
-        "adjusted": 62,
-        "rate": 0.7654320987654321,
+        "denominator": 94,
+        "adjusted": 73,
+        "rate": 0.776595744680851,
         "target": 0.75,
         "status": "pass"
       },
@@ -91,41 +91,41 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 388,
-        "adjusted": 285,
-        "rate": 0.7345360824742269,
+        "denominator": 524,
+        "adjusted": 392,
+        "rate": 0.7480916030534351,
         "target": 0.75,
         "status": "fail"
       },
       "six_high": {
-        "denominator": 1,
-        "adjusted": 1,
-        "rate": 1.0,
+        "denominator": 0,
+        "adjusted": 0,
+        "rate": null,
         "target": 0.8,
-        "status": "pass"
+        "status": "no_data"
       }
     }
   ],
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 3150,
-      "adjusted": 2044,
-      "rate": 0.6488888888888888,
+      "denominator": 3829,
+      "adjusted": 2277,
+      "rate": 0.594672238182293,
       "target": 0.75,
       "status": "fail"
     },
     "six_high": {
-      "denominator": 41,
-      "adjusted": 16,
-      "rate": 0.3902439024390244,
+      "denominator": 28,
+      "adjusted": 3,
+      "rate": 0.10714285714285714,
       "target": 0.8,
       "status": "fail"
     }
   },
   "six_high_item": "品牌6高商品总览",
-  "six_high_source": "企业邮箱附件提取_20260806/企业邮箱附件提取_20260806/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-05 23：59.xlsx",
-  "generated_at": "2026-08-06 14:59:18",
+  "six_high_source": "/root/.openclaw/workspace/agent:main:uuid-66hzkflgyklmqg1pk4h/企业邮箱附件提取_20260807/企业邮箱附件提取_20260807/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-06 23：59.xlsx",
+  "generated_at": "2026-08-07 09:40:55",
   "validation": {
     "status": "PASS",
     "errors": []
