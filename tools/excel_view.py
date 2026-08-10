@@ -99,7 +99,7 @@ def _get_section_range(ws, module_kw, sub_section=None, fallback=None):
 SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
     {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
-    {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 38, 2, 11), "stickyCols": 1},
+    {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 41, 2, 11), "stickyCols": 1},
     {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 52, 2, 15), "stickyCols": 1},
     {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
     {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 26), "stickyCols": 1},
@@ -116,7 +116,7 @@ SECTION_SPECS = [
 _DYNAMIC_RANGE_MAP = {
     "self_sales_mtd": ("自营销售", "MTD", (3, 12, 2, 11)),
     "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 37)),
-    "gross_profit": ("毛利", None, (26, 38, 2, 11)),
+    "gross_profit": ("毛利", None, (26, 41, 2, 11)),
     "price_index_mtd": ("外网价指", "MTD", (41, 51, 2, 15)),
     "price_index_history": ("外网价指", "YTD", (53, 62, 2, 79)),
     "internal_discount": ("内网折扣", None, (65, 74, 2, 26)),
@@ -559,6 +559,57 @@ def build_section(value_ws, formula_ws, spec: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _build_gross_profit_data(section: dict, data_date: str) -> dict:
+    """从毛利 section 的 rows 构建前端 renderGrossProfit 所需的 data 字段。"""
+    from datetime import datetime
+    rows = section.get("rows", [])
+
+    def _row_val(row, idx):
+        cells = row.get("cells", [])
+        if idx < len(cells):
+            return cells[idx].get("raw")
+        return None
+
+    def _as_period(row):
+        cells = row.get("cells", [])
+        return {
+            "period": str(cells[0].get("raw", "")) if cells else "",
+            "实收": _row_val(row, 1),
+            "净收入": _row_val(row, 2),
+            "毛利值": _row_val(row, 3),
+            "毛利率": _row_val(row, 4),
+            "毛利率目标": _row_val(row, 5),
+            "落差": _row_val(row, 6),
+            "完成率": _row_val(row, 7),
+            "毛利盈余": _row_val(row, 8),
+        }
+
+    mtd = None
+    ytd = None
+    year_target = None
+    months = []
+
+    for row in rows:
+        period = str(_row_val(row, 0) or "").strip()
+        if period == "8月MTD":
+            mtd = _as_period(row)
+        elif period == "YTD":
+            ytd = _as_period(row)
+        elif period == "全年目标":
+            year_target = _as_period(row)
+        elif period in ("1月", "2月", "3月", "4月", "5月", "6月", "7月", "4月YTD", "5月YTD", "6月YTD", "7月YTD"):
+            months.append(_as_period(row))
+
+    return {
+        "mtd": mtd or {},
+        "ytd": ytd or {},
+        "year_target": year_target or {},
+        "months": months,
+        "source_date": data_date,
+        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+    }
+
+
 def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
     excel_path = Path(excel_path)
     value_wb = load_workbook(excel_path, data_only=True)
@@ -577,6 +628,13 @@ def build_excel_view(excel_path: str | Path) -> dict[str, Any]:
     else:
         data_date = excel_date_to_str(raw_cutoff)
     sections = [build_section(value_ws, formula_ws, spec) for spec in SECTION_SPECS]
+
+    # 为毛利 section 构建 data 字段（供前端 renderGrossProfit 使用）
+    for sec in sections:
+        if sec["id"] == "gross_profit":
+            sec["data"] = _build_gross_profit_data(sec, data_date)
+            break
+
     value_wb.close()
     formula_wb.close()
 
