@@ -21,6 +21,7 @@
 
   var TABS = [
     { id: "sales", label: "自营销售", sectionIds: ["self_sales_mtd", "self_sales_history"] },
+    { id: "brand-tier", label: "品牌分层", sectionIds: [] },
     { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
     { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
@@ -30,7 +31,6 @@
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
     { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
-    { id: "brand-tier", label: "品牌分层", sectionIds: [] },
   ];
   var BRAND_TABS = [
     { id: "brand-adjustment", label: "调价率" },
@@ -439,7 +439,6 @@
     });
 
     html+='</tbody></table></div>';
-    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：VMA下载 · 品牌分层映射O-T · 有标签品牌参与汇总，无标签品牌仅出现在品牌视角</div>';
     return html;
   }
   function renderGrossProfit(section){
