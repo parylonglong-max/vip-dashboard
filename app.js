@@ -776,14 +776,16 @@
     html+='<div class="excel-scroll"><table class="excel-table brand-price-index-table"><thead><tr>';
     html+='<th class="excel-cell is-header is-row-label" rowspan="2">品牌</th>';
     html+='<th class="excel-cell is-header" rowspan="2">等级</th>';
-    html+='<th class="excel-cell is-header" colspan="3">天猫</th>';
-    html+='<th class="excel-cell is-header" colspan="3">抖音</th>';
+        html+='<th class="excel-cell is-header" colspan="4">天猫</th>';
+    html+='<th class="excel-cell is-header" colspan="4">抖音</th>';
     html+='</tr><tr>';
     html+='<th class="excel-cell is-header">价格指数</th>';
     html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">本月目标</th>';
     html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
     html+='<th class="excel-cell is-header">价格指数</th>';
     html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">本月目标</th>';
     html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
     html+='</tr></thead><tbody>';
     
@@ -794,10 +796,12 @@
       // 天猫
       html+='<td class="excel-cell">'+fmtRate(b.tmall_rate)+'</td>';
       html+='<td class="excel-cell">'+fmtRate(b.tmall_target)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.tmall_goal)+'</td>';
       html+='<td class="excel-cell '+diffClass(b.tmall_diff)+'">'+fmtDiff(b.tmall_diff)+'</td>';
       // 抖音
       html+='<td class="excel-cell">'+fmtRate(b.douyin_rate)+'</td>';
       html+='<td class="excel-cell">'+fmtRate(b.douyin_target)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.douyin_goal)+'</td>';
       html+='<td class="excel-cell '+diffClass(b.douyin_diff)+'">'+fmtDiff(b.douyin_diff)+'</td>';
       html+='</tr>';
     });
