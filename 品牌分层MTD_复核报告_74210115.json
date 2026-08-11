@@ -1,0 +1,27 @@
+{
+  "source_date": "7421-01-15",
+  "generated_at": "2026-08-11 16:01:23",
+  "source_file": "",
+  "data_quality": {
+    "original_rows": 944,
+    "clean_rows": 944,
+    "original_unique_sns": 868,
+    "clean_unique_sns": 868,
+    "mapped_sns": 559,
+    "mapping_coverage": 0.6440092165898618,
+    "unmatched_with_data": 309,
+    "excluded_historical_groups": 3,
+    "excluded_historical_rows": 0
+  },
+  "summary_verification": {
+    "精品总业绩": 132921819.12801999,
+    "精品总曝光": 906292316.0,
+    "标品+类穿戴": 132921819.12802,
+    "=精品总?": true,
+    "占比之和": 1.0000000000000002,
+    "占比=100%?": true
+  },
+  "brands_count": 879,
+  "summary_rows": 9,
+  "output_file": "data/brand_tier_mtd.json"
+}

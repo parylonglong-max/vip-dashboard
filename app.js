@@ -30,10 +30,12 @@
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
     { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
+    { id: "brand-tier", label: "品牌分层", sectionIds: [] },
   ];
   var BRAND_TABS = [
     { id: "brand-adjustment", label: "调价率" },
     { id: "brand-price-index", label: "外网价指" },
+    { id: "brand-sales-traffic", label: "品牌销售流量" },
   ];
 
   var PERIOD_CONFIG = {
@@ -52,7 +54,7 @@
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
   function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608030940'); }
-  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){}),fetch(dataUrl('data/brand_price_index.json')).then(function(r){return r.json();}).then(function(d){state.brandPriceIndexData=d;}).catch(function(){})]); }
+  function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){}),fetch(dataUrl('data/brand_price_index.json')).then(function(r){return r.json();}).then(function(d){state.brandPriceIndexData=d;}).catch(function(){}),fetch(dataUrl('data/brand_tier_mtd.json')).then(function(r){return r.json();}).then(function(d){state.brandTierData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -374,6 +376,72 @@
     html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：销售看板Excel · 总览表O-P列+BY-BZ列</div>';
     return html;
   }
+  function renderBrandTierMtdPanel(){
+    var d=state.brandTierData;
+    if(!d) return '<div class="loading">暂无品牌分层数据</div>';
+    var rows=d.summary||[];
+    if(!rows.length) return '<div class="loading">暂无品牌分层汇总</div>';
+    var sourceDate=d.source_date||'—';
+
+    function fmt(n){if(n==null)return '—';if(Math.abs(n)>=1e8)return (n/1e8).toFixed(2)+'亿';if(Math.abs(n)>=1e4)return (n/1e4).toFixed(1)+'万';return String(Math.round(n));}
+    function yoyPill(y){
+      if(y==null) return '<span class="yoy-pill" style="color:#6b849e">—</span>';
+      var cls=y>=0?'up':'down';
+      var arrow=y>=0?'↑':'↓';
+      return '<span class="yoy-pill '+cls+'">'+arrow+' '+Math.abs(y*100).toFixed(1)+'%</span>';
+    }
+    function pct(v){if(v==null)return '—';return (v*100).toFixed(1)+'%';}
+
+    var html='<div class="section-title"><span></span>品牌分层 · MTD <small>（数据日期：'+escapeHtml(sourceDate)+'）</small></div>';
+    html+='<div class="excel-scroll"><table class="excel-table brand-tier-grid"><thead><tr>';
+    html+='<th class="excel-cell is-header is-row-label">标品/类穿戴</th><th class="excel-cell is-header" style="width:60px">品牌分层</th>';
+    html+='<th class="excel-cell is-header">业绩</th><th class="excel-cell is-header" style="width:60px">业绩占比</th><th class="excel-cell is-header">同期业绩</th><th class="excel-cell is-header" style="width:70px">业绩同比</th>';
+    html+='<th class="excel-cell is-header">曝光流量</th><th class="excel-cell is-header" style="width:60px">曝光占比</th><th class="excel-cell is-header">同期曝光</th><th class="excel-cell is-header" style="width:70px">曝光同比</th>';
+    html+='</tr></thead><tbody>';
+
+    var catLabels={};
+    rows.forEach(function(r){
+      var cat=r.category||'';
+      var tier=r.tier||'';
+      var isSub=r.is_subtotal;
+      var isGrand=r.is_grand_total;
+      var showCat=cat!==catLabels[cat];
+      catLabels[cat]=cat;
+
+      var rowCls='';
+      if(isGrand) rowCls=' total-row';
+      else if(isSub) rowCls=' subtotal-row';
+
+      html+='<tr class="'+rowCls+'">';
+      // 分类列
+      if(isGrand){
+        html+='<td class="excel-cell is-row-label" colspan="2"><b>精品总</b></td>';
+      } else if(showCat){
+        var catRowspan=0;
+        for(var j=0;j<rows.length;j++){
+          if(rows[j].category===cat&&!rows[j].is_grand_total) catRowspan++;
+        }
+        html+='<td class="excel-cell is-row-label" rowspan="'+catRowspan+'">'+escapeHtml(cat)+'</td>';
+        html+='<td class="excel-cell is-row-label">'+escapeHtml(tier)+'</td>';
+      } else {
+        html+='<td class="excel-cell is-row-label">'+escapeHtml(tier)+'</td>';
+      }
+
+      html+='<td class="excel-cell">'+fmt(r.sales)+'</td>';
+      html+='<td class="excel-cell">'+pct(r.sales_share)+'</td>';
+      html+='<td class="excel-cell">'+fmt(r.sales_compare)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(r.sales_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(r.traffic)+'</td>';
+      html+='<td class="excel-cell">'+pct(r.traffic_share)+'</td>';
+      html+='<td class="excel-cell">'+fmt(r.traffic_compare)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(r.traffic_yoy)+'</td>';
+      html+='</tr>';
+    });
+
+    html+='</tbody></table></div>';
+    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：VMA下载 · 品牌分层映射O-T · 有标签品牌参与汇总，无标签品牌仅出现在品牌视角</div>';
+    return html;
+  }
   function renderGrossProfit(section){
     var d=section&&section.data; if(!d)return '';
     var period=state.periods.gross_profit||'YTD';
@@ -585,6 +653,97 @@
     return html;
   }
 
+  function renderBrandSalesTrafficPanel(){
+    var d=state.brandTierData;
+    if(!d) return '<div class="loading">暂无品牌销售流量数据</div>';
+    var brands=(d.brands||[]).slice();
+    if(!brands.length) return '<div class="loading">暂无品牌明细</div>';
+
+    var sourceDate=d.source_date||'—';
+    var selectedGroup=state.periods.brand_sales_traffic_group||'全部';
+    var selectedTier=state.periods.brand_sales_traffic_tier||'全部';
+    var brandQuery=state.brandSalesTrafficQuery||'';
+
+    function fmt(n){if(n==null)return '—';if(Math.abs(n)>=1e8)return (n/1e8).toFixed(2)+'亿';if(Math.abs(n)>=1e4)return (n/1e4).toFixed(1)+'万';return String(Math.round(n));}
+    function yoyPill(y){
+      if(y==null) return '<span class="yoy-pill" style="color:#6b849e">—</span>';
+      var cls=y>=0?'up':'down';
+      var arrow=y>=0?'↑':'↓';
+      return '<span class="yoy-pill '+cls+'">'+arrow+' '+Math.abs(y*100).toFixed(1)+'%</span>';
+    }
+
+    // 筛选
+    if(selectedGroup!=='全部'){
+      brands=brands.filter(function(b){return b.group===selectedGroup;});
+    }
+    if(selectedTier!=='全部'){
+      brands=brands.filter(function(b){return b.tier===selectedTier;});
+    }
+    if(brandQuery){
+      var q=brandQuery.toLowerCase();
+      brands=brands.filter(function(b){
+        return b.brand.toLowerCase().indexOf(q)!==-1 || b.sn.indexOf(q)!==-1;
+      });
+    }
+
+    // 排序
+    brands.sort(function(a,b){
+      var sa=a.sales||0, sb=b.sales||0;
+      if(sa!==sb) return sb-sa;
+      return (b.traffic||0)-(a.traffic||0);
+    });
+
+    var html='<div class="section-title"><span></span>品牌销售流量 · MTD <small>（数据日期：'+escapeHtml(sourceDate)+'）</small></div>';
+
+    // 筛选器
+    html+='<div class="filter-bar" style="margin-bottom:8px">';
+    var groups=['全部','饰品1组','饰品2组','海淘组','珠宝1组','珠宝2组','珠宝3组'];
+    groups.forEach(function(g){
+      var active=selectedGroup===g?' active':'';
+      html+='<button class="filter-btn'+active+'" data-section="brand_sales_traffic_group" data-period="'+g+'">'+g+'</button>';
+    });
+    html+='</div>';
+
+    html+='<div class="filter-bar" style="margin-bottom:8px">';
+    var tiers=['全部','S1','S2','S3','高价值','矩阵非高','双非'];
+    tiers.forEach(function(t){
+      var active=selectedTier===t?' active':'';
+      html+='<button class="filter-btn'+active+'" data-section="brand_sales_traffic_tier" data-period="'+t+'">'+t+'</button>';
+    });
+    html+='</div>';
+
+    // 搜索
+    html+='<div class="brand-search-wrap" style="margin-bottom:8px"><span class="brand-search-icon">⌕</span><input id="brandSalesTrafficSearch" type="search" autocomplete="off" inputmode="search" placeholder="输入品牌名称或SN" value="'+escapeHtml(brandQuery)+'"><button type="button" class="brand-clear" aria-label="清空" style="right:4px">×</button></div>';
+
+    // 汇总
+    var totalSales=brands.reduce(function(s,b){return s+(b.sales||0);},0);
+    var totalTraffic=brands.reduce(function(s,b){return s+(b.traffic||0);},0);
+    html+='<div style="font-size:12px;color:#6b849e;margin-bottom:8px">品牌数：<b>'+brands.length+'</b> ｜ 业绩合计：<b>'+fmt(totalSales)+'</b> ｜ 曝光合计：<b>'+fmt(totalTraffic)+'</b></div>';
+
+    // 表格
+    html+='<div class="excel-scroll"><table class="excel-table brand-sales-traffic-table"><thead><tr>';
+    html+='<th class="excel-cell is-header is-row-label">小组</th><th class="excel-cell is-header" style="width:60px">品牌分层</th><th class="excel-cell is-header" style="width:80px">品牌SN</th><th class="excel-cell is-header" style="min-width:100px">品牌名称</th>';
+    html+='<th class="excel-cell is-header">业绩</th><th class="excel-cell is-header">同期业绩</th><th class="excel-cell is-header" style="width:70px">业绩同比</th>';
+    html+='<th class="excel-cell is-header">曝光流量</th><th class="excel-cell is-header">同期曝光</th><th class="excel-cell is-header" style="width:70px">曝光同比</th>';
+    html+='</tr></thead><tbody>';
+
+    brands.forEach(function(b){
+      html+='<tr>';
+      html+='<td class="excel-cell is-row-label">'+escapeHtml(b.group||'')+'</td>';
+      html+='<td class="excel-cell">'+escapeHtml(b.tier||'—')+'</td>';
+      html+='<td class="excel-cell" style="font-size:11px;color:#6b849e">'+escapeHtml(b.sn)+'</td>';
+      html+='<td class="excel-cell is-row-label">'+escapeHtml(b.brand||'')+'</td>';
+      html+='<td class="excel-cell">'+fmt(b.sales)+'</td>';
+      html+='<td class="excel-cell">'+fmt(b.sales_compare)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(b.sales_yoy)+'</td>';
+      html+='<td class="excel-cell">'+fmt(b.traffic)+'</td>';
+      html+='<td class="excel-cell">'+fmt(b.traffic_compare)+'</td>';
+      html+='<td class="excel-cell">'+yoyPill(b.traffic_yoy)+'</td>';
+      html+='</tr>';
+    });
+    html+='</tbody></table></div>';
+    return html;
+  }
   function renderBrandPriceIndexPanel(){
     var d=state.brandPriceIndexData;
     if(!d) return '<div class="loading">暂无品牌外网价格指数数据</div>';
@@ -709,8 +868,23 @@
     bindBrandOptionClicks(document);
     var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
     var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
+
+    // 品牌销售流量搜索
+    var stInput=document.getElementById('brandSalesTrafficSearch');
+    if(stInput&&!stInput.dataset.bound){
+      stInput.dataset.bound='1';
+      stInput.addEventListener('compositionstart',function(){state.brandSalesTrafficComposing=true;});
+      stInput.addEventListener('compositionend',function(){state.brandSalesTrafficComposing=false;state.brandSalesTrafficQuery=stInput.value;renderDashboard();});
+      stInput.addEventListener('input',function(){
+        if(state.brandSalesTrafficComposing) return;
+        state.brandSalesTrafficQuery=stInput.value;
+        renderDashboard();
+      });
+    }
+    var stClear=document.querySelector('#brandSalesTrafficSearch+.brand-clear');
+    if(stClear)stClear.onclick=function(){state.brandSalesTrafficQuery='';renderDashboard();setTimeout(function(){var x=document.getElementById('brandSalesTrafficSearch');if(x)x.focus();},0);};
   }
-  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; var body=state.viewMode==='brand'?(renderBrandTabs()+'<main class="mobile-panel">'+(state.activeBrandTab==='brand-price-index'?renderBrandPriceIndexPanel():renderBrandAdjustmentPanel())+'</main>'):(renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():renderGenericPanel(activeTab)))))+'</main>'); $modulesContainer.innerHTML=renderViewModeSwitch()+body; document.querySelectorAll('.view-mode-btn').forEach(function(btn){btn.onclick=function(){state.viewMode=btn.getAttribute('data-view-mode');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-tab]').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-brand-tab]').forEach(function(btn){btn.onclick=function(){state.activeBrandTab=btn.getAttribute('data-brand-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); bindBrandInteractions(); }
+  function renderDashboard(){ var data=state.data; if(!data) return; var meta=data.meta||{}; $navbarDate.textContent=meta.dataDate?'截止 '+meta.dataDate:'—'; if($periodToggle) $periodToggle.style.display='none'; var activeTab=TABS.find(function(t){return t.id===state.activeTab;})||TABS[0]; var body=state.viewMode==='brand'?(renderBrandTabs()+'<main class="mobile-panel">'+(state.activeBrandTab==='brand-price-index'?renderBrandPriceIndexPanel():(state.activeBrandTab==='brand-sales-traffic'?renderBrandSalesTrafficPanel():renderBrandAdjustmentPanel()))+'</main>'):(renderTabs()+'<main class="mobile-panel">'+(state.activeTab==='sales'?renderSalesPanel():(state.activeTab==='discount'?renderDiscountPanel():(state.activeTab==='traffic'?renderTrafficPanel():(state.activeTab==='adjustment'?renderAdjustmentPanel():(state.activeTab==='brand-tier'?renderBrandTierMtdPanel():renderGenericPanel(activeTab))))))+'</main>'); $modulesContainer.innerHTML=renderViewModeSwitch()+body; document.querySelectorAll('.view-mode-btn').forEach(function(btn){btn.onclick=function(){state.viewMode=btn.getAttribute('data-view-mode');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-tab]').forEach(function(btn){btn.onclick=function(){state.activeTab=btn.getAttribute('data-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('[data-brand-tab]').forEach(function(btn){btn.onclick=function(){state.activeBrandTab=btn.getAttribute('data-brand-tab');renderDashboard();window.scrollTo(0,0);};}); document.querySelectorAll('.filter-btn').forEach(function(btn){btn.onclick=function(){state.periods[btn.getAttribute('data-section')]=btn.getAttribute('data-period');renderDashboard();};}); bindBrandInteractions(); }
 
   function enterDashboard(){ $loginError.textContent=""; $loginPage.style.display="none"; $dashboard.classList.add("active"); loadData(); }
   function handleLogin(){ var pwd=$passwordInput.value.trim(); if(!pwd){$loginError.textContent='请输入密码';return;} $loginError.textContent='正在登录…'; loginByApi(pwd).then(function(){enterDashboard();}).catch(function(){ if(pwd===STATIC_PREVIEW_PASSWORD){state.token='static-preview';enterDashboard();return;} $loginError.textContent='密码错误'; $passwordInput.value=''; $passwordInput.focus(); }); }
