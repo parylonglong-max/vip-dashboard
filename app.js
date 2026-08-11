@@ -731,7 +731,7 @@
       html+='<td class="excel-cell is-row-label">'+escapeHtml(b.group||'')+'</td>';
       html+='<td class="excel-cell">'+escapeHtml(b.tier||'—')+'</td>';
       html+='<td class="excel-cell" style="font-size:11px;color:#6b849e">'+escapeHtml(b.sn)+'</td>';
-      html+='<td class="excel-cell is-row-label">'+escapeHtml(b.brand||'')+'</td>';
+      html+='<td class="excel-cell is-row-label" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+escapeHtml(b.brand||'')+'">'+escapeHtml(b.brand||'')+'</td>';
       html+='<td class="excel-cell">'+fmt(b.sales)+'</td>';
       html+='<td class="excel-cell">'+fmt(b.sales_compare)+'</td>';
       html+='<td class="excel-cell">'+yoyPill(b.sales_yoy)+'</td>';
