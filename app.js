@@ -872,16 +872,17 @@
     var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
     var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
 
-    // 品牌销售流量搜索
+    // 品牌销售流量搜索（防抖 300ms）
     var stInput=document.getElementById('brandSalesTrafficSearch');
     if(stInput&&!stInput.dataset.bound){
       stInput.dataset.bound='1';
       stInput.addEventListener('compositionstart',function(){state.brandSalesTrafficComposing=true;});
-      stInput.addEventListener('compositionend',function(){state.brandSalesTrafficComposing=false;state.brandSalesTrafficQuery=stInput.value;renderDashboard();});
+      stInput.addEventListener('compositionend',function(){state.brandSalesTrafficComposing=false;state.brandSalesTrafficQuery=stInput.value;if(state.brandSalesTrafficTimer)clearTimeout(state.brandSalesTrafficTimer);state.brandSalesTrafficTimer=setTimeout(function(){renderDashboard();},300);});
       stInput.addEventListener('input',function(){
         if(state.brandSalesTrafficComposing) return;
         state.brandSalesTrafficQuery=stInput.value;
-        renderDashboard();
+        if(state.brandSalesTrafficTimer)clearTimeout(state.brandSalesTrafficTimer);
+        state.brandSalesTrafficTimer=setTimeout(function(){renderDashboard();},300);
       });
     }
     var stClear=document.querySelector('#brandSalesTrafficSearch+.brand-clear');
