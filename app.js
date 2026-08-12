@@ -490,7 +490,17 @@
     if(section.id==='six_high') return renderSixHighMtd(section);
     if(section.id==='six_high_price_index') return renderSixHighPriceIndex(section);
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
-    if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
+    if(section.id==='machine_purchase_mtd'){
+      var rows=(section.rows||[]).filter(function(row){return row.excelRow>=114&&row.excelRow<=118;}).map(function(row){
+        var cells=row.cells.slice(0,8);
+        normalizeTotalCell(cells[0]);
+        ratePctCell(cells[3]); // 月完成率
+        growthPctCell(cells[5]); // 业绩同比
+        return {excelRow:row.excelRow,cells:cells};
+      });
+      rows=markHeaders(rows,1);
+      return '<div class="section-title"><span></span>机采 · MTD</div>'+renderRows(rows);
+    }
     if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
     if(section.id==='traffic') return renderTrafficPanel();
     var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
