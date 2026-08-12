@@ -21,6 +21,7 @@
 
   var TABS = [
     { id: "sales", label: "自营销售", sectionIds: ["self_sales_mtd", "self_sales_history"] },
+    { id: "brand-tier", label: "品牌分层", sectionIds: [] },
     { id: "gross", label: "毛利", sectionIds: ["gross_profit"] },
     { id: "price", label: "外网价指", sectionIds: ["price_index_mtd", "price_index_history", "six_high_price_index"] },
     { id: "discount", label: "内网折扣", sectionIds: ["internal_discount"] },
@@ -30,7 +31,6 @@
     { id: "machine", label: "机采", sectionIds: ["machine_purchase_mtd", "machine_purchase_history"] },
     { id: "power", label: "五星价格力", sectionIds: ["price_power_mtd", "price_power_history"] },
     { id: "traffic", label: "流量趋势", sectionIds: ["traffic"] },
-    { id: "brand-tier", label: "品牌分层", sectionIds: [] },
   ];
   var BRAND_TABS = [
     { id: "brand-adjustment", label: "调价率" },
@@ -53,7 +53,7 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608030940'); }
+  function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608111830'); }
   function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){}),fetch(dataUrl('data/brand_price_index.json')).then(function(r){return r.json();}).then(function(d){state.brandPriceIndexData=d;}).catch(function(){}),fetch(dataUrl('data/brand_tier_mtd.json')).then(function(r){return r.json();}).then(function(d){state.brandTierData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
@@ -439,7 +439,6 @@
     });
 
     html+='</tbody></table></div>';
-    html+='<div class="section-title" style="font-size:12px;color:#888;margin-top:8px"><span></span>数据来源：VMA下载 · 品牌分层映射O-T · 有标签品牌参与汇总，无标签品牌仅出现在品牌视角</div>';
     return html;
   }
   function renderGrossProfit(section){
@@ -732,7 +731,7 @@
       html+='<td class="excel-cell is-row-label">'+escapeHtml(b.group||'')+'</td>';
       html+='<td class="excel-cell">'+escapeHtml(b.tier||'—')+'</td>';
       html+='<td class="excel-cell" style="font-size:11px;color:#6b849e">'+escapeHtml(b.sn)+'</td>';
-      html+='<td class="excel-cell is-row-label">'+escapeHtml(b.brand||'')+'</td>';
+      html+='<td class="excel-cell is-row-label" style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+escapeHtml(b.brand||'')+'">'+escapeHtml(b.brand||'')+'</td>';
       html+='<td class="excel-cell">'+fmt(b.sales)+'</td>';
       html+='<td class="excel-cell">'+fmt(b.sales_compare)+'</td>';
       html+='<td class="excel-cell">'+yoyPill(b.sales_yoy)+'</td>';
@@ -777,14 +776,16 @@
     html+='<div class="excel-scroll"><table class="excel-table brand-price-index-table"><thead><tr>';
     html+='<th class="excel-cell is-header is-row-label" rowspan="2">品牌</th>';
     html+='<th class="excel-cell is-header" rowspan="2">等级</th>';
-    html+='<th class="excel-cell is-header" colspan="3">天猫</th>';
-    html+='<th class="excel-cell is-header" colspan="3">抖音</th>';
+        html+='<th class="excel-cell is-header" colspan="4">天猫</th>';
+    html+='<th class="excel-cell is-header" colspan="4">抖音</th>';
     html+='</tr><tr>';
     html+='<th class="excel-cell is-header">价格指数</th>';
     html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">本月目标</th>';
     html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
     html+='<th class="excel-cell is-header">价格指数</th>';
     html+='<th class="excel-cell is-header">对标值</th>';
+    html+='<th class="excel-cell is-header">本月目标</th>';
     html+='<th class="excel-cell is-header">完成差值<br><small>(pp)</small></th>';
     html+='</tr></thead><tbody>';
     
@@ -795,10 +796,12 @@
       // 天猫
       html+='<td class="excel-cell">'+fmtRate(b.tmall_rate)+'</td>';
       html+='<td class="excel-cell">'+fmtRate(b.tmall_target)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.tmall_goal)+'</td>';
       html+='<td class="excel-cell '+diffClass(b.tmall_diff)+'">'+fmtDiff(b.tmall_diff)+'</td>';
       // 抖音
       html+='<td class="excel-cell">'+fmtRate(b.douyin_rate)+'</td>';
       html+='<td class="excel-cell">'+fmtRate(b.douyin_target)+'</td>';
+      html+='<td class="excel-cell">'+fmtRate(b.douyin_goal)+'</td>';
       html+='<td class="excel-cell '+diffClass(b.douyin_diff)+'">'+fmtDiff(b.douyin_diff)+'</td>';
       html+='</tr>';
     });

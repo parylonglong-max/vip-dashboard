@@ -268,8 +268,10 @@ def build_brand_list(
         tier_info = mapping.get(sn, {})
         tier = tier_info.get('tier', '')
         category = tier_info.get('category', '')
-        # 无映射标签但有数据的品牌：保留，tier 为空
-        sales = parse_num(row['销售额(含拒退)'])
+        # 无映射标签的品牌不展示
+        if not tier:
+            continue
+        sales = parse_num(row['销售额(含拒退)']) 
         traffic = parse_num(row['累计曝光流量'])
         sales_compare = parse_num(row['销售额(含拒退)(对比)'])
         traffic_compare = parse_num(row['累计曝光流量(对比)'])
