@@ -1,24 +1,39 @@
 {
-  "source_date": "2026-08-11",
-  "updated_at": "2026-08-12 09:53",
+  "source_date": "2026-08-12",
+  "updated_at": "2026-08-13 09:40",
   "overall_problem_count": 1,
-  "six_high_problem_count": 0,
-  "total_problem_count": 1,
+  "six_high_problem_count": 1,
+  "total_problem_count": 2,
   "problems": [
     {
       "sn": "10024102",
       "brand": "范琦Fanci",
       "level": "国内C",
       "group": "珠宝3组",
-      "overall_denominator": 12,
+      "overall_denominator": 13,
       "overall_adjusted": 1,
-      "overall_rate": 0.08333333333333333,
+      "overall_rate": 0.07692307692307693,
       "is_overall_problem": true,
       "six_high_count": 0,
       "six_high_price_high": 0,
       "six_high_adjusted": 0,
       "six_high_rate": null,
       "is_six_high_problem": false
+    },
+    {
+      "sn": "10201449",
+      "brand": "CAPONI",
+      "level": "国内C",
+      "group": "饰品1组",
+      "overall_denominator": 0,
+      "overall_adjusted": 0,
+      "overall_rate": null,
+      "is_overall_problem": false,
+      "six_high_count": 3,
+      "six_high_price_high": 1,
+      "six_high_adjusted": 0,
+      "six_high_rate": 0.0,
+      "is_six_high_problem": true
     }
   ]
 }
