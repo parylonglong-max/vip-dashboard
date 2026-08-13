@@ -84,21 +84,26 @@ def _get_section_range(ws, module_kw, sub_section=None, fallback=None):
     start, end = mod_range
     if sub_section:
         sub_row = _find_sub(ws, [sub_section], search_col=2, start_row=start+1, end_row=end)
+        if not sub_row:
+            # B列无子标题时尝试 C 列（如 YTD 表头在 C3）
+            sub_row = _find_sub(ws, [sub_section], search_col=3, start_row=start+1, end_row=end)
         if sub_row:
             # 子区域从标题行下一行开始到下一个子标题或模块结束
             next_sub = None
             for r in range(sub_row+1, end+1):
                 val = str(ws.cell(r, 2).value or '').strip()
-                if val in ('YTD', 'MTD', '历史月份', '历史月份得分'):
+                if any(k in val for k in ('YTD', 'MTD', '历史月份', '历史月份得分')):
                     next_sub = r
                     break
             sub_end = next_sub - 1 if next_sub else end
             return (sub_row, sub_end)
+        # 子标题未找到：回退到 fallback，避免返回整个模块范围
+        return fallback
     return (start, end)
 
 SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
-    {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 37), "stickyCols": 1},
+    {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 42), "stickyCols": 1},
     {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 41, 2, 11), "stickyCols": 1},
     {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 52, 2, 15), "stickyCols": 1},
     {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
@@ -115,7 +120,7 @@ SECTION_SPECS = [
 # 动态范围映射：section_id -> (模块关键词, 子区域, fallback_range)
 _DYNAMIC_RANGE_MAP = {
     "self_sales_mtd": ("自营销售", "MTD", (3, 12, 2, 11)),
-    "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 37)),
+    "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 42)),
     "gross_profit": ("毛利", None, (26, 41, 2, 11)),
     "price_index_mtd": ("外网价指", "MTD", (41, 51, 2, 15)),
     "price_index_history": ("外网价指", "YTD", (53, 62, 2, 79)),
