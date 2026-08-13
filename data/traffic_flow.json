@@ -1,62 +1,62 @@
 {
-  "source_date": "2026-08-11",
-  "updated_at": "2026-08-12 09:53",
+  "source_date": "2026-08-12",
+  "updated_at": "2026-08-13 09:40",
   "mtd": [
     {
       "group": "精品总",
-      "exposure": 444318920.0,
-      "browse": 24347205.0,
-      "uv": 289962.0,
-      "exposure_yoy": 4.68809296502434,
-      "browse_yoy": 10.952769434731229
+      "exposure": 459280975.0,
+      "browse": 25153442.0,
+      "uv": 287755.0,
+      "exposure_yoy": 4.137821670267846,
+      "browse_yoy": 10.013588645981898
     },
     {
       "group": "海淘组",
-      "exposure": 22156764.0,
-      "browse": 1214077.0,
-      "uv": 21789.0,
-      "exposure_yoy": 21.585440102331066,
-      "browse_yoy": 36.41130681384071
+      "exposure": 0,
+      "browse": 0,
+      "uv": 0,
+      "exposure_yoy": null,
+      "browse_yoy": null
     },
     {
       "group": "珠宝1组",
-      "exposure": 148931167.0,
-      "browse": 8233449.0,
-      "uv": 33921.0,
-      "exposure_yoy": 18.437798356158588,
-      "browse_yoy": 22.205773325328227
+      "exposure": 163114198.0,
+      "browse": 9010822.0,
+      "uv": 36855.0,
+      "exposure_yoy": 20.041235837277846,
+      "browse_yoy": 23.54909216154579
     },
     {
       "group": "珠宝2组",
-      "exposure": 64835673.0,
-      "browse": 3577876.0,
-      "uv": 12081.0,
-      "exposure_yoy": 10.240245918126702,
-      "browse_yoy": 16.055983869670257
+      "exposure": 70059489.0,
+      "browse": 3872020.0,
+      "uv": 13049.0,
+      "exposure_yoy": 5.847841273734409,
+      "browse_yoy": 12.491128150614152
     },
     {
       "group": "珠宝3组",
-      "exposure": 40411233.0,
-      "browse": 2141320.0,
-      "uv": 20822.0,
-      "exposure_yoy": 4.709604119602548,
-      "browse_yoy": 11.139426697607355
+      "exposure": 44194566.0,
+      "browse": 2341651.0,
+      "uv": 22697.0,
+      "exposure_yoy": 6.048131039007858,
+      "browse_yoy": 12.292973929473147
     },
     {
       "group": "饰品1组",
-      "exposure": 44736538.0,
-      "browse": 2297487.0,
-      "uv": 25644.0,
-      "exposure_yoy": -14.864865584931627,
-      "browse_yoy": -10.369323390871548
+      "exposure": 48790434.0,
+      "browse": 2506233.0,
+      "uv": 27828.0,
+      "exposure_yoy": -14.32146850467462,
+      "browse_yoy": -9.973738195927929
     },
     {
       "group": "饰品2组",
-      "exposure": 123247545.0,
-      "browse": 6882996.0,
-      "uv": 175705.0,
-      "exposure_yoy": -5.555803367419159,
-      "browse_yoy": 2.068417762139372
+      "exposure": 133122288.0,
+      "browse": 7422716.0,
+      "uv": 187326.0,
+      "exposure_yoy": -5.1438281152480965,
+      "browse_yoy": 2.2502105900447216
     }
   ],
   "daily": {
@@ -64,202 +64,220 @@
       {
         "date": "8月1日",
         "date_raw": "20260801",
-        "exposure": 39675167.0,
-        "browse": 2177280.0,
-        "uv": 30144.0,
-        "exposure_yoy": 1.085852394486369,
-        "browse_yoy": 11.11683833890207
+        "exposure": 37757098.0,
+        "browse": 2067204.0,
+        "uv": 27153.0,
+        "exposure_yoy": -0.7874028575949639,
+        "browse_yoy": 8.80330283071203
       },
       {
         "date": "8月2日",
         "date_raw": "20260802",
-        "exposure": 38904409.0,
-        "browse": 2150552.0,
-        "uv": 24500.0,
-        "exposure_yoy": -1.775875222942232,
-        "browse_yoy": 6.022243180205847
+        "exposure": 36811582.0,
+        "browse": 2039132.0,
+        "uv": 22609.0,
+        "exposure_yoy": -2.5526172736527073,
+        "browse_yoy": 5.035505780957198
       },
       {
         "date": "8月3日",
         "date_raw": "20260803",
-        "exposure": 36931425.0,
-        "browse": 2044356.0,
-        "uv": 27037.0,
-        "exposure_yoy": -4.009024207116672,
-        "browse_yoy": 2.012296229246184
+        "exposure": 35244692.0,
+        "browse": 1954739.0,
+        "uv": 25696.0,
+        "exposure_yoy": -4.238483337336904,
+        "browse_yoy": 1.1868132095669766
       },
       {
         "date": "8月4日",
         "date_raw": "20260804",
-        "exposure": 37403696.0,
-        "browse": 2072250.0,
-        "uv": 22577.0,
-        "exposure_yoy": 1.758216388467515,
-        "browse_yoy": 8.392897774081426
+        "exposure": 35832951.0,
+        "browse": 1988452.0,
+        "uv": 21728.0,
+        "exposure_yoy": 1.5282468668945948,
+        "browse_yoy": 7.835786292891994
       },
       {
         "date": "8月5日",
         "date_raw": "20260805",
-        "exposure": 38329762.0,
-        "browse": 2143151.0,
-        "uv": 29283.0,
-        "exposure_yoy": 2.5924246921291423,
-        "browse_yoy": 11.52022104737324
+        "exposure": 36455529.0,
+        "browse": 2045808.0,
+        "uv": 27027.0,
+        "exposure_yoy": 2.2721165257363043,
+        "browse_yoy": 11.209211987586452
       },
       {
         "date": "8月6日",
         "date_raw": "20260806",
-        "exposure": 42903219.0,
-        "browse": 2308537.0,
-        "uv": 23913.0,
-        "exposure_yoy": 18.458015996430515,
-        "browse_yoy": 23.982644319177822
+        "exposure": 40556811.0,
+        "browse": 2183550.0,
+        "uv": 22128.0,
+        "exposure_yoy": 16.46998080449063,
+        "browse_yoy": 21.76882243015671
       },
       {
         "date": "8月7日",
         "date_raw": "20260807",
-        "exposure": 38626969.0,
-        "browse": 2151559.0,
-        "uv": 26194.0,
-        "exposure_yoy": -3.246084327541336,
-        "browse_yoy": 3.6285119662001626
+        "exposure": 36621947.0,
+        "browse": 2035384.0,
+        "uv": 24160.0,
+        "exposure_yoy": -5.007888050355282,
+        "browse_yoy": 1.6152528918688187
       },
       {
         "date": "8月8日",
         "date_raw": "20260808",
-        "exposure": 39089451.0,
-        "browse": 2205497.0,
-        "uv": 28358.0,
-        "exposure_yoy": -6.768196866356141,
-        "browse_yoy": 0.6712184452015527
+        "exposure": 36851596.0,
+        "browse": 2078626.0,
+        "uv": 25818.0,
+        "exposure_yoy": -8.857921490175965,
+        "browse_yoy": -1.4845849427711557
       },
       {
         "date": "8月9日",
         "date_raw": "20260809",
-        "exposure": 40308088.0,
-        "browse": 2234349.0,
-        "uv": 27153.0,
-        "exposure_yoy": 3.12507859151017,
-        "browse_yoy": 7.72811626262076
+        "exposure": 37873423.0,
+        "browse": 2101140.0,
+        "uv": 24635.0,
+        "exposure_yoy": 1.2973636714742236,
+        "browse_yoy": 5.95021327299801
       },
       {
         "date": "8月10日",
         "date_raw": "20260810",
-        "exposure": 45772754.0,
-        "browse": 2438773.0,
-        "uv": 26876.0,
-        "exposure_yoy": 17.266329449114547,
-        "browse_yoy": 20.35763214415439
+        "exposure": 43581322.0,
+        "browse": 2318686.0,
+        "uv": 24662.0,
+        "exposure_yoy": 19.47308321286327,
+        "browse_yoy": 21.812227211882163
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 46373980.0,
-        "browse": 2420901.0,
-        "uv": 23927.0,
-        "exposure_yoy": 26.0693978434278,
-        "browse_yoy": 28.158486810411915
+        "exposure": 44568219.0,
+        "browse": 2320072.0,
+        "uv": 22074.0,
+        "exposure_yoy": 27.5263800875781,
+        "browse_yoy": 28.589845486359366
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 37125805.0,
+        "browse": 2020649.0,
+        "uv": 20065.0,
+        "exposure_yoy": 6.580965658017762,
+        "browse_yoy": 11.62591695820952
       }
     ],
     "海淘组": [
       {
         "date": "8月1日",
         "date_raw": "20260801",
-        "exposure": 1918069.0,
-        "browse": 110076.0,
-        "uv": 2987.0,
-        "exposure_yoy": 60.88173101844202,
-        "browse_yoy": 84.98613561885556
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月2日",
         "date_raw": "20260802",
-        "exposure": 2092827.0,
-        "browse": 111420.0,
-        "uv": 1888.0,
-        "exposure_yoy": 14.241085538328512,
-        "browse_yoy": 28.03511715293658
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月3日",
         "date_raw": "20260803",
-        "exposure": 1686733.0,
-        "browse": 89617.0,
-        "uv": 1342.0,
-        "exposure_yoy": 1.0503834172058473,
-        "browse_yoy": 24.09404987745268
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月4日",
         "date_raw": "20260804",
-        "exposure": 1570745.0,
-        "browse": 83798.0,
-        "uv": 846.0,
-        "exposure_yoy": 7.302832339260426,
-        "browse_yoy": 23.537563391909426
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月5日",
         "date_raw": "20260805",
-        "exposure": 1874233.0,
-        "browse": 97343.0,
-        "uv": 2248.0,
-        "exposure_yoy": 9.247648902821316,
-        "browse_yoy": 18.48412186423555
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月6日",
         "date_raw": "20260806",
-        "exposure": 2346408.0,
-        "browse": 124987.0,
-        "uv": 1780.0,
-        "exposure_yoy": 68.03337739921541,
-        "browse_yoy": 81.69091887020105
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月7日",
         "date_raw": "20260807",
-        "exposure": 2005022.0,
-        "browse": 116175.0,
-        "uv": 2017.0,
-        "exposure_yoy": 46.32195878071724,
-        "browse_yoy": 58.724194936674266
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月8日",
         "date_raw": "20260808",
-        "exposure": 2237855.0,
-        "browse": 126871.0,
-        "uv": 2512.0,
-        "exposure_yoy": 49.78618276838597,
-        "browse_yoy": 56.936988199203384
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月9日",
         "date_raw": "20260809",
-        "exposure": 2434088.0,
-        "browse": 133191.0,
-        "uv": 2442.0,
-        "exposure_yoy": 43.329951402657215,
-        "browse_yoy": 46.48607628348951
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月10日",
         "date_raw": "20260810",
-        "exposure": 2190992.0,
-        "browse": 120059.0,
-        "uv": 2146.0,
-        "exposure_yoy": -14.25420453362492,
-        "browse_yoy": -2.216158983547809
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 1799792.0,
-        "browse": 100540.0,
-        "uv": 1581.0,
-        "exposure_yoy": -1.9855128737846843,
-        "browse_yoy": 18.6340680606032
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 0,
+        "browse": 0,
+        "uv": 0,
+        "exposure_yoy": null,
+        "browse_yoy": null
       }
     ],
     "珠宝1组": [
@@ -268,7 +286,7 @@
         "date_raw": "20260801",
         "exposure": 12721316.0,
         "browse": 708926.0,
-        "uv": 3545.0,
+        "uv": 3544.0,
         "exposure_yoy": 17.171557520493693,
         "browse_yoy": 19.12540391760165
       },
@@ -338,11 +356,11 @@
       {
         "date": "8月9日",
         "date_raw": "20260809",
-        "exposure": 11973412.0,
-        "browse": 699827.0,
-        "uv": 2699.0,
-        "exposure_yoy": -0.8630570403229966,
-        "browse_yoy": 5.647978454561649
+        "exposure": 11972835.0,
+        "browse": 699809.0,
+        "uv": 2695.0,
+        "exposure_yoy": -0.8678344601668753,
+        "browse_yoy": 5.6452611206888745
       },
       {
         "date": "8月10日",
@@ -356,11 +374,20 @@
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 20518262.0,
-        "browse": 1025100.0,
-        "uv": 3796.0,
-        "exposure_yoy": 100.31033158756357,
-        "browse_yoy": 82.7448631419067
+        "exposure": 20514578.0,
+        "browse": 1024931.0,
+        "uv": 3749.0,
+        "exposure_yoy": 100.2743663941389,
+        "browse_yoy": 82.7147354647328
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 14187292.0,
+        "browse": 777560.0,
+        "uv": 2986.0,
+        "exposure_yoy": 39.97638002701399,
+        "browse_yoy": 39.86200148215301
       }
     ],
     "珠宝2组": [
@@ -441,7 +468,7 @@
         "date_raw": "20260809",
         "exposure": 5206449.0,
         "browse": 292066.0,
-        "uv": 994.0,
+        "uv": 988.0,
         "exposure_yoy": -0.9465768350271098,
         "browse_yoy": 3.0473240211834356
       },
@@ -450,18 +477,27 @@
         "date_raw": "20260810",
         "exposure": 5005405.0,
         "browse": 281822.0,
-        "uv": 994.0,
+        "uv": 992.0,
         "exposure_yoy": -3.846242507625404,
         "browse_yoy": -1.0220136830422994
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 5839515.0,
-        "browse": 317330.0,
-        "uv": 1193.0,
-        "exposure_yoy": -15.110212522661568,
-        "browse_yoy": -7.026143312111241
+        "exposure": 5838715.0,
+        "browse": 317294.0,
+        "uv": 1162.0,
+        "exposure_yoy": -15.121842226495168,
+        "browse_yoy": -7.036690877235132
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 5224616.0,
+        "browse": 294180.0,
+        "uv": 1007.0,
+        "exposure_yoy": -29.165423298547044,
+        "browse_yoy": -18.09654796076608
       }
     ],
     "珠宝3组": [
@@ -533,7 +569,7 @@
         "date_raw": "20260808",
         "exposure": 3633551.0,
         "browse": 197440.0,
-        "uv": 2091.0,
+        "uv": 2090.0,
         "exposure_yoy": 11.897112149604663,
         "browse_yoy": 15.14752109735401
       },
@@ -542,27 +578,36 @@
         "date_raw": "20260809",
         "exposure": 3769148.0,
         "browse": 204147.0,
-        "uv": 2046.0,
+        "uv": 2044.0,
         "exposure_yoy": 19.917254298589558,
         "browse_yoy": 21.324696163789262
       },
       {
         "date": "8月10日",
         "date_raw": "20260810",
-        "exposure": 3696246.0,
-        "browse": 198311.0,
-        "uv": 2055.0,
-        "exposure_yoy": 17.905630097619746,
-        "browse_yoy": 23.87005296821907
+        "exposure": 3695806.0,
+        "browse": 198283.0,
+        "uv": 2053.0,
+        "exposure_yoy": 17.891594647262018,
+        "browse_yoy": 23.852563461922845
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 3760172.0,
-        "browse": 199823.0,
-        "uv": 1982.0,
-        "exposure_yoy": 26.106085916573235,
-        "browse_yoy": 33.852471095749095
+        "exposure": 3759859.0,
+        "browse": 199811.0,
+        "uv": 1956.0,
+        "exposure_yoy": 26.095588735887915,
+        "browse_yoy": 33.84443283362137
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 3784086.0,
+        "browse": 200371.0,
+        "uv": 1906.0,
+        "exposure_yoy": 22.84246590906878,
+        "browse_yoy": 26.330954302431152
       }
     ],
     "饰品1组": [
@@ -580,7 +625,7 @@
         "date_raw": "20260802",
         "exposure": 4091788.0,
         "browse": 211586.0,
-        "uv": 2319.0,
+        "uv": 2318.0,
         "exposure_yoy": -10.783890904761883,
         "browse_yoy": -7.045013223677851
       },
@@ -598,7 +643,7 @@
         "date_raw": "20260804",
         "exposure": 3693402.0,
         "browse": 191932.0,
-        "uv": 2143.0,
+        "uv": 2142.0,
         "exposure_yoy": -16.268507395250108,
         "browse_yoy": -12.131519793435913
       },
@@ -607,7 +652,7 @@
         "date_raw": "20260805",
         "exposure": 3983117.0,
         "browse": 201917.0,
-        "uv": 2315.0,
+        "uv": 2313.0,
         "exposure_yoy": -25.475902743203267,
         "browse_yoy": -19.549531243151925
       },
@@ -616,7 +661,7 @@
         "date_raw": "20260806",
         "exposure": 4179511.0,
         "browse": 210988.0,
-        "uv": 2243.0,
+        "uv": 2244.0,
         "exposure_yoy": -11.71671098245872,
         "browse_yoy": -7.7139757855693185
       },
@@ -625,7 +670,7 @@
         "date_raw": "20260807",
         "exposure": 4027050.0,
         "browse": 207071.0,
-        "uv": 2378.0,
+        "uv": 2371.0,
         "exposure_yoy": -11.921660900198878,
         "browse_yoy": -10.199098829519187
       },
@@ -634,7 +679,7 @@
         "date_raw": "20260808",
         "exposure": 4307004.0,
         "browse": 223348.0,
-        "uv": 2418.0,
+        "uv": 2415.0,
         "exposure_yoy": -6.953205304634534,
         "browse_yoy": -5.332536483433575
       },
@@ -643,7 +688,7 @@
         "date_raw": "20260809",
         "exposure": 4477747.0,
         "browse": 231384.0,
-        "uv": 2530.0,
+        "uv": 2523.0,
         "exposure_yoy": -9.13389850182189,
         "browse_yoy": -5.350481052424897
       },
@@ -652,18 +697,27 @@
         "date_raw": "20260810",
         "exposure": 4164740.0,
         "browse": 211523.0,
-        "uv": 2294.0,
+        "uv": 2285.0,
         "exposure_yoy": -24.523672050195525,
         "browse_yoy": -19.362979623734823
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 4194987.0,
-        "browse": 214771.0,
-        "uv": 2561.0,
-        "exposure_yoy": -8.404177481157294,
-        "browse_yoy": -3.41336835146451
+        "exposure": 4194902.0,
+        "browse": 214765.0,
+        "uv": 2527.0,
+        "exposure_yoy": -8.40603342133401,
+        "browse_yoy": -3.4160666663668535
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 4053981.0,
+        "browse": 208752.0,
+        "uv": 2247.0,
+        "exposure_yoy": -7.827345758435122,
+        "browse_yoy": -5.374667397975604
       }
     ],
     "饰品2组": [
@@ -672,7 +726,7 @@
         "date_raw": "20260801",
         "exposure": 11823339.0,
         "browse": 657575.0,
-        "uv": 18539.0,
+        "uv": 18536.0,
         "exposure_yoy": 1.976236414555196,
         "browse_yoy": 18.319106671176975
       },
@@ -681,7 +735,7 @@
         "date_raw": "20260802",
         "exposure": 11661492.0,
         "browse": 652910.0,
-        "uv": 14937.0,
+        "uv": 14935.0,
         "exposure_yoy": -15.151896145238458,
         "browse_yoy": -5.021464034831234
       },
@@ -690,7 +744,7 @@
         "date_raw": "20260803",
         "exposure": 11884246.0,
         "browse": 662729.0,
-        "uv": 18766.0,
+        "uv": 18767.0,
         "exposure_yoy": -4.271802523679431,
         "browse_yoy": 3.1831713073967283
       },
@@ -699,7 +753,7 @@
         "date_raw": "20260804",
         "exposure": 11384217.0,
         "browse": 642427.0,
-        "uv": 14721.0,
+        "uv": 14719.0,
         "exposure_yoy": -2.7624122046904453,
         "browse_yoy": 3.077762356697607
       },
@@ -708,7 +762,7 @@
         "date_raw": "20260805",
         "exposure": 10839969.0,
         "browse": 610870.0,
-        "uv": 17613.0,
+        "uv": 17607.0,
         "exposure_yoy": -11.843530276588462,
         "browse_yoy": -4.906972689572722
       },
@@ -717,7 +771,7 @@
         "date_raw": "20260806",
         "exposure": 10079770.0,
         "browse": 563124.0,
-        "uv": 13590.0,
+        "uv": 13584.0,
         "exposure_yoy": -15.953639036156353,
         "browse_yoy": -9.185705784548198
       },
@@ -726,7 +780,7 @@
         "date_raw": "20260807",
         "exposure": 10508284.0,
         "browse": 597585.0,
-        "uv": 15237.0,
+        "uv": 15227.0,
         "exposure_yoy": -7.123722035565315,
         "browse_yoy": -2.2998371623079787
       },
@@ -735,7 +789,7 @@
         "date_raw": "20260808",
         "exposure": 11624698.0,
         "browse": 662426.0,
-        "uv": 17365.0,
+        "uv": 17341.0,
         "exposure_yoy": 0.1764961823792161,
         "browse_yoy": 6.7342752779026505
       },
@@ -744,7 +798,7 @@
         "date_raw": "20260809",
         "exposure": 12447244.0,
         "browse": 673734.0,
-        "uv": 16442.0,
+        "uv": 16385.0,
         "exposure_yoy": 3.869577016191887,
         "browse_yoy": 7.872173842037763
       },
@@ -753,18 +807,27 @@
         "date_raw": "20260810",
         "exposure": 10733034.0,
         "browse": 596279.0,
-        "uv": 15681.0,
+        "uv": 15626.0,
         "exposure_yoy": -7.326269901519039,
         "browse_yoy": 1.9059110244442659
       },
       {
         "date": "8月11日",
         "date_raw": "20260811",
-        "exposure": 10261252.0,
-        "browse": 563337.0,
-        "uv": 12814.0,
-        "exposure_yoy": -0.030854157454016637,
-        "browse_yoy": 6.222258257941162
+        "exposure": 10260165.0,
+        "browse": 563271.0,
+        "uv": 12680.0,
+        "exposure_yoy": -0.041444138241044134,
+        "browse_yoy": 6.209813364307291
+      },
+      {
+        "date": "8月12日",
+        "date_raw": "20260812",
+        "exposure": 9875830.0,
+        "browse": 539786.0,
+        "uv": 11919.0,
+        "exposure_yoy": 0.3288987454100212,
+        "browse_yoy": 4.639500012600489
       }
     ]
   }

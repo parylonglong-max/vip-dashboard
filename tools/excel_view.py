@@ -140,7 +140,10 @@ def _resolve_section_ranges(ws):
         mod_kw, sub, fallback = _DYNAMIC_RANGE_MAP[sid]
         dynamic = _get_section_range(ws, mod_kw, sub, fallback)
         if dynamic:
-            r1, r2 = dynamic
+            if len(dynamic) >= 4:
+                r1, r2 = dynamic[0], dynamic[1]
+            else:
+                r1, r2 = dynamic
             c1, c2 = fallback[2], fallback[3]  # 列范围保持不变
             spec["range"] = (r1, r2, c1, c2)
 

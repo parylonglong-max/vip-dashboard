@@ -490,7 +490,17 @@
     if(section.id==='six_high') return renderSixHighMtd(section);
     if(section.id==='six_high_price_index') return renderSixHighPriceIndex(section);
     if(section.id==='quality_product_mtd') return renderQualityMtd(section);
-    if(section.id==='machine_purchase_mtd') return renderMtdWithoutTitle(section,'机采 · MTD',114,118,8);
+    if(section.id==='machine_purchase_mtd'){
+      var rows=(section.rows||[]).filter(function(row){return row.excelRow>=114&&row.excelRow<=118;}).map(function(row){
+        var cells=row.cells.slice(0,8);
+        normalizeTotalCell(cells[0]);
+        ratePctCell(cells[3]); // 月完成率
+        growthPctCell(cells[5]); // 业绩同比
+        return {excelRow:row.excelRow,cells:cells};
+      });
+      rows=markHeaders(rows,1);
+      return '<div class="section-title"><span></span>机采 · MTD</div>'+renderRows(rows);
+    }
     if(section.id==='price_power_mtd') return renderPricePowerMtd(section);
     if(section.id==='traffic') return renderTrafficPanel();
     var hasFilter=!!PERIOD_CONFIG[section.id]; var baseTitle = section.title.replace(' · MTD / YTD / 历史月份',' · 历史月份').replace('YTD / 历史月份得分','历史月份得分').replace('YTD / 历史月份','历史月份'); var title=hasFilter ? baseTitle+' · '+activePeriod(section.id) : section.title; var rows=hasFilter ? periodRows(section, section.id) : (section.rows||[]); return '<div class="section-title"><span></span>'+escapeHtml(title)+'</div>'+renderPeriodFilter(section.id)+renderRows(rows); }
@@ -872,16 +882,17 @@
     var clear=document.querySelector('.brand-clear');if(clear)clear.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
     var change=document.querySelector('.brand-change');if(change)change.onclick=function(){state.brandQuery='';state.selectedBrandSn=null;renderDashboard();setTimeout(function(){var x=document.getElementById('brandSearchInput');if(x)x.focus();},0);};
 
-    // 品牌销售流量搜索
+    // 品牌销售流量搜索（防抖 300ms）
     var stInput=document.getElementById('brandSalesTrafficSearch');
     if(stInput&&!stInput.dataset.bound){
       stInput.dataset.bound='1';
       stInput.addEventListener('compositionstart',function(){state.brandSalesTrafficComposing=true;});
-      stInput.addEventListener('compositionend',function(){state.brandSalesTrafficComposing=false;state.brandSalesTrafficQuery=stInput.value;renderDashboard();});
+      stInput.addEventListener('compositionend',function(){state.brandSalesTrafficComposing=false;state.brandSalesTrafficQuery=stInput.value;if(state.brandSalesTrafficTimer)clearTimeout(state.brandSalesTrafficTimer);state.brandSalesTrafficTimer=setTimeout(function(){renderDashboard();},300);});
       stInput.addEventListener('input',function(){
         if(state.brandSalesTrafficComposing) return;
         state.brandSalesTrafficQuery=stInput.value;
-        renderDashboard();
+        if(state.brandSalesTrafficTimer)clearTimeout(state.brandSalesTrafficTimer);
+        state.brandSalesTrafficTimer=setTimeout(function(){renderDashboard();},300);
       });
     }
     var stClear=document.querySelector('#brandSalesTrafficSearch+.brand-clear');
