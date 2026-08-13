@@ -5,9 +5,9 @@
     "sourceFile": "货价监控指标副本-26.08.13_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-08-12",
-    "generatedAt": "2026-08-13 13:57:36",
-    "updatedAtHour": "2026-08-13 13点",
-    "versionNote": "更新于 2026-08-13 13点"
+    "generatedAt": "2026-08-13 14:08:30",
+    "updatedAtHour": "2026-08-13 14点",
+    "versionNote": "更新于 2026-08-13 14点"
   },
   "sections": [
     {
@@ -2128,11 +2128,13 @@
             },
             {
               "coord": "AN17",
-              "formula": "=AM30/AL30",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.9641543356721891,
+              "text": "96.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 饰品1组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO17",
@@ -2146,11 +2148,13 @@
             },
             {
               "coord": "AP17",
-              "formula": "=AM30/AO30-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.04214361196898886,
+              "text": "4.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 饰品1组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -2537,11 +2541,13 @@
             },
             {
               "coord": "AN18",
-              "formula": "=AM31/AL31",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.7168411686646973,
+              "text": "71.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 饰品2组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO18",
@@ -2555,11 +2561,13 @@
             },
             {
               "coord": "AP18",
-              "formula": "=AM31/AO31-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": -0.1012947615542541,
+              "text": "-10.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 饰品2组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -2946,11 +2954,13 @@
             },
             {
               "coord": "AN19",
-              "formula": "=AM32/AL32",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 1.165393079607351,
+              "text": "116.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 海淘组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO19",
@@ -2964,11 +2974,13 @@
             },
             {
               "coord": "AP19",
-              "formula": "=AM32/AO32-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.4167056900389909,
+              "text": "41.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 海淘组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -3355,11 +3367,13 @@
             },
             {
               "coord": "AN20",
-              "formula": "=AM33/AL33",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.9640506318948845,
+              "text": "96.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 珠宝1组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO20",
@@ -3373,11 +3387,13 @@
             },
             {
               "coord": "AP20",
-              "formula": "=AM33/AO33-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.1389952071485234,
+              "text": "13.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 珠宝1组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -3764,11 +3780,13 @@
             },
             {
               "coord": "AN21",
-              "formula": "=AM34/AL34",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.9368118447215148,
+              "text": "93.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 珠宝2组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO21",
@@ -3782,11 +3800,13 @@
             },
             {
               "coord": "AP21",
-              "formula": "=AM34/AO34-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.07712909927105427,
+              "text": "7.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 珠宝2组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -4173,11 +4193,13 @@
             },
             {
               "coord": "AN22",
-              "formula": "=AM35/AL35",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.7518519585422194,
+              "text": "75.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 珠宝3组",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO22",
@@ -4191,11 +4213,13 @@
             },
             {
               "coord": "AP22",
-              "formula": "=AM35/AO35-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": -0.1400495699227579,
+              "text": "-14.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 珠宝3组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -4213,8 +4237,8 @@
             {
               "coord": "C23",
               "formula": "=H23+H12+M23+R23+W23+AB23+AG23+AL23",
-              "raw": 3451275094.0483418,
-              "text": "34.51",
+              "raw": 3880912909.0483418,
+              "text": "38.81",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 总",
@@ -4223,8 +4247,8 @@
             {
               "coord": "D23",
               "formula": "=I23+D12+N23+S23+X23+AC23+AH23+AM23",
-              "raw": 3005265061.46638,
-              "text": "30.05",
+              "raw": 3373696534.3219,
+              "text": "33.74",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 总",
@@ -4233,8 +4257,8 @@
             {
               "coord": "E23",
               "formula": "=D23/C23",
-              "raw": 0.87076949230993,
-              "text": "87.1%",
+              "raw": 0.8693048809356511,
+              "text": "86.9%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 总",
@@ -4243,8 +4267,8 @@
             {
               "coord": "F23",
               "formula": "=K23+F12+P23+U23+Z23+AE23+AJ23+AO23",
-              "raw": 2994803663.55312,
-              "text": "29.95",
+              "raw": 3360724742.0754204,
+              "text": "33.61",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 总",
@@ -4253,8 +4277,8 @@
             {
               "coord": "G23",
               "formula": "=D23/F23-1",
-              "raw": 0.003493183222852192,
-              "text": "0.3%",
+              "raw": 0.0038598199025572377,
+              "text": "0.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 总",
@@ -4562,49 +4586,53 @@
             },
             {
               "coord": "AL23",
-              "formula": "=SUM(AL30:AL35)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "formula": "",
+              "raw": 429637815.0000001,
+              "text": "4.3",
+              "unit": "亿",
               "type": "number",
               "context": "7月 7月目标 71810000.00000006 总",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "AM23",
-              "formula": "=SUM(AM30:AM35)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "formula": "",
+              "raw": 368431472.8555199,
+              "text": "3.68",
+              "unit": "亿",
               "type": "number",
               "context": "7月完成 69235922.84461996 总",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "AN23",
-              "formula": "=AM36/AL36",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.8575396764261074,
+              "text": "85.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月完成率 0.9641543356721891 总",
+              "numberFormat": "0.0%"
             },
             {
               "coord": "AO23",
-              "formula": "=SUM(AO30:AO35)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "formula": "",
+              "raw": 365921078.5223002,
+              "text": "3.66",
+              "unit": "亿",
               "type": "number",
               "context": "同期 66436067.01557004 总",
               "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
             },
             {
               "coord": "AP23",
-              "formula": "=AM36/AO36-1",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "",
+              "raw": 0.006860480252620205,
+              "text": "0.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 0.04214361196898886 总",
+              "numberFormat": "0.0%"
             }
           ]
         }
@@ -6359,7 +6387,7 @@
           }
         ],
         "source_date": "2026-08-12",
-        "updated_at": "2026-08-13 13:57"
+        "updated_at": "2026-08-13 14:08"
       }
     },
     {
