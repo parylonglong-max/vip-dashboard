@@ -1,14 +1,14 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-08-12",
-  "six_high_source_date": "2026-08-12",
+  "overall_source_date": "2026-08-13",
+  "six_high_source_date": "2026-08-13",
   "groups": [
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 1915,
-        "adjusted": 1567,
-        "rate": 0.8182767624020888,
+        "denominator": 1959,
+        "adjusted": 1592,
+        "rate": 0.8126595201633486,
         "target": 0.75,
         "status": "pass"
       },
@@ -23,9 +23,9 @@
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 3024,
-        "adjusted": 1758,
-        "rate": 0.5813492063492064,
+        "denominator": 3047,
+        "adjusted": 1781,
+        "rate": 0.584509353462422,
         "target": 0.75,
         "status": "fail"
       },
@@ -57,9 +57,9 @@
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 108,
-        "adjusted": 67,
-        "rate": 0.6203703703703703,
+        "denominator": 113,
+        "adjusted": 71,
+        "rate": 0.6283185840707964,
         "target": 0.75,
         "status": "fail"
       },
@@ -74,9 +74,9 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 119,
-        "adjusted": 91,
-        "rate": 0.7647058823529411,
+        "denominator": 128,
+        "adjusted": 99,
+        "rate": 0.7734375,
         "target": 0.75,
         "status": "pass"
       },
@@ -91,9 +91,9 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 1070,
-        "adjusted": 849,
-        "rate": 0.7934579439252336,
+        "denominator": 1091,
+        "adjusted": 864,
+        "rate": 0.7919340054995417,
         "target": 0.75,
         "status": "pass"
       },
@@ -109,9 +109,9 @@
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 6257,
-      "adjusted": 4345,
-      "rate": 0.6944222470832667,
+      "denominator": 6359,
+      "adjusted": 4420,
+      "rate": 0.6950778424280547,
       "target": 0.75,
       "status": "fail"
     },
@@ -124,8 +124,8 @@
     }
   },
   "six_high_item": "品牌6高商品总览",
-  "six_high_source": "企业邮箱附件提取_20260813/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-12 23：59.xlsx",
-  "generated_at": "2026-08-13 09:40:58",
+  "six_high_source": "企业邮箱附件提取_20260814/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-13 23：59.xlsx",
+  "generated_at": "2026-08-14 09:52:35",
   "validation": {
     "status": "PASS",
     "errors": []
