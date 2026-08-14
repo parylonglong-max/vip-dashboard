@@ -401,7 +401,6 @@ def main():
     source_date = args.source_date
     if not source_date:
         # 从文件名或今天取
-        from pathlib import Path
         import re
         # 文件名: vma_品牌分层数据8.11_xxx -> 2026-08-11
         m = re.search(r'数据(\d{1,2})\.(\d{1,2})', Path(args.vma).name)
