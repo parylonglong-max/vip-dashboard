@@ -1,39 +1,24 @@
 {
-  "source_date": "2026-08-13",
-  "updated_at": "2026-08-14 09:52",
-  "overall_problem_count": 2,
-  "six_high_problem_count": 0,
-  "total_problem_count": 2,
+  "source_date": "",
+  "updated_at": "2026-08-16 12:49",
+  "overall_problem_count": 0,
+  "six_high_problem_count": 1,
+  "total_problem_count": 1,
   "problems": [
     {
-      "sn": "10005335",
-      "brand": "周大福CHOW TAI FOOK",
-      "level": "国内A",
-      "group": "珠宝1组",
-      "overall_denominator": 11,
+      "sn": "10026180",
+      "brand": "",
+      "level": "",
+      "group": "",
+      "overall_denominator": 0,
       "overall_adjusted": 0,
-      "overall_rate": 0.0,
-      "is_overall_problem": true,
-      "six_high_count": 0,
-      "six_high_price_high": 0,
+      "overall_rate": null,
+      "is_overall_problem": false,
+      "six_high_count": 4,
+      "six_high_price_high": 1,
       "six_high_adjusted": 0,
-      "six_high_rate": null,
-      "is_six_high_problem": false
-    },
-    {
-      "sn": "10024102",
-      "brand": "范琦Fanci",
-      "level": "国内C",
-      "group": "珠宝3组",
-      "overall_denominator": 15,
-      "overall_adjusted": 1,
-      "overall_rate": 0.06666666666666667,
-      "is_overall_problem": true,
-      "six_high_count": 0,
-      "six_high_price_high": 0,
-      "six_high_adjusted": 0,
-      "six_high_rate": null,
-      "is_six_high_problem": false
+      "six_high_rate": 0.0,
+      "is_six_high_problem": true
     }
   ]
 }
