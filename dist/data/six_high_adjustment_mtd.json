@@ -1,0 +1,310 @@
+{
+  "source_date": "2026-08-15",
+  "updated_at": "2026-08-16 12:55",
+  "data_range": {
+    "start": "2026-08-03",
+    "end": "2026-08-15"
+  },
+  "daily_count": 12,
+  "daily_detail": {
+    "20260803": {
+      "海淘组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 9.0,
+        "adjusted": 8.0
+      },
+      "饰品2组": {
+        "price_high": 7.0,
+        "adjusted": 3.0
+      }
+    },
+    "20260804": {
+      "海淘组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 4.0,
+        "adjusted": 3.0
+      },
+      "饰品2组": {
+        "price_high": 15.0,
+        "adjusted": 11.0
+      }
+    },
+    "20260805": {
+      "海淘组": {
+        "price_high": 2.0,
+        "adjusted": 2.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品1组": {
+        "price_high": 4.0,
+        "adjusted": 4.0
+      },
+      "饰品2组": {
+        "price_high": 34.0,
+        "adjusted": 9.0
+      }
+    },
+    "20260806": {
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 4.0,
+        "adjusted": 2.0
+      },
+      "饰品2组": {
+        "price_high": 24.0,
+        "adjusted": 1.0
+      }
+    },
+    "20260807": {
+      "海淘组": {
+        "price_high": 2.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 3.0
+      },
+      "饰品2组": {
+        "price_high": 25.0,
+        "adjusted": 25.0
+      }
+    },
+    "20260808": {
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 5.0,
+        "adjusted": 5.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
+    },
+    "20260809": {
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
+    },
+    "20260810": {
+      "海淘组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 3.0
+      },
+      "饰品2组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      }
+    },
+    "20260811": {
+      "海淘组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 2.0
+      },
+      "饰品2组": {
+        "price_high": 22.0,
+        "adjusted": 22.0
+      }
+    },
+    "20260812": {
+      "海淘组": {
+        "price_high": 2.0,
+        "adjusted": 1.0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 2.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
+    },
+    "20260813": {
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 2.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
+    },
+    "20260815": {
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝1组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 2.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
+    }
+  },
+  "mtd_summary": {
+    "珠宝1组": {
+      "price_high": 0,
+      "adjusted": 0
+    },
+    "珠宝2组": {
+      "price_high": 0,
+      "adjusted": 0
+    },
+    "珠宝3组": {
+      "price_high": 1.0,
+      "adjusted": 1.0
+    },
+    "饰品1组": {
+      "price_high": 45.0,
+      "adjusted": 37.0
+    },
+    "饰品2组": {
+      "price_high": 128.0,
+      "adjusted": 72.0
+    },
+    "海淘组": {
+      "price_high": 10.0,
+      "adjusted": 8.0
+    }
+  },
+  "mtd_total": {
+    "price_high": 184.0,
+    "adjusted": 118.0,
+    "rate": 64.1
+  }
+}

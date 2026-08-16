@@ -129,5 +129,43 @@
   "validation": {
     "status": "PASS",
     "errors": []
+  },
+  "six_high": {
+    "source": "品牌6高商品总览 MTD累计",
+    "data_range": "2026-08-03 ~ 2026-08-15",
+    "daily_count": 12,
+    "mtd": {
+      "珠宝1组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品1组": {
+        "price_high": 45.0,
+        "adjusted": 37.0
+      },
+      "饰品2组": {
+        "price_high": 128.0,
+        "adjusted": 72.0
+      },
+      "海淘组": {
+        "price_high": 10.0,
+        "adjusted": 8.0
+      }
+    },
+    "total": {
+      "price_high": 184.0,
+      "adjusted": 118.0,
+      "rate": 64.1
+    },
+    "target": 0.8,
+    "status": "fail"
   }
 }
