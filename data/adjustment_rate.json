@@ -13,9 +13,9 @@
         "status": "pass"
       },
       "six_high": {
-        "denominator": 3,
-        "adjusted": 1,
-        "rate": 0.3333333333333333,
+        "denominator": 48,
+        "adjusted": 38,
+        "rate": 0.7916666666666666,
         "target": 0.8,
         "status": "fail"
       }
@@ -30,11 +30,11 @@
         "status": "fail"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 128,
+        "adjusted": 72,
+        "rate": 0.5625,
         "target": 0.8,
-        "status": "no_data"
+        "status": "fail"
       }
     },
     {
@@ -47,11 +47,11 @@
         "status": "fail"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 10,
+        "adjusted": 8,
+        "rate": 0.8,
         "target": 0.8,
-        "status": "no_data"
+        "status": "pass"
       }
     },
     {
@@ -98,11 +98,11 @@
         "status": "pass"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 1,
+        "adjusted": 1,
+        "rate": 1.0,
         "target": 0.8,
-        "status": "no_data"
+        "status": "pass"
       }
     }
   ],
@@ -116,9 +116,9 @@
       "status": "fail"
     },
     "six_high": {
-      "denominator": 3,
-      "adjusted": 1,
-      "rate": 0.3333333333333333,
+      "denominator": 187,
+      "adjusted": 119,
+      "rate": 0.6363636363636364,
       "target": 0.8,
       "status": "fail"
     }
@@ -144,25 +144,25 @@
         "adjusted": 0
       },
       "珠宝3组": {
-        "price_high": 1.0,
-        "adjusted": 1.0
+        "price_high": 1,
+        "adjusted": 1
       },
       "饰品1组": {
-        "price_high": 48.0,
-        "adjusted": 38.0
+        "price_high": 48,
+        "adjusted": 38
       },
       "饰品2组": {
-        "price_high": 128.0,
-        "adjusted": 72.0
+        "price_high": 128,
+        "adjusted": 72
       },
       "海淘组": {
-        "price_high": 10.0,
-        "adjusted": 8.0
+        "price_high": 10,
+        "adjusted": 8
       }
     },
     "total": {
-      "price_high": 187.0,
-      "adjusted": 119.0,
+      "price_high": 187,
+      "adjusted": 119,
       "rate": 63.6
     },
     "target": 0.8,

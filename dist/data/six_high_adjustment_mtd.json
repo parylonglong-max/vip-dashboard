@@ -1,11 +1,11 @@
 {
-  "source_date": "2026-08-15",
+  "source_date": "2026-08-16",
   "updated_at": "2026-08-16 12:55",
   "data_range": {
     "start": "2026-08-03",
-    "end": "2026-08-15"
+    "end": "2026-08-16"
   },
-  "daily_count": 12,
+  "daily_count": 13,
   "daily_detail": {
     "20260803": {
       "海淘组": {
@@ -274,6 +274,32 @@
         "price_high": 0,
         "adjusted": 0
       }
+    },
+    "2026-08-16": {
+      "珠宝1组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "珠宝3组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "饰品1组": {
+        "price_high": 3.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 0,
+        "adjusted": 0
+      },
+      "海淘组": {
+        "price_high": 0,
+        "adjusted": 0
+      }
     }
   },
   "mtd_summary": {
@@ -290,8 +316,8 @@
       "adjusted": 1.0
     },
     "饰品1组": {
-      "price_high": 45.0,
-      "adjusted": 37.0
+      "price_high": 48.0,
+      "adjusted": 38.0
     },
     "饰品2组": {
       "price_high": 128.0,
@@ -303,8 +329,8 @@
     }
   },
   "mtd_total": {
-    "price_high": 184.0,
-    "adjusted": 118.0,
-    "rate": 64.1
+    "price_high": 187.0,
+    "adjusted": 119.0,
+    "rate": 63.6
   }
 }
