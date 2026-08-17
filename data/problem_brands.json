@@ -1,6 +1,6 @@
 {
   "source_date": "",
-  "updated_at": "2026-08-16 12:54",
+  "updated_at": "2026-08-17 09:51",
   "overall_problem_count": 0,
   "six_high_problem_count": 1,
   "total_problem_count": 1,
@@ -14,10 +14,10 @@
       "overall_adjusted": 0,
       "overall_rate": null,
       "is_overall_problem": false,
-      "six_high_count": 4,
-      "six_high_price_high": 1,
-      "six_high_adjusted": 0,
-      "six_high_rate": 0.0,
+      "six_high_count": 5,
+      "six_high_price_high": 3,
+      "six_high_adjusted": 1,
+      "six_high_rate": 0.3333333333333333,
       "is_six_high_problem": true
     }
   ]
