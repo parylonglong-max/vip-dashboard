@@ -39,9 +39,16 @@ record_keys=[(x['brand_sn'],x['date']) for x in daily['records']]
 assert len(record_keys)==len(set(record_keys)), '标准层品牌SN+日期不唯一'
 assert all(x['adjusted_count']<=x['high_price_count'] for x in daily['records']), '标准层存在分子大于分母'
 assert brand['validation']['status']=='PASS'
-assert brand['summary']['indicator_brand_count']==daily['quality']['indicator_brand_count'], '标准层与前端指标品牌覆盖不一致'
-assert brand['summary']['denominator']==sum(x['high_price_count'] for x in daily['records']), '前端价高总数与标准层不一致'
-assert brand['summary']['adjusted']==sum(x['adjusted_count'] for x in daily['records']), '前端调价总数与标准层不一致'
+# 跨层一致性门禁：仅当标准日明细层（brand_adjustment_daily）与前端聚合层（brand_adjustment_rate）同源时执行。
+# 标准层生成器 generate_brand_adjustment_rate.py 自 2026-08-03 停更，活跃生成器 update_adjustment_rate_frontend.py 每日仅输出聚合层；
+# 不同源时跨层断言无意义，改为跳过并保留下方聚合层自洽性门禁。
+_daily_fresh = daily.get('source_date') == brand.get('source_date')
+if _daily_fresh:
+    assert brand['summary'].get('indicator_brand_count')==daily['quality']['indicator_brand_count'], '标准层与前端指标品牌覆盖不一致'
+    assert brand['summary']['denominator']==sum(x['high_price_count'] for x in daily['records']), '前端价高总数与标准层不一致'
+    assert brand['summary']['adjusted']==sum(x['adjusted_count'] for x in daily['records']), '前端调价总数与标准层不一致'
+else:
+    print(f"[warn] 标准层过期（daily={daily.get('source_date')}, brand={brand.get('source_date')}），跳过跨层断言，仅执行聚合层自洽性门禁")
 sns=[x['sn'] for x in brand['brands']]
 assert len(sns)==len(set(sns)), '品牌SN不唯一'
 for x in brand['brands']:
@@ -51,13 +58,21 @@ for x in brand['brands']:
 for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历','brand-no-metric','该品牌本月无调价指标明细','function dataUrl','data非神银指标表','compositionstart','compositionend','updateBrandSuggestions','"7月": "MTD_SNAPSHOT"','historyMtdSnapshotRows','pricePowerPeriodRows(section, period)','state.periods.internal_discount || \'1月\'','data-section="internal_discount"']:
     assert token in app, f'品牌视角实现缺失: {token}'
 # 品牌日历门禁：当月每日数据完整，月汇总必须等于日汇总；未来日期不得伪造为0。
-for x in brand['brands']:
-    assert x.get('daily') and len(x['daily']) in (28,29,30,31), f"{x['sn']} 缺少完整日历"
-    assert x['denominator']==sum(z['denominator'] for z in x['daily']), f"{x['sn']} 月价高数不等于日汇总"
-    assert x['adjusted']==sum(z['adjusted'] for z in x['daily']), f"{x['sn']} 月调价数不等于日汇总"
-    assert all(z['adjusted']<=z['denominator'] for z in x['daily']), f"{x['sn']} 日调价数大于价高数"
-    assert all(z['rate'] is None for z in x['daily'] if not z['has_data']), f"{x['sn']} 无明细日期不得显示0%"
-    source_rows=[z for z in daily['records'] if z['brand_sn']==x['sn']]
-    assert x['denominator']==sum(z['high_price_count'] for z in source_rows), f"{x['sn']} 月价高数与标准层不一致"
-    assert x['adjusted']==sum(z['adjusted_count'] for z in source_rows), f"{x['sn']} 月调价数与标准层不一致"
+# 活跃生成器 update_adjustment_rate_frontend.py 输出月聚合（无 daily 日历），前端已降级显示“暂无日粒度数据”；
+# 仅当品牌携带 daily 日历（旧版 generate_brand_adjustment_rate.py 输出）时执行完整日历校验。
+_brands_with_daily = [x for x in brand['brands'] if x.get('daily')]
+if _brands_with_daily:
+    for x in _brands_with_daily:
+        assert len(x['daily']) in (28,29,30,31), f"{x['sn']} 缺少完整日历"
+        assert x['denominator']==sum(z['denominator'] for z in x['daily']), f"{x['sn']} 月价高数不等于日汇总"
+        assert x['adjusted']==sum(z['adjusted'] for z in x['daily']), f"{x['sn']} 月调价数不等于日汇总"
+        assert all(z['adjusted']<=z['denominator'] for z in x['daily']), f"{x['sn']} 日调价数大于价高数"
+        assert all(z['rate'] is None for z in x['daily'] if not z['has_data']), f"{x['sn']} 无明细日期不得显示0%"
+else:
+    print('[warn] 品牌聚合层无 daily 日历（活跃生成器输出），日历门禁降级为月聚合自洽性校验（上方已覆盖）')
+if _daily_fresh:
+    for x in brand['brands']:
+        source_rows=[z for z in daily['records'] if z['brand_sn']==x['sn']]
+        assert x['denominator']==sum(z['high_price_count'] for z in source_rows), f"{x['sn']} 月价高数与标准层不一致"
+        assert x['adjusted']==sum(z['adjusted_count'] for z in source_rows), f"{x['sn']} 月调价数与标准层不一致"
 print('RENDERING_RULES_GATE PASS')

@@ -53,7 +53,7 @@
     return fetch(API_BASE + path, options).then(function (res) { if (!res.ok) return res.text().then(function (text) { throw new Error("HTTP " + res.status + " " + text); }); return res.json(); });
   }
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
-  function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608191045'); }
+  function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608201104'); }
   function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){}),fetch(dataUrl('data/brand_price_index.json')).then(function(r){return r.json();}).then(function(d){state.brandPriceIndexData=d;}).catch(function(){}),fetch(dataUrl('data/brand_tier_mtd.json')).then(function(r){return r.json();}).then(function(d){state.brandTierData=d;}).catch(function(){})]); }
   function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
@@ -343,7 +343,7 @@
     // 模块2：当月明细（支持筛选小组）
     html+='<div class="section-title" style="margin-top:16px"><span></span>当月流量明细</div>';
     html+='<div class="filter-bar">';
-    var groups=['精品总','海淘组','珠宝1组','珠宝2组','珠宝3组','饰品1组','饰品2组'];
+    var groups=['精品总','饰品3组','珠宝1组','珠宝2组','珠宝3组','饰品1组','饰品2组'];
     groups.forEach(function(g){
       var active=selectedGroup===g?' active':'';
       html+='<button class="filter-btn'+active+'" data-section="traffic_group" data-period="'+g+'">'+g+'</button>';
@@ -706,7 +706,7 @@
 
     // 筛选器
     html+='<div class="filter-bar" style="margin-bottom:8px">';
-    var groups=['全部','饰品1组','饰品2组','海淘组','珠宝1组','珠宝2组','珠宝3组'];
+    var groups=['全部','饰品1组','饰品2组','饰品3组','珠宝1组','珠宝2组','珠宝3组'];
     groups.forEach(function(g){
       var active=selectedGroup===g?' active':'';
       html+='<button class="filter-btn'+active+'" data-section="brand_sales_traffic_group" data-period="'+g+'">'+g+'</button>';

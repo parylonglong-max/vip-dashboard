@@ -1,14 +1,14 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-08-18",
-  "six_high_source_date": "2026-08-18",
+  "overall_source_date": "2026-08-19",
+  "six_high_source_date": "2026-08-19",
   "groups": [
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 2261,
-        "adjusted": 1775,
-        "rate": 0.7850508624502432,
+        "denominator": 2070,
+        "adjusted": 1697,
+        "rate": 0.8198067632850241,
         "target": 0.75,
         "status": "pass"
       },
@@ -23,9 +23,9 @@
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 3315,
-        "adjusted": 1970,
-        "rate": 0.5942684766214178,
+        "denominator": 3358,
+        "adjusted": 2006,
+        "rate": 0.5973793924955331,
         "target": 0.75,
         "status": "fail"
       },
@@ -38,13 +38,13 @@
       }
     },
     {
-      "group": "海淘组",
+      "group": "饰品3组",
       "overall": {
-        "denominator": 21,
-        "adjusted": 13,
-        "rate": 0.6190476190476191,
+        "denominator": 6,
+        "adjusted": 6,
+        "rate": 1.0,
         "target": 0.75,
-        "status": "fail"
+        "status": "pass"
       },
       "six_high": {
         "denominator": 0,
@@ -57,9 +57,9 @@
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 135,
-        "adjusted": 84,
-        "rate": 0.6222222222222222,
+        "denominator": 136,
+        "adjusted": 85,
+        "rate": 0.625,
         "target": 0.75,
         "status": "fail"
       },
@@ -74,9 +74,9 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 142,
+        "denominator": 143,
         "adjusted": 105,
-        "rate": 0.7394366197183099,
+        "rate": 0.7342657342657343,
         "target": 0.75,
         "status": "fail"
       },
@@ -91,9 +91,9 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 1377,
-        "adjusted": 1053,
-        "rate": 0.7647058823529411,
+        "denominator": 1412,
+        "adjusted": 1073,
+        "rate": 0.759915014164306,
         "target": 0.75,
         "status": "pass"
       },
@@ -109,9 +109,9 @@
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 7251,
-      "adjusted": 5000,
-      "rate": 0.6895600606812854,
+      "denominator": 7125,
+      "adjusted": 4972,
+      "rate": 0.6978245614035088,
       "target": 0.75,
       "status": "fail"
     },
@@ -125,7 +125,7 @@
   },
   "six_high_item": "品牌6高商品总览",
   "six_high_source": "",
-  "generated_at": "2026-08-19 10:32:27",
+  "generated_at": "2026-08-20 10:46:28",
   "validation": {
     "status": "PASS",
     "errors": []
