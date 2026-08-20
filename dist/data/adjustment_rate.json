@@ -13,11 +13,11 @@
         "status": "pass"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 49,
+        "adjusted": 38,
+        "rate": 0.7755102040816326,
         "target": 0.8,
-        "status": "no_data"
+        "status": "fail"
       }
     },
     {
@@ -30,11 +30,11 @@
         "status": "fail"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 129,
+        "adjusted": 72,
+        "rate": 0.5581395348837209,
         "target": 0.8,
-        "status": "no_data"
+        "status": "fail"
       }
     },
     {
@@ -47,11 +47,11 @@
         "status": "pass"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 11,
+        "adjusted": 9,
+        "rate": 0.8181818181818182,
         "target": 0.8,
-        "status": "no_data"
+        "status": "pass"
       }
     },
     {
@@ -98,11 +98,11 @@
         "status": "pass"
       },
       "six_high": {
-        "denominator": 0,
-        "adjusted": 0,
-        "rate": null,
+        "denominator": 1,
+        "adjusted": 1,
+        "rate": 1.0,
         "target": 0.8,
-        "status": "no_data"
+        "status": "pass"
       }
     }
   ],
@@ -116,16 +116,16 @@
       "status": "fail"
     },
     "six_high": {
-      "denominator": 0,
-      "adjusted": 0,
-      "rate": null,
+      "denominator": 190,
+      "adjusted": 120,
+      "rate": 0.631578947368421,
       "target": 0.8,
-      "status": "no_data"
+      "status": "fail"
     }
   },
-  "six_high_item": "品牌6高商品总览",
-  "six_high_source": "",
-  "generated_at": "2026-08-20 10:46:28",
+  "six_high_item": "品牌6高商品总览（MTD月度累计）",
+  "six_high_source": "企业邮箱附件提取_20260820/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-19 23：59.xlsx",
+  "generated_at": "2026-08-20 16:09:38",
   "validation": {
     "status": "PASS",
     "errors": []
