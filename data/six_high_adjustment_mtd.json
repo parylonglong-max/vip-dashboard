@@ -1,13 +1,13 @@
 {
   "title": "六高商品调价率 MTD 月度累计",
   "mode": "mtd_accumulate",
-  "source_date": "2026-08-20",
-  "updated_at": "2026-08-21 10:00:48",
+  "source_date": "2026-08-23",
+  "updated_at": "2026-08-24 09:55:19",
   "data_range": {
     "start": "20260803",
-    "end": "20260820"
+    "end": "20260823"
   },
-  "daily_count": 17,
+  "daily_count": 18,
   "daily_detail": {
     "20260803": {
       "饰品1组": {
@@ -164,19 +164,33 @@
       }
     },
     "20260819": {},
-    "20260820": {}
+    "20260820": {},
+    "20260823": {
+      "饰品1组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 8.0,
+        "adjusted": 0.0
+      },
+      "饰品3组": {
+        "price_high": 2.0,
+        "adjusted": 0.0
+      }
+    }
   },
   "mtd_totals": {
     "饰品1组": {
-      "price_high": 49.0,
-      "adjusted": 38.0
+      "price_high": 50.0,
+      "adjusted": 39.0
     },
     "饰品2组": {
-      "price_high": 129.0,
+      "price_high": 137.0,
       "adjusted": 72.0
     },
     "饰品3组": {
-      "price_high": 11.0,
+      "price_high": 13.0,
       "adjusted": 9.0
     },
     "珠宝1组": {
