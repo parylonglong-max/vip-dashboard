@@ -5,7 +5,7 @@
     "sourceFile": "货价监控指标副本-26.08.24_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-08-23",
-    "generatedAt": "2026-08-24 11:04:26",
+    "generatedAt": "2026-08-24 11:13:43",
     "updatedAtHour": "2026-08-24 11点",
     "versionNote": "更新于 2026-08-24 11点"
   },
@@ -6387,7 +6387,7 @@
           }
         ],
         "source_date": "2026-08-23",
-        "updated_at": "2026-08-24 11:04"
+        "updated_at": "2026-08-24 11:13"
       }
     },
     {
@@ -22360,7 +22360,7 @@
               "text": "533",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 精品总",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 月度目标 精品总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
@@ -22443,7 +22443,7 @@
               "text": "171",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 饰品3组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 月度目标 饰品3组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
@@ -22526,7 +22526,7 @@
               "text": "267",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 饰品1组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 月度目标 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
@@ -22609,7 +22609,7 @@
               "text": "95.9",
               "unit": "万",
               "type": "number",
-              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=33ae248a05ff318f3e23067e54834ea3 月度目标 饰品2组",
+              "context": "https://vman.vip.vip.com/vman/analysis/share/open_share_link?key=2edc9c33f8800ad38c4a97df9046a58a 月度目标 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
