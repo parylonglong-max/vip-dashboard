@@ -1,38 +1,38 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-08-27",
-  "six_high_source_date": "2026-08-27",
+  "overall_source_date": "2026-08-30",
+  "six_high_source_date": "2026-08-30",
   "groups": [
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 2957,
-        "adjusted": 2290,
-        "rate": 0.7744335475143727,
+        "denominator": 3173,
+        "adjusted": 2402,
+        "rate": 0.7570122912070596,
         "target": 0.75,
         "status": "pass"
       },
       "six_high": {
-        "denominator": 52,
-        "adjusted": 41,
-        "rate": 0.7884615384615384,
+        "denominator": 61,
+        "adjusted": 49,
+        "rate": 0.8032786885245902,
         "target": 0.8,
-        "status": "fail"
+        "status": "pass"
       }
     },
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 4068,
-        "adjusted": 2607,
-        "rate": 0.6408554572271387,
+        "denominator": 4184,
+        "adjusted": 2698,
+        "rate": 0.6448374760994264,
         "target": 0.75,
         "status": "fail"
       },
       "six_high": {
-        "denominator": 143,
-        "adjusted": 78,
-        "rate": 0.5454545454545454,
+        "denominator": 166,
+        "adjusted": 86,
+        "rate": 0.5180722891566265,
         "target": 0.8,
         "status": "fail"
       }
@@ -40,16 +40,16 @@
     {
       "group": "饰品3组",
       "overall": {
-        "denominator": 314,
-        "adjusted": 171,
-        "rate": 0.5445859872611465,
+        "denominator": 390,
+        "adjusted": 214,
+        "rate": 0.5487179487179488,
         "target": 0.75,
         "status": "fail"
       },
       "six_high": {
-        "denominator": 22,
-        "adjusted": 16,
-        "rate": 0.7272727272727273,
+        "denominator": 35,
+        "adjusted": 22,
+        "rate": 0.6285714285714286,
         "target": 0.8,
         "status": "fail"
       }
@@ -57,9 +57,9 @@
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 227,
-        "adjusted": 167,
-        "rate": 0.73568281938326,
+        "denominator": 251,
+        "adjusted": 186,
+        "rate": 0.7410358565737052,
         "target": 0.75,
         "status": "fail"
       },
@@ -74,11 +74,11 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 208,
-        "adjusted": 156,
-        "rate": 0.75,
+        "denominator": 239,
+        "adjusted": 178,
+        "rate": 0.7447698744769874,
         "target": 0.75,
-        "status": "pass"
+        "status": "fail"
       },
       "six_high": {
         "denominator": 0,
@@ -91,41 +91,41 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 1822,
-        "adjusted": 1295,
-        "rate": 0.7107574094401756,
+        "denominator": 1986,
+        "adjusted": 1408,
+        "rate": 0.7089627391742196,
         "target": 0.75,
         "status": "fail"
       },
       "six_high": {
-        "denominator": 1,
+        "denominator": 4,
         "adjusted": 1,
-        "rate": 1.0,
+        "rate": 0.25,
         "target": 0.8,
-        "status": "pass"
+        "status": "fail"
       }
     }
   ],
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 9596,
-      "adjusted": 6686,
-      "rate": 0.696748645268862,
+      "denominator": 10223,
+      "adjusted": 7086,
+      "rate": 0.6931429130392253,
       "target": 0.75,
       "status": "fail"
     },
     "six_high": {
-      "denominator": 218,
-      "adjusted": 136,
-      "rate": 0.6238532110091743,
+      "denominator": 266,
+      "adjusted": 158,
+      "rate": 0.5939849624060151,
       "target": 0.8,
       "status": "fail"
     }
   },
   "six_high_item": "品牌6高商品总览（MTD月度累计）",
-  "six_high_source": "/root/.openclaw/workspace/agent:main:uuid-66hzkflgyklmqg1pk4h/企业邮箱附件提取_20260828/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-27 23：59.xlsx",
-  "generated_at": "2026-08-28 10:50:29",
+  "six_high_source": "企业邮箱附件提取_20260831/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-08-30 23：59.xlsx",
+  "generated_at": "2026-08-31 14:50:48",
   "validation": {
     "status": "PASS",
     "errors": []

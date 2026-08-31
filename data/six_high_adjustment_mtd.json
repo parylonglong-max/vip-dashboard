@@ -1,14 +1,24 @@
 {
   "title": "六高商品调价率 MTD 月度累计",
   "mode": "mtd_accumulate",
-  "source_date": "2026-08-27",
-  "updated_at": "2026-08-28 10:50:29",
+  "source_date": "2026-08-30",
+  "updated_at": "2026-08-31 14:50:48",
   "data_range": {
-    "start": "20260803",
-    "end": "20260827"
+    "start": "20260802",
+    "end": "20260830"
   },
-  "daily_count": 22,
+  "daily_count": 29,
   "daily_detail": {
+    "20260802": {
+      "饰品1组": {
+        "price_high": 6.0,
+        "adjusted": 5.0
+      },
+      "饰品2组": {
+        "price_high": 2.0,
+        "adjusted": 2.0
+      }
+    },
     "20260803": {
       "饰品1组": {
         "price_high": 9.0,
@@ -135,6 +145,7 @@
         "adjusted": 2.0
       }
     },
+    "20260814": {},
     "20260815": {
       "饰品1组": {
         "price_high": 3.0,
@@ -165,6 +176,34 @@
     },
     "20260819": {},
     "20260820": {},
+    "20260821": {
+      "饰品2组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品3组": {
+        "price_high": 4.0,
+        "adjusted": 1.0
+      },
+      "珠宝3组": {
+        "price_high": 2.0,
+        "adjusted": 0.0
+      }
+    },
+    "20260822": {
+      "饰品1组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 11.0,
+        "adjusted": 5.0
+      },
+      "饰品3组": {
+        "price_high": 7.0,
+        "adjusted": 4.0
+      }
+    },
     "20260823": {
       "饰品1组": {
         "price_high": 1.0,
@@ -218,20 +257,49 @@
         "price_high": 2.0,
         "adjusted": 2.0
       }
+    },
+    "20260828": {},
+    "20260829": {
+      "饰品1组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 8.0,
+        "adjusted": 0.0
+      }
+    },
+    "20260830": {
+      "饰品1组": {
+        "price_high": 1.0,
+        "adjusted": 1.0
+      },
+      "饰品2组": {
+        "price_high": 1.0,
+        "adjusted": 0.0
+      },
+      "饰品3组": {
+        "price_high": 2.0,
+        "adjusted": 1.0
+      },
+      "珠宝3组": {
+        "price_high": 1.0,
+        "adjusted": 0.0
+      }
     }
   },
   "mtd_totals": {
     "饰品1组": {
-      "price_high": 52.0,
-      "adjusted": 41.0
+      "price_high": 61.0,
+      "adjusted": 49.0
     },
     "饰品2组": {
-      "price_high": 143.0,
-      "adjusted": 78.0
+      "price_high": 166.0,
+      "adjusted": 86.0
     },
     "饰品3组": {
-      "price_high": 22.0,
-      "adjusted": 16.0
+      "price_high": 35.0,
+      "adjusted": 22.0
     },
     "珠宝1组": {
       "price_high": 0.0,
@@ -242,7 +310,7 @@
       "adjusted": 0.0
     },
     "珠宝3组": {
-      "price_high": 1.0,
+      "price_high": 4.0,
       "adjusted": 1.0
     }
   }
