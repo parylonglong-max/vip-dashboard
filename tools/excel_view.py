@@ -103,16 +103,16 @@ def _get_section_range(ws, module_kw, sub_section=None, fallback=None):
 
 SECTION_SPECS = [
     {"id": "self_sales_mtd", "title": "自营销售 · MTD", "range": (3, 12, 2, 11), "stickyCols": 1},
-    {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 42), "stickyCols": 1},
+    {"id": "self_sales_history", "title": "自营销售 · YTD / 历史月份", "range": (15, 23, 2, 47), "stickyCols": 1},
     {"id": "gross_profit", "title": "毛利 · 单独更新", "range": (26, 41, 2, 11), "stickyCols": 1},
     {"id": "price_index_mtd", "title": "外网价指 · MTD", "range": (41, 52, 2, 15), "stickyCols": 1},
-    {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 79), "stickyCols": 1},
-    {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 26), "stickyCols": 1},
+    {"id": "price_index_history", "title": "外网价指 · YTD / 历史月份得分", "range": (53, 62, 2, 101), "stickyCols": 1},
+    {"id": "internal_discount", "title": "内网折扣 · MTD / YTD / 历史月份", "range": (65, 74, 2, 32), "stickyCols": 1},
     {"id": "six_high", "title": "六高 · MTD", "range": (77, 86, 2, 16), "stickyCols": 1},
     {"id": "quality_product_mtd", "title": "优质款 · MTD", "range": (89, 98, 2, 7), "stickyCols": 1},
-    {"id": "quality_product_history", "title": "优质款 · YTD / 历史月份", "range": (100, 109, 2, 37), "stickyCols": 1},
+    {"id": "quality_product_history", "title": "优质款 · YTD / 历史月份", "range": (100, 109, 2, 42), "stickyCols": 1},
     {"id": "machine_purchase_mtd", "title": "机采 · MTD", "range": (113, 119, 2, 9), "stickyCols": 1},
-    {"id": "machine_purchase_history", "title": "机采 · YTD / 历史月份", "range": (121, 127, 2, 37), "stickyCols": 1},
+    {"id": "machine_purchase_history", "title": "机采 · YTD / 历史月份", "range": (121, 127, 2, 47), "stickyCols": 1},
     {"id": "price_power_mtd", "title": "五星价格力 & 大爆款效率 · MTD", "range": (145, 150, 2, 10), "stickyCols": 1},
     {"id": "price_power_history", "title": "五星价格力 & 大爆款效率 · YTD / 历史月份", "range": (137, 152, 2, 11), "stickyCols": 2},
 ]
@@ -120,16 +120,16 @@ SECTION_SPECS = [
 # 动态范围映射：section_id -> (模块关键词, 子区域, fallback_range)
 _DYNAMIC_RANGE_MAP = {
     "self_sales_mtd": ("自营销售", "MTD", (3, 12, 2, 11)),
-    "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 42)),
+    "self_sales_history": ("自营销售", "YTD", (15, 23, 2, 47)),
     "gross_profit": ("毛利", None, (26, 41, 2, 11)),
     "price_index_mtd": ("外网价指", "MTD", (41, 51, 2, 15)),
-    "price_index_history": ("外网价指", "YTD", (53, 62, 2, 79)),
-    "internal_discount": ("内网折扣", None, (65, 74, 2, 26)),
+    "price_index_history": ("外网价指", "YTD", (53, 62, 2, 101)),
+    "internal_discount": ("内网折扣", None, (65, 74, 2, 32)),
     "six_high": ("六高", "MTD", (77, 86, 2, 16)),
     "quality_product_mtd": ("优质款", "MTD", (89, 98, 2, 7)),
-    "quality_product_history": ("优质款", "YTD", (100, 109, 2, 37)),
+    "quality_product_history": ("优质款", "YTD", (100, 109, 2, 42)),
     "machine_purchase_mtd": ("机采", "MTD", (113, 119, 2, 9)),
-    "machine_purchase_history": ("机采", "YTD", (121, 127, 2, 37)),
+    "machine_purchase_history": ("机采", "YTD", (121, 127, 2, 47)),
     "price_power_mtd": ("五星价格力", None, (145, 150, 2, 10)),
     "price_power_history": ("五星价格力", "YTD", (137, 152, 2, 11)),
 }
@@ -256,7 +256,8 @@ def infer_col_context(value_ws, formula_ws, row: int, col: int, section_start_ro
 
 def should_show_as_percent(context: str, value: float) -> bool:
     # Excel stores most ratios as 0.x. Keep them as percentages when context says ratio/rate/weight/share.
-    return any(k in context for k in ("率", "权重", "占比", "完成率", "同比")) and -5 <= value <= 5
+    # 比率语境列允许超过 100% 的效率/同比值(如大爆款效率 535%), 上限放宽到 ±20。
+    return any(k in context for k in ("率", "权重", "占比", "完成率", "同比")) and -20 <= value <= 20
 
 
 def should_show_as_wan(context: str, value: float) -> bool:
