@@ -2,12 +2,12 @@
   "meta": {
     "title": "精品货价监控数据看板",
     "subtitle": "按 Excel Sheet1 原样呈现，数字统一优化为万单位",
-    "sourceFile": "货价监控指标副本-26.09.01_邮箱附件更新_08_机采MTD.xlsx",
+    "sourceFile": "货价监控指标副本-26.09.01_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-08-31",
-    "generatedAt": "2026-09-01 10:45:33",
-    "updatedAtHour": "2026-09-01 10点",
-    "versionNote": "更新于 2026-09-01 10点"
+    "generatedAt": "2026-09-02 11:23:31",
+    "updatedAtHour": "2026-09-02 11点",
+    "versionNote": "更新于 2026-09-02 11点"
   },
   "sections": [
     {
@@ -912,7 +912,7 @@
     {
       "id": "self_sales_history",
       "title": "自营销售 · YTD / 历史月份",
-      "range": "B15:AP25",
+      "range": "B15:AU25",
       "stickyCols": 1,
       "rows": [
         {
@@ -1405,6 +1405,46 @@
               "text": "",
               "unit": "",
               "type": "blank"
+            },
+            {
+              "coord": "AQ15",
+              "formula": "",
+              "raw": "8月",
+              "text": "8月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AR15",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AS15",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AT15",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AU15",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -1742,6 +1782,46 @@
               "text": "业绩同比",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AQ16",
+              "formula": "",
+              "raw": "8月目标",
+              "text": "8月目标",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AR16",
+              "formula": "",
+              "raw": "8月完成",
+              "text": "8月完成",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AS16",
+              "formula": "",
+              "raw": "完成率",
+              "text": "完成率",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AT16",
+              "formula": "",
+              "raw": "同期",
+              "text": "同期",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AU16",
+              "formula": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -1758,9 +1838,9 @@
             },
             {
               "coord": "C17",
-              "formula": "=H17+H6+M17+R17+W17+AB17+AG17+AL17",
-              "raw": 620269054.8649786,
-              "text": "6.2",
+              "formula": "=H17+H6+M17+R17+W17+AB17+AG17+AL17+AQ17",
+              "raw": 698269054.8649786,
+              "text": "6.98",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品1组",
@@ -1768,9 +1848,9 @@
             },
             {
               "coord": "D17",
-              "formula": "=I17+D6+N17+S17+X17+AC17+AH17+AM17",
-              "raw": 599921743.12181,
-              "text": "6",
+              "formula": "=I17+D6+N17+S17+X17+AC17+AH17+AM17+AR17",
+              "raw": 647581103.98194,
+              "text": "6.48",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 饰品1组",
@@ -1779,8 +1859,8 @@
             {
               "coord": "E17",
               "formula": "=D17/C17",
-              "raw": 0.9671959908630331,
-              "text": "96.7%",
+              "raw": 0.9274091404597046,
+              "text": "92.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品1组",
@@ -1788,9 +1868,9 @@
             },
             {
               "coord": "F17",
-              "formula": "=K17+F6+P17+U17+Z17+AE17+AJ17+AO17",
-              "raw": 551057355.7026601,
-              "text": "5.51",
+              "formula": "=K17+F6+P17+U17+Z17+AE17+AJ17+AO17+AT17",
+              "raw": 592392887.2481201,
+              "text": "5.92",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 饰品1组",
@@ -1799,8 +1879,8 @@
             {
               "coord": "G17",
               "formula": "=D17/F17-1",
-              "raw": 0.08867386836138369,
-              "text": "8.9%",
+              "raw": 0.09316151142561702,
+              "text": "9.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品1组",
@@ -2155,6 +2235,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 饰品1组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ17",
+              "formula": "",
+              "raw": 78000000,
+              "text": "7,800",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 78000000 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR17",
+              "formula": "",
+              "raw": 47659360.86013001,
+              "text": "4,766",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS17",
+              "formula": "=AR17/AQ17",
+              "raw": 0.6110174469247437,
+              "text": "61.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品1组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT17",
+              "formula": "",
+              "raw": 41335531.54546001,
+              "text": "4,134",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 41335531.54546001 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU17",
+              "formula": "=AR17/AT17-1",
+              "raw": 0.15298773423816225,
+              "text": "15.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品1组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -2171,9 +2301,9 @@
             },
             {
               "coord": "C18",
-              "formula": "=H18+H6+M18+R18+W18+AB18+AG18+AL18",
-              "raw": 1108937490.8649786,
-              "text": "11.09",
+              "formula": "=H18+H6+M18+R18+W18+AB18+AG18+AL18+AQ18",
+              "raw": 1209116226.8649786,
+              "text": "12.09",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品2组",
@@ -2181,9 +2311,9 @@
             },
             {
               "coord": "D18",
-              "formula": "=I18+D6+N18+S18+X18+AC18+AH18+AM18",
-              "raw": 854404183.6662401,
-              "text": "8.54",
+              "formula": "=I18+D6+N18+S18+X18+AC18+AH18+AM18+AR18",
+              "raw": 934888254.4120501,
+              "text": "9.35",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 饰品2组",
@@ -2192,8 +2322,8 @@
             {
               "coord": "E18",
               "formula": "=D18/C18",
-              "raw": 0.7704710055386433,
-              "text": "77.0%",
+              "raw": 0.7731996590898855,
+              "text": "77.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品2组",
@@ -2201,9 +2331,9 @@
             },
             {
               "coord": "F18",
-              "formula": "=K18+F6+P18+U18+Z18+AE18+AJ18+AO18",
-              "raw": 892418041.06353,
-              "text": "8.92",
+              "formula": "=K18+F6+P18+U18+Z18+AE18+AJ18+AO18+AT18",
+              "raw": 981993054.627,
+              "text": "9.82",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 饰品2组",
@@ -2212,8 +2342,8 @@
             {
               "coord": "G18",
               "formula": "=D18/F18-1",
-              "raw": -0.04259646897320368,
-              "text": "-4.3%",
+              "raw": -0.047968567591185396,
+              "text": "-4.8%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品2组",
@@ -2568,6 +2698,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 饰品2组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ18",
+              "formula": "",
+              "raw": 100178736,
+              "text": "1",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月 8月目标 78000000 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR18",
+              "formula": "",
+              "raw": 80484070.74581,
+              "text": "8,048",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS18",
+              "formula": "=AR18/AQ18",
+              "raw": 0.8034047339727864,
+              "text": "80.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品2组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT18",
+              "formula": "",
+              "raw": 89575013.56347,
+              "text": "8,958",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 41335531.54546001 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU18",
+              "formula": "=AR18/AT18-1",
+              "raw": -0.10148971745584445,
+              "text": "-10.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品2组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -2584,9 +2764,9 @@
             },
             {
               "coord": "C19",
-              "formula": "=H19+H6+M19+R19+W19+AB19+AG19+AL19",
-              "raw": 165422563.86497855,
-              "text": "1.65",
+              "formula": "=H19+H6+M19+R19+W19+AB19+AG19+AL19+AQ19",
+              "raw": 179899077.86497855,
+              "text": "1.8",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品3组",
@@ -2594,9 +2774,9 @@
             },
             {
               "coord": "D19",
-              "formula": "=I19+D6+N19+S19+X19+AC19+AH19+AM19",
-              "raw": 153661118.92743003,
-              "text": "1.54",
+              "formula": "=I19+D6+N19+S19+X19+AC19+AH19+AM19+AR19",
+              "raw": 203205607.97007006,
+              "text": "2.03",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 饰品3组",
@@ -2605,8 +2785,8 @@
             {
               "coord": "E19",
               "formula": "=D19/C19",
-              "raw": 0.9289006006027783,
-              "text": "92.9%",
+              "raw": 1.1295533605935657,
+              "text": "113.0%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品3组",
@@ -2614,9 +2794,9 @@
             },
             {
               "coord": "F19",
-              "formula": "=K19+F6+P19+U19+Z19+AE19+AJ19+AO19",
-              "raw": 115631375.11653,
-              "text": "1.16",
+              "formula": "=K19+F6+P19+U19+Z19+AE19+AJ19+AO19+AT19",
+              "raw": 159732662.67226,
+              "text": "1.6",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 饰品3组",
@@ -2625,8 +2805,8 @@
             {
               "coord": "G19",
               "formula": "=D19/F19-1",
-              "raw": 0.3288877588161063,
-              "text": "32.9%",
+              "raw": 0.272160649991843,
+              "text": "27.2%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品3组",
@@ -2981,6 +3161,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 饰品3组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ19",
+              "formula": "",
+              "raw": 14476514,
+              "text": "1,448",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 78000000 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR19",
+              "formula": "",
+              "raw": 49544489.04264002,
+              "text": "4,954",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS19",
+              "formula": "=AR19/AQ19",
+              "raw": 3.422404664730751,
+              "text": "342.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品3组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT19",
+              "formula": "",
+              "raw": 44101287.55572999,
+              "text": "4,410",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 41335531.54546001 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU19",
+              "formula": "=AR19/AT19-1",
+              "raw": 0.12342500159505665,
+              "text": "12.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品3组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -2997,9 +3227,9 @@
             },
             {
               "coord": "C20",
-              "formula": "=H20+H6+M20+R20+W20+AB20+AG20+AL20",
-              "raw": 903233489.8649786,
-              "text": "9.03",
+              "formula": "=H20+H6+M20+R20+W20+AB20+AG20+AL20+AQ20",
+              "raw": 1039233489.8649786,
+              "text": "10.39",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝1组",
@@ -3007,9 +3237,9 @@
             },
             {
               "coord": "D20",
-              "formula": "=I20+D6+N20+S20+X20+AC20+AH20+AM20",
-              "raw": 816365621.7592099,
-              "text": "8.16",
+              "formula": "=I20+D6+N20+S20+X20+AC20+AH20+AM20+AR20",
+              "raw": 927972511.5787599,
+              "text": "9.28",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 珠宝1组",
@@ -3018,8 +3248,8 @@
             {
               "coord": "E20",
               "formula": "=D20/C20",
-              "raw": 0.9038256784314382,
-              "text": "90.4%",
+              "raw": 0.8929393833327348,
+              "text": "89.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝1组",
@@ -3027,9 +3257,9 @@
             },
             {
               "coord": "F20",
-              "formula": "=K20+F6+P20+U20+Z20+AE20+AJ20+AO20",
-              "raw": 769851824.6151302,
-              "text": "7.7",
+              "formula": "=K20+F6+P20+U20+Z20+AE20+AJ20+AO20+AT20",
+              "raw": 891908426.7027901,
+              "text": "8.92",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 珠宝1组",
@@ -3038,8 +3268,8 @@
             {
               "coord": "G20",
               "formula": "=D20/F20-1",
-              "raw": 0.06041915555286659,
-              "text": "6.0%",
+              "raw": 0.04043473948249554,
+              "text": "4.0%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 珠宝1组",
@@ -3394,6 +3624,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 珠宝1组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ20",
+              "formula": "",
+              "raw": 136000000,
+              "text": "1.36",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月 8月目标 78000000 珠宝1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR20",
+              "formula": "",
+              "raw": 111606889.81955,
+              "text": "1.12",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 珠宝1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS20",
+              "formula": "=AR20/AQ20",
+              "raw": 0.8206388957319852,
+              "text": "82.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 珠宝1组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT20",
+              "formula": "",
+              "raw": 122056602.08766,
+              "text": "1.22",
+              "unit": "亿",
+              "type": "number",
+              "context": "同期 41335531.54546001 珠宝1组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU20",
+              "formula": "=AR20/AT20-1",
+              "raw": -0.08561365865817827,
+              "text": "-8.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 珠宝1组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -3410,9 +3690,9 @@
             },
             {
               "coord": "C21",
-              "formula": "=H21+H6+M21+R21+W21+AB21+AG21+AL21",
-              "raw": 786476144.8649786,
-              "text": "7.86",
+              "formula": "=H21+H6+M21+R21+W21+AB21+AG21+AL21+AQ21",
+              "raw": 946476144.8649786,
+              "text": "9.46",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝2组",
@@ -3420,9 +3700,9 @@
             },
             {
               "coord": "D21",
-              "formula": "=I21+D6+N21+S21+X21+AC21+AH21+AM21",
-              "raw": 636318814.20275,
-              "text": "6.36",
+              "formula": "=I21+D6+N21+S21+X21+AC21+AH21+AM21+AR21",
+              "raw": 718806053.5973899,
+              "text": "7.19",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 珠宝2组",
@@ -3431,8 +3711,8 @@
             {
               "coord": "E21",
               "formula": "=D21/C21",
-              "raw": 0.8090757976034894,
-              "text": "80.9%",
+              "raw": 0.7594550137340573,
+              "text": "75.9%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝2组",
@@ -3440,9 +3720,9 @@
             },
             {
               "coord": "F21",
-              "formula": "=K21+F6+P21+U21+Z21+AE21+AJ21+AO21",
-              "raw": 670865325.65898,
-              "text": "6.71",
+              "formula": "=K21+F6+P21+U21+Z21+AE21+AJ21+AO21+AT21",
+              "raw": 813829284.92051,
+              "text": "8.14",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 珠宝2组",
@@ -3451,8 +3731,8 @@
             {
               "coord": "G21",
               "formula": "=D21/F21-1",
-              "raw": -0.051495449436584906,
-              "text": "-5.1%",
+              "raw": -0.11676064388909457,
+              "text": "-11.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 珠宝2组",
@@ -3807,6 +4087,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 珠宝2组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ21",
+              "formula": "",
+              "raw": 160000000,
+              "text": "1.6",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月 8月目标 78000000 珠宝2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR21",
+              "formula": "",
+              "raw": 82487239.39463998,
+              "text": "8,249",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 珠宝2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS21",
+              "formula": "=AR21/AQ21",
+              "raw": 0.5155452462164999,
+              "text": "51.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 珠宝2组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT21",
+              "formula": "",
+              "raw": 142963959.2615301,
+              "text": "1.43",
+              "unit": "亿",
+              "type": "number",
+              "context": "同期 41335531.54546001 珠宝2组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU21",
+              "formula": "=AR21/AT21-1",
+              "raw": -0.4230207401870947,
+              "text": "-42.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 珠宝2组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -3823,9 +4153,9 @@
             },
             {
               "coord": "C22",
-              "formula": "=H22+H6+M22+R22+W22+AB22+AG22+AL22",
-              "raw": 565221426.8649786,
-              "text": "5.65",
+              "formula": "=H22+H6+M22+R22+W22+AB22+AG22+AL22+AQ22",
+              "raw": 643635394.8649786,
+              "text": "6.44",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝3组",
@@ -3833,9 +4163,9 @@
             },
             {
               "coord": "D22",
-              "formula": "=I22+D6+N22+S22+X22+AC22+AH22+AM22",
-              "raw": 439179751.58471006,
-              "text": "4.39",
+              "formula": "=I22+D6+N22+S22+X22+AC22+AH22+AM22+AR22",
+              "raw": 493434897.99289006,
+              "text": "4.93",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 珠宝3组",
@@ -3844,8 +4174,8 @@
             {
               "coord": "E22",
               "formula": "=D22/C22",
-              "raw": 0.7770047820384954,
-              "text": "77.7%",
+              "raw": 0.7666372948560458,
+              "text": "76.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝3组",
@@ -3853,9 +4183,9 @@
             },
             {
               "coord": "F22",
-              "formula": "=K22+F6+P22+U22+Z22+AE22+AJ22+AO22",
-              "raw": 472102507.55909,
-              "text": "4.72",
+              "formula": "=K22+F6+P22+U22+Z22+AE22+AJ22+AO22+AT22",
+              "raw": 540692024.4348301,
+              "text": "5.41",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 珠宝3组",
@@ -3864,8 +4194,8 @@
             {
               "coord": "G22",
               "formula": "=D22/F22-1",
-              "raw": -0.06973645648399618,
-              "text": "-7.0%",
+              "raw": -0.08740119015318659,
+              "text": "-8.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 珠宝3组",
@@ -4220,6 +4550,56 @@
               "type": "number",
               "context": "业绩同比 0.04214361196898886 珠宝3组",
               "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ22",
+              "formula": "",
+              "raw": 78413968,
+              "text": "7,841",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 78000000 珠宝3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR22",
+              "formula": "",
+              "raw": 54255146.40818001,
+              "text": "5,426",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 珠宝3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS22",
+              "formula": "=AR22/AQ22",
+              "raw": 0.6919066563265873,
+              "text": "69.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 珠宝3组",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT22",
+              "formula": "",
+              "raw": 68589516.87574002,
+              "text": "6,859",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 41335531.54546001 珠宝3组",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU22",
+              "formula": "=AR22/AT22-1",
+              "raw": -0.20898777423274206,
+              "text": "-20.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 珠宝3组",
+              "numberFormat": "0.0%"
             }
           ]
         },
@@ -4236,9 +4616,9 @@
             },
             {
               "coord": "C23",
-              "formula": "=H23+H12+M23+R23+W23+AB23+AG23+AL23",
-              "raw": 4248854307.8961926,
-              "text": "42.49",
+              "formula": "=H23+H12+M23+R23+W23+AB23+AG23+AL23+AQ23",
+              "raw": 4815923525.896193,
+              "text": "48.16",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 总",
@@ -4246,9 +4626,9 @@
             },
             {
               "coord": "D23",
-              "formula": "=I23+D12+N23+S23+X23+AC23+AH23+AM23",
-              "raw": 3639932264.3723197,
-              "text": "36.4",
+              "formula": "=I23+D12+N23+S23+X23+AC23+AH23+AM23+AR23",
+              "raw": 4065969460.6432695,
+              "text": "40.66",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD完成 总",
@@ -4257,8 +4637,8 @@
             {
               "coord": "E23",
               "formula": "=D23/C23",
-              "raw": 0.8566855911269458,
-              "text": "85.7%",
+              "raw": 0.8442761681699743,
+              "text": "84.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 总",
@@ -4266,9 +4646,9 @@
             },
             {
               "coord": "F23",
-              "formula": "=K23+F12+P23+U23+Z23+AE23+AJ23+AO23",
-              "raw": 3732535151.3327503,
-              "text": "37.33",
+              "formula": "=K23+F12+P23+U23+Z23+AE23+AJ23+AO23+AT23",
+              "raw": 4241157062.2223406,
+              "text": "42.41",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD同期 总",
@@ -4277,8 +4657,8 @@
             {
               "coord": "G23",
               "formula": "=D23/F23-1",
-              "raw": -0.024809648993490585,
-              "text": "-2.5%",
+              "raw": -0.04130655833039909,
+              "text": "-4.1%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 总",
@@ -4632,6 +5012,56 @@
               "unit": "%",
               "type": "number",
               "context": "业绩同比 0.04214361196898886 总",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AQ23",
+              "formula": "=SUM(AQ17:AQ22)",
+              "raw": 567069218.0,
+              "text": "5.67",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月 8月目标 78000000 总",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AR23",
+              "formula": "=SUM(AR17:AR22)",
+              "raw": 426037196.27095,
+              "text": "4.26",
+              "unit": "亿",
+              "type": "number",
+              "context": "8月完成 47659360.86013001 总",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AS23",
+              "formula": "=AR23/AQ23",
+              "raw": 0.7512966367201932,
+              "text": "75.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 总",
+              "numberFormat": "0.0%"
+            },
+            {
+              "coord": "AT23",
+              "formula": "=SUM(AT17:AT22)",
+              "raw": 508621910.88959014,
+              "text": "5.09",
+              "unit": "亿",
+              "type": "number",
+              "context": "同期 41335531.54546001 总",
+              "numberFormat": "[>=100000000]0\\.00,,\"亿\";[>=10000]0\\.0,\"万\";#,##0"
+            },
+            {
+              "coord": "AU23",
+              "formula": "=AR23/AT23-1",
+              "raw": -0.16236955752495552,
+              "text": "-16.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 总",
               "numberFormat": "0.0%"
             }
           ]
@@ -6387,7 +6817,7 @@
           }
         ],
         "source_date": "2026-08-31",
-        "updated_at": "2026-09-01 10:45"
+        "updated_at": "2026-09-02 11:23"
       }
     },
     {
@@ -7704,7 +8134,7 @@
     {
       "id": "price_index_history",
       "title": "外网价指 · YTD / 历史月份得分",
-      "range": "B55:CA65",
+      "range": "B55:CW65",
       "stickyCols": 1,
       "rows": [
         {
@@ -8661,6 +9091,182 @@
               "text": "6月",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "CB55",
+              "formula": "",
+              "raw": "7月",
+              "text": "7月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CC55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CD55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CE55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CF55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CG55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CH55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CI55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CJ55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CK55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CL55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CM55",
+              "formula": "",
+              "raw": "8月",
+              "text": "8月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CN55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CO55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CP55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CQ55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CR55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CS55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CT55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CW55",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -9294,6 +9900,182 @@
               "text": "抖音权重",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "CB56",
+              "formula": "",
+              "raw": "综合得分",
+              "text": "综合得分",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CC56",
+              "formula": "",
+              "raw": "天猫价指",
+              "text": "天猫价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CD56",
+              "formula": "",
+              "raw": "对标值",
+              "text": "对标值",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CE56",
+              "formula": "",
+              "raw": "天猫降幅",
+              "text": "天猫降幅",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CF56",
+              "formula": "",
+              "raw": "抖音价指",
+              "text": "抖音价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CG56",
+              "formula": "",
+              "raw": "对标值",
+              "text": "对标值",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CH56",
+              "formula": "",
+              "raw": "抖音降幅",
+              "text": "抖音降幅",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CI56",
+              "formula": "",
+              "raw": "天猫外网加总",
+              "text": "天猫外网加总",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CJ56",
+              "formula": "",
+              "raw": "抖音外网加总",
+              "text": "抖音外网加总",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CK56",
+              "formula": "",
+              "raw": "天猫权重",
+              "text": "天猫权重",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CL56",
+              "formula": "",
+              "raw": "抖音权重",
+              "text": "抖音权重",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CM56",
+              "formula": "",
+              "raw": "综合得分",
+              "text": "综合得分",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CN56",
+              "formula": "",
+              "raw": "天猫价指",
+              "text": "天猫价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CO56",
+              "formula": "",
+              "raw": "对标值",
+              "text": "对标值",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CP56",
+              "formula": "",
+              "raw": "天猫降幅",
+              "text": "天猫降幅",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CQ56",
+              "formula": "",
+              "raw": "抖音价指",
+              "text": "抖音价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CR56",
+              "formula": "",
+              "raw": "对标值",
+              "text": "对标值",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CS56",
+              "formula": "",
+              "raw": "抖音降幅",
+              "text": "抖音降幅",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CT56",
+              "formula": "",
+              "raw": "天猫外网加总",
+              "text": "天猫外网加总",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CU56",
+              "formula": "",
+              "raw": "抖音外网加总",
+              "text": "抖音外网加总",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CV56",
+              "formula": "",
+              "raw": "天猫权重",
+              "text": "天猫权重",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "CW56",
+              "formula": "",
+              "raw": "抖音权重",
+              "text": "抖音权重",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -9310,9 +10092,9 @@
             },
             {
               "coord": "C57",
-              "formula": "=AVERAGE(C46,N57,Y57,AJ57,AU57,BF57,BQ57)",
-              "raw": 67.53463359964921,
-              "text": "67.5",
+              "formula": "=AVERAGE(C46,N57,Y57,AJ57,AU57,BF57,BQ57,CB57,CM57)",
+              "raw": 77.46493196239383,
+              "text": "77.5",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 珠宝1组",
@@ -9340,9 +10122,9 @@
             },
             {
               "coord": "F57",
-              "formula": "=SUM(U57,AF57,AQ57,BB57,BM57,BX57)/SUM(U57:V57,AF57:AG57,AQ57:AR57,BB57:BC57,BM57:BN57,BX57:BY57)",
-              "raw": 0.747954427857891,
-              "text": "74.8%",
+              "formula": "=SUM(U57,AF57,AQ57,BB57,BM57,BX57,CI57)/SUM(U57:V57,AF57:AG57,AQ57:AR57,BB57:BC57,BM57:BN57,BX57:BY57,CI57:CJ57)",
+              "raw": 0.798575878269507,
+              "text": "79.9%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 珠宝1组",
@@ -9351,8 +10133,8 @@
             {
               "coord": "G57",
               "formula": "=1-F57",
-              "raw": 0.252045572142109,
-              "text": "25.2%",
+              "raw": 0.20142412173049296,
+              "text": "20.1%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 珠宝1组",
@@ -10075,6 +10857,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 珠宝1组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB57",
+              "formula": "",
+              "raw": 116.48,
+              "text": "116.5",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC57",
+              "formula": "",
+              "raw": 0.7978,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD57",
+              "formula": "",
+              "raw": 0.8408,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE57",
+              "formula": "",
+              "raw": -4.3,
+              "text": "-4.3",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF57",
+              "formula": "",
+              "raw": 0.9836,
+              "text": "1",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG57",
+              "formula": "",
+              "raw": 0.8715,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH57",
+              "formula": "",
+              "raw": 11.21,
+              "text": "11.2",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI57",
+              "formula": "",
+              "raw": 16315365.63,
+              "text": "1,632",
+              "unit": "万",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ57",
+              "formula": "",
+              "raw": 492337.08,
+              "text": "49.2",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK57",
+              "formula": "",
+              "raw": 0.9707,
+              "text": "97.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL57",
+              "formula": "",
+              "raw": 0.0293,
+              "text": "2.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM57",
+              "formula": "",
+              "raw": 107.961952464,
+              "text": "108",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN57",
+              "formula": "",
+              "raw": 0.758376,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO57",
+              "formula": "",
+              "raw": 0.763744,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP57",
+              "formula": "",
+              "raw": -0.5368,
+              "text": "-0.5",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ57",
+              "formula": "",
+              "raw": 0.988191,
+              "text": "1",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR57",
+              "formula": "",
+              "raw": 0.794744,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS57",
+              "formula": "",
+              "raw": 19.3447,
+              "text": "19.3",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT57",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU57",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV57",
+              "formula": "",
+              "raw": 0.974949,
+              "text": "97.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW57",
+              "formula": "",
+              "raw": 0.025051,
+              "text": "2.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 珠宝1组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -10091,9 +11089,9 @@
             },
             {
               "coord": "C58",
-              "formula": "=AVERAGE(C47,N58,Y58,AJ58,AU58,BF58,BQ58)",
-              "raw": 83.33220803817844,
-              "text": "83.3",
+              "formula": "=AVERAGE(C47,N58,Y58,AJ58,AU58,BF58,BQ58,CB58,CM58)",
+              "raw": 64.8139395852499,
+              "text": "64.8",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 珠宝2组",
@@ -10121,9 +11119,9 @@
             },
             {
               "coord": "F58",
-              "formula": "=SUM(U58,AF58,AQ58,BB58,BM58,BX58)/SUM(U58:V58,AF58:AG58,AQ58:AR58,BB58:BC58,BM58:BN58,BX58:BY58)",
-              "raw": 0.7678184492283234,
-              "text": "76.8%",
+              "formula": "=SUM(U58,AF58,AQ58,BB58,BM58,BX58,CI58)/SUM(U58:V58,AF58:AG58,AQ58:AR58,BB58:BC58,BM58:BN58,BX58:BY58,CI58:CJ58)",
+              "raw": 0.7264651742620545,
+              "text": "72.6%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 珠宝2组",
@@ -10132,8 +11130,8 @@
             {
               "coord": "G58",
               "formula": "=1-F58",
-              "raw": 0.23218155077167657,
-              "text": "23.2%",
+              "raw": 0.2735348257379455,
+              "text": "27.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 珠宝2组",
@@ -10856,6 +11854,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 珠宝2组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB58",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC58",
+              "formula": "",
+              "raw": 0.8605,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD58",
+              "formula": "",
+              "raw": 0.8393,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE58",
+              "formula": "",
+              "raw": 2.11,
+              "text": "2.1",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF58",
+              "formula": "",
+              "raw": 0.9497,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG58",
+              "formula": "",
+              "raw": 0.87,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH58",
+              "formula": "",
+              "raw": 7.97,
+              "text": "8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI58",
+              "formula": "",
+              "raw": 140759.96,
+              "text": "14.1",
+              "unit": "万",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ58",
+              "formula": "",
+              "raw": 110329.1,
+              "text": "11.0",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK58",
+              "formula": "",
+              "raw": 0.5606,
+              "text": "56.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL58",
+              "formula": "",
+              "raw": 0.4394,
+              "text": "43.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM58",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN58",
+              "formula": "",
+              "raw": 0.885674,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO58",
+              "formula": "",
+              "raw": 0.806574,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP58",
+              "formula": "",
+              "raw": 7.91,
+              "text": "7.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ58",
+              "formula": "",
+              "raw": 0.907491,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR58",
+              "formula": "",
+              "raw": 0.837574,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS58",
+              "formula": "",
+              "raw": 6.9917,
+              "text": "7",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT58",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU58",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV58",
+              "formula": "",
+              "raw": 0.52635,
+              "text": "52.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW58",
+              "formula": "",
+              "raw": 0.47365,
+              "text": "47.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 珠宝2组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -10872,9 +12086,9 @@
             },
             {
               "coord": "C59",
-              "formula": "=AVERAGE(C48,N59,Y59,AJ59,AU59,BF59,BQ59)",
-              "raw": 118.23404992141029,
-              "text": "118.2",
+              "formula": "=AVERAGE(C48,N59,Y59,AJ59,AU59,BF59,BQ59,CB59,CM59)",
+              "raw": 118.60523628554135,
+              "text": "118.6",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 珠宝3组",
@@ -10902,9 +12116,9 @@
             },
             {
               "coord": "F59",
-              "formula": "=SUM(U59,AF59,AQ59,BB59,BM59,BX59)/SUM(U59:V59,AF59:AG59,AQ59:AR59,BB59:BC59,BM59:BN59,BX59:BY59)",
-              "raw": 0.6614937730513574,
-              "text": "66.1%",
+              "formula": "=SUM(U59,AF59,AQ59,BB59,BM59,BX59,CI59)/SUM(U59:V59,AF59:AG59,AQ59:AR59,BB59:BC59,BM59:BN59,BX59:BY59,CI59:CJ59)",
+              "raw": 0.7330063241647116,
+              "text": "73.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 珠宝3组",
@@ -10913,8 +12127,8 @@
             {
               "coord": "G59",
               "formula": "=1-F59",
-              "raw": 0.33850622694864263,
-              "text": "33.9%",
+              "raw": 0.26699367583528844,
+              "text": "26.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 珠宝3组",
@@ -11637,6 +12851,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 珠宝3组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB59",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC59",
+              "formula": "",
+              "raw": 0.7431,
+              "text": "0.7",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD59",
+              "formula": "",
+              "raw": 0.7774,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE59",
+              "formula": "",
+              "raw": -3.43,
+              "text": "-3.4",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF59",
+              "formula": "",
+              "raw": 0.7235,
+              "text": "0.7",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG59",
+              "formula": "",
+              "raw": 0.8081,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH59",
+              "formula": "",
+              "raw": -8.46,
+              "text": "-8.5",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI59",
+              "formula": "",
+              "raw": 28415238.86,
+              "text": "2,842",
+              "unit": "万",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ59",
+              "formula": "",
+              "raw": 2514496.09,
+              "text": "251",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK59",
+              "formula": "",
+              "raw": 0.9187,
+              "text": "91.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL59",
+              "formula": "",
+              "raw": 0.0813,
+              "text": "8.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM59",
+              "formula": "",
+              "raw": 119.80877712,
+              "text": "119.8",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN59",
+              "formula": "",
+              "raw": 0.70884,
+              "text": "0.7",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO59",
+              "formula": "",
+              "raw": 0.736997,
+              "text": "0.7",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP59",
+              "formula": "",
+              "raw": -2.8157,
+              "text": "-2.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ59",
+              "formula": "",
+              "raw": 0.758937,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR59",
+              "formula": "",
+              "raw": 0.767997,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS59",
+              "formula": "",
+              "raw": -0.906,
+              "text": "-0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT59",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU59",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV59",
+              "formula": "",
+              "raw": 0.922894,
+              "text": "92.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW59",
+              "formula": "",
+              "raw": 0.077106,
+              "text": "7.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 珠宝3组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -11653,9 +13083,9 @@
             },
             {
               "coord": "C60",
-              "formula": "=AVERAGE(C49,N60,Y60,AJ60,AU60,BF60,BQ60)",
-              "raw": 69.3325000072041,
-              "text": "69.3",
+              "formula": "=AVERAGE(C49,N60,Y60,AJ60,AU60,BF60,BQ60,CB60,CM60)",
+              "raw": 75.00911339449209,
+              "text": "75",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 饰品1组",
@@ -11683,9 +13113,9 @@
             },
             {
               "coord": "F60",
-              "formula": "=SUM(U60,AF60,AQ60,BB60,BM60,BX60)/SUM(U60:V60,AF60:AG60,AQ60:AR60,BB60:BC60,BM60:BN60,BX60:BY60)",
-              "raw": 0.6965530962538622,
-              "text": "69.7%",
+              "formula": "=SUM(U60,AF60,AQ60,BB60,BM60,BX60,CI60)/SUM(U60:V60,AF60:AG60,AQ60:AR60,BB60:BC60,BM60:BN60,BX60:BY60,CI60:CJ60)",
+              "raw": 0.7309092294741887,
+              "text": "73.1%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 饰品1组",
@@ -11694,8 +13124,8 @@
             {
               "coord": "G60",
               "formula": "=1-F60",
-              "raw": 0.3034469037461378,
-              "text": "30.3%",
+              "raw": 0.2690907705258113,
+              "text": "26.9%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 饰品1组",
@@ -12418,6 +13848,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 饰品1组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB60",
+              "formula": "",
+              "raw": 85.86,
+              "text": "85.9",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC60",
+              "formula": "",
+              "raw": 0.8107,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD60",
+              "formula": "",
+              "raw": 0.8296,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE60",
+              "formula": "",
+              "raw": -1.89,
+              "text": "-1.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF60",
+              "formula": "",
+              "raw": 0.8694,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG60",
+              "formula": "",
+              "raw": 0.8603,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH60",
+              "formula": "",
+              "raw": 0.91,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI60",
+              "formula": "",
+              "raw": 113136457.95,
+              "text": "1.13",
+              "unit": "亿",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ60",
+              "formula": "",
+              "raw": 15792072.6,
+              "text": "1,579",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK60",
+              "formula": "",
+              "raw": 0.8775,
+              "text": "87.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL60",
+              "formula": "",
+              "raw": 0.1225,
+              "text": "12.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM60",
+              "formula": "",
+              "raw": 103.8945205,
+              "text": "103.9",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN60",
+              "formula": "",
+              "raw": 0.768428,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO60",
+              "formula": "",
+              "raw": 0.772262,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP60",
+              "formula": "",
+              "raw": -0.3834,
+              "text": "-0.4",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ60",
+              "formula": "",
+              "raw": 0.823743,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR60",
+              "formula": "",
+              "raw": 0.803262,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS60",
+              "formula": "",
+              "raw": 2.0481,
+              "text": "2",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT60",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU60",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV60",
+              "formula": "",
+              "raw": 0.92335,
+              "text": "92.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW60",
+              "formula": "",
+              "raw": 0.07665,
+              "text": "7.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 饰品1组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -12434,9 +14080,9 @@
             },
             {
               "coord": "C61",
-              "formula": "=AVERAGE(C50,N61,Y61,AJ61,AU61,BF61,BQ61)",
-              "raw": 15.212941133158626,
-              "text": "15.2",
+              "formula": "=AVERAGE(C50,N61,Y61,AJ61,AU61,BF61,BQ61,CB61,CM61)",
+              "raw": 17.726350993345598,
+              "text": "17.7",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 饰品2组",
@@ -12464,9 +14110,9 @@
             },
             {
               "coord": "F61",
-              "formula": "=SUM(U61,AF61,AQ61,BB61,BM61,BX61)/SUM(U61:V61,AF61:AG61,AQ61:AR61,BB61:BC61,BM61:BN61,BX61:BY61)",
-              "raw": 0.6897383658514358,
-              "text": "69.0%",
+              "formula": "=SUM(U61,AF61,AQ61,BB61,BM61,BX61,CI61)/SUM(U61:V61,AF61:AG61,AQ61:AR61,BB61:BC61,BM61:BN61,BX61:BY61,CI61:CJ61)",
+              "raw": 0.7243910933422046,
+              "text": "72.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 饰品2组",
@@ -12475,8 +14121,8 @@
             {
               "coord": "G61",
               "formula": "=1-F61",
-              "raw": 0.3102616341485642,
-              "text": "31.0%",
+              "raw": 0.27560890665779536,
+              "text": "27.6%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 饰品2组",
@@ -13199,6 +14845,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 饰品2组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB61",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC61",
+              "formula": "",
+              "raw": 0.8876,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD61",
+              "formula": "",
+              "raw": 0.8344,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE61",
+              "formula": "",
+              "raw": 5.32,
+              "text": "5.3",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF61",
+              "formula": "",
+              "raw": 0.8853,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG61",
+              "formula": "",
+              "raw": 0.8651,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH61",
+              "formula": "",
+              "raw": 2.02,
+              "text": "2",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI61",
+              "formula": "",
+              "raw": 50806423.53,
+              "text": "5,081",
+              "unit": "万",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ61",
+              "formula": "",
+              "raw": 11295567.94,
+              "text": "1,130",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK61",
+              "formula": "",
+              "raw": 0.8181,
+              "text": "81.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL61",
+              "formula": "",
+              "raw": 0.1819,
+              "text": "18.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM61",
+              "formula": "",
+              "raw": 53.046571008,
+              "text": "53",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN61",
+              "formula": "",
+              "raw": 0.855287,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO61",
+              "formula": "",
+              "raw": 0.828039,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP61",
+              "formula": "",
+              "raw": 2.7248,
+              "text": "2.7",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ61",
+              "formula": "",
+              "raw": 0.830628,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR61",
+              "formula": "",
+              "raw": 0.859039,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS61",
+              "formula": "",
+              "raw": -2.8411,
+              "text": "-2.8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT61",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU61",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV61",
+              "formula": "",
+              "raw": 0.898752,
+              "text": "89.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW61",
+              "formula": "",
+              "raw": 0.101248,
+              "text": "10.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 饰品2组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -13215,9 +15077,9 @@
             },
             {
               "coord": "C62",
-              "formula": "=AVERAGE(C51,N62,Y62,AJ62,AU62,BF62,BQ62)",
-              "raw": 75.74280173129122,
-              "text": "75.7",
+              "formula": "=AVERAGE(C51,N62,Y62,AJ62,AU62,BF62,BQ62,CB62,CM62)",
+              "raw": 74.71543098922649,
+              "text": "74.7",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 饰品3组",
@@ -13245,8 +15107,8 @@
             },
             {
               "coord": "F62",
-              "formula": "=SUM(U62,AF62,AQ62,BB62,BM62,BX62)/SUM(U62:V62,AF62:AG62,AQ62:AR62,BB62:BC62,BM62:BN62,BX62:BY62)",
-              "raw": 0.8287686650450734,
+              "formula": "=SUM(U62,AF62,AQ62,BB62,BM62,BX62,CI62)/SUM(U62:V62,AF62:AG62,AQ62:AR62,BB62:BC62,BM62:BN62,BX62:BY62,CI62:CJ62)",
+              "raw": 0.8292412886878137,
               "text": "82.9%",
               "unit": "%",
               "type": "number",
@@ -13256,7 +15118,7 @@
             {
               "coord": "G62",
               "formula": "=1-F62",
-              "raw": 0.1712313349549266,
+              "raw": 0.17075871131218634,
               "text": "17.1%",
               "unit": "%",
               "type": "number",
@@ -13956,6 +15818,218 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 饰品3组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB62",
+              "formula": "",
+              "raw": 120,
+              "text": "120",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC62",
+              "formula": "",
+              "raw": 0.7335,
+              "text": "0.7",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD62",
+              "formula": "",
+              "raw": 0.8567,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE62",
+              "formula": "",
+              "raw": -12.32,
+              "text": "-12.3",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF62",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CG62",
+              "formula": "",
+              "raw": 0.8874,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH62",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CI62",
+              "formula": "",
+              "raw": 20312,
+              "text": "2.0",
+              "unit": "万",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ62",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK62",
+              "formula": "",
+              "raw": 1,
+              "text": "100.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL62",
+              "formula": "",
+              "raw": 0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM62",
+              "formula": "",
+              "raw": 22.23926678399995,
+              "text": "22.2",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN62",
+              "formula": "",
+              "raw": 0.854468,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO62",
+              "formula": "",
+              "raw": 0.813372,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP62",
+              "formula": "",
+              "raw": 4.1096,
+              "text": "4.1",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ62",
+              "formula": "",
+              "raw": 0.87102,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR62",
+              "formula": "",
+              "raw": 0.844372,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS62",
+              "formula": "",
+              "raw": 2.6648,
+              "text": "2.7",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT62",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU62",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV62",
+              "formula": "",
+              "raw": 0.843396,
+              "text": "84.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW62",
+              "formula": "",
+              "raw": 0.156604,
+              "text": "15.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 饰品3组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -13972,9 +16046,9 @@
             },
             {
               "coord": "C63",
-              "formula": "=AVERAGE(C52,N63,Y63,AJ63,AU63,BF63,BQ63)",
-              "raw": 43.309826391144995,
-              "text": "43.3",
+              "formula": "=AVERAGE(C52,N63,Y63,AJ63,AU63,BF63,BQ63,CB63,CM63)",
+              "raw": 48.798237774001656,
+              "text": "48.8",
               "unit": "",
               "type": "number",
               "context": "YTD 综合得分 总",
@@ -14002,9 +16076,9 @@
             },
             {
               "coord": "F63",
-              "formula": "=SUM(U63,AF63,AQ63,BB63,BM63,BX63)/SUM(U63:V63,AF63:AG63,AQ63:AR63,BB63:BC63,BM63:BN63,BX63:BY63)",
-              "raw": 0.899745860608105,
-              "text": "90.0%",
+              "formula": "=SUM(U63,AF63,AQ63,BB63,BM63,BX63,CI63)/SUM(U63:V63,AF63:AG63,AQ63:AR63,BB63:BC63,BM63:BN63,BX63:BY63,CI63:CJ63)",
+              "raw": 0.8940920601185547,
+              "text": "89.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD 天猫权重 总",
@@ -14013,8 +16087,8 @@
             {
               "coord": "G63",
               "formula": "=1-F63",
-              "raw": 0.10025413939189498,
-              "text": "10.0%",
+              "raw": 0.10590793988144531,
+              "text": "10.6%",
               "unit": "%",
               "type": "number",
               "context": "YTD 抖音权重 总",
@@ -14737,6 +16811,222 @@
               "type": "number",
               "context": "6月 抖音权重 0.02473 总",
               "numberFormat": "General"
+            },
+            {
+              "coord": "CB63",
+              "formula": "",
+              "raw": 61.37,
+              "text": "61.4",
+              "unit": "",
+              "type": "number",
+              "context": "7月 综合得分 116.48 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CC63",
+              "formula": "",
+              "raw": 0.8193,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.7978 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CD63",
+              "formula": "",
+              "raw": 0.8244,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8408 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CE63",
+              "formula": "",
+              "raw": -0.51,
+              "text": "-0.5",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -4.3 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CF63",
+              "formula": "",
+              "raw": 0.8654,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.9836 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CG63",
+              "formula": "",
+              "raw": 0.8551,
+              "text": "0.9",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.8715 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CH63",
+              "formula": "",
+              "raw": 1.03,
+              "text": "1",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 11.21 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CI63",
+              "formula": "",
+              "raw": 208869237.93,
+              "text": "2.09",
+              "unit": "亿",
+              "type": "number",
+              "context": "天猫外网加总 16315365.63 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CJ63",
+              "formula": "",
+              "raw": 30204802.81,
+              "text": "3,020",
+              "unit": "万",
+              "type": "number",
+              "context": "抖音外网加总 492337.08 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CK63",
+              "formula": "",
+              "raw": 0.8737,
+              "text": "87.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.9707 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CL63",
+              "formula": "",
+              "raw": 0.1263,
+              "text": "12.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.0293 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CM63",
+              "formula": "",
+              "raw": 74.64535522799999,
+              "text": "74.6",
+              "unit": "",
+              "type": "number",
+              "context": "8月 综合得分 107.961952464 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CN63",
+              "formula": "",
+              "raw": 0.799066,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫价指 0.758376 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CO63",
+              "formula": "",
+              "raw": 0.790607,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.763744 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CP63",
+              "formula": "",
+              "raw": 0.8459,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "天猫降幅 -0.5368 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CQ63",
+              "formula": "",
+              "raw": 0.843512,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "抖音价指 0.988191 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CR63",
+              "formula": "",
+              "raw": 0.821607,
+              "text": "0.8",
+              "unit": "",
+              "type": "number",
+              "context": "对标值 0.794744 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CS63",
+              "formula": "",
+              "raw": 2.1905,
+              "text": "2.2",
+              "unit": "",
+              "type": "number",
+              "context": "抖音降幅 19.3447 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CT63",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CU63",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "CV63",
+              "formula": "",
+              "raw": 0.898454,
+              "text": "89.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "天猫权重 0.974949 总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "CW63",
+              "formula": "",
+              "raw": 0.101546,
+              "text": "10.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "抖音权重 0.025051 总",
+              "numberFormat": "General"
             }
           ]
         }
@@ -14745,7 +17035,7 @@
     {
       "id": "internal_discount",
       "title": "内网折扣 · MTD / YTD / 历史月份",
-      "range": "B66:Z77",
+      "range": "B66:AF77",
       "stickyCols": 1,
       "rows": [
         {
@@ -15058,6 +17348,54 @@
               "text": "6月",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AA67",
+              "formula": "",
+              "raw": "7月",
+              "text": "7月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AB67",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AC67",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AD67",
+              "formula": "",
+              "raw": "8月",
+              "text": "8月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AE67",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AF67",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -15271,6 +17609,54 @@
               "text": "系数差",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AA68",
+              "formula": "",
+              "raw": "去年内网价指",
+              "text": "去年内网价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AB68",
+              "formula": "",
+              "raw": "今年内网价指",
+              "text": "今年内网价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AC68",
+              "formula": "",
+              "raw": "系数差",
+              "text": "系数差",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AD68",
+              "formula": "",
+              "raw": "去年内网价指",
+              "text": "去年内网价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AE68",
+              "formula": "",
+              "raw": "今年内网价指",
+              "text": "今年内网价指",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AF68",
+              "formula": "",
+              "raw": "系数差",
+              "text": "系数差",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -15317,9 +17703,9 @@
             },
             {
               "coord": "F69",
-              "formula": "=AVERAGE(C69,I69,L69,O69,R69,U69,X69)",
-              "raw": 0.9439618203558424,
-              "text": "94.40%",
+              "formula": "=AVERAGE(C69,I69,L69,O69,R69,U69,X69,AA69,AD69)",
+              "raw": 0.9414031615622633,
+              "text": "94.14%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 饰品3组",
@@ -15327,9 +17713,9 @@
             },
             {
               "coord": "G69",
-              "formula": "=AVERAGE(D69,J69,M69,P69,S69,V69,Y69)",
-              "raw": 0.9200358485489809,
-              "text": "92.00%",
+              "formula": "=AVERAGE(D69,J69,M69,P69,S69,V69,Y69,AB69,AE69)",
+              "raw": 0.9209885008321389,
+              "text": "92.10%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 饰品3组",
@@ -15338,8 +17724,8 @@
             {
               "coord": "H69",
               "formula": "=G69-F69",
-              "raw": -0.023925971806861512,
-              "text": "-2.39%",
+              "raw": -0.020414660730124434,
+              "text": "-2.04%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 饰品3组",
@@ -15524,6 +17910,66 @@
               "type": "number",
               "context": "6月 系数差 饰品3组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA69",
+              "formula": "",
+              "raw": 0.9398000000000001,
+              "text": "93.98%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 饰品3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB69",
+              "formula": "",
+              "raw": 0.9267000000000001,
+              "text": "92.67%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC69",
+              "formula": "=AB69-AA69",
+              "raw": -0.0131,
+              "text": "-1.31%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD69",
+              "formula": "",
+              "raw": 0.9250957115694742,
+              "text": "92.51%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 饰品3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE69",
+              "formula": "",
+              "raw": 0.9219455676463827,
+              "text": "92.19%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF69",
+              "formula": "=AE69-AD69",
+              "raw": -0.003150143923091542,
+              "text": "-0.32%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品3组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -15570,9 +18016,9 @@
             },
             {
               "coord": "F70",
-              "formula": "=AVERAGE(C70,I70,L70,O70,R70,U70,X70)",
-              "raw": 0.9214914381295533,
-              "text": "92.15%",
+              "formula": "=AVERAGE(C70,I70,L70,O70,R70,U70,X70,AA70,AD70)",
+              "raw": 0.9194830996019393,
+              "text": "91.95%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 饰品1组",
@@ -15580,9 +18026,9 @@
             },
             {
               "coord": "G70",
-              "formula": "=AVERAGE(D70,J70,M70,P70,S70,V70,Y70)",
-              "raw": 0.8910025962561336,
-              "text": "89.10%",
+              "formula": "=AVERAGE(D70,J70,M70,P70,S70,V70,Y70,AB70,AE70)",
+              "raw": 0.8891329128371436,
+              "text": "88.91%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 饰品1组",
@@ -15591,8 +18037,8 @@
             {
               "coord": "H70",
               "formula": "=G70-F70",
-              "raw": -0.030488841873419603,
-              "text": "-3.05%",
+              "raw": -0.030350186764795728,
+              "text": "-3.04%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 饰品1组",
@@ -15777,6 +18223,66 @@
               "type": "number",
               "context": "6月 系数差 饰品1组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA70",
+              "formula": "",
+              "raw": 0.9272,
+              "text": "92.72%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 饰品1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB70",
+              "formula": "",
+              "raw": 0.8876000000000001,
+              "text": "88.76%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC70",
+              "formula": "=AB70-AA70",
+              "raw": -0.03959999999999997,
+              "text": "-3.96%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD70",
+              "formula": "",
+              "raw": 0.8977078295105815,
+              "text": "89.77%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 饰品1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE70",
+              "formula": "",
+              "raw": 0.8775780417413563,
+              "text": "87.76%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF70",
+              "formula": "=AE70-AD70",
+              "raw": -0.020129787769225138,
+              "text": "-2.01%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品1组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -15823,9 +18329,9 @@
             },
             {
               "coord": "F71",
-              "formula": "=AVERAGE(C71,I71,L71,O71,R71,U71,X71)",
-              "raw": 0.9007961719873083,
-              "text": "90.08%",
+              "formula": "=AVERAGE(C71,I71,L71,O71,R71,U71,X71,AA71,AD71)",
+              "raw": 0.9020958360142105,
+              "text": "90.21%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 饰品2组",
@@ -15833,9 +18339,9 @@
             },
             {
               "coord": "G71",
-              "formula": "=AVERAGE(D71,J71,M71,P71,S71,V71,Y71)",
-              "raw": 0.8773083191669108,
-              "text": "87.73%",
+              "formula": "=AVERAGE(D71,J71,M71,P71,S71,V71,Y71,AB71,AE71)",
+              "raw": 0.8787189421311177,
+              "text": "87.87%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 饰品2组",
@@ -15844,8 +18350,8 @@
             {
               "coord": "H71",
               "formula": "=G71-F71",
-              "raw": -0.02348785282039756,
-              "text": "-2.35%",
+              "raw": -0.02337689388309283,
+              "text": "-2.34%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 饰品2组",
@@ -16030,6 +18536,66 @@
               "type": "number",
               "context": "6月 系数差 饰品2组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA71",
+              "formula": "",
+              "raw": 0.9196,
+              "text": "91.96%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 饰品2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB71",
+              "formula": "",
+              "raw": 0.8908,
+              "text": "89.08%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC71",
+              "formula": "=AB71-AA71",
+              "raw": -0.028799999999999937,
+              "text": "-2.88%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD71",
+              "formula": "",
+              "raw": 0.8936893202167365,
+              "text": "89.37%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 饰品2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE71",
+              "formula": "",
+              "raw": 0.8765122450116839,
+              "text": "87.65%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 饰品2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF71",
+              "formula": "=AE71-AD71",
+              "raw": -0.017177075205052628,
+              "text": "-1.72%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 饰品2组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -16076,9 +18642,9 @@
             },
             {
               "coord": "F72",
-              "formula": "=AVERAGE(C72,I72,L72,O72,R72,U72,X72)",
-              "raw": 0.9528074178822104,
-              "text": "95.28%",
+              "formula": "=AVERAGE(C72,I72,L72,O72,R72,U72,X72,AA72,AD72)",
+              "raw": 0.9568394016550307,
+              "text": "95.68%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 珠宝1组",
@@ -16086,9 +18652,9 @@
             },
             {
               "coord": "G72",
-              "formula": "=AVERAGE(D72,J72,M72,P72,S72,V72,Y72)",
-              "raw": 0.8908160993650213,
-              "text": "89.08%",
+              "formula": "=AVERAGE(D72,J72,M72,P72,S72,V72,Y72,AB72,AE72)",
+              "raw": 0.8907485421241181,
+              "text": "89.07%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 珠宝1组",
@@ -16097,8 +18663,8 @@
             {
               "coord": "H72",
               "formula": "=G72-F72",
-              "raw": -0.06199131851718909,
-              "text": "-6.20%",
+              "raw": -0.06609085953091254,
+              "text": "-6.61%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 珠宝1组",
@@ -16283,6 +18849,66 @@
               "type": "number",
               "context": "6月 系数差 珠宝1组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA72",
+              "formula": "",
+              "raw": 0.9794,
+              "text": "97.94%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 珠宝1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB72",
+              "formula": "",
+              "raw": 0.8829000000000001,
+              "text": "88.29%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC72",
+              "formula": "=AB72-AA72",
+              "raw": -0.09649999999999992,
+              "text": "-9.65%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD72",
+              "formula": "",
+              "raw": 0.962502689719803,
+              "text": "96.25%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 珠宝1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE72",
+              "formula": "",
+              "raw": 0.8981241835619135,
+              "text": "89.81%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝1组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF72",
+              "formula": "=AE72-AD72",
+              "raw": -0.06437850615788954,
+              "text": "-6.44%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝1组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -16329,9 +18955,9 @@
             },
             {
               "coord": "F73",
-              "formula": "=AVERAGE(C73,I73,L73,O73,R73,U73,X73)",
-              "raw": 0.9298917937979299,
-              "text": "92.99%",
+              "formula": "=AVERAGE(C73,I73,L73,O73,R73,U73,X73,AA73,AD73)",
+              "raw": 0.931592498326297,
+              "text": "93.16%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 珠宝2组",
@@ -16339,9 +18965,9 @@
             },
             {
               "coord": "G73",
-              "formula": "=AVERAGE(D73,J73,M73,P73,S73,V73,Y73)",
-              "raw": 0.8572965509301259,
-              "text": "85.73%",
+              "formula": "=AVERAGE(D73,J73,M73,P73,S73,V73,Y73,AB73,AE73)",
+              "raw": 0.8517301002263875,
+              "text": "85.17%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 珠宝2组",
@@ -16350,8 +18976,8 @@
             {
               "coord": "H73",
               "formula": "=G73-F73",
-              "raw": -0.07259524286780394,
-              "text": "-7.26%",
+              "raw": -0.07986239809990947,
+              "text": "-7.99%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 珠宝2组",
@@ -16536,6 +19162,66 @@
               "type": "number",
               "context": "6月 系数差 珠宝2组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA73",
+              "formula": "",
+              "raw": 0.9401999999999999,
+              "text": "94.02%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 珠宝2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB73",
+              "formula": "",
+              "raw": 0.8246,
+              "text": "82.46%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC73",
+              "formula": "=AB73-AA73",
+              "raw": -0.11559999999999993,
+              "text": "-11.56%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD73",
+              "formula": "",
+              "raw": 0.9348899283511644,
+              "text": "93.49%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 珠宝2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE73",
+              "formula": "",
+              "raw": 0.8398950455266063,
+              "text": "83.99%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝2组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF73",
+              "formula": "=AE73-AD73",
+              "raw": -0.09499488282455804,
+              "text": "-9.50%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝2组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -16582,9 +19268,9 @@
             },
             {
               "coord": "F74",
-              "formula": "=AVERAGE(C74,I74,L74,O74,R74,U74,X74)",
-              "raw": 0.9268819771140967,
-              "text": "92.69%",
+              "formula": "=AVERAGE(C74,I74,L74,O74,R74,U74,X74,AA74,AD74)",
+              "raw": 0.9283073957905155,
+              "text": "92.83%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 珠宝3组",
@@ -16592,9 +19278,9 @@
             },
             {
               "coord": "G74",
-              "formula": "=AVERAGE(D74,J74,M74,P74,S74,V74,Y74)",
-              "raw": 0.8782968724052556,
-              "text": "87.83%",
+              "formula": "=AVERAGE(D74,J74,M74,P74,S74,V74,Y74,AB74,AE74)",
+              "raw": 0.8779508938536196,
+              "text": "87.80%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 珠宝3组",
@@ -16603,8 +19289,8 @@
             {
               "coord": "H74",
               "formula": "=G74-F74",
-              "raw": -0.04858510470884114,
-              "text": "-4.86%",
+              "raw": -0.05035650193689589,
+              "text": "-5.04%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 珠宝3组",
@@ -16789,6 +19475,66 @@
               "type": "number",
               "context": "6月 系数差 珠宝3组",
               "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA74",
+              "formula": "",
+              "raw": 0.9386,
+              "text": "93.86%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 珠宝3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB74",
+              "formula": "",
+              "raw": 0.8788,
+              "text": "87.88%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC74",
+              "formula": "=AB74-AA74",
+              "raw": -0.059799999999999964,
+              "text": "-5.98%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD74",
+              "formula": "",
+              "raw": 0.9279927223159616,
+              "text": "92.80%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 珠宝3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE74",
+              "formula": "",
+              "raw": 0.8746799378457869,
+              "text": "87.47%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 珠宝3组",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF74",
+              "formula": "=AE74-AD74",
+              "raw": -0.053312784470174734,
+              "text": "-5.33%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 珠宝3组",
+              "numberFormat": "0.00%"
             }
           ]
         },
@@ -16835,9 +19581,9 @@
             },
             {
               "coord": "F75",
-              "formula": "=AVERAGE(C75,I75,L75,O75,R75,U75,X75)",
-              "raw": 0.9240561875228065,
-              "text": "92.41%",
+              "formula": "=AVERAGE(C75,I75,L75,O75,R75,U75,X75,AA75,AD75)",
+              "raw": 0.924019699922941,
+              "text": "92.40%",
               "unit": "%",
               "type": "number",
               "context": "YTD 去年内网价指 总",
@@ -16845,9 +19591,9 @@
             },
             {
               "coord": "G75",
-              "formula": "=AVERAGE(D75,J75,M75,P75,S75,V75,Y75)",
-              "raw": 0.8857354647680954,
-              "text": "88.57%",
+              "formula": "=AVERAGE(D75,J75,M75,P75,S75,V75,Y75,AB75,AE75)",
+              "raw": 0.8845823994500474,
+              "text": "88.46%",
               "unit": "%",
               "type": "number",
               "context": "YTD 今年内网价指 总",
@@ -16856,8 +19602,8 @@
             {
               "coord": "H75",
               "formula": "=G75-F75",
-              "raw": -0.0383207227547111,
-              "text": "-3.83%",
+              "raw": -0.03943730047289362,
+              "text": "-3.94%",
               "unit": "%",
               "type": "number",
               "context": "YTD 系数差 总",
@@ -17041,6 +19787,66 @@
               "unit": "%",
               "type": "number",
               "context": "6月 系数差 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AA75",
+              "formula": "",
+              "raw": 0.9326000000000001,
+              "text": "93.26%",
+              "unit": "%",
+              "type": "number",
+              "context": "7月 去年内网价指 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AB75",
+              "formula": "",
+              "raw": 0.8837999999999999,
+              "text": "88.38%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AC75",
+              "formula": "=AB75-AA75",
+              "raw": -0.04880000000000018,
+              "text": "-4.88%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AD75",
+              "formula": "",
+              "raw": 0.9151839866468243,
+              "text": "91.52%",
+              "unit": "%",
+              "type": "number",
+              "context": "8月 去年内网价指 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AE75",
+              "formula": "",
+              "raw": 0.8772933416737586,
+              "text": "87.73%",
+              "unit": "%",
+              "type": "number",
+              "context": "今年内网价指 总",
+              "numberFormat": "0.00%"
+            },
+            {
+              "coord": "AF75",
+              "formula": "=AE75-AD75",
+              "raw": -0.03789064497306571,
+              "text": "-3.79%",
+              "unit": "%",
+              "type": "number",
+              "context": "系数差 总",
               "numberFormat": "0.00%"
             }
           ]
@@ -18960,7 +21766,7 @@
     {
       "id": "quality_product_history",
       "title": "优质款 · YTD / 历史月份",
-      "range": "B102:AK112",
+      "range": "B102:AP112",
       "stickyCols": 1,
       "rows": [
         {
@@ -19413,6 +22219,46 @@
               "text": "6月",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL102",
+              "formula": "",
+              "raw": "7月",
+              "text": "7月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AM102",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AN102",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AO102",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AP102",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -19710,6 +22556,46 @@
               "text": "引入率（目标50%）",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL103",
+              "formula": "",
+              "raw": "已引进",
+              "text": "已引进",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AM103",
+              "formula": "",
+              "raw": "未引进",
+              "text": "未引进",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AN103",
+              "formula": "",
+              "raw": "暂不引进",
+              "text": "暂不引进",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AO103",
+              "formula": "",
+              "raw": "总计",
+              "text": "总计",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AP103",
+              "formula": "",
+              "raw": "引入率（目标50%）",
+              "text": "引入率（目标50%）",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -19726,7 +22612,7 @@
             },
             {
               "coord": "C104",
-              "formula": "=C93+H104+M104+R104+W104+AB104+AG104",
+              "formula": "=C93+H104+M104+R104+W104+AB104+AG104+AL104",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -19736,7 +22622,7 @@
             },
             {
               "coord": "D104",
-              "formula": "=D93+I104+N104+S104+X104+AC104+AH104",
+              "formula": "=D93+I104+N104+S104+X104+AC104+AH104+AM104",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -19746,7 +22632,7 @@
             },
             {
               "coord": "E104",
-              "formula": "=E93+J104+O104+T104+Y104+AD104+AI104",
+              "formula": "=E93+J104+O104+T104+Y104+AD104+AI104+AN104",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -19756,7 +22642,7 @@
             },
             {
               "coord": "F104",
-              "formula": "=F93+K104+P104+U104+Z104+AE104+AJ104",
+              "formula": "=F93+K104+P104+U104+Z104+AE104+AJ104+AO104",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -20063,6 +22949,54 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL104",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM104",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN104",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO104",
+              "formula": "=SUM(AL104:AN104)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "总计 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP104",
+              "formula": "=IFERROR(AL104/AO104,\"-\")",
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -20079,7 +23013,7 @@
             },
             {
               "coord": "C105",
-              "formula": "=C94+H105+M105+R105+W105+AB105+AG105",
+              "formula": "=C94+H105+M105+R105+W105+AB105+AG105+AL105",
               "raw": 15.0,
               "text": "15",
               "unit": "",
@@ -20089,7 +23023,7 @@
             },
             {
               "coord": "D105",
-              "formula": "=D94+I105+N105+S105+X105+AC105+AH105",
+              "formula": "=D94+I105+N105+S105+X105+AC105+AH105+AM105",
               "raw": 21.0,
               "text": "21",
               "unit": "",
@@ -20099,7 +23033,7 @@
             },
             {
               "coord": "E105",
-              "formula": "=E94+J105+O105+T105+Y105+AD105+AI105",
+              "formula": "=E94+J105+O105+T105+Y105+AD105+AI105+AN105",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -20109,7 +23043,7 @@
             },
             {
               "coord": "F105",
-              "formula": "=F94+K105+P105+U105+Z105+AE105+AJ105",
+              "formula": "=F94+K105+P105+U105+Z105+AE105+AJ105+AO105",
               "raw": 37.0,
               "text": "37",
               "unit": "",
@@ -20418,6 +23352,54 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL105",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM105",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN105",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO105",
+              "formula": "=SUM(AL105:AN105)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "总计 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP105",
+              "formula": "=IFERROR(AL105/AO105,\"-\")",
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -20434,7 +23416,7 @@
             },
             {
               "coord": "C106",
-              "formula": "=C95+H106+M106+R106+W106+AB106+AG106",
+              "formula": "=C95+H106+M106+R106+W106+AB106+AG106+AL106",
               "raw": 4.0,
               "text": "4",
               "unit": "",
@@ -20444,9 +23426,9 @@
             },
             {
               "coord": "D106",
-              "formula": "=D95+I106+N106+S106+X106+AC106+AH106",
-              "raw": 2.0,
-              "text": "2",
+              "formula": "=D95+I106+N106+S106+X106+AC106+AH106+AM106",
+              "raw": 8.0,
+              "text": "8",
               "unit": "",
               "type": "number",
               "context": "YTD 未引进 饰品2组",
@@ -20454,7 +23436,7 @@
             },
             {
               "coord": "E106",
-              "formula": "=E95+J106+O106+T106+Y106+AD106+AI106",
+              "formula": "=E95+J106+O106+T106+Y106+AD106+AI106+AN106",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -20464,9 +23446,9 @@
             },
             {
               "coord": "F106",
-              "formula": "=F95+K106+P106+U106+Z106+AE106+AJ106",
-              "raw": 7.0,
-              "text": "7",
+              "formula": "=F95+K106+P106+U106+Z106+AE106+AJ106+AO106",
+              "raw": 13.0,
+              "text": "13",
               "unit": "",
               "type": "number",
               "context": "YTD 总计 饰品2组",
@@ -20475,8 +23457,8 @@
             {
               "coord": "G106",
               "formula": "=IFERROR(C106/F106,\"-\")",
-              "raw": 0.5714285714285714,
-              "text": "57.1%",
+              "raw": 0.3076923076923077,
+              "text": "30.8%",
               "unit": "%",
               "type": "number",
               "context": "YTD 引入率（目标50%） 饰品2组",
@@ -20775,6 +23757,56 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL106",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM106",
+              "formula": "",
+              "raw": 6,
+              "text": "6",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN106",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO106",
+              "formula": "=SUM(AL106:AN106)",
+              "raw": 6.0,
+              "text": "6",
+              "unit": "",
+              "type": "number",
+              "context": "总计 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP106",
+              "formula": "=IFERROR(AL106/AO106,\"-\")",
+              "raw": 0.0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "引入率（目标50%） 饰品2组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -20791,7 +23823,7 @@
             },
             {
               "coord": "C107",
-              "formula": "=C96+H107+M107+R107+W107+AB107+AG107",
+              "formula": "=C96+H107+M107+R107+W107+AB107+AG107+AL107",
               "raw": 3.0,
               "text": "3",
               "unit": "",
@@ -20801,7 +23833,7 @@
             },
             {
               "coord": "D107",
-              "formula": "=D96+I107+N107+S107+X107+AC107+AH107",
+              "formula": "=D96+I107+N107+S107+X107+AC107+AH107+AM107",
               "raw": 2.0,
               "text": "2",
               "unit": "",
@@ -20811,7 +23843,7 @@
             },
             {
               "coord": "E107",
-              "formula": "=E96+J107+O107+T107+Y107+AD107+AI107",
+              "formula": "=E96+J107+O107+T107+Y107+AD107+AI107+AN107",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -20821,7 +23853,7 @@
             },
             {
               "coord": "F107",
-              "formula": "=F96+K107+P107+U107+Z107+AE107+AJ107",
+              "formula": "=F96+K107+P107+U107+Z107+AE107+AJ107+AO107",
               "raw": 5.0,
               "text": "5",
               "unit": "",
@@ -21132,6 +24164,54 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL107",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM107",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN107",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO107",
+              "formula": "=SUM(AL107:AN107)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "总计 珠宝1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP107",
+              "formula": "=IFERROR(AL107/AO107,\"-\")",
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -21148,7 +24228,7 @@
             },
             {
               "coord": "C108",
-              "formula": "=C97+H108+M108+R108+W108+AB108+AG108",
+              "formula": "=C97+H108+M108+R108+W108+AB108+AG108+AL108",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -21158,7 +24238,7 @@
             },
             {
               "coord": "D108",
-              "formula": "=D97+I108+N108+S108+X108+AC108+AH108",
+              "formula": "=D97+I108+N108+S108+X108+AC108+AH108+AM108",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -21168,7 +24248,7 @@
             },
             {
               "coord": "E108",
-              "formula": "=E97+J108+O108+T108+Y108+AD108+AI108",
+              "formula": "=E97+J108+O108+T108+Y108+AD108+AI108+AN108",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -21178,7 +24258,7 @@
             },
             {
               "coord": "F108",
-              "formula": "=F97+K108+P108+U108+Z108+AE108+AJ108",
+              "formula": "=F97+K108+P108+U108+Z108+AE108+AJ108+AO108",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -21483,6 +24563,54 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL108",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM108",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN108",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO108",
+              "formula": "=SUM(AL108:AN108)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "总计 珠宝2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP108",
+              "formula": "=IFERROR(AL108/AO108,\"-\")",
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -21499,7 +24627,7 @@
             },
             {
               "coord": "C109",
-              "formula": "=C98+H109+M109+R109+W109+AB109+AG109",
+              "formula": "=C98+H109+M109+R109+W109+AB109+AG109+AL109",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -21509,7 +24637,7 @@
             },
             {
               "coord": "D109",
-              "formula": "=D98+I109+N109+S109+X109+AC109+AH109",
+              "formula": "=D98+I109+N109+S109+X109+AC109+AH109+AM109",
               "raw": 1.0,
               "text": "1",
               "unit": "",
@@ -21519,7 +24647,7 @@
             },
             {
               "coord": "E109",
-              "formula": "=E98+J109+O109+T109+Y109+AD109+AI109",
+              "formula": "=E98+J109+O109+T109+Y109+AD109+AI109+AN109",
               "raw": 0.0,
               "text": "0",
               "unit": "",
@@ -21529,7 +24657,7 @@
             },
             {
               "coord": "F109",
-              "formula": "=F98+K109+P109+U109+Z109+AE109+AJ109",
+              "formula": "=F98+K109+P109+U109+Z109+AE109+AJ109+AO109",
               "raw": 2.0,
               "text": "2",
               "unit": "",
@@ -21838,6 +24966,54 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL109",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM109",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN109",
+              "formula": "",
+              "raw": 0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO109",
+              "formula": "=SUM(AL109:AN109)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "总计 珠宝3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP109",
+              "formula": "=IFERROR(AL109/AO109,\"-\")",
+              "raw": "-",
+              "text": "-",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -21854,7 +25030,7 @@
             },
             {
               "coord": "C110",
-              "formula": "=C99+H110+M110+R110+W110+AB110+AG110",
+              "formula": "=C99+H110+M110+R110+W110+AB110+AG110+AL110",
               "raw": 24.0,
               "text": "24",
               "unit": "",
@@ -21864,9 +25040,9 @@
             },
             {
               "coord": "D110",
-              "formula": "=D99+I110+N110+S110+X110+AC110+AH110",
-              "raw": 27.0,
-              "text": "27",
+              "formula": "=D99+I110+N110+S110+X110+AC110+AH110+AM110",
+              "raw": 33.0,
+              "text": "33",
               "unit": "",
               "type": "number",
               "context": "YTD 未引进 精品总",
@@ -21874,7 +25050,7 @@
             },
             {
               "coord": "E110",
-              "formula": "=E99+J110+O110+T110+Y110+AD110+AI110",
+              "formula": "=E99+J110+O110+T110+Y110+AD110+AI110+AN110",
               "raw": 2.0,
               "text": "2",
               "unit": "",
@@ -21884,9 +25060,9 @@
             },
             {
               "coord": "F110",
-              "formula": "=F99+K110+P110+U110+Z110+AE110+AJ110",
-              "raw": 53.0,
-              "text": "53",
+              "formula": "=F99+K110+P110+U110+Z110+AE110+AJ110+AO110",
+              "raw": 59.0,
+              "text": "59",
               "unit": "",
               "type": "number",
               "context": "YTD 总计 精品总",
@@ -21895,8 +25071,8 @@
             {
               "coord": "G110",
               "formula": "=IFERROR(C110/F110,\"-\")",
-              "raw": 0.4528301886792453,
-              "text": "45.3%",
+              "raw": 0.4067796610169492,
+              "text": "40.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD 引入率（目标50%） 精品总",
@@ -22195,6 +25371,56 @@
               "text": "-",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL110",
+              "formula": "=SUM(AL104:AL109)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "7月 已引进 0 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AM110",
+              "formula": "=SUM(AM104:AM109)",
+              "raw": 6.0,
+              "text": "6",
+              "unit": "",
+              "type": "number",
+              "context": "未引进 0 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AN110",
+              "formula": "=SUM(AN104:AN109)",
+              "raw": 0.0,
+              "text": "0",
+              "unit": "",
+              "type": "number",
+              "context": "暂不引进 0 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO110",
+              "formula": "=SUM(AL110:AN110)",
+              "raw": 6.0,
+              "text": "6",
+              "unit": "",
+              "type": "number",
+              "context": "总计 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AP110",
+              "formula": "=IFERROR(AL110/AO110,\"-\")",
+              "raw": 0.0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "引入率（目标50%） 精品总",
+              "numberFormat": "General"
             }
           ]
         }
@@ -22681,7 +25907,7 @@
     {
       "id": "machine_purchase_history",
       "title": "机采 · YTD / 历史月份",
-      "range": "B121:AK127",
+      "range": "B121:AU127",
       "stickyCols": 1,
       "rows": [
         {
@@ -23134,6 +26360,86 @@
               "text": "6月",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL122",
+              "formula": "",
+              "raw": "7月",
+              "text": "7月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AM122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AN122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AO122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AP122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AQ122",
+              "formula": "",
+              "raw": "8月",
+              "text": "8月",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AR122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AS122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AT122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AU122",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
             }
           ]
         },
@@ -23431,6 +26737,86 @@
               "text": "业绩同比",
               "unit": "",
               "type": "text"
+            },
+            {
+              "coord": "AL123",
+              "formula": "",
+              "raw": "7月目标",
+              "text": "7月目标",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AM123",
+              "formula": "",
+              "raw": "7月完成",
+              "text": "7月完成",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AN123",
+              "formula": "",
+              "raw": "完成率",
+              "text": "完成率",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AO123",
+              "formula": "",
+              "raw": "同期",
+              "text": "同期",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AP123",
+              "formula": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AQ123",
+              "formula": "",
+              "raw": "8月目标",
+              "text": "8月目标",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AR123",
+              "formula": "",
+              "raw": "8月完成",
+              "text": "8月完成",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AS123",
+              "formula": "",
+              "raw": "完成率",
+              "text": "完成率",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AT123",
+              "formula": "",
+              "raw": "同期",
+              "text": "同期",
+              "unit": "",
+              "type": "text"
+            },
+            {
+              "coord": "AU123",
+              "formula": "",
+              "raw": "业绩同比",
+              "text": "业绩同比",
+              "unit": "",
+              "type": "text"
             }
           ]
         },
@@ -23448,8 +26834,8 @@
             {
               "coord": "C124",
               "formula": "=SUM(C125:C127)",
-              "raw": 41995209.24406898,
-              "text": "4,200",
+              "raw": 52655815.552473255,
+              "text": "5,266",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 精品总",
@@ -23458,8 +26844,8 @@
             {
               "coord": "D124",
               "formula": "=SUM(D125:D127)",
-              "raw": 10242698.92,
-              "text": "1,024",
+              "raw": 14475187.48,
+              "text": "1,448",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 精品总",
@@ -23468,8 +26854,8 @@
             {
               "coord": "E124",
               "formula": "=D124/C124",
-              "raw": 0.24390160459663826,
-              "text": "24.4%",
+              "raw": 0.2749019710002402,
+              "text": "27.5%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 精品总",
@@ -23478,8 +26864,8 @@
             {
               "coord": "F124",
               "formula": "=SUM(F125:F127)",
-              "raw": 13056390.39,
-              "text": "1,306",
+              "raw": 19713322.79,
+              "text": "1,971",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 精品总",
@@ -23488,8 +26874,8 @@
             {
               "coord": "G124",
               "formula": "=D124/F124-1",
-              "raw": -0.2155030131570691,
-              "text": "-21.6%",
+              "raw": -0.2657154943283917,
+              "text": "-26.6%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 精品总",
@@ -23794,6 +27180,106 @@
               "type": "number",
               "context": "6月 业绩同比 精品总",
               "numberFormat": "General"
+            },
+            {
+              "coord": "AL124",
+              "formula": "=SUM(AL125:AL127)",
+              "raw": 5330303.154202142,
+              "text": "533",
+              "unit": "万",
+              "type": "number",
+              "context": "7月 7月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AM124",
+              "formula": "=SUM(AM125:AM127)",
+              "raw": 491805.56000000006,
+              "text": "49.2",
+              "unit": "万",
+              "type": "number",
+              "context": "7月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AN124",
+              "formula": "=AM124/AL124",
+              "raw": 0.09226596419985707,
+              "text": "9.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO124",
+              "formula": "=SUM(AO125:AO127)",
+              "raw": 1343112.6400000001,
+              "text": "134",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AP124",
+              "formula": "=AM124/AO124-1",
+              "raw": -0.6338314856451652,
+              "text": "-63.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AQ124",
+              "formula": "=SUM(AQ125:AQ127)",
+              "raw": 5330303.154202135,
+              "text": "533",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AR124",
+              "formula": "=SUM(AR125:AR127)",
+              "raw": 3740683.0,
+              "text": "374",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AS124",
+              "formula": "=AR124/AQ124",
+              "raw": 0.7017767830054917,
+              "text": "70.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 精品总",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AT124",
+              "formula": "=SUM(AT125:AT127)",
+              "raw": 5313819.76,
+              "text": "531",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 精品总",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AU124",
+              "formula": "=AR124/AT124-1",
+              "raw": -0.296046315278108,
+              "text": "-29.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 精品总",
+              "numberFormat": "General"
             }
           ]
         },
@@ -23810,9 +27296,9 @@
             },
             {
               "coord": "C125",
-              "formula": "=H125+H117+M125+R125+W125+AB125+AG125",
-              "raw": 13438466.958102081,
-              "text": "1,344",
+              "formula": "=H125+H117+M125+R125+W125+AB125+AG125+AL125+AQ125",
+              "raw": 16849860.976791445,
+              "text": "1,685",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 饰品3组",
@@ -23820,9 +27306,9 @@
             },
             {
               "coord": "D125",
-              "formula": "=I125+D117+N125+S125+X125+AC125+AH125",
-              "raw": 3299095.2600000002,
-              "text": "330",
+              "formula": "=I125+D117+N125+S125+X125+AC125+AH125+AM125+AR125",
+              "raw": 4228372.61,
+              "text": "423",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 饰品3组",
@@ -23831,8 +27317,8 @@
             {
               "coord": "E125",
               "formula": "=D125/C125",
-              "raw": 0.24549640001986747,
-              "text": "24.5%",
+              "raw": 0.2509440651067715,
+              "text": "25.1%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品3组",
@@ -23840,9 +27326,9 @@
             },
             {
               "coord": "F125",
-              "formula": "=K125+F117+P125+U125+Z125+AE125+AJ125",
-              "raw": 2643263.04,
-              "text": "264",
+              "formula": "=K125+F117+P125+U125+Z125+AE125+AJ125+AO125+AT125",
+              "raw": 3523285.39,
+              "text": "352",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 饰品3组",
@@ -23851,8 +27337,8 @@
             {
               "coord": "G125",
               "formula": "=D125/F125-1",
-              "raw": 0.24811462577708499,
-              "text": "24.8%",
+              "raw": 0.2001220854834016,
+              "text": "20.0%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品3组",
@@ -24157,6 +27643,106 @@
               "type": "number",
               "context": "6月 业绩同比 饰品3组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "AL125",
+              "formula": "",
+              "raw": 1705697.009344685,
+              "text": "171",
+              "unit": "万",
+              "type": "number",
+              "context": "7月 7月目标 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AM125",
+              "formula": "",
+              "raw": 138865.42,
+              "text": "13.9",
+              "unit": "万",
+              "type": "number",
+              "context": "7月完成 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AN125",
+              "formula": "=AM125/AL125",
+              "raw": 0.08141271236287798,
+              "text": "8.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO125",
+              "formula": "",
+              "raw": 503902.5,
+              "text": "50.4",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AP125",
+              "formula": "=AM125/AO125-1",
+              "raw": -0.7244200614206121,
+              "text": "-72.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AQ125",
+              "formula": "",
+              "raw": 1705697.00934468,
+              "text": "171",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AR125",
+              "formula": "",
+              "raw": 790411.93,
+              "text": "79.0",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AS125",
+              "formula": "=AR125/AQ125",
+              "raw": 0.46339527223751903,
+              "text": "46.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品3组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AT125",
+              "formula": "",
+              "raw": 376119.85,
+              "text": "37.6",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品3组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AU125",
+              "formula": "=AR125/AT125-1",
+              "raw": 1.1014895385074732,
+              "text": "110.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品3组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -24173,9 +27759,9 @@
             },
             {
               "coord": "C126",
-              "formula": "=H126+H118+M126+R126+W126+AB126+AG126",
-              "raw": 20997604.62203448,
-              "text": "2,100",
+              "formula": "=H126+H118+M126+R126+W126+AB126+AG126+AL126+AQ126",
+              "raw": 26327907.77623662,
+              "text": "2,633",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 饰品1组",
@@ -24183,9 +27769,9 @@
             },
             {
               "coord": "D126",
-              "formula": "=I126+D118+N126+S126+X126+AC126+AH126",
-              "raw": 4000563.5700000003,
-              "text": "400",
+              "formula": "=I126+D118+N126+S126+X126+AC126+AH126+AM126+AR126",
+              "raw": 4544539.41,
+              "text": "454",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 饰品1组",
@@ -24194,8 +27780,8 @@
             {
               "coord": "E126",
               "formula": "=D126/C126",
-              "raw": 0.19052475946717687,
-              "text": "19.1%",
+              "raw": 0.17261301006614238,
+              "text": "17.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品1组",
@@ -24203,9 +27789,9 @@
             },
             {
               "coord": "F126",
-              "formula": "=K126+F118+P126+U126+Z126+AE126+AJ126",
-              "raw": 4030489.25,
-              "text": "403",
+              "formula": "=K126+F118+P126+U126+Z126+AE126+AJ126+AO126+AT126",
+              "raw": 4976827.1899999995,
+              "text": "498",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 饰品1组",
@@ -24214,8 +27800,8 @@
             {
               "coord": "G126",
               "formula": "=D126/F126-1",
-              "raw": -0.007424825658572276,
-              "text": "-0.7%",
+              "raw": -0.08686011458637755,
+              "text": "-8.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品1组",
@@ -24516,6 +28102,106 @@
               "type": "number",
               "context": "6月 业绩同比 饰品1组",
               "numberFormat": "General"
+            },
+            {
+              "coord": "AL126",
+              "formula": "",
+              "raw": 2665151.577101071,
+              "text": "267",
+              "unit": "万",
+              "type": "number",
+              "context": "7月 7月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AM126",
+              "formula": "",
+              "raw": 352940.14,
+              "text": "35.3",
+              "unit": "万",
+              "type": "number",
+              "context": "7月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AN126",
+              "formula": "=AM126/AL126",
+              "raw": 0.13242779248747225,
+              "text": "13.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO126",
+              "formula": "",
+              "raw": 816176.85,
+              "text": "81.6",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AP126",
+              "formula": "=AM126/AO126-1",
+              "raw": -0.5675690384994379,
+              "text": "-56.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AQ126",
+              "formula": "",
+              "raw": 2665151.57710107,
+              "text": "267",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AR126",
+              "formula": "",
+              "raw": 191035.7,
+              "text": "19.1",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AS126",
+              "formula": "=AR126/AQ126",
+              "raw": 0.07167911260334121,
+              "text": "7.2%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品1组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AT126",
+              "formula": "",
+              "raw": 130161.09,
+              "text": "13.0",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品1组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AU126",
+              "formula": "=AR126/AT126-1",
+              "raw": 0.46768669500232374,
+              "text": "46.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品1组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -24532,9 +28218,9 @@
             },
             {
               "coord": "C127",
-              "formula": "=H127+H119+M127+R127+W127+AB127+AG127",
-              "raw": 7559137.66393242,
-              "text": "756",
+              "formula": "=H127+H119+M127+R127+W127+AB127+AG127+AL127+AQ127",
+              "raw": 9478046.799445191,
+              "text": "948",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD目标 饰品2组",
@@ -24542,9 +28228,9 @@
             },
             {
               "coord": "D127",
-              "formula": "=I127+D119+N127+S127+X127+AC127+AH127",
-              "raw": 2943040.0900000003,
-              "text": "294",
+              "formula": "=I127+D119+N127+S127+X127+AC127+AH127+AM127+AR127",
+              "raw": 5702275.460000001,
+              "text": "570",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD完成 饰品2组",
@@ -24553,8 +28239,8 @@
             {
               "coord": "E127",
               "formula": "=D127/C127",
-              "raw": 0.38933542698162343,
-              "text": "38.9%",
+              "raw": 0.6016298062944562,
+              "text": "60.2%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品2组",
@@ -24562,9 +28248,9 @@
             },
             {
               "coord": "F127",
-              "formula": "=K127+F119+P127+U127+Z127+AE127+AJ127",
-              "raw": 6382638.100000001,
-              "text": "638",
+              "formula": "=K127+F119+P127+U127+Z127+AE127+AJ127+AO127+AT127",
+              "raw": 11213210.21,
+              "text": "1,121",
               "unit": "万",
               "type": "number",
               "context": "YTD YTD同期 饰品2组",
@@ -24573,8 +28259,8 @@
             {
               "coord": "G127",
               "formula": "=D127/F127-1",
-              "raw": -0.5388991128918934,
-              "text": "-53.9%",
+              "raw": -0.49146806728775305,
+              "text": "-49.1%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD业绩同比 饰品2组",
@@ -24878,6 +28564,104 @@
               "unit": "%",
               "type": "number",
               "context": "6月 业绩同比 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AL127",
+              "formula": "",
+              "raw": 959454.5677563855,
+              "text": "95.9",
+              "unit": "万",
+              "type": "number",
+              "context": "7月 7月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AM127",
+              "formula": "",
+              "raw": null,
+              "text": "",
+              "unit": "",
+              "type": "blank"
+            },
+            {
+              "coord": "AN127",
+              "formula": "=AM127/AL127",
+              "raw": 0.0,
+              "text": "0.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AO127",
+              "formula": "",
+              "raw": 23033.29,
+              "text": "2.3",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AP127",
+              "formula": "=AM127/AO127-1",
+              "raw": -1.0,
+              "text": "-100.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AQ127",
+              "formula": "",
+              "raw": 959454.567756386,
+              "text": "95.9",
+              "unit": "万",
+              "type": "number",
+              "context": "8月 8月目标 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AR127",
+              "formula": "",
+              "raw": 2759235.37,
+              "text": "276",
+              "unit": "万",
+              "type": "number",
+              "context": "8月完成 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AS127",
+              "formula": "=AR127/AQ127",
+              "raw": 2.8758374421545247,
+              "text": "287.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "完成率 饰品2组",
+              "numberFormat": "General"
+            },
+            {
+              "coord": "AT127",
+              "formula": "",
+              "raw": 4807538.82,
+              "text": "481",
+              "unit": "万",
+              "type": "number",
+              "context": "同期 饰品2组",
+              "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
+            },
+            {
+              "coord": "AU127",
+              "formula": "=AR127/AT127-1",
+              "raw": -0.4260607197759456,
+              "text": "-42.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "业绩同比 饰品2组",
               "numberFormat": "General"
             }
           ]
@@ -25364,8 +29148,8 @@
               "coord": "E150",
               "formula": "=D150/C150",
               "raw": 5.35332096926002,
-              "text": "5.4",
-              "unit": "",
+              "text": "535.3%",
+              "unit": "%",
               "type": "number",
               "context": "APP销售占比/ APP曝光占比 大爆款",
               "numberFormat": "0.00"
@@ -25808,9 +29592,9 @@
             },
             {
               "coord": "H155",
-              "formula": "=AVERAGE(H157,H159,H161,H163)",
-              "raw": 1.4537805457722126,
-              "text": "145.4%",
+              "formula": "=AVERAGE(H157,H159,H161,H163,H165,H167)",
+              "raw": 1.5134458944602833,
+              "text": "151.3%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 实际 YTD",
@@ -25818,9 +29602,9 @@
             },
             {
               "coord": "I155",
-              "formula": "=AVERAGE(I157,I159,I161,I163)",
-              "raw": 1.5039372422979476,
-              "text": "150.4%",
+              "formula": "=AVERAGE(I157,I159,I161,I163,I165,I167)",
+              "raw": 1.661422881396865,
+              "text": "166.1%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 目标 YTD",
@@ -25829,8 +29613,8 @@
             {
               "coord": "J155",
               "formula": "=H155-I155",
-              "raw": -0.050156696525734956,
-              "text": "-5.0%",
+              "raw": -0.14797698693658168,
+              "text": "-14.8%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 VS目标差距 YTD",
@@ -25839,8 +29623,8 @@
             {
               "coord": "K155",
               "formula": "=H155/I155",
-              "raw": 0.9666497410163886,
-              "text": "96.7%",
+              "raw": 0.9109335807316149,
+              "text": "91.1%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 完成率 YTD",
@@ -26831,16 +30615,18 @@
             {
               "coord": "D165",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 7676122.935483871,
+              "text": "768",
+              "unit": "万",
+              "type": "number",
+              "context": "四五星商品 曝光 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "E165",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.2023180688519917,
+              "text": "20.2%",
               "unit": "%",
               "type": "number",
               "context": "四五星商品 曝光占比 202607",
@@ -26849,16 +30635,18 @@
             {
               "coord": "F165",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 1476937.486915,
+              "text": "1,476,937.5",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "四五星商品 APP销售 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "G165",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.333105,
+              "text": "33.3%",
               "unit": "%",
               "type": "number",
               "context": "四五星商品 APP销售占比 202607",
@@ -26867,10 +30655,12 @@
             {
               "coord": "H165",
               "formula": "=IFERROR(G165/E165,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1.6464421684633967,
+              "text": "164.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 实际 202607",
+              "numberFormat": "0.00"
             },
             {
               "coord": "I165",
@@ -26885,8 +30675,8 @@
             {
               "coord": "J165",
               "formula": "=IFERROR(H165-I165,\"\")",
-              "raw": -2.0376362786555,
-              "text": "-203.8%",
+              "raw": -0.39119411019210326,
+              "text": "-39.1%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 VS目标差距 202607",
@@ -26895,8 +30685,8 @@
             {
               "coord": "K165",
               "formula": "=IFERROR(H165/I165,\"\")",
-              "raw": 0.0,
-              "text": "0.0%",
+              "raw": 0.8080157316151506,
+              "text": "80.8%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 完成率 202607",
@@ -26932,42 +30722,52 @@
             {
               "coord": "D166",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 12236244,
+              "text": "1,224",
+              "unit": "万",
+              "type": "number",
+              "context": "四五星商品 曝光 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "E166",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.007466551106905052,
+              "text": "0.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星商品 曝光占比 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "F166",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 5697977.1926,
+              "text": "5,697,977.2",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "四五星商品 APP销售 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "G166",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.02878645061480923,
+              "text": "2.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星商品 APP销售占比 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "H166",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "=G166/E166",
+              "raw": 3.8553878762294382,
+              "text": "385.5%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 实际 202607",
+              "numberFormat": "0.00"
             },
             {
               "coord": "I166",
@@ -26981,17 +30781,19 @@
             },
             {
               "coord": "J166",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "=H166-I166",
+              "raw": 0.949290157088968,
+              "text": "94.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 VS目标差距 202607",
+              "numberFormat": "General"
             },
             {
               "coord": "K166",
               "formula": "=H166/I166",
-              "raw": 0.0,
-              "text": "0.0%",
+              "raw": 1.3266545893610684,
+              "text": "132.7%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 完成率 202607",
@@ -27029,16 +30831,18 @@
             {
               "coord": "D167",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 9351211.709677419,
+              "text": "935",
+              "unit": "万",
+              "type": "number",
+              "context": "四五星商品 曝光 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "E167",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.2331822811736967,
+              "text": "23.3%",
               "unit": "%",
               "type": "number",
               "context": "四五星商品 曝光占比 202608",
@@ -27047,16 +30851,18 @@
             {
               "coord": "F167",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 1939286.347079,
+              "text": "1,939,286.3",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "四五星商品 APP销售 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "G167",
               "formula": "",
-              "raw": 0,
-              "text": "0.0%",
+              "raw": 0.377548,
+              "text": "37.8%",
               "unit": "%",
               "type": "number",
               "context": "四五星商品 APP销售占比 202608",
@@ -27065,10 +30871,12 @@
             {
               "coord": "H167",
               "formula": "=IFERROR(G167/E167,\"\")",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1.6191110152094523,
+              "text": "161.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 实际 202608",
+              "numberFormat": "0.00"
             },
             {
               "coord": "I167",
@@ -27083,8 +30891,8 @@
             {
               "coord": "J167",
               "formula": "=IFERROR(H167-I167,\"\")",
-              "raw": -1.9151520405339,
-              "text": "-191.5%",
+              "raw": -0.29604102532444765,
+              "text": "-29.6%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 VS目标差距 202608",
@@ -27093,8 +30901,8 @@
             {
               "coord": "K167",
               "formula": "=IFERROR(H167/I167,\"\")",
-              "raw": 0.0,
-              "text": "0.0%",
+              "raw": 0.8454216589290121,
+              "text": "84.5%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 完成率 202608",
@@ -27130,42 +30938,52 @@
             {
               "coord": "D168",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 12266231,
+              "text": "1,227",
+              "unit": "万",
+              "type": "number",
+              "context": "四五星商品 曝光 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "E168",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.007453577052562332,
+              "text": "0.7%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星商品 曝光占比 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "F168",
               "formula": "",
-              "raw": null,
-              "text": "",
+              "raw": 8165255.24294,
+              "text": "8,165,255.2",
               "unit": "",
-              "type": "blank"
+              "type": "number",
+              "context": "四五星商品 APP销售 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "G168",
               "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.03990139033147723,
+              "text": "4.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星商品 APP销售占比 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "H168",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "=G168/E168",
+              "raw": 5.35332096926002,
+              "text": "535.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 实际 202608",
+              "numberFormat": "0.00"
             },
             {
               "coord": "I168",
@@ -27179,17 +30997,19 @@
             },
             {
               "coord": "J168",
-              "formula": "",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "formula": "=H168-I168",
+              "raw": 2.48092026805644,
+              "text": "248.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "四五星APP销售占比/ 四五星APP曝光占比 VS目标差距 202608",
+              "numberFormat": "General"
             },
             {
               "coord": "K168",
               "formula": "=H168/I168",
-              "raw": 0.0,
-              "text": "0.0%",
+              "raw": 1.8637096721975093,
+              "text": "186.4%",
               "unit": "%",
               "type": "number",
               "context": "四五星APP销售占比/ 四五星APP曝光占比 完成率 202608",
