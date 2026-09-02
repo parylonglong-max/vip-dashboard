@@ -5,9 +5,9 @@
     "sourceFile": "货价监控指标副本-26.09.02_邮箱附件全流程更新.xlsx",
     "sheet": "Sheet1",
     "dataDate": "2026-09-01",
-    "generatedAt": "2026-09-02 12:02:25",
-    "updatedAtHour": "2026-09-02 12点",
-    "versionNote": "更新于 2026-09-02 12点"
+    "generatedAt": "2026-09-02 16:41:24",
+    "updatedAtHour": "2026-09-02 16点",
+    "versionNote": "更新于 2026-09-02 16点"
   },
   "sections": [
     {
@@ -250,38 +250,42 @@
             {
               "coord": "H6",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 1857874.11223298,
+              "text": "186",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 饰品1组",
+              "context": "部门阶段目标 1857874.11223298 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I6",
               "formula": "=D6/H6",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.6440709695296859,
+              "text": "64.4%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品1组",
+              "numberFormat": "General"
             },
             {
               "coord": "J6",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 4000000,
+              "text": "400",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 饰品1组",
+              "context": "小组阶段目标 4000000 饰品1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K6",
               "formula": "=D6/J6",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.2991506951825,
+              "text": "29.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品1组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -349,38 +353,42 @@
             {
               "coord": "H7",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 1729463.68563724,
+              "text": "173",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 饰品2组",
+              "context": "部门阶段目标 1857874.11223298 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I7",
               "formula": "=D7/H7",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 1.4210230127118675,
+              "text": "142.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品2组",
+              "numberFormat": "General"
             },
             {
               "coord": "J7",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 3457620,
+              "text": "346",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 饰品2组",
+              "context": "小组阶段目标 4000000 饰品2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K7",
               "formula": "=D7/J7",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.7107801600349376,
+              "text": "71.1%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品2组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -448,38 +456,42 @@
             {
               "coord": "H8",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 1606650.31105314,
+              "text": "161",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 饰品3组",
+              "context": "部门阶段目标 1857874.11223298 饰品3组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I8",
               "formula": "=D8/H8",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.7092254134212231,
+              "text": "70.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品3组",
+              "numberFormat": "General"
             },
             {
               "coord": "J8",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 2786228,
+              "text": "279",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 饰品3组",
+              "context": "小组阶段目标 4000000 饰品3组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K8",
               "formula": "=D8/J8",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.4089676907561047,
+              "text": "40.9%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 饰品3组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -547,38 +559,42 @@
             {
               "coord": "H9",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 3430959.79282423,
+              "text": "343",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 珠宝1组",
+              "context": "部门阶段目标 1857874.11223298 珠宝1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I9",
               "formula": "=D9/H9",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.7425597913908633,
+              "text": "74.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝1组",
+              "numberFormat": "General"
             },
             {
               "coord": "J9",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 6825452,
+              "text": "683",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 珠宝1组",
+              "context": "小组阶段目标 4000000 珠宝1组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K9",
               "formula": "=D9/J9",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.3732636004223603,
+              "text": "37.3%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝1组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -646,38 +662,42 @@
             {
               "coord": "H10",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 2427569.08055004,
+              "text": "243",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 珠宝2组",
+              "context": "部门阶段目标 1857874.11223298 珠宝2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I10",
               "formula": "=D10/H10",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.7701031927323825,
+              "text": "77.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝2组",
+              "numberFormat": "General"
             },
             {
               "coord": "J10",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 5200000,
+              "text": "520",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 珠宝2组",
+              "context": "小组阶段目标 4000000 珠宝2组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K10",
               "formula": "=D10/J10",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.35951513452115386,
+              "text": "36.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝2组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -745,38 +765,42 @@
             {
               "coord": "H11",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 2347483.01770236,
+              "text": "235",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 珠宝3组",
+              "context": "部门阶段目标 1857874.11223298 珠宝3组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I11",
               "formula": "=D11/H11",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.689647462776775,
+              "text": "69.0%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝3组",
+              "numberFormat": "General"
             },
             {
               "coord": "J11",
               "formula": "",
-              "raw": 0,
-              "text": "0",
-              "unit": "",
+              "raw": 5816869.54,
+              "text": "582",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 珠宝3组",
+              "context": "小组阶段目标 4000000 珠宝3组",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K11",
               "formula": "=D11/J11",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.2783173485217961,
+              "text": "27.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 珠宝3组",
+              "numberFormat": "General"
             }
           ]
         },
@@ -844,38 +868,42 @@
             {
               "coord": "H12",
               "formula": "=SUM(H6:H11)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "raw": 13399999.999999993,
+              "text": "1,340",
+              "unit": "万",
               "type": "number",
-              "context": "部门阶段目标 0 总",
+              "context": "部门阶段目标 1857874.11223298 总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "I12",
               "formula": "=D12/H12",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.8081936495044781,
+              "text": "80.8%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 总",
+              "numberFormat": "General"
             },
             {
               "coord": "J12",
               "formula": "=SUM(J6:J11)",
-              "raw": 0.0,
-              "text": "0",
-              "unit": "",
+              "raw": 28086169.54,
+              "text": "2,809",
+              "unit": "万",
               "type": "number",
-              "context": "小组阶段目标 0 总",
+              "context": "小组阶段目标 4000000 总",
               "numberFormat": "[>=100000000]0\\.00,,\\亿;[>=10000]0\\.0,\\万;#,##0"
             },
             {
               "coord": "K12",
               "formula": "=D12/J12",
-              "raw": null,
-              "text": "",
-              "unit": "",
-              "type": "blank"
+              "raw": 0.38559173716929723,
+              "text": "38.6%",
+              "unit": "%",
+              "type": "number",
+              "context": "阶段完成率 总",
+              "numberFormat": "General"
             }
           ]
         }
@@ -1811,8 +1839,8 @@
             {
               "coord": "C17",
               "formula": "=H17+H6+M17+R17+W17+AB17+AG17+AL17+AQ17",
-              "raw": 620091970.0,
-              "text": "6.2",
+              "raw": 621949844.112233,
+              "text": "6.22",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品1组",
@@ -1831,8 +1859,8 @@
             {
               "coord": "E17",
               "formula": "=D17/C17",
-              "raw": 0.9694019193677673,
-              "text": "96.9%",
+              "raw": 0.9665061444955777,
+              "text": "96.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品1组",
@@ -2274,8 +2302,8 @@
             {
               "coord": "C18",
               "formula": "=H18+H6+M18+R18+W18+AB18+AG18+AL18+AQ18",
-              "raw": 1130939142.0,
-              "text": "11.31",
+              "raw": 1132797016.112233,
+              "text": "11.33",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品2组",
@@ -2294,8 +2322,8 @@
             {
               "coord": "E18",
               "formula": "=D18/C18",
-              "raw": 0.7855643715377305,
-              "text": "78.6%",
+              "raw": 0.784275985632212,
+              "text": "78.4%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品2组",
@@ -2737,8 +2765,8 @@
             {
               "coord": "C19",
               "formula": "=H19+H6+M19+R19+W19+AB19+AG19+AL19+AQ19",
-              "raw": 101721993.0,
-              "text": "1.02",
+              "raw": 103579867.11223298,
+              "text": "1.04",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 饰品3组",
@@ -2757,8 +2785,8 @@
             {
               "coord": "E19",
               "formula": "=D19/C19",
-              "raw": 1.5408944051132583,
-              "text": "154.1%",
+              "raw": 1.5132559469383446,
+              "text": "151.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 饰品3组",
@@ -3200,8 +3228,8 @@
             {
               "coord": "C20",
               "formula": "=H20+H6+M20+R20+W20+AB20+AG20+AL20+AQ20",
-              "raw": 961056405.0,
-              "text": "9.61",
+              "raw": 962914279.1122329,
+              "text": "9.63",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝1组",
@@ -3220,8 +3248,8 @@
             {
               "coord": "E20",
               "formula": "=D20/C20",
-              "raw": 0.9172299866201505,
-              "text": "91.7%",
+              "raw": 0.9154602570771673,
+              "text": "91.5%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝1组",
@@ -3663,8 +3691,8 @@
             {
               "coord": "C21",
               "formula": "=H21+H6+M21+R21+W21+AB21+AG21+AL21+AQ21",
-              "raw": 868299060.0,
-              "text": "8.68",
+              "raw": 870156934.1122329,
+              "text": "8.7",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝2组",
@@ -3683,8 +3711,8 @@
             {
               "coord": "E21",
               "formula": "=D21/C21",
-              "raw": 0.7743222657847745,
-              "text": "77.4%",
+              "raw": 0.7726690084978062,
+              "text": "77.3%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝2组",
@@ -4126,8 +4154,8 @@
             {
               "coord": "C22",
               "formula": "=H22+H6+M22+R22+W22+AB22+AG22+AL22+AQ22",
-              "raw": 565458310.0,
-              "text": "5.65",
+              "raw": 567316184.112233,
+              "text": "5.67",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 珠宝3组",
@@ -4146,8 +4174,8 @@
             {
               "coord": "E22",
               "formula": "=D22/C22",
-              "raw": 0.7904599366724137,
-              "text": "79.0%",
+              "raw": 0.7878713007508082,
+              "text": "78.8%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 珠宝3组",
@@ -4589,8 +4617,8 @@
             {
               "coord": "C23",
               "formula": "=H23+H12+M23+R23+W23+AB23+AG23+AL23+AQ23",
-              "raw": 4247566880.0,
-              "text": "42.48",
+              "raw": 4260966880.0,
+              "text": "42.61",
               "unit": "亿",
               "type": "number",
               "context": "YTD YTD目标 总",
@@ -4609,8 +4637,8 @@
             {
               "coord": "E23",
               "formula": "=D23/C23",
-              "raw": 0.859494897294161,
-              "text": "85.9%",
+              "raw": 0.8567919352791776,
+              "text": "85.7%",
               "unit": "%",
               "type": "number",
               "context": "YTD YTD完成率 总",
@@ -6789,7 +6817,7 @@
           }
         ],
         "source_date": "2026-09-01",
-        "updated_at": "2026-09-02 12:02"
+        "updated_at": "2026-09-02 16:41"
       }
     },
     {
