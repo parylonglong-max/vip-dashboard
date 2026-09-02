@@ -22,7 +22,16 @@ assert fields[12:23]==['综合得分','天猫价指','对标值','天猫降幅',
 assert fields[23:34]==['综合得分','天猫价指','对标值','天猫降幅','抖音价指','对标值','抖音降幅','天猫外网加总','抖音外网加总','天猫权重','抖音权重'], '外网2月字段结构变化'
 assert 'function priceIndexHistoryRows' in app and '天猫外网加总' in app, '缺少外网历史独立字段驱动渲染'
 assert "[2,3,5,6,10,11]" in app and "[4,7]" in app, '外网单月比例/pp字段映射缺失'
-assert "price_power_history" in app and "最新月份" in app, '五星价格力历史月份仍存在硬编码风险'
+assert "price_power_history" in app and "refreshPeriodConfig" in app and "monthNumber" in app, '历史月份必须从JSON动态识别'
+assert '"7月": "MTD_SNAPSHOT"' not in app and "historyMtdSnapshotRows(sectionId)" not in app, '禁止继续用7月MTD快照冒充历史月份'
+# 历史月份前端连续性：源JSON有8月的模块必须可动态识别8月；优质款源无8月时不得伪造。
+def _months(section_id):
+    sec=next(s for s in data['sections'] if s['id']==section_id)
+    head=sec['rows'][0]['cells']
+    return [c.get('text') for c in head if str(c.get('text','')).endswith('月')]
+for sid in ['self_sales_history','price_index_history','internal_discount','machine_purchase_history']:
+    assert '8月' in _months(sid), f'{sid} 源JSON缺少8月'
+assert '8月' not in _months('quality_product_history'), '优质款8月无同步来源，禁止伪造'
 # 品牌视角门禁：必须先生成品牌SN+日期标准层，再由标准层生成前端聚合。
 daily_path=root/'data/brand_adjustment_daily.json'
 brand_path=root/'data/brand_adjustment_rate.json'
@@ -55,7 +64,7 @@ for x in brand['brands']:
     assert x['adjusted']<=x['denominator'], f"{x['sn']} 调价商品数大于价高商品数"
     if x['denominator']==0: assert x['rate'] is None, f"{x['sn']} 无分母时rate必须为null"
     else: assert abs(x['rate']-x['adjusted']/x['denominator'])<1e-12, f"{x['sn']} 调价率不可重算"
-for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历','brand-no-metric','该品牌本月无调价指标明细','function dataUrl','data非神银指标表','compositionstart','compositionend','updateBrandSuggestions','"7月": "MTD_SNAPSHOT"','historyMtdSnapshotRows','pricePowerPeriodRows(section, period)','state.periods.internal_discount || \'1月\'','data-section="internal_discount"']:
+for token in ['viewMode','品牌视角','renderBrandAdjustmentPanel','renderBrandCalendar','brandSearchInput','输入品牌名称或品牌SN','本月价高数','调价日历','brand-no-metric','该品牌本月无调价指标明细','function dataUrl','data非神银指标表','compositionstart','compositionend','updateBrandSuggestions','refreshPeriodConfig','monthNumber','pricePowerPeriodRows(section, period)','state.periods.internal_discount || \'1月\'','data-section="internal_discount"']:
     assert token in app, f'品牌视角实现缺失: {token}'
 # 品牌日历门禁：当月每日数据完整，月汇总必须等于日汇总；未来日期不得伪造为0。
 # 活跃生成器 update_adjustment_rate_frontend.py 输出月聚合（无 daily 日历），前端已降级显示“暂无日粒度数据”；

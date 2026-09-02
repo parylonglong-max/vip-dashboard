@@ -5,7 +5,7 @@
   var API_BASE = window.DASHBOARD_API_BASE || "http://127.0.0.1:8900";
   var FALLBACK_URL = "data/excel_view.json";
   var STATIC_PREVIEW_PASSWORD = "vip2026";
-  var PERIODS = ["YTD", "1月", "2月", "3月", "4月", "5月", "6月", "7月"];
+  var PERIODS = ["YTD"]; // 历史月份由 JSON 表头动态生成，禁止硬编码月份。
 
   var state = { token: null, data: null, activeTab: "sales", viewMode: "group", activeBrandTab: "brand-adjustment", selectedBrandSn: null, brandQuery: "", periods: {} };
 
@@ -39,13 +39,45 @@
   ];
 
   var PERIOD_CONFIG = {
-    self_sales_history: { rowStart: 17, rowEnd: 23, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35], "7月": [0,36,37,38,39,40] }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
-    price_index_history: { rowStart: 56, rowEnd: 63, periods: { "YTD": [0,1,2,3,4,5,6,7,8,9,10,11], "1月": [0,12,13,14,15,16,17,18,19,20,21,22], "2月": [0,23,24,25,26,27,28,29,30,31,32,33], "3月": [0,34,35,36,37,38,39,40,41,42,43,44], "4月": [0,45,46,47,48,49,50,51,52,53,54,55], "5月": [0,56,57,58,59,60,61,62,63,64,65,66], "6月": [0,67,68,69,70,71,72,73,74,75,76,77], "7月": "MTD_SNAPSHOT" }, headers: function(p){ return ["小组",p+"综合得分",p+"天猫得分",p+"抖音得分",p+"天猫权重",p+"抖音权重",p+"天猫价指",p+"天猫目标",p+"天猫差值",p+"抖音价指",p+"抖音目标",p+"抖音差值"]; } },
-    internal_discount: { rowStart: 68, rowEnd: 74, periods: { "MTD": [0,1,2,3], "YTD": [0,4,5,6], "1月": [0,7,8,9], "2月": [0,10,11,12], "3月": [0,13,14,15], "4月": [0,16,17,18], "5月": [0,19,20,21], "6月": [0,22,23,24], "7月": "MTD_SNAPSHOT" }, headers: function(p){ return ["小组",p+"去年内网价指",p+"今年内网价指",p+"系数差"]; }, periodList: ["MTD","YTD","1月","2月","3月","4月","5月","6月","7月"] },
-    quality_product_history: { rowStart: 103, rowEnd: 109, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35], "7月": "MTD_SNAPSHOT" }, headers: function(p){ return ["小组",p+"已引进",p+"未引进",p+"暂不引进",p+"总计",p+"引入率"]; } },
-    machine_purchase_history: { rowStart: 123, rowEnd: 126, periods: { "YTD": [0,1,2,3,4,5], "1月": [0,6,7,8,9,10], "2月": [0,11,12,13,14,15], "3月": [0,16,17,18,19,20], "4月": [0,21,22,23,24,25], "5月": [0,26,27,28,29,30], "6月": [0,31,32,33,34,35], "7月": "MTD_SNAPSHOT" }, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
-    price_power_history: { rowStart: 139, rowEnd: 152, periods: { "YTD": null, "最新月份": null }, headers: function(p){ return ["时间","维度","指标","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"]; }, periodList: ["YTD","最新月份","7月"] }
+    self_sales_history: { rowStart: 17, rowEnd: 23, ytd: [0,1,2,3,4,5], monthWidth: 5, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
+    price_index_history: { rowStart: 56, rowEnd: 63, ytd: [0,1,2,3,4,5,6,7,8,9,10,11], monthWidth: 11, headers: function(p){ return ["小组",p+"综合得分",p+"天猫价指",p+"对标值",p+"天猫降幅",p+"抖音价指",p+"对标值",p+"抖音降幅",p+"天猫外网加总",p+"抖音外网加总",p+"天猫权重",p+"抖音权重"]; } },
+    internal_discount: { rowStart: 68, rowEnd: 74, ytd: [0,4,5,6], mtd: [0,1,2,3], monthWidth: 3, headers: function(p){ return ["小组",p+"去年内网价指",p+"今年内网价指",p+"系数差"]; } },
+    quality_product_history: { rowStart: 104, rowEnd: 110, ytd: [0,1,2,3,4,5], monthWidth: 5, headers: function(p){ return ["小组",p+"已引进",p+"未引进",p+"暂不引进",p+"总计",p+"引入率"]; } },
+    machine_purchase_history: { rowStart: 124, rowEnd: 127, ytd: [0,1,2,3,4,5], monthWidth: 5, headers: function(p){ return p==="YTD" ? ["小组","YTD目标","YTD完成","YTD完成率","同期","业绩同比"] : ["小组",p+"目标",p+"完成",p+"完成率","同期","业绩同比"]; } },
+    price_power_history: { rowStart: 155, rowEnd: 176, periods: { "YTD": null }, headers: function(){ return ["时间","维度","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"]; }, periodList: ["YTD"] }
   };
+
+  function monthNumber(label){ var m=String(label||'').match(/^(\d{1,2})月$/); return m?Number(m[1]):null; }
+  function refreshPeriodConfig(){
+    var normalIds=['self_sales_history','price_index_history','internal_discount','quality_product_history','machine_purchase_history'];
+    normalIds.forEach(function(id){
+      var cfg=PERIOD_CONFIG[id], section=getSection(id), rows=section&&section.rows||[], head=rows[0]&&rows[0].cells||[];
+      cfg.periods={};
+      if(cfg.mtd) cfg.periods.MTD=cfg.mtd.slice();
+      cfg.periods.YTD=cfg.ytd.slice();
+      var months=[];
+      head.forEach(function(cell,idx){
+        var label=String(cell&&cell.text||'').trim(), n=monthNumber(label);
+        if(n==null||months.indexOf(label)>=0) return;
+        var indices=[0]; for(var j=0;j<cfg.monthWidth;j++) indices.push(idx+j);
+        cfg.periods[label]=indices; months.push(label);
+      });
+      months.sort(function(a,b){return monthNumber(a)-monthNumber(b);});
+      cfg.periodList=(id==='internal_discount'?months:(cfg.mtd?['MTD','YTD']:['YTD']).concat(months));
+      if(cfg.periodList.indexOf(state.periods[id])<0) state.periods[id]=(id==='internal_discount'&&months.length?months[months.length-1]:cfg.periodList[0]);
+    });
+    var power=PERIOD_CONFIG.price_power_history, ps=getSection('price_power_history'), seen={};
+    (ps&&ps.rows||[]).forEach(function(row){
+      var cells=row.cells||[], raw=cells[0]&&cells[0].raw;
+      if(!/^20\d{4}$/.test(String(raw||''))) return;
+      if(!(cells[2]&&typeof cells[2].raw==='number'&&cells[6]&&typeof cells[6].raw==='number')) return;
+      seen[String(Number(String(raw).slice(4,6)))+'月']=true;
+    });
+    var powerMonths=Object.keys(seen).sort(function(a,b){return monthNumber(a)-monthNumber(b);});
+    power.periodList=['YTD'].concat(powerMonths);
+    if(power.periodList.indexOf(state.periods.price_power_history)<0) state.periods.price_power_history='YTD';
+  }
+
 
   function apiFetch(path, options) {
     options = options || {}; options.headers = options.headers || {};
@@ -55,7 +87,7 @@
   function loginByApi(password) { return apiFetch("/api/login", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({password:password}) }).then(function(json){ state.token=json.token; return json; }); }
   function dataUrl(path){ return path+'?v='+encodeURIComponent(window.__DASHBOARD_RELEASE__||'202608241010'); }
   function loadExtraData(){ return Promise.all([fetch(dataUrl('data/traffic_uv.json')).then(function(r){return r.json();}).then(function(d){state.trafficData=d;}).catch(function(){}),fetch(dataUrl('data/traffic_flow.json')).then(function(r){return r.json();}).then(function(d){state.trafficFlowData=d;}).catch(function(){}),fetch(dataUrl('data/adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.adjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/brand_adjustment_rate.json')).then(function(r){return r.json();}).then(function(d){state.brandAdjustmentData=d;}).catch(function(){}),fetch(dataUrl('data/problem_brands.json')).then(function(r){return r.json();}).then(function(d){state.problemBrandsData=d;}).catch(function(){}),fetch(dataUrl('data/brand_price_index.json')).then(function(r){return r.json();}).then(function(d){state.brandPriceIndexData=d;}).catch(function(){}),fetch(dataUrl('data/brand_tier_mtd.json')).then(function(r){return r.json();}).then(function(d){state.brandTierData=d;}).catch(function(){})]); }
-  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
+  function loadData() { return apiFetch("/api/excel_view").then(function(json){ state.data=json.data||json; refreshPeriodConfig(); return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ return fetch(FALLBACK_URL).then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); }).then(function(json){ state.data=json; refreshPeriodConfig(); return loadExtraData().then(function(){renderDashboard();}); }).catch(function(){ $modulesContainer.innerHTML='<div class="loading">数据加载失败，请稍后重试</div>'; }); }); }
 
   function escapeHtml(value){ return String(value==null?"":value).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function parseNum(cell){ if(!cell) return null; var v=cell.raw; if(typeof v==="number") return v; var n=Number(v); return isNaN(n)?null:n; }
@@ -123,61 +155,23 @@
   function blankCell(){ return {text:"",raw:null,type:"blank"}; }
   function cloneCells(cells){ return (cells||[]).map(function(c){return Object.assign({},c||blankCell());}); }
   function normalizeTotalCell(cell){ if(cell&&cell.text==='总'){cell.text='精品总';cell.raw='精品总';} return cell; }
-  function historyMtdSnapshotRows(sectionId){
-    if(sectionId==='self_sales_history'){
-      var mtd=getSection('self_sales_mtd');
-      var rows=(mtd&&mtd.rows||[]).filter(function(row){return row.excelRow>=6&&row.excelRow<=12;}).map(function(row){
-        var cells=cloneCells(row.cells).slice(0,6); normalizeTotalCell(cells[0]); [1,2,4].forEach(function(i){salesMoneyDisplayCell(cells[i]);}); ratePctCell(cells[3]); growthPctCell(cells[5]); return {excelRow:row.excelRow,cells:cells};
-      });
-      return [headerRow(['小组','7月目标','7月完成','7月完成率','同期','业绩同比'])].concat(rows);
-    }
-    if(sectionId==='quality_product_history'){
-      var q=getSection('quality_product_mtd');
-      var qrows=(q&&q.rows||[]).filter(function(row){return row.excelRow>=93&&row.excelRow<=99;}).map(function(row){
-        var cells=cloneCells(row.cells).slice(0,6); normalizeTotalCell(cells[0]); ratePctCell(cells[5]); return {excelRow:row.excelRow,cells:cells,total:normalizeGroupName(cells[0]&&cells[0].text)==='精品总'};
-      });
-      return [headerRow(['小组','7月已引进','7月未引进','7月暂不引进','7月总计','7月引入率'])].concat(qrows);
-    }
-    if(sectionId==='machine_purchase_history'){
-      var m=getSection('machine_purchase_mtd');
-      var mrows=(m&&m.rows||[]).filter(function(row){return row.excelRow>=116&&row.excelRow<=119;}).map(function(row){
-        var cells=cloneCells(row.cells).slice(0,6); normalizeTotalCell(cells[0]); ratePctCell(cells[3]); growthPctCell(cells[5]); return {excelRow:row.excelRow,cells:cells,total:normalizeGroupName(cells[0]&&cells[0].text)==='精品总'};
-      });
-      return [headerRow(['小组','7月目标','7月完成','7月完成率','同期','业绩同比'])].concat(mrows);
-    }
-    return [];
-  }
-  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(period==='7月'&&cfg.periods&&cfg.periods['7月']==='MTD_SNAPSHOT') return historyMtdSnapshotRows(sectionId); if(sectionId==='price_index_history') return priceIndexHistoryRows(section, period); if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var startHeader=Math.max(0,cfg.rowStart-2); var rows=(section.rows||[]).filter(function(row){return row.excelRow>=startHeader&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if((sectionId==='self_sales_history'||sectionId==='machine_purchase_history')&&row.excelRow>=cfg.rowStart){ratePctCell(cells[3]); growthPctCell(cells[5]);} if(sectionId==='quality_product_history'&&row.excelRow>=cfg.rowStart){ratePctCell(cells[5]);} return {excelRow:row.excelRow,cells:cells};}); return markHeaders(rows,2); }
+  function periodRows(section, sectionId){ var cfg=PERIOD_CONFIG[sectionId]; var period=activePeriod(sectionId); if(!cfg) return section.rows||[]; if(sectionId==='price_index_history') return priceIndexHistoryRows(section, period); if(sectionId==='price_power_history'){ return pricePowerPeriodRows(section, period); } var idx=cfg.periods[period]||cfg.periods.YTD; var rows=(section.rows||[]).filter(function(row){return row.excelRow>=cfg.rowStart&&row.excelRow<=cfg.rowEnd;}).map(function(row){var cells=idx.map(function(i){return Object.assign({},row.cells[i]||{text:"",type:"blank"});}); if(sectionId==='self_sales_history'||sectionId==='machine_purchase_history'){ratePctCell(cells[3]); growthPctCell(cells[5]);} if(sectionId==='quality_product_history'){ratePctCell(cells[5]);} return {excelRow:row.excelRow,cells:cells};}); return [headerRow(cfg.headers(period))].concat(rows); }
   // 外网价指历史：YTD(11业务列)与单月(11业务列，但字段语义不同)必须分别切片，禁止用索引硬套。
   function priceIndexHistoryRows(section, period){
-    if(period==='7月'){
-      var mtd=getSection('price_index_mtd');
-      var fields7=['小组','7月综合得分','7月天猫得分','7月抖音得分','7月天猫权重','7月抖音权重','7月天猫价指','7月天猫目标','7月天猫差值','7月抖音价指','7月抖音目标','7月抖音差值'];
-      var rows7=(mtd&&mtd.rows||[]).filter(function(row){return row.excelRow>=46&&row.excelRow<=52;}).map(function(row){
-        var keep=[0,1,2,3,4,5,6,7,8,10,11,12];
-        var cells=keep.map(function(i){return Object.assign({},row.cells[i]||{text:'',type:'blank'});});
-        if(cells[0]&&normalizeGroupName(cells[0].text)==='精品总'){cells[0].text='精品总';cells[0].raw='精品总';}
-        [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);});
-        return {excelRow:row.excelRow,cells:cells};
-      });
-      return [headerRow(fields7)].concat(rows7);
-    }
-    var isYtd=period==='YTD';
-    var start=isYtd?1:({"1月":12,"2月":23,"3月":34,"4月":45,"5月":56,"6月":67}[period]);
+    var cfg=PERIOD_CONFIG.price_index_history, idx=cfg.periods[period]||cfg.periods.YTD, isYtd=period==='YTD';
     var fields=isYtd?
       ['小组','综合得分','天猫得分','抖音得分','天猫权重','抖音权重','天猫价指','天猫目标','天猫降幅','抖音价指','抖音目标','抖音降幅']:
       ['小组','综合得分','天猫价指','对标值','天猫降幅','抖音价指','对标值','抖音降幅','天猫外网加总','抖音外网加总','天猫权重','抖音权重'];
     var rows=(section.rows||[]).filter(function(row){return row.excelRow>=57&&row.excelRow<=63;}).map(function(row){
-      var cells=[Object.assign({},row.cells[0]||{text:'',type:'blank'})];
-      for(var i=0;i<11;i++) cells.push(Object.assign({},row.cells[start+i]||{text:'',type:'blank'}));
+      var cells=idx.map(function(i){return Object.assign({},row.cells[i]||blankCell());});
       if(cells[0]&&normalizeGroupName(cells[0].text)==='精品总'){cells[0].text='精品总';cells[0].raw='精品总';}
-      // 价指/对标是比例；降幅是源表已计算的 pp；外网加总是数量，必须保持数量格式。
       if(isYtd){ [6,7,9,10].forEach(function(i){pricePctCell(cells[i]);}); [8,11].forEach(function(i){pricePpCell(cells[i]);}); }
       else { [2,3,5,6,10,11].forEach(function(i){pricePctCell(cells[i]);}); [4,7].forEach(function(i){pricePpCell(cells[i]);}); }
       return {excelRow:row.excelRow,cells:cells};
     });
     return [headerRow(fields)].concat(rows);
   }
+
   function qtyDisplayCell(c){
     if(!c||typeof c.raw!=='number')return;
     var n=c.raw;
@@ -186,35 +180,18 @@
   }
   function pricePowerPeriodRows(section, period){
     var headers=["时间","维度","曝光","曝光占比","APP销售","APP销售占比","实际","目标","VS目标差距","完成率"];
-    if(period==='7月'){
-      var mtd=getSection('price_power_mtd');
-      var data7=(mtd&&mtd.rows||[]).filter(function(row){var label=row.cells&&row.cells[0]&&row.cells[0].text;return label==='四五星'||label==='大爆款';}).slice(0,2).map(function(row){
-        var src=cloneCells(row.cells);
-        var cells=[{text:'7月',raw:'202607',type:'text'},src[0]||blankCell(),src[7]||blankCell(),src[1]||blankCell(),src[8]||blankCell(),src[2]||blankCell(),src[3]||blankCell(),src[4]||blankCell(),src[5]||blankCell(),src[6]||blankCell()];
-        return {excelRow:row.excelRow,cells:cells};
-      });
-      data7.forEach(function(row){ qtyDisplayCell(row.cells[2]); qtyDisplayCell(row.cells[4]); [3,5,6,7,9].forEach(function(i){ratePctCell(row.cells[i]);}); ppRatioCell(row.cells[8]); });
-      return [headerRow(headers)].concat(data7);
-    }
-    // 仅展示源表已有实际数据的最新月份，禁止硬编码月份造成跨月后取错列。
-    var monthRows=(section.rows||[]).filter(function(row){var c=row.cells&&row.cells[0]; return c&&/^20\d{4}$/.test(String(c.raw||''))&&row.cells[2]&&typeof row.cells[2].raw==='number'&&row.cells[6]&&typeof row.cells[6].raw==='number';});
-    var latest=monthRows.map(function(row){return String(row.cells[0].raw);}).sort().pop();
-    var wanted=period==='YTD'?'YTD':latest;
+    var wanted=period==='YTD'?'YTD':('2026'+String(monthNumber(period)).padStart(2,'0'));
     var data=(section.rows||[]).filter(function(row){
-      var first=row.cells&&row.cells[0];
-      var raw=first&&first.raw;
-      var text=first&&first.text;
-      return wanted==='YTD'?text==='YTD':String(raw)===String(wanted);
-    }).map(function(row){return {excelRow:row.excelRow,cells:row.cells.slice(0,10).map(function(c){return Object.assign({},c);})};});
+      var first=row.cells&&row.cells[0]; return wanted==='YTD' ? first&&first.text==='YTD' : String(first&&first.raw)===wanted;
+    }).map(function(row){return {excelRow:row.excelRow,cells:cloneCells(row.cells).slice(0,10)};});
     data.forEach(function(row){
-      if(wanted!=='YTD'&&row.cells[0]&&row.cells[0].merge&&!row.cells[0].merge.covered){row.cells[0].text=wanted ? (wanted.slice(4,6).replace(/^0/,'')+'月') : '—';row.cells[0].raw=wanted||'';row.cells[0].unit='';}
+      if(wanted!=='YTD'&&row.cells[0]){row.cells[0].text=period;row.cells[0].raw=wanted;row.cells[0].unit='';}
       qtyDisplayCell(row.cells[2]); qtyDisplayCell(row.cells[4]);
-      // 曝光/销售占比、实际/目标/完成率均为比例；VS目标差距为百分点差。
-      [3,5,6,7,9].forEach(function(i){ratePctCell(row.cells[i]);});
-      ppRatioCell(row.cells[8]);
+      [3,5,6,7,9].forEach(function(i){ratePctCell(row.cells[i]);}); ppRatioCell(row.cells[8]);
     });
     return [headerRow(headers)].concat(data);
   }
+
   function renderPeriodFilter(sectionId){ var cfg=PERIOD_CONFIG[sectionId]; if(!cfg) return ""; var list=cfg.periodList||PERIODS; var current=activePeriod(sectionId); var html='<div class="filterbar">'; list.forEach(function(p){html+='<button class="filter-btn '+(current===p?'active':'')+'" data-section="'+sectionId+'" data-period="'+p+'">'+p+'</button>';}); html+='</div>'; return html; }
 
   function cloneCell(text){ return {text:text,raw:text,type:"text",unit:"",header:true}; }
@@ -532,7 +509,7 @@
     html+='<div class="section-title"><span></span>内网价指数 · YTD</div>'+renderRows(discountRows(section,'YTD'));
     html+='<div class="section-title"><span></span>内网价指数 · 历史月份 · '+historyPeriod+'</div>';
     html+='<div class="filterbar">';
-    ['1月','2月','3月','4月','5月','6月','7月'].forEach(function(p){ html+='<button class="filter-btn '+(historyPeriod===p?'active':'')+'" data-section="internal_discount" data-period="'+p+'">'+p+'</button>'; });
+    (PERIOD_CONFIG.internal_discount.periodList||[]).filter(function(p){return p!=='MTD'&&p!=='YTD';}).forEach(function(p){ html+='<button class="filter-btn '+(historyPeriod===p?'active':'')+'" data-section="internal_discount" data-period="'+p+'">'+p+'</button>'; });
     html+='</div>'+renderRows(discountRows(section,historyPeriod));
     return html;
   }
