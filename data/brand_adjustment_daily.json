@@ -1,9 +1,9 @@
 {
   "title": "品牌调价率标准日明细",
   "schema_version": "1.1",
-  "source_file": "销售看板_2026-09-01 23：59.xlsx",
-  "source_sha256": "cd3a713593f17ca3fd2a7118234b928b7ab6dbdc4e4f905946d4387e29107a76",
-  "source_date": "2026-09-01",
+  "source_file": "销售看板_2026-09-02 23：59.xlsx",
+  "source_sha256": "f9780329429e6ea651af9a1a508cbe5d7c77f6463e0b8bd94f1c74e1be747384",
+  "source_date": "2026-09-02",
   "source_month": "202609",
   "grain": "brand_sn + date",
   "filters": {
@@ -947,7 +947,7 @@
       "date": "2026-09-01",
       "brand_sn": "10003277",
       "brand_name": "Salvatore Ferragamo",
-      "group": "饰品1组",
+      "group": "饰品3组",
       "level": "国际A",
       "shenyin_type": "新银河",
       "high_price_count": 0,
@@ -7932,16 +7932,7921 @@
         "data非神银"
       ],
       "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000008",
+      "brand_name": "七度SEVEN DEGREE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000018",
+      "brand_name": "安妮克莱因ANNE KLEIN",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000057",
+      "brand_name": "ELLE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 1,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000090",
+      "brand_name": "雨果博斯HUGO BOSS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000103",
+      "brand_name": "JEEP",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000121",
+      "brand_name": "Kmonado",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000126",
+      "brand_name": "LEE",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000127",
+      "brand_name": "LEVI'S",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000160",
+      "brand_name": "POLO RALPH LAUREN",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000166",
+      "brand_name": "RENA CHRIS",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000171",
+      "brand_name": "茜子She's",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000280",
+      "brand_name": "芭比BARBIE",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000288",
+      "brand_name": "佰色传情",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000304",
+      "brand_name": "宝格丽BVLGARI",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000307",
+      "brand_name": "宝娜斯BONAS",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000326",
+      "brand_name": "毕加索PICASSO",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000333",
+      "brand_name": "博柏利BURBERRY",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 5,
+      "adjusted_count": 5,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000351",
+      "brand_name": "德玛纳",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000359",
+      "brand_name": "迪奥Dior",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000363",
+      "brand_name": "迪士尼DISNEY",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000376",
+      "brand_name": "鳄鱼恤CROCODILE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000384",
+      "brand_name": "范思哲VERSACE",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000388",
+      "brand_name": "菲拉格慕FERRAGAMO",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000395",
+      "brand_name": "芬迪FENDI",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000466",
+      "brand_name": "金利来goldlion",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000469",
+      "brand_name": "精工SEIKO",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000481",
+      "brand_name": "卡帝乐鳄鱼CARTELO",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000484",
+      "brand_name": "卡尔文克雷恩Calvin Klein",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 16,
+      "adjusted_count": 16,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000495",
+      "brand_name": "卡西欧CASIO",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "神舟",
+      "high_price_count": 3,
+      "adjusted_count": 2,
+      "rate": 0.6666666666666666,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000498",
+      "brand_name": "凯撒KAISER",
+      "group": "饰品1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000566",
+      "brand_name": "马克华菲FAIRWHALE",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000623",
+      "brand_name": "缪缪MIU MIU",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000630",
+      "brand_name": "耐克Nike",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000649",
+      "brand_name": "派克Parker",
+      "group": "珠宝3组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 4,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000651",
+      "brand_name": "皮尔·卡丹pierre cardin",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000652",
+      "brand_name": "匹克PEAK",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000654",
+      "brand_name": "普拉达PRADA",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000656",
+      "brand_name": "七匹狼SEPTWOLVES",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000702",
+      "brand_name": "施华洛世奇SWAROVSKI",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "神舟",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000723",
+      "brand_name": "斯沃琪swatch",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000743",
+      "brand_name": "天梭TISSOT",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "神舟",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000751",
+      "brand_name": "万宝龙MONTBLANC",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000809",
+      "brand_name": "伊泰莲娜ITALINA",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000822",
+      "brand_name": "盈满堂",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10000946",
+      "brand_name": "雷朋RayBan",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 4,
+      "adjusted_count": 1,
+      "rate": 0.25,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001010",
+      "brand_name": "奥康AOKANG",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001091",
+      "brand_name": "西铁城Citizen",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001179",
+      "brand_name": "罗蒙ROMON",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001201",
+      "brand_name": "依波EBOHR",
+      "group": "饰品3组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 8,
+      "adjusted_count": 8,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001210",
+      "brand_name": "派丽蒙PARIM",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001228",
+      "brand_name": "CELINE",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001252",
+      "brand_name": "雷诺RARONE",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001263",
+      "brand_name": "纳维凯尔NAVIGARE",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001264",
+      "brand_name": "朵岚D'ORLAN",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001286",
+      "brand_name": "蔻依Chloé",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001294",
+      "brand_name": "佐卡伊",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001327",
+      "brand_name": "宝姿PORTS",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10001392",
+      "brand_name": "古驰GUCCI",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003177",
+      "brand_name": "喜钻",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003235",
+      "brand_name": "周生生Chow Sang Sang",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "神舟",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003259",
+      "brand_name": "金大生KTS",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003277",
+      "brand_name": "Salvatore Ferragamo",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 2,
+      "adjusted_count": 2,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003287",
+      "brand_name": "罗意威LOEWE",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003319",
+      "brand_name": "凤禧Phoenisess",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003405",
+      "brand_name": "TAMINA",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003423",
+      "brand_name": "美度MIDO",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003482",
+      "brand_name": "潮宏基CHJ",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003564",
+      "brand_name": "诺帝卡NAUTICA",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003576",
+      "brand_name": "布塔PTAH",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003711",
+      "brand_name": "太阳城SUNCITY",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003749",
+      "brand_name": "MT·MIT",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003751",
+      "brand_name": "暴龙BOLON",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 3,
+      "adjusted_count": 3,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003803",
+      "brand_name": "仙蒂瑞拉珠宝SANDYRILLA",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003869",
+      "brand_name": "蓝色海洋",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10003961",
+      "brand_name": "R",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004074",
+      "brand_name": "柒牌",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004114",
+      "brand_name": "斐乐FILA",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004163",
+      "brand_name": "VIVIENNE WESTWOOD",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004185",
+      "brand_name": "MICHAEL KORS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004235",
+      "brand_name": "曼古银MGS",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004283",
+      "brand_name": "DTOTO",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004363",
+      "brand_name": "兆君",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004434",
+      "brand_name": "YOUR-D",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004443",
+      "brand_name": "FURLA",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004593",
+      "brand_name": "爱迪尔IDEAL",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004644",
+      "brand_name": "MCM",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004671",
+      "brand_name": "帕鲁巴斯PALBAS",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004688",
+      "brand_name": "巴黎世家BALENCIAGA",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10004888",
+      "brand_name": "优悦生活UVE",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005242",
+      "brand_name": "格雅GEYA",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005254",
+      "brand_name": "梦娜MengNa",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005335",
+      "brand_name": "周大福CHOW TAI FOOK",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "神舟",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005419",
+      "brand_name": "威古氏VEGOOS",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005528",
+      "brand_name": "JOWISSA",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005582",
+      "brand_name": "汤姆福特TOM FORD",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005749",
+      "brand_name": "珂兰Kela",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005773",
+      "brand_name": "聚利时Julius",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005847",
+      "brand_name": "欧米茄Omega",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005848",
+      "brand_name": "浪琴LONGINES",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005858",
+      "brand_name": "雷达RADO",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005923",
+      "brand_name": "T400",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10005924",
+      "brand_name": "高特OUTDO",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006009",
+      "brand_name": "蒂芙尼TIFFANY&CO.",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006011",
+      "brand_name": "DPL",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006044",
+      "brand_name": "千足珍珠",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006059",
+      "brand_name": "夏蒙Charmant",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006176",
+      "brand_name": "海俪恩",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006264",
+      "brand_name": "宏达HONDAR",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006296",
+      "brand_name": "海伦·凯勒Helen Keller",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006364",
+      "brand_name": "珍视明",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006562",
+      "brand_name": "红豆HOdo",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006606",
+      "brand_name": "飞亚达FIYTA",
+      "group": "饰品3组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006689",
+      "brand_name": "羽兰JOLEE",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10006934",
+      "brand_name": "FOLLI FOLLIE",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007025",
+      "brand_name": "英纳格ENICAR",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007193",
+      "brand_name": "MLB",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007406",
+      "brand_name": "百年灵Breitling",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007458",
+      "brand_name": "帝舵TUDOR",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007554",
+      "brand_name": "静风格STYLEJING",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007678",
+      "brand_name": "俞兆林",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10007862",
+      "brand_name": "BCBGMAXAZRIA",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010007",
+      "brand_name": "保罗史密斯Paul Smith",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010075",
+      "brand_name": "天堂伞",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 3,
+      "adjusted_count": 3,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010103",
+      "brand_name": "六福珠宝LUKFOOK JEWELLERY",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "神舟",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010163",
+      "brand_name": "汤丽柏琦Tory Burch",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010201",
+      "brand_name": "帕莎Prsr",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010218",
+      "brand_name": "海螺hailuo",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010245",
+      "brand_name": "宝亨达BOHENGDA",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010336",
+      "brand_name": "豪利时Oris",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010347",
+      "brand_name": "JOSEPH ABBOUD",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010348",
+      "brand_name": "紫气东来ZI QI DONG LAI",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010395",
+      "brand_name": "Timex",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010437",
+      "brand_name": "蔡司ZEISS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010501",
+      "brand_name": "罗西尼ROSSINI",
+      "group": "饰品3组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 2,
+      "adjusted_count": 2,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010543",
+      "brand_name": "顶瓜瓜",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010709",
+      "brand_name": "啄木鸟TUCANO",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010788",
+      "brand_name": "丝界",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010925",
+      "brand_name": "Mbox",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10010950",
+      "brand_name": "周六福",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011106",
+      "brand_name": "Filial&Love",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011158",
+      "brand_name": "英雄HERO",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011284",
+      "brand_name": "海鸥SEA-GULL",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 1,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011400",
+      "brand_name": "百年宝诚",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011544",
+      "brand_name": "摩纹MARVIN",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011551",
+      "brand_name": "星皇STARKING",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011845",
+      "brand_name": "Silhouette",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10011875",
+      "brand_name": "Piara",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012332",
+      "brand_name": "木九十",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012356",
+      "brand_name": "LES NEREIDES",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012404",
+      "brand_name": "凤凰涅磐",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012417",
+      "brand_name": "伊海诗EX²",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012562",
+      "brand_name": "萃华CUI HUA",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012651",
+      "brand_name": "邦顿Bestdon",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012721",
+      "brand_name": "天王TIAN WANG",
+      "group": "饰品3组",
+      "level": "国内A",
+      "shenyin_type": "神舟",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012739",
+      "brand_name": "MARY WINDSOR",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012781",
+      "brand_name": "真享THANTRUE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10012782",
+      "brand_name": "奇美拉CHIMERA",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013308",
+      "brand_name": "黛慕妮DEMONE",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013567",
+      "brand_name": "中国黄金China Gold",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013781",
+      "brand_name": "陌森Molsion",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013836",
+      "brand_name": "Alexandre De Paris",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013947",
+      "brand_name": "蔻斯琦Agovski",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10013972",
+      "brand_name": "赛菲尔sunfeel",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014171",
+      "brand_name": "上海SHANGHAI",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014207",
+      "brand_name": "法拉利Ferrari",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014287",
+      "brand_name": "鑫万福",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014653",
+      "brand_name": "LACOSTE",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014674",
+      "brand_name": "米格MIGE",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014824",
+      "brand_name": "拜戈balco",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014831",
+      "brand_name": "古尊GOLGEN",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10014963",
+      "brand_name": "东方翡翠",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015112",
+      "brand_name": "唯一winy",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015164",
+      "brand_name": "宾爵BEGEEL",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015206",
+      "brand_name": "老爷子Laoyezi",
+      "group": "饰品1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015435",
+      "brand_name": "老庙",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015824",
+      "brand_name": "亚一",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015852",
+      "brand_name": "UNAFORTE",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10015960",
+      "brand_name": "老银匠",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016220",
+      "brand_name": "纪梵希GIVENCHY",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016373",
+      "brand_name": "钻石世家ShiningHouse",
+      "group": "珠宝3组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016647",
+      "brand_name": "织布人Zhiburen",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016695",
+      "brand_name": "施耐德schneider",
+      "group": "珠宝3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016753",
+      "brand_name": "厚木Atsugi",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10016754",
+      "brand_name": "紫宝ZEAPO",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020296",
+      "brand_name": "Kenmont",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020427",
+      "brand_name": "海澜之家HLA",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020436",
+      "brand_name": "曼卡龙MCLON",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020483",
+      "brand_name": "穗南",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020526",
+      "brand_name": "丹尼尔惠灵顿DANIEL WELLINGTON",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020554",
+      "brand_name": "漫威MARVEL",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020644",
+      "brand_name": "劳士顿ROSDN",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020646",
+      "brand_name": "颂拓SUUNTO",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020687",
+      "brand_name": "Siggi",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020693",
+      "brand_name": "Be in Lover",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020929",
+      "brand_name": "LONGCHAMP",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020953",
+      "brand_name": "帕森PARZIN",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10020985",
+      "brand_name": "冠琴GUANQIN",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021118",
+      "brand_name": "special",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021192",
+      "brand_name": "名爵Manjaz",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021253",
+      "brand_name": "黛米Daimi",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 6,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021315",
+      "brand_name": "普莱斯PULAIS",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021371",
+      "brand_name": "亿珍阁",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021431",
+      "brand_name": "蓝婷凯丝Lightingkiss",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021435",
+      "brand_name": "boy",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021771",
+      "brand_name": "潘多拉PANDORA",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021976",
+      "brand_name": "阪织屋Bandgewoo",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10021978",
+      "brand_name": "依波路ERNEST BOREL",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022132",
+      "brand_name": "aojo",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022214",
+      "brand_name": "DOM",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022221",
+      "brand_name": "金至尊3DG Jewellery​",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022222",
+      "brand_name": "谢瑞麟TSL",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022266",
+      "brand_name": "艾米龙Emile Chouriet",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022293",
+      "brand_name": "佳明GARMIN",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022382",
+      "brand_name": "威迪文WATERMAN",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022426",
+      "brand_name": "汉米尔顿HAMILTON",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022468",
+      "brand_name": "爱丽丝ALICE",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022501",
+      "brand_name": "布加迪BONEST GATTI",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10022843",
+      "brand_name": "GALLERIA",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10023150",
+      "brand_name": "Bertha",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10023271",
+      "brand_name": "LAMY",
+      "group": "珠宝3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10023618",
+      "brand_name": "时刻美SKMEI",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10023952",
+      "brand_name": "Vnox",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024066",
+      "brand_name": "兆亮珠宝",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024079",
+      "brand_name": "CAROMAY",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024102",
+      "brand_name": "范琦Fanci",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 2,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024187",
+      "brand_name": "眼镜生活LOHO",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 2,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024537",
+      "brand_name": "天使之泪",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 6,
+      "adjusted_count": 2,
+      "rate": 0.3333333333333333,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024538",
+      "brand_name": "KANGOL",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024730",
+      "brand_name": "萧邦",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10024733",
+      "brand_name": "Zippo",
+      "group": "珠宝3组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 2,
+      "adjusted_count": 2,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025066",
+      "brand_name": "eyeplay",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025337",
+      "brand_name": "Dickies",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025431",
+      "brand_name": "维氏VICTORINOX",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025512",
+      "brand_name": "梅花表",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025556",
+      "brand_name": "OAKLEY",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 11,
+      "adjusted_count": 10,
+      "rate": 0.9090909090909091,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025557",
+      "brand_name": "COACH",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "新银河",
+      "high_price_count": 6,
+      "adjusted_count": 4,
+      "rate": 0.6666666666666666,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025795",
+      "brand_name": "齐博林Zeppelin",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10025830",
+      "brand_name": "PRADA LINEA ROSSA",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026071",
+      "brand_name": "HEFANG Jewelry",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 2,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026178",
+      "brand_name": "BURBERRY",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026179",
+      "brand_name": "GIORGIO ARMANI",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026180",
+      "brand_name": "EMPORIO ARMANI",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 3,
+      "adjusted_count": 2,
+      "rate": 0.6666666666666666,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 3
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026303",
+      "brand_name": "明牌珠宝MINGR",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026565",
+      "brand_name": "杰尼亚ERMENEGILDO ZEGNA",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026666",
+      "brand_name": "千叶KEER",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10026891",
+      "brand_name": "艾美表Maurice Lacroix",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027018",
+      "brand_name": "NEW ERA",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027309",
+      "brand_name": "百乐PILOT",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027320",
+      "brand_name": "me.luxe",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 4,
+      "adjusted_count": 1,
+      "rate": 0.25,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027395",
+      "brand_name": "VEC",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027630",
+      "brand_name": "天珺TANGIN",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027799",
+      "brand_name": "古由卡Guuka",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027955",
+      "brand_name": "嘉乐琥珀carol",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10027963",
+      "brand_name": "BATAR",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028032",
+      "brand_name": "慈元阁",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028039",
+      "brand_name": "AX Armani Exchange",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028449",
+      "brand_name": "蕉下",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "神舟",
+      "high_price_count": 3,
+      "adjusted_count": 3,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028498",
+      "brand_name": "I&U",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028524",
+      "brand_name": "adidas",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028669",
+      "brand_name": "千年CEMNI",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10028986",
+      "brand_name": "依慧达EVITA PERONI",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 244,
+      "adjusted_count": 244,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10029221",
+      "brand_name": "吉盟珠宝GMOND",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10029255",
+      "brand_name": "CACUSS",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 4,
+      "adjusted_count": 4,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10029305",
+      "brand_name": "梦祥银MYSHINE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10029799",
+      "brand_name": "梦金园",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 9,
+      "adjusted_count": 7,
+      "rate": 0.7777777777777778,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030032",
+      "brand_name": "CATELLES",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030248",
+      "brand_name": "CIRCLE",
+      "group": "珠宝3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030425",
+      "brand_name": "晨光M&G",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030603",
+      "brand_name": "樱花SAKURASAKURA",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030911",
+      "brand_name": "上海故事",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 8,
+      "adjusted_count": 8,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10030950",
+      "brand_name": "apm MONACO",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10031139",
+      "brand_name": "稻草人",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10031255",
+      "brand_name": "康斯登FREDERIQUE CONSTANT",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10031292",
+      "brand_name": "名创优品MINISO",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10031385",
+      "brand_name": "JEEP SPIRIT 1941 ESTD",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10031878",
+      "brand_name": "国誉KOKUYO",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10032549",
+      "brand_name": "ADEXE",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10032834",
+      "brand_name": "Ohsunny",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10032926",
+      "brand_name": "welly merck",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10033201",
+      "brand_name": "斯诺威登RUNOSD",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10033593",
+      "brand_name": "VVC",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 60,
+      "adjusted_count": 57,
+      "rate": 0.95,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10033824",
+      "brand_name": "娉饰珠宝PINKBOX",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10034050",
+      "brand_name": "夕阳红",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10034606",
+      "brand_name": "契意坊cuneiform",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10036219",
+      "brand_name": "OLIVIA BURTON",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10036521",
+      "brand_name": "Vana",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10036622",
+      "brand_name": "S&A",
+      "group": "珠宝2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10036646",
+      "brand_name": "罗拉玫瑰LOLA ROSE",
+      "group": "饰品3组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10037278",
+      "brand_name": "诺米美物NOME",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10037336",
+      "brand_name": "宝时捷POSCER",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10037841",
+      "brand_name": "品彩pincai",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10037902",
+      "brand_name": "Katie Ermilio",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10038025",
+      "brand_name": "邦尼世家3AnGnI",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10038138",
+      "brand_name": "辉柏嘉FABER-CASTELL",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10038294",
+      "brand_name": "尤珂IL&Co.",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10038541",
+      "brand_name": "johnsongem",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10038837",
+      "brand_name": "Touch mark",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039126",
+      "brand_name": "爱恋珠宝",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039380",
+      "brand_name": "银千惠YINCHIE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039411",
+      "brand_name": "老凤祥",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039708",
+      "brand_name": "SLEEK",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039732",
+      "brand_name": "瑞贝卡REBECCA",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039747",
+      "brand_name": "极尔斯",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039780",
+      "brand_name": "语唐",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039840",
+      "brand_name": "牛老爹",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10039988",
+      "brand_name": "灵菲",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040169",
+      "brand_name": "正港ZGO",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040223",
+      "brand_name": "顺钦银楼",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040334",
+      "brand_name": "集藏JC",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040369",
+      "brand_name": "欧利时OLEVS",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040403",
+      "brand_name": "爱勒AGELOCER",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040536",
+      "brand_name": "I Do",
+      "group": "珠宝3组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040777",
+      "brand_name": "积优JEAYOU",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040814",
+      "brand_name": "东方雅翠",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040967",
+      "brand_name": "圣缇斯欧图SOTOIRU",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10040983",
+      "brand_name": "周大生CHOW TAI SENG",
+      "group": "珠宝1组",
+      "level": "国内A",
+      "shenyin_type": "新银河",
+      "high_price_count": 17,
+      "adjusted_count": 17,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041002",
+      "brand_name": "六桂福LUK KWAI FOOK",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041063",
+      "brand_name": "若华",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041064",
+      "brand_name": "豫银",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041074",
+      "brand_name": "银意坊YF",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041079",
+      "brand_name": "TIMESS",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041196",
+      "brand_name": "海蒂",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041199",
+      "brand_name": "金大福King Tai Fook",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041323",
+      "brand_name": "索缇朵SOFTDORA",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041389",
+      "brand_name": "德克力时DRIKLUX",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041452",
+      "brand_name": "金仕盾JSDUN",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041521",
+      "brand_name": "MCK",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041667",
+      "brand_name": "瑷瑞DP",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041723",
+      "brand_name": "WithLove",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041771",
+      "brand_name": "仟丝百变",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041788",
+      "brand_name": "优奇",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10041807",
+      "brand_name": "FUSSEM",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042090",
+      "brand_name": "ORANGE CUBE",
+      "group": "饰品2组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042121",
+      "brand_name": "欧品客",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042336",
+      "brand_name": "十瑞",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042383",
+      "brand_name": "格林GRAND PRIX",
+      "group": "饰品3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042386",
+      "brand_name": "NOMOS GLASHUTTE",
+      "group": "饰品3组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042851",
+      "brand_name": "卡梭KASSAW",
+      "group": "饰品1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10042986",
+      "brand_name": "魅丝黛儿",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043171",
+      "brand_name": "佰丝堂",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043521",
+      "brand_name": "中鑫珠宝",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043544",
+      "brand_name": "智盛ZS",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043685",
+      "brand_name": "TOS THE SECOND SIGHT",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043738",
+      "brand_name": "七可",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043976",
+      "brand_name": "普先生MR.PUTIAN",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10043981",
+      "brand_name": "是你IS YOU",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044053",
+      "brand_name": "珍·如金",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044158",
+      "brand_name": "金海湾银楼",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044160",
+      "brand_name": "CGC",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044190",
+      "brand_name": "米兰茜M&Q",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044191",
+      "brand_name": "东方ORIENT",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044248",
+      "brand_name": "一马珠宝",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044286",
+      "brand_name": "玖慕",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044325",
+      "brand_name": "鸣钻国际",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044534",
+      "brand_name": "倾爱",
+      "group": "珠宝1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044559",
+      "brand_name": "uni",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10044696",
+      "brand_name": "金盾",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045009",
+      "brand_name": "九乐",
+      "group": "珠宝1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045074",
+      "brand_name": "ZEGL",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045187",
+      "brand_name": "珍宝银楼",
+      "group": "珠宝1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045391",
+      "brand_name": "翡拉拉FELLALA",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045608",
+      "brand_name": "金嘉福",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045670",
+      "brand_name": "JAY",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045692",
+      "brand_name": "缔晶",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10045948",
+      "brand_name": "wpc.",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046030",
+      "brand_name": "卡伦顿",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046031",
+      "brand_name": "星际熊",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046222",
+      "brand_name": "SAINT LAURENT PARIS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046431",
+      "brand_name": "轩曼",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046437",
+      "brand_name": "京工美作",
+      "group": "珠宝1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046692",
+      "brand_name": "薇饰岚west island",
+      "group": "饰品2组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10046946",
+      "brand_name": "珍爱妮丝JANE ALICE JAJ",
+      "group": "珠宝1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10047008",
+      "brand_name": "万事利",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 3,
+      "adjusted_count": 1,
+      "rate": 0.3333333333333333,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10047395",
+      "brand_name": "萱子SHINE SHINE DESIGN CO.ACCESSORIES",
+      "group": "饰品2组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10047488",
+      "brand_name": "阮仕珍珠",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10047585",
+      "brand_name": "LUMI NOX",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10047710",
+      "brand_name": "BOSS HUGO BOSS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10048007",
+      "brand_name": "ARSIS",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 3,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10048265",
+      "brand_name": "中华",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10048390",
+      "brand_name": "MAXMARA",
+      "group": "饰品1组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10048432",
+      "brand_name": "珍·尚银",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10048504",
+      "brand_name": "施洛华",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10049380",
+      "brand_name": "LASHION",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10049389",
+      "brand_name": "明月镜片",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10049719",
+      "brand_name": "UV 100",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050077",
+      "brand_name": "佐川",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050119",
+      "brand_name": "翠雅金楼",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050410",
+      "brand_name": "ZAUO",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050488",
+      "brand_name": "珍珠皇后",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050510",
+      "brand_name": "洛伊士",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050511",
+      "brand_name": "建禄",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10050639",
+      "brand_name": "WEEKISS",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200091",
+      "brand_name": "印象眸",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 29,
+      "adjusted_count": 4,
+      "rate": 0.13793103448275862,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200113",
+      "brand_name": "天空树",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200134",
+      "brand_name": "罗兰度ROLENDO R",
+      "group": "饰品3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200150",
+      "brand_name": "卡兰薇",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200202",
+      "brand_name": "净心石",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200283",
+      "brand_name": "月印百川",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 8,
+      "adjusted_count": 8,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200296",
+      "brand_name": "爱蒂尔",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200327",
+      "brand_name": "蔻润",
+      "group": "珠宝3组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200363",
+      "brand_name": "吴越老银铺",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200487",
+      "brand_name": "DODOGOGO",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200546",
+      "brand_name": "小野和子",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200587",
+      "brand_name": "唐科",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200592",
+      "brand_name": "莫拉克",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200662",
+      "brand_name": "中国珠宝SINO GEM",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200700",
+      "brand_name": "杭丝路",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200709",
+      "brand_name": "SHUKIKU",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200710",
+      "brand_name": "熊银匠",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200729",
+      "brand_name": "欧拿",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200730",
+      "brand_name": "酷宝仕",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200757",
+      "brand_name": "诗普琳MEMORA",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 3,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10200881",
+      "brand_name": "世纪缘珠宝",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201261",
+      "brand_name": "爱的约定",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201449",
+      "brand_name": "CAPONI",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 2,
+      "adjusted_count": 2,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201495",
+      "brand_name": "玛丽亚.古琦",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201531",
+      "brand_name": "斑马牌ZEBRA",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 5,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201566",
+      "brand_name": "KIETLA",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201568",
+      "brand_name": "SHAWN LEE",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201616",
+      "brand_name": "艾登",
+      "group": "饰品1组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201652",
+      "brand_name": "白金PLATINUM",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201669",
+      "brand_name": "银奥",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201679",
+      "brand_name": "京润",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 60,
+      "adjusted_count": 44,
+      "rate": 0.7333333333333333,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201722",
+      "brand_name": "ZOBO",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201741",
+      "brand_name": "索柏SHOWBIZS",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201834",
+      "brand_name": "匠心手工坊",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201843",
+      "brand_name": "SEVENFRIDAY",
+      "group": "饰品3组",
+      "level": "国际A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10201904",
+      "brand_name": "533",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202040",
+      "brand_name": "玉品堂",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202058",
+      "brand_name": "ONE&ONE",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202173",
+      "brand_name": "牧尔西MOERCIAN",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202185",
+      "brand_name": "XXOFF",
+      "group": "饰品2组",
+      "level": "国内D",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202200",
+      "brand_name": "M.Y.S.H",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202280",
+      "brand_name": "RIOTLILY",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202298",
+      "brand_name": "依视路",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202322",
+      "brand_name": "凯乐曼莱COLEVKIE",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202384",
+      "brand_name": "LA JOYIA",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202401",
+      "brand_name": "白岚BN",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 1,
+      "adjusted_count": 0,
+      "rate": 0.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202821",
+      "brand_name": "礼兰",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202855",
+      "brand_name": "龙凤珠宝",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202871",
+      "brand_name": "福来岛",
+      "group": "珠宝1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10202924",
+      "brand_name": "PDPAOLA",
+      "group": "饰品3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203135",
+      "brand_name": "安道子",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203179",
+      "brand_name": "瑞茜REESE",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203487",
+      "brand_name": "安铂洛利Amber lollipop",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "新银河",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203507",
+      "brand_name": "宝若岚",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203524",
+      "brand_name": "金六福吉祥",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203597",
+      "brand_name": "俏佳银",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203684",
+      "brand_name": "普陀山",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 75,
+      "adjusted_count": 75,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203726",
+      "brand_name": "TILTIL MITIL",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203727",
+      "brand_name": "HERB",
+      "group": "珠宝3组",
+      "level": "国际C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203801",
+      "brand_name": "TROLLBEADS",
+      "group": "饰品2组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10203880",
+      "brand_name": "阿吉豆",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "新银河",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204086",
+      "brand_name": "周大金CHOW TAI KING",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204157",
+      "brand_name": "英皇珠宝EMPEROR",
+      "group": "珠宝2组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204170",
+      "brand_name": "航民HANGMIN",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204208",
+      "brand_name": "行金银中",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 1,
+      "adjusted_count": 1,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204370",
+      "brand_name": "朵澜Dorain",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204418",
+      "brand_name": "诤友JOYO",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204431",
+      "brand_name": "老银坊",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204459",
+      "brand_name": "ROSE & CROWN",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204465",
+      "brand_name": "金冠森",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204660",
+      "brand_name": "TLOVE",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204718",
+      "brand_name": "MICO KIVI",
+      "group": "饰品1组",
+      "level": "国内A",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204790",
+      "brand_name": "SUKDULI",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204831",
+      "brand_name": "镇声珠宝ZS",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204840",
+      "brand_name": "中单",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10204883",
+      "brand_name": "COLORE.IN",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 62,
+      "adjusted_count": 62,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205067",
+      "brand_name": "LAC",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205355",
+      "brand_name": "仙源",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205395",
+      "brand_name": "MISSION UV",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205450",
+      "brand_name": "奢凌羊",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205454",
+      "brand_name": "CARIN",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205475",
+      "brand_name": "色菲尔",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205515",
+      "brand_name": "央创时尚",
+      "group": "珠宝2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205520",
+      "brand_name": "康洛薇COMLORVEI",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205521",
+      "brand_name": "金至福GOLDEN FORTUNE",
+      "group": "珠宝1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205571",
+      "brand_name": "MISS JOJO",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205625",
+      "brand_name": "柯百年",
+      "group": "珠宝1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205641",
+      "brand_name": "GRACE GIRL",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 2,
+      "adjusted_count": 2,
+      "rate": 1.0,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205676",
+      "brand_name": "佐野一郎",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205700",
+      "brand_name": "首爱",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205711",
+      "brand_name": "紫金",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205776",
+      "brand_name": "永传承",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205778",
+      "brand_name": "铂思亚",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205805",
+      "brand_name": "传呈CHUM",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205838",
+      "brand_name": "RENOVO",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205932",
+      "brand_name": "肯默",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205933",
+      "brand_name": "GUSKI 1819",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205938",
+      "brand_name": "月老祠堂DESTINY TEMPLE",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205971",
+      "brand_name": "纪思梵CHEESEFAN",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10205972",
+      "brand_name": "DISCUS",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206029",
+      "brand_name": "老福黄金",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206088",
+      "brand_name": "大溪地",
+      "group": "珠宝1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206092",
+      "brand_name": "赛浪",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206129",
+      "brand_name": "中银鑫行",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206131",
+      "brand_name": "S•LABELLE",
+      "group": "饰品1组",
+      "level": "国际B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206132",
+      "brand_name": "兰诺LANO",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206238",
+      "brand_name": "穆百年",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206239",
+      "brand_name": "晶贵坊CMILL",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206289",
+      "brand_name": "夏秦",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206315",
+      "brand_name": "GOLDBEAR",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206379",
+      "brand_name": "度享",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206417",
+      "brand_name": "IDEAGEMER",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206468",
+      "brand_name": "金楼",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206496",
+      "brand_name": "BAX",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206645",
+      "brand_name": "牛大叔",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206670",
+      "brand_name": "杭丝府",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206719",
+      "brand_name": "FREERABBIT II",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206720",
+      "brand_name": "龙之初",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206739",
+      "brand_name": "银色饰界",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206844",
+      "brand_name": "峨眉山",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206938",
+      "brand_name": "皇家天选",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10206972",
+      "brand_name": "万晨WOALMORN",
+      "group": "饰品3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207005",
+      "brand_name": "晶甜坊",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207023",
+      "brand_name": "7000年",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207119",
+      "brand_name": "宜生缘ILIFEYAL",
+      "group": "珠宝3组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207140",
+      "brand_name": "七七银饰77 SILVER",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207309",
+      "brand_name": "HOYA",
+      "group": "饰品1组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207410",
+      "brand_name": "绳之运",
+      "group": "饰品2组",
+      "level": "国内B",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207487",
+      "brand_name": "LAGUR",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207633",
+      "brand_name": "翠王妃",
+      "group": "珠宝2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207636",
+      "brand_name": "香雪羽秀",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207715",
+      "brand_name": "赫生",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207917",
+      "brand_name": "绣娘丝绸",
+      "group": "饰品1组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10207919",
+      "brand_name": "中银亿金",
+      "group": "饰品2组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
+    },
+    {
+      "date": "2026-09-02",
+      "brand_sn": "10208107",
+      "brand_name": "南珠宫PEARL ROYAL",
+      "group": "珠宝3组",
+      "level": "国内C",
+      "shenyin_type": "非神银",
+      "high_price_count": 0,
+      "adjusted_count": 0,
+      "rate": null,
+      "source_sheets": [
+        "data非神银"
+      ],
+      "source_row_count": 1
     }
   ],
   "quality": {
     "status": "PASS",
     "errors": [],
-    "latest_date": "2026-09-01",
+    "latest_date": "2026-09-02",
     "catalog_count": 552,
     "indicator_brand_count": 527,
-    "metric_brand_count": 61,
-    "standard_record_count": 527,
+    "metric_brand_count": 70,
+    "standard_record_count": 1054,
     "source_brand_counts": {
       "data": 70,
       "data非神银": 457
@@ -7949,5 +15854,5 @@
     "source_overlap_count": 0,
     "reader": "xlsx-xml-stream"
   },
-  "generated_at": "2026-09-02 11:53:13"
+  "generated_at": "2026-09-03 09:57:13"
 }
