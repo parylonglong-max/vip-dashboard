@@ -1,20 +1,20 @@
 {
   "title": "调价率",
-  "overall_source_date": "2026-09-02",
-  "six_high_source_date": "2026-09-02",
+  "overall_source_date": "2026-09-03",
+  "six_high_source_date": "2026-09-03",
   "groups": [
     {
       "group": "饰品1组",
       "overall": {
-        "denominator": 486,
-        "adjusted": 456,
-        "rate": 0.9382716049382716,
+        "denominator": 567,
+        "adjusted": 531,
+        "rate": 0.9365079365079365,
         "target": 0.75,
         "status": "pass"
       },
       "six_high": {
-        "denominator": 10,
-        "adjusted": 10,
+        "denominator": 11,
+        "adjusted": 11,
         "rate": 1.0,
         "target": 0.8,
         "status": "pass"
@@ -23,15 +23,15 @@
     {
       "group": "饰品2组",
       "overall": {
-        "denominator": 895,
-        "adjusted": 831,
-        "rate": 0.9284916201117318,
+        "denominator": 972,
+        "adjusted": 903,
+        "rate": 0.9290123456790124,
         "target": 0.75,
         "status": "pass"
       },
       "six_high": {
-        "denominator": 6,
-        "adjusted": 6,
+        "denominator": 7,
+        "adjusted": 7,
         "rate": 1.0,
         "target": 0.8,
         "status": "pass"
@@ -40,9 +40,9 @@
     {
       "group": "饰品3组",
       "overall": {
-        "denominator": 54,
-        "adjusted": 38,
-        "rate": 0.7037037037037037,
+        "denominator": 73,
+        "adjusted": 50,
+        "rate": 0.684931506849315,
         "target": 0.75,
         "status": "fail"
       },
@@ -57,8 +57,8 @@
     {
       "group": "珠宝1组",
       "overall": {
-        "denominator": 70,
-        "adjusted": 70,
+        "denominator": 73,
+        "adjusted": 73,
         "rate": 1.0,
         "target": 0.75,
         "status": "pass"
@@ -74,11 +74,11 @@
     {
       "group": "珠宝2组",
       "overall": {
-        "denominator": 17,
-        "adjusted": 12,
-        "rate": 0.7058823529411765,
+        "denominator": 24,
+        "adjusted": 19,
+        "rate": 0.7916666666666666,
         "target": 0.75,
-        "status": "fail"
+        "status": "pass"
       },
       "six_high": {
         "denominator": 0,
@@ -91,16 +91,16 @@
     {
       "group": "珠宝3组",
       "overall": {
-        "denominator": 361,
-        "adjusted": 271,
-        "rate": 0.7506925207756233,
+        "denominator": 511,
+        "adjusted": 379,
+        "rate": 0.7416829745596869,
         "target": 0.75,
-        "status": "pass"
+        "status": "fail"
       },
       "six_high": {
-        "denominator": 7,
-        "adjusted": 5,
-        "rate": 0.7142857142857143,
+        "denominator": 9,
+        "adjusted": 6,
+        "rate": 0.6666666666666666,
         "target": 0.8,
         "status": "fail"
       }
@@ -109,23 +109,23 @@
   "summary": {
     "group": "精品总",
     "overall": {
-      "denominator": 1883,
-      "adjusted": 1678,
-      "rate": 0.8911311736590547,
+      "denominator": 2220,
+      "adjusted": 1955,
+      "rate": 0.8806306306306306,
       "target": 0.75,
       "status": "pass"
     },
     "six_high": {
-      "denominator": 24,
-      "adjusted": 21,
-      "rate": 0.875,
+      "denominator": 28,
+      "adjusted": 24,
+      "rate": 0.8571428571428571,
       "target": 0.8,
       "status": "pass"
     }
   },
   "six_high_item": "品牌6高商品总览（MTD月度累计）",
-  "six_high_source": "/root/.openclaw/workspace/agent:main:uuid-66hzkflgyklmqg1pk4h/企业邮箱附件提取_20260903/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-09-02 23：59.xlsx",
-  "generated_at": "2026-09-03 09:56:38",
+  "six_high_source": "企业邮箱附件提取_20260904/04f_六高_部门监控正确源/04f_六高_部门监控正确源/品牌6高商品总览_2026-09-03 23：59.xlsx",
+  "generated_at": "2026-09-04 15:29:49",
   "validation": {
     "status": "PASS",
     "errors": []
