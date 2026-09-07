@@ -2,111 +2,111 @@
   "mtd": [
     {
       "group": "精品总计",
-      "exposureTraffic": 205051481,
-      "exposureTrafficYoy": -13.38,
-      "detailUv": 3318415,
-      "detailUvYoy": -9.92
+      "exposureTraffic": 429791700,
+      "exposureTrafficYoy": -12.28,
+      "detailUv": 6857055,
+      "detailUvYoy": -8.73
     },
     {
       "group": "饰品3组",
-      "exposureTraffic": 14318517,
-      "exposureTrafficYoy": 200.96,
-      "detailUv": 209222,
-      "detailUvYoy": 47.64
+      "exposureTraffic": 29465749,
+      "exposureTrafficYoy": 150.65,
+      "detailUv": 429450,
+      "detailUvYoy": 21.79
     },
     {
       "group": "饰品1组",
-      "exposureTraffic": 24120681,
-      "exposureTrafficYoy": -36.73,
-      "detailUv": 520625,
-      "detailUvYoy": -19.98
+      "exposureTraffic": 51398620,
+      "exposureTrafficYoy": -35.85,
+      "detailUv": 1114391,
+      "detailUvYoy": -17.67
     },
     {
       "group": "饰品2组",
-      "exposureTraffic": 76128560,
-      "exposureTrafficYoy": -12.64,
-      "detailUv": 1172887,
-      "detailUvYoy": -6.68
+      "exposureTraffic": 159905031,
+      "exposureTrafficYoy": -11.89,
+      "detailUv": 2425829,
+      "detailUvYoy": -7.16
     },
     {
       "group": "珠宝1组",
-      "exposureTraffic": 41068321,
-      "exposureTrafficYoy": -10.35,
-      "detailUv": 604251,
-      "detailUvYoy": -8.29
+      "exposureTraffic": 83636127,
+      "exposureTrafficYoy": -13.01,
+      "detailUv": 1208559,
+      "detailUvYoy": -10.91
     },
     {
       "group": "珠宝2组",
-      "exposureTraffic": 23716897,
-      "exposureTrafficYoy": -12.11,
-      "detailUv": 421554,
-      "detailUvYoy": -12.36
+      "exposureTraffic": 50181347,
+      "exposureTrafficYoy": -5.13,
+      "detailUv": 857953,
+      "detailUvYoy": -10.43
     },
     {
       "group": "珠宝3组",
-      "exposureTraffic": 25698505,
-      "exposureTrafficYoy": -24.28,
-      "detailUv": 389876,
-      "detailUvYoy": -21.14
+      "exposureTraffic": 55204826,
+      "exposureTrafficYoy": -18.25,
+      "detailUv": 820873,
+      "detailUvYoy": -16.22
     }
   ],
   "ytd": [
     {
       "group": "精品总计",
-      "exposureTraffic": 23439939686,
-      "exposureTrafficYoy": -10.26,
-      "detailUv": 386186259,
-      "detailUvYoy": 3.16
+      "exposureTraffic": 21517413084,
+      "exposureTrafficYoy": -34.24,
+      "detailUv": 88423172,
+      "detailUvYoy": -22.69
     },
     {
       "group": "饰品3组",
-      "exposureTraffic": 612417640,
-      "exposureTrafficYoy": 33.07,
-      "detailUv": 16761857,
-      "detailUvYoy": 37.29
+      "exposureTraffic": 586254824,
+      "exposureTrafficYoy": -7.1,
+      "detailUv": 6806121,
+      "detailUvYoy": -2.9
     },
     {
       "group": "饰品1组",
-      "exposureTraffic": 3831989895,
-      "exposureTrafficYoy": 6.49,
-      "detailUv": 71989969,
-      "detailUvYoy": 21.49
+      "exposureTraffic": 3550670113,
+      "exposureTrafficYoy": -26.61,
+      "detailUv": 18224282,
+      "detailUvYoy": -19.77
     },
     {
       "group": "饰品2组",
-      "exposureTraffic": 9427000501,
-      "exposureTrafficYoy": -12.07,
-      "detailUv": 142647438,
-      "detailUvYoy": -0.84
+      "exposureTraffic": 8730769105,
+      "exposureTrafficYoy": -36.94,
+      "detailUv": 27426850,
+      "detailUvYoy": -21.08
     },
     {
       "group": "珠宝1组",
-      "exposureTraffic": 4099705140,
-      "exposureTrafficYoy": -17.45,
-      "detailUv": 63346370,
-      "detailUvYoy": -1.84
+      "exposureTraffic": 3720165603,
+      "exposureTrafficYoy": -37.3,
+      "detailUv": 14313393,
+      "detailUvYoy": -23.58
     },
     {
       "group": "珠宝2组",
-      "exposureTraffic": 2731175158,
-      "exposureTrafficYoy": -18.88,
-      "detailUv": 49501708,
-      "detailUvYoy": -4.92
+      "exposureTraffic": 2446015633,
+      "exposureTrafficYoy": -36.88,
+      "detailUv": 12518486,
+      "detailUvYoy": -27.99
     },
     {
       "group": "珠宝3组",
-      "exposureTraffic": 2737651352,
-      "exposureTrafficYoy": -9.01,
-      "detailUv": 41938917,
-      "detailUvYoy": -1.18
+      "exposureTraffic": 2483537802,
+      "exposureTrafficYoy": -30.95,
+      "detailUv": 11134040,
+      "detailUvYoy": -23.26
     }
   ],
   "dateRange": {
     "mtdStart": "9.1",
-    "mtdEnd": "9.3",
+    "mtdEnd": "9.6",
     "ytdStart": "1.1",
-    "ytdEnd": "9.3"
+    "ytdEnd": "9.6"
   },
   "source": "ONEDP中台智能体API",
-  "updatedAt": "2026-09-04 15:24:39"
+  "updatedAt": "2026-09-07 10:13:55"
 }
